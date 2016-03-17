@@ -2,36 +2,47 @@
 
 <?php
 
+include 'mdpTest.php';
 
-function InscriptionMembre($numeroDuMembre,$Civilite,$Nom,$Prenom,$Age,$CategorieDeSport,$Sport,$Adresse,$Groupe,$AdresseMail,$NumeroDePortable){
+function InscriptionMembre($Civilite,$Nom,$Prenom,$DateNaissance,$CodePostal,$Adresse,$AdresseMail,$NumeroDePortable,$Mdp){
 	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', '');
-	$req = $bdd->prepare('INSERT INTO membre(numero_membre, civilite, nom, prenom, age, categorie_de_sport, sport,adresse,groupe,adresse_mail,numero_de_portable) 
-		VALUES(:numero_membre, :civilite, :nom, :prenom, :age, :categorie_de_sport, :sport,:adresse,:groupe,:adresse_mail,:numero_de_portable)');
+	$req = $bdd->prepare('INSERT INTO membre(id_membre,civilite, nom, prenom, age,codepostal,adresse,adresse_mail,numero_de_portable,mdp) 
+		VALUES(:id_membre,:civilite, :nom, :prenom, :age,:codepostal, :adresse,:adresse_mail,:numero_de_portable,:mdp)');
 $req->execute(array(
-	'numero_membre' => $numeroDuMembre,
+	'id_membre' => 0,
 	'civilite' => $Civilite,
 	'nom' => $Nom,
 	'prenom' => $Prenom,
-	'age' => $Age,
-	'categorie_de_sport' => $CategorieDeSport,
-	'sport' => $Sport,
+	'age' => $DateNaissance,
+	'codepostal'=>$CodePostal,
 	'adresse' => $Adresse,
-	'groupe' => $Groupe,
 	'adresse_mail' => $AdresseMail,
-	'numero_de_portable' => $NumeroDePortable
+	'numero_de_portable' => $NumeroDePortable,
+	'mdp'=> NewPassword($Mdp)
 	));
-echo 'Le membre a été ajouté ';
+echo 'Le membre a été ajouté '.'</br>'.NewPassword($Mdp).'</br>';
 }
-InscriptionMembre(1,'monsieur','Corre','Alexandre','20','combat','judo','75000 paris','','o@gmail.com',0897863840);
 
-function AfficheurMembre($numeroDuMembre){
+
+//InscriptionMembre('monsieur','Corre','Alexandre','20',75000 ,'paris','o@gmail.com','0897863840','coucou');
+//InscriptionMembre('monsieur','Corre','bob','20',75000 ,'paris','op@gmail.com','0897863840','coucou');
+
+function AfficheurMembre($AdresseMail){
 	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', '');
-	$reponse = $bdd->query('SELECT * FROM membre ');
+	$reponse = $bdd->query('SELECT * FROM membre');
 	$donnees = $reponse->fetch();
+	while($donnees['adresse_mail']<>$AdresseMail){
+		$donnees = $reponse->fetch();
+	}
 
-echo 'Nom :' . $donnees['nom'].'     '. 'Prénom :' . $donnees['prenom'];
-
+echo 'Nom :' . $donnees['nom'].' Prénom :' . $donnees['prenom'].' Numéro de portable : '.$donnees['numero_de_portable'].' Age : '.$donnees['age'].' Adresse mail:'.$donnees['adresse_mail'].'</br>';
 }
-AfficheurMembre(1);
+//AfficheurMembre(36);
 
+
+/*
+echo 'mdp: '.'</br>'.RechercheMdp(46).'</br>';
+PasswordVerify('coucou',RechercheMdp(46));
+PasswordVerify('coucou',RechercheMdp(47));
+*/
 ?>
