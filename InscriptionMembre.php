@@ -6,14 +6,13 @@ include 'mdpTest.php';
 
 function InscriptionMembre($Civilite,$Nom,$Prenom,$DateNaissance,$CodePostal,$Adresse,$AdresseMail,$NumeroDePortable,$Mdp){
 	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', '');
-	$req = $bdd->prepare('INSERT INTO membre(id_membre,civilite, nom, prenom, age,codepostal,adresse,adresse_mail,numero_de_portable,mdp) 
-		VALUES(:id_membre,:civilite, :nom, :prenom, :age,:codepostal, :adresse,:adresse_mail,:numero_de_portable,:mdp)');
+	$req = $bdd->prepare('INSERT INTO membre(civilite, nom, prenom, date_de_naissance,codepostal,adresse,adresse_mail,numero_de_portable,mdp) 
+		VALUES(:civilite, :nom, :prenom, :date_de_naissance,:codepostal, :adresse,:adresse_mail,:numero_de_portable,:mdp)');
 $req->execute(array(
-	'id_membre' => 0,
 	'civilite' => $Civilite,
 	'nom' => $Nom,
 	'prenom' => $Prenom,
-	'age' => $DateNaissance,
+	'date_de_naissance' => $DateNaissance,
 	'codepostal'=>$CodePostal,
 	'adresse' => $Adresse,
 	'adresse_mail' => $AdresseMail,
@@ -38,6 +37,10 @@ function AfficheurMembre($AdresseMail){
 echo 'Nom :' . $donnees['nom'].' Prénom :' . $donnees['prenom'].' Numéro de portable : '.$donnees['numero_de_portable'].' Age : '.$donnees['age'].' Adresse mail:'.$donnees['adresse_mail'].'</br>';
 }
 //AfficheurMembre(36);
+
+//InscriptionMembre('monsieur','Mebtoul','Kamel','19911111',75000 ,'paris','kamel@gmail.com','0897863840','coucou');
+//InscriptionMembre('monsieur','Lemoine','Logan','19911111',75000 ,'paris','logan@gmail.com','0897863840','coucou');
+
 
 
 /*
