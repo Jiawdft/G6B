@@ -1,0 +1,87 @@
+* {
+	margin: 0;
+}
+
+body {
+	font-family: Helvetica;
+}
+
+.menu {
+	background-color: rgba(0,0,0,0.7);
+	padding: 1.9%;
+}
+
+.menu li {
+	display: inline;
+	padding: 0.5em;
+}
+
+.menu li a {
+	text-decoration: none;
+	color: white;
+}
+
+.menu li a:hover {
+	color: #999999;
+}
+
+#left {
+	float: left;
+	margin-top: -1.4em;
+}
+
+#left img {
+	line-height: 4.5em;
+	margin-left: 1em;
+}
+
+#right {
+	text-align: right;
+}
+
+.HOMETOP {
+	clear: both;
+	position: fixed;
+	background-image: url("/Users/Logan/Desktop/Site/Images/Wallpaper/PageSport.jpg");
+	height: 100%;
+	width: 100%;
+}
+
+.Connexion {
+	background-color: rgba(40,40,40,0.7);
+	margin: auto; 
+	height: 70vh;
+	width: 60%;
+	margin-top: 6%;
+	border-radius: 5%;
+	text-align: center;
+	color: white;
+}
+
+.Connexion a {
+	
+}
+
+#social {
+	height: 4em;
+}
+
+#social img{
+	margin: 0.5em;
+	height: 2em;
+    filter: brightness(100%);
+    -webkit-filter: brightness(100%);
+    -moz-filter: brightness(100%);
+    -o-filter: brightness(100%);
+    -ms-filter: brightness(100%);
+}
+
+#social img:hover {
+	margin: 0.5em;
+	height: 2em;
+    filter: brightness(300%);
+    -webkit-filter: brightness(300%);
+    -moz-filter: brightness(300%);
+    -o-filter: brightness(300%);
+    -ms-filter: brightness(300%);
+}

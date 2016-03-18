@@ -1,0 +1,293 @@
+* {
+	margin: 0;
+}
+
+html, body {
+	font-family: Helvetica;
+	background-color: rgba(220,220,220,0.7);
+}
+
+html, footer{
+	font-family: Helvetica;
+	background-color: rgb(40,40,40)
+}
+
+.menu {
+	position: relative;
+	z-index: 3;
+	width: auto;
+	background-color: rgba(0,0,0,0.7);
+	padding: 2%;
+	margin-top: -0.2em;
+}
+
+.menu li {
+	display: inline;
+	padding: 0.5em;
+}
+
+.menu li a {
+	text-decoration: none;
+	color: white;
+}
+
+.menu li a:hover {
+	color: #999999;
+}
+
+#left img {
+	position: absolute;
+	height: 4em;
+	margin-top: -1.3em;
+	margin-left: 0.91em;
+}
+
+#right {
+	text-align: right;
+}
+
+#inscription {
+	position: absolute;
+	z-index: 3;
+	margin-left: 65%;
+	margin-top: 20%;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #ffffff;
+	text-decoration: none;
+	border: 0.1em solid #ffffff;
+	padding: 0.5em;
+	border-radius: 0.5em;
+}
+
+#inscription:hover {
+	color: #ffffff;
+	border: 0.2em solid #ffffff;
+}
+
+
+@keyframes slider {
+  0% { left: 0%; }
+  20% { left: 0%; }
+  25% { left: -100%; }
+  45% { left: -100%; }
+  50% { left: -200%; }
+  70% { left: -200%; }
+  75% { left: -300%; }
+  95% { left: -300%; }
+  100% { left: -400%; }
+}
+
+.slider figure {
+	position: relative;
+  	width: 500%;
+  	font-size: 0;
+  	animation: 25s slider infinite;
+}
+
+.slider {
+	margin-top: -4.5em;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.slider img {
+	 width: 20%; 
+	 height: 100vh;
+}
+
+.search {
+	position: relative;
+	z-index: 2;
+	width: auto;
+	background-color: rgba(0,0,0,0.7);
+	margin-top: -2.8em;
+	padding: 0.8em;
+	border-top: 0.15em solid rgba(255,255,255,0.7);
+}
+
+.search li {
+	display: inline;
+	padding: 14%;
+}
+
+.search li a {
+	text-decoration: none;
+	color: white;
+}
+
+.search li a:hover {
+	color: #999999;
+}
+
+#SPORT a {
+	font-size: 3em;
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+	line-height: 5em;
+}
+
+.picture > div div {
+	display: inline-block;
+	height: 20em;
+	margin-top: 1em;
+}
+
+.picture a {
+	font-size: 2em;
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+	line-height: 10em;
+}
+
+.picture a:hover {
+	border-bottom: 0.3em solid rgba(255,255,255,0.5);
+}
+
+.pline1 > div {
+	width : 29%;
+	background-repeat: no-repeat;
+  	background-size: cover;
+
+}
+
+.p1 {
+	background-image: url("/Users/Logan/Desktop/Site/Images/Sports/Basket.jpg");
+	margin-left: 2em;
+	margin-right: 1em;
+}
+
+.p2 { 
+	background-image: url("/Users/Logan/Desktop/Site/Images/Sports/Boxe.jpg");
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+.p3 { 
+	background-image: url("/Users/Logan/Desktop/Site/Images/Sports/Ski.jpg");
+	margin-left: 1em;
+	margin-right: 2em;
+}
+
+
+.p4 { 
+	background-image: url("/Users/Logan/Desktop/Site/Images/Sports/Athlétisme.jpg");
+	margin-left: 2em;
+	margin-right: 1em;
+	width : 29%; 
+}
+
+.p5 { 
+	background-image: url("/Users/Logan/Desktop/Site/Images/Sports/Rugby.jpg");
+	margin-left: 1em;
+	margin-right: 2em;
+	width : 61%; 
+}
+
+.p6 { 
+	background-image: url("/Users/Logan/Desktop/Site/Images/Sports/Natation.jpg");
+	margin-left: 2em;
+	margin-right: 1em;
+	margin-bottom: 2em;
+	width : 60%; 
+}
+
+.p7 {
+	background-image: url("/Users/Logan/Desktop/Site/Images/Sports/Tennis.jpg");
+	margin-left: 1em;
+	margin-right: 2em;
+	margin-bottom: 2em;
+	width : 30%; 
+}
+
+#MAPS a {
+	font-size: 3em;
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+	line-height: 5em;
+}
+
+.googlemaps {
+	height: 30em;
+}
+
+#GROUPES a {
+	font-size: 3em;
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+	line-height: 5em;
+}
+
+#social {
+	height: 4em;
+}
+
+#social img{
+	margin: 0.5em;
+	height: 2em;
+    filter: brightness(100%);
+        -webkit-filter: brightness(100%);
+        -moz-filter: brightness(100%);
+        -o-filter: brightness(100%);
+        -ms-filter: brightness(100%);
+}
+
+#social img:hover {
+	margin: 0.5em;
+	height: 2em;
+    filter: brightness(300%);
+    -webkit-filter: brightness(300%);
+    -moz-filter: brightness(300%);
+    -o-filter: brightness(300%);
+    -ms-filter: brightness(300%);
+}
+
+#copyright a {
+	font-size: 0.6em;
+	color: rgba(220,220,220,0.7);
+	text-decoration: none;
+}
+
+.organisation {
+  background-color: rgb(40,40,40);
+  padding: 2em;
+}
+
+.organisation h3{
+	margin-left: 40em;
+	text-decoration: none;
+  	color: rgba(220,220,220,0.7);
+}
+
+.organisation td {
+ 	padding: 3em;
+}
+
+.organisation td a {
+  	text-decoration: none;
+  	color: rgba(220,220,220,0.7);
+}
+
+.organisation td img {
+  	height: 4em;
+}
+
+.organisation table {
+  	margin: auto;
+  	text-align: center;
+}
+
+.organisation br {
+  	line-height: 1.5em;
+}
+
+#L2 {
+  	background-color: rgba(220,220,220,0.7);
+  	height: 0.1em;
+  	width: 92%;
+  	margin: auto;
+}
