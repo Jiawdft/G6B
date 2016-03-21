@@ -13,8 +13,21 @@ $req->execute(array(
 	));
 echo 'Le sport a été ajouté '.'</br>';
 }
-InscriptionSport('ping pong','Sport de raquette sur table');
-InscriptionSport('babyfoot','Sport de boule');
+/*
+InscriptionSport('athletisme','');
+InscriptionSport('golf','');
+InscriptionSport('parachutisme','');
+InscriptionSport('aviron','');
+InscriptionSport('gymnastique','');
+InscriptionSport('peche','');
+InscriptionSport('badminton','');
+InscriptionSport('handball','');
+InscriptionSport('rafting','');
+InscriptionSport('hockey','');
+InscriptionSport('roller','');
+InscriptionSport('biathlon','');
+
+*/
 
 function AfficheurSport($nomDuSport){
 	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', '');
@@ -26,6 +39,6 @@ function AfficheurSport($nomDuSport){
 
 echo 'Sport :' . $donnees['sport'].' information  : '.$donnees['information'].' Sport: '.$donnees['sport'].'</br>';
 }
-AfficheurSport('babyfoot');
+//AfficheurSport('babyfoot');
 
 ?>

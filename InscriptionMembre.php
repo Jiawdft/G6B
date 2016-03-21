@@ -34,9 +34,9 @@ function AfficheurMembre($AdresseMail){
 		$donnees = $reponse->fetch();
 	}
 
-echo 'Nom :' . $donnees['nom'].' Prénom :' . $donnees['prenom'].' Numéro de portable : '.$donnees['numero_de_portable'].' Age : '.$donnees['age'].' Adresse mail:'.$donnees['adresse_mail'].'</br>';
+echo 'Nom :' . $donnees['nom'].' Prénom :' . $donnees['prenom'].' Numéro de portable : '.$donnees['numero_de_portable'].' Adresse mail:'.$donnees['adresse_mail'].'</br>';
 }
-//AfficheurMembre(36);
+AfficheurMembre('o@gmail.com');
 
 //InscriptionMembre('monsieur','Mebtoul','Kamel','19911111',75000 ,'paris','kamel@gmail.com','0897863840','coucou');
 //InscriptionMembre('monsieur','Lemoine','Logan','19911111',75000 ,'paris','logan@gmail.com','0897863840','coucou');
