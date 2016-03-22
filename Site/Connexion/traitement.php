@@ -4,13 +4,13 @@
 include('mdpTest.php');
 if((!isset($_POST['Adresse_Mail']) AND !isset($_POST['Mdp'])))
 {
-	echo 'veillez saisir un identifiant';
+	echo 'veillez saisir un identifiant et un mot de passe';
 }
 else
 {
-	if(($_POST['Adresse_Mail']=="" AND $_POST['Mdp']==""))
+	if(($_POST['Adresse_Mail']=="" OR $_POST['Mdp']==""))
 	{
-		echo 'veillez saisir un identifiant';
+		echo 'veillez saisir un identifiant et un mot de passe';
 
 	}
 	else
@@ -24,11 +24,14 @@ else
 			{
 				echo 'bien joué';
 				break;	
-				break;
 			}
 			
 		}
+		if(!$donnees = $req-> fetch())
+		{
+
 		echo 'echec'.'</br>';
+		}
 	}
 }
 
