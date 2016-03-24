@@ -24,11 +24,11 @@
 			    <table>
 			    	<tbody>
 						<?php
-		    			$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root' , '');
+		    			$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root' , 'root');
 						$req = $bdd->query('SELECT sport FROM sport ORDER BY sport');
 						$donnees = $req-> fetch();
 						$a=0;
-						for($i=0;$i<20;$i++)
+						for($i=0;$i<33;$i++)
 						{	
 						?>
 						<td><a href="#"><?php echo mb_strtoupper($donnees['sport'])?></a></td>
@@ -37,7 +37,9 @@
 							$a++;
 							if($a%3==0)
 							{
+								/*
 								echo'</br>';
+								*/
 								?>
 								</tr>
 								<tr>
