@@ -23,8 +23,8 @@
 		    <div class="Connexion">
 			  <h1 style="text-align: center;">CONNECTEZ-VOUS</h1>
 			  <form method="post" action="traitement.php">
-			    <input type="email" name="Adresse_Mail" placeholder="Adresse Mail" />
-			    <input type="password" name="Mdp" placeholder="Mot de Passe" />
+			    <input type="email" name='mail' placeholder="Adresse Mail" />
+			    <input type="password" name='passe' placeholder="Mot de Passe" />
 			    <input type="submit" value="CONNEXION" />
 			  </form>
 			  <a id="inscription" href="#">Pas encore inscrit ? Inscris toi !</a>

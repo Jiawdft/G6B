@@ -2,15 +2,16 @@
 <meta charset="UTF-8"> 
 <?php
 include('mdpTest.php');
-if((!isset($_POST['Adresse_Mail']) AND !isset($_POST['Mdp'])))
+echo $_POST['mail'];
+if((!isset($_POST['mail']) OR !isset($_POST['passe'])))
 {
-	echo 'veillez saisir un identifiant et un mot de passe';
+	echo 'veuillez saisir un identifiant et un mot de passe'.' bonjour';
 }
 else
 {
-	if(($_POST['Adresse_Mail']=="" OR $_POST['Mdp']==""))
+	if(($_POST['mail']=="" OR $_POST['passe']==""))
 	{
-		echo 'veillez saisir un identifiant et un mot de passe';
+		echo 'veuillez saisir un identifiant et un mot de passe';
 
 	}
 	else
@@ -20,7 +21,7 @@ else
 		while($donnees = $req -> fetch())
 		{
 
-			if($_POST['Adresse_Mail']==$donnees['adresse_mail']AND Passwordverify($_POST['Mdp'],$donnees['mdp']))
+			if($_POST['mail']==$donnees['adresse_mail']AND Passwordverify($_POST['passe'],$donnees['mdp']))
 			{
 				echo 'bien joué';
 				break;	
