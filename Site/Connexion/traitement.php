@@ -3,7 +3,7 @@
 <?php
 include('mdpTest.php');
 echo $_POST['mail'];
-if((!isset($_POST['mail']) OR !isset($_POST['passe'])))
+if(!isset($_POST['mail']) OR !isset($_POST['passe']))
 {
 	echo 'veuillez saisir un identifiant et un mot de passe'.' bonjour';
 }
@@ -23,7 +23,7 @@ else
 
 			if($_POST['mail']==$donnees['adresse_mail']AND Passwordverify($_POST['passe'],$donnees['mdp']))
 			{
-				echo 'bien joué';
+				echo '</br>'.'bien joué';
 				break;	
 			}
 			
