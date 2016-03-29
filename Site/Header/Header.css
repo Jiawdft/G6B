@@ -2,7 +2,7 @@
 	margin: 0;
 }
 
-body {
+html, body {
 	font-family: Helvetica;
 }
 
@@ -37,27 +37,6 @@ body {
 
 #right {
 	text-align: right;
-}
-
-.HOMETOP {
-	clear: both;
-	position: fixed;
-	height: 100%;
-	width: 100%;
-	background-image: url("/Users/Logan/Desktop/Site/Images/Wallpaper/PageSport.jpg");
-}
-
-.Sports {
-	margin-top: 5em;
-}
-
-.Sports a {
-	font-size: 1.3em;
-	font-weight: bold;
-	text-decoration: none;
-	color: white;
-	line-height: 2.2em;
-	padding: 7em;
 }
 
 
