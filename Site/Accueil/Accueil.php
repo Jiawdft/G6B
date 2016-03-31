@@ -30,7 +30,9 @@
 	    				<img src="../Images/Wallpaper/Slider.jpg">
 	  				</figure>
   				</div>
-			   	<div class="search">
+
+
+			<div class="search">
 				<ul>
 					<select name="choix">
 						<?php
