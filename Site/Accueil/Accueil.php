@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Sporciety</title>
-		<link href="../Accueil/Accueil.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="../Accueil/test.css" rel="stylesheet" type="text/css" media="screen" />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
@@ -30,7 +30,9 @@
 	    				<img src="../Images/Wallpaper/Slider.jpg">
 	  				</figure>
   				</div>
-			   	<div class="search">
+
+
+			<div class="search">
 				<ul>
 					<select name="choix">
 						<?php
@@ -46,10 +48,11 @@
 					<input type="text" name="Code Postal" placeholder="Code Postal" />
 
 				    <input type="submit" value="Valider" />
-
+<!--
 				    <li><a href="#">Sports</a></li>
 				    <li><a href="#">Lieux</a></li>
 				    <li><a href="#">Rechercher</a></li>
+-->
 				</ul>
 			</div>
 	    </div>
