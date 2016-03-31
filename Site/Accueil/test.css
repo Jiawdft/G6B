@@ -106,23 +106,16 @@ html, footer{
 	border-top: 0.15em solid rgba(255,255,255,0.7);
 }
 
-.search li {
-	display: inline;
-	padding-left: 20%;
-}
 
-.search li a {
-	text-decoration: none;
-	color: white;
-}
 
-.search li a:hover {
-	color: #999999;
-}
+
+
+
 
 .search select {
 	display: inline;
-	padding-left: 20%;
+	padding-left: 3em;
+	border: 
 }
 
 .search select {
@@ -133,7 +126,11 @@ html, footer{
 .search select:hover {
 	color: #999999;
 }
+
+
+
 .search input {
+	margin-left:3em;
 	display: inline;
 	padding-left: 20%;
 }
@@ -146,6 +143,15 @@ html, footer{
 .search input:hover {
 	color: #999999;
 }
+
+
+
+
+
+
+
+
+
 
 #SPORT a {
 	z-index: 1;
