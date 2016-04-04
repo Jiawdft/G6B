@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Sporciety</title>
-		<link href="../Accueil/test.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="Test.css" rel="stylesheet" type="text/css" media="screen" />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
@@ -30,29 +30,27 @@
 	    				<img src="../Images/Wallpaper/Slider.jpg">
 	  				</figure>
   				</div>
-
-
-			<div class="search">
+			   	<div class="search">
 				<ul>
-					<select name="choix">
-						<?php
-
-
-						?>
-						<option value=""></option>
-					    <option value="France">Foot</option>
-					    <option value="Angleterre">Escalade</option>
-					    <option value="Chine">Tennis</option>
-					</select>
-
-					<input type="text" name="Code Postal" placeholder="Code Postal" />
-
-				    <input type="submit" value="Valider" />
-<!--
+					<!--
 				    <li><a href="#">Sports</a></li>
 				    <li><a href="#">Lieux</a></li>
 				    <li><a href="#">Rechercher</a></li>
--->
+					-->
+					<form action="#" method="post">
+
+					<select name="choix">
+					    <option value="France">Sport</option>
+					    <option value="Angleterre">Angleterre</option>
+					    <option value="Chine">Chine</option>
+					    <option value=""></option>
+					</select>
+				    <input type="text" CodePostal="id" placeholder="Code Postal" />
+				    <input type="submit" value="Rechercher" />
+					</form>
+
+
+
 				</ul>
 			</div>
 	    </div>
