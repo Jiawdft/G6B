@@ -81,6 +81,7 @@ body {
 .Connexion input[type="submit"] {
     background-color: rgb(140,140,140);
     border: 0.2em solid rgb(140,140,140);
+    border-radius:0.5em;
     width: 30%;
     margin: 2em 35%;
     display: inline-block;
@@ -96,7 +97,7 @@ body {
     margin-left: 71%;
     color: white;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 #inscription:hover {
