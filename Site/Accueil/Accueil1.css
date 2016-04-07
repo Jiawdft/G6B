@@ -99,52 +99,52 @@ html, footer{
 
 .search {
 	position: relative;
-	/*
 	width: auto;
-	*/
 	background-color: rgba(0,0,0,0.7);
 	margin-top: -2.8em;
 	padding: 0.8em;
 	border-top: 0.15em solid rgba(255,255,255,0.7);
 }
 
+.search li {
+	display: inline;
+	padding-left: 20%;
+}
+
+.search li a {
+	text-decoration: none;
+	color: white;
+}
+
+.search li a:hover {
+	color: #999999;
+}
+
 .search select {
-margin-left: 10%;
-	margin-right: 7.5%;
-	width: 20%;
+	display: inline;
+	padding-left: 20%;
 }
 
 .search select {
 	text-decoration: none;
-	color: #999999;
+	color: white;
 }
 
 .search select:hover {
-	color: black;
+	color: #999999;
 }
 .search input {
-	width: 20%;
-	margin-right: 7.5%;
+	display: inline;
+	padding-left: 20%;
 }
 
 .search input {
 	text-decoration: none;
-	color: #999999;
+	color: white;
 }
 
 .search input:hover {
-	color: black;
-}
-.search input[type="submit"] {
-    background-color: rgb(140,140,140);
-    border: 0.2em solid rgb(140,140,140);
-    width: 20%;
-    cursor: pointer;
-    color: #ffffff;
-    line-height: 0.1em;
-    font-size: 1em;
-    padding: 0.5em;
-    text-decoration: none;
+	color: #999999;
 }
 
 #SPORT a {
@@ -402,3 +402,4 @@ margin-left: 10%;
   	width: 92%;
   	margin: auto;
 }
+*/

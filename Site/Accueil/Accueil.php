@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Sporciety</title>
-		<link href="Test.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="Accueil.css" rel="stylesheet" type="text/css" media="screen" />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
@@ -13,10 +13,10 @@
 			      </div>
 			      <ul id="right">
 			          <li><a href="../Sports/Sports.php">LES SPORTS</a></li>
-			          <li><a href="#">FORUM</a></li>
-			          <li><a href="#">CONTACT</a></li>
-			          <li><a href="../Connexion/Connexion.html">CONNEXION</a></li>
-			          <li><a href="../Inscription/Inscription.html">INSCRIPTION</a></li>
+			          <li><a href="../Forum/Forum.php">FORUM</a></li>
+			          <li><a href="../Contact/Contact.php">CONTACT</a></li>
+			          <li><a href="../Connexion/Connexion.php">CONNEXION</a></li>
+			          <li><a href="../Inscription/Inscription.php">INSCRIPTION</a></li>
 			          <li><a href="#">AIDE</a></li>
 			      </ul>
 			   </div>
@@ -32,18 +32,20 @@
   				</div>
 			   	<div class="search">
 				<ul>
-					<!--
-				    <li><a href="#">Sports</a></li>
-				    <li><a href="#">Lieux</a></li>
-				    <li><a href="#">Rechercher</a></li>
-					-->
 					<form action="#" method="post">
 
 					<select name="choix">
-					    <option value="France">Sport</option>
-					    <option value="Angleterre">Angleterre</option>
-					    <option value="Chine">Chine</option>
-					    <option value=""></option>
+					    <option value="">Sport</option>
+					    <?php
+					    $bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root' , '');
+						$req = $bdd->query('SELECT sport FROM sport ORDER BY sport');		
+						while($donnees = $req->fetch())
+						{
+							?>
+							<option value= <?php echo ucfirst(strtolower($donnees['sport'])) ?>><?php echo ucfirst(strtolower($donnees['sport'])) ?></option>
+							<?php
+						}
+						?>
 					</select>
 				    <input type="text" CodePostal="id" placeholder="Code Postal" />
 				    <input type="submit" value="Rechercher" />
