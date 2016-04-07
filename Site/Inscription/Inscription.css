@@ -86,6 +86,7 @@ body {
 .Inscription input[type="submit"] {
     background-color: rgb(140,140,140);
     border: 0.2em solid rgb(140,140,140);
+    border-radius:0.5em;
     width: 30%;
     margin: 1em 35%;
     cursor: pointer;
