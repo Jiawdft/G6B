@@ -1,0 +1,14 @@
+Git terminal CMD :
+
+pwd : affiche le chemin actuel 
+
+ls : affiche les éléments présent dans le répertoire 
+
+cd : pour changer de répertoire 
+
+cd .. : pour revenir dans le répertoire père 
+
+git status : affiche l'état du dossier clone //à jour ou pas 
+
+git pull : sync
+
