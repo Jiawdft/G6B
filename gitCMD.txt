@@ -12,3 +12,10 @@ git status : affiche l'état du dossier clone //à jour ou pas
 
 git pull : sync
 
+Pour push via command line :
+git add . : pour cibler tout les fichiers à MAJ
+
+git commit -m "Message descrp du push"
+
+git push
+
