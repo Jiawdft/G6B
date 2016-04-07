@@ -9,14 +9,14 @@
 	    <div class="HOMETOP" style="height: 100vh;">
 	    	<div class="menu">
 		       	<div id="left">
-		       		<a href="../Accueil/Accueil.html"><img src="../Images/Logos/Sporciety.png" style="	height: 4em;" /></a>
+		       		<a href="../Accueil/Accueil.php"><img src="../Images/Logos/Sporciety.png" style="	height: 4em;" /></a>
 			    </div>
 			    <ul id="right">
 		       	   	<li><a href="../Sports/Sports.php">LES SPORTS</a></li>
 		           	<li><a href="#">FORUM</a></li>
 		           	<li><a href="#">CONTACT</a></li>
 		           	<li><a href="../Connexion/Connexion.php">CONNEXION</a></li>
-		           	<li><a href="../Inscription/Inscription.html">INSCRIPTION</a></li>
+		           	<li><a href="../Inscription/Inscription.php">INSCRIPTION</a></li>
 	         		<li><a href="#">AIDE</a></li>
 	       		</ul>
 	    	</div>
@@ -24,7 +24,7 @@
 			    <table>
 			    	<tbody>
 						<?php
-		    			$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root' , '');
+		    			$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root' , 'root');
 						$req = $bdd->query('SELECT sport FROM sport ORDER BY sport');
 						$donnees = $req-> fetch();
 						$a=0;
@@ -48,8 +48,21 @@
 					</tbody>
 				</table>
 			</div>
-			<div id="Plus">
-				<a href="#">Plus…</a>
+			<script type="text/javascript">
+ 			function AfficherMasquer()
+			{
+				divInfo = document.getElementById('divacacher');
+				if (divInfo.style.display == 'none')
+				    divInfo.style.display = 'block';
+				else
+				divInfo.style.display = 'none';
+			}
+			</script>
+			<div id="Plus"  onClick="AfficherMasquer(); scrollTo(0,400)">
+				<a>Plus…</a>
+			</div>
+			<div id="divacacher" style="display:none;">
+				<a>AUTRES SPORTS :</a>
 			</div>
 		</div> 
 	</body>
