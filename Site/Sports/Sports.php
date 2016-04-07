@@ -12,10 +12,10 @@
 		       		<a href="../Accueil/Accueil.html"><img src="../Images/Logos/Sporciety.png" style="	height: 4em;" /></a>
 			    </div>
 			    <ul id="right">
-		       	   	<li><a href="#">LES SPORTS</a></li>
+		       	   	<li><a href="../Sports/Sports.php">LES SPORTS</a></li>
 		           	<li><a href="#">FORUM</a></li>
 		           	<li><a href="#">CONTACT</a></li>
-		           	<li><a href="../Connexion/Connexion.html">CONNEXION</a></li>
+		           	<li><a href="../Connexion/Connexion.php">CONNEXION</a></li>
 		           	<li><a href="../Inscription/Inscription.html">INSCRIPTION</a></li>
 	         		<li><a href="#">AIDE</a></li>
 	       		</ul>

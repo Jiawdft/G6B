@@ -39,4 +39,51 @@ html, body {
 	text-align: right;
 }
 
+<<<<<<< Updated upstream:Site/Header/Header.css
+=======
+.HOMETOP {
+	clear: both;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-image: url("/Users/Logan/Desktop/Site/Images/Wallpaper/PageSport.jpg");
+}
 
+.Sports {
+	margin-top: 5em;
+}
+
+.Sports a {
+	font-size: 1.3em;
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+	line-height: 2.2em;
+	padding: 7em;
+}
+
+.Plus a {
+	font-size: 1.3em;
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+	margin-left: 90%;
+}
+
+.Plus a:hover {
+	cursor: pointer;
+}
+>>>>>>> Stashed changes:Sports.css
+
+#divacacher {
+	height: 35em;
+	background-color: rgba(0,0,0,0.7);
+}
+
+#divacacher a {
+	font-size: 1.5em;
+	line-height: 3em;
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+}
