@@ -6,6 +6,11 @@
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
+		<!--
+		<?php
+		//include"../Header/Header.php";
+		?>
+	-->
 	    <div class="HOMETOP" style="height: 100vh;">
 	    	<div class="menu">
 		       	<div id="left">
@@ -13,18 +18,19 @@
 			    </div>
 			    <ul id="right">
 		       	   	<li><a href="../Sports/Sports.php">LES SPORTS</a></li>
-		           	<li><a href="#">FORUM</a></li>
-		           	<li><a href="#">CONTACT</a></li>
-		           	<li><a href="../Connexion/Connexion.php">CONNEXION</a></li>
-		           	<li><a href="../Inscription/Inscription.php">INSCRIPTION</a></li>
-	         		<li><a href="#">AIDE</a></li>
+			        <li><a href="../Forum/Forum.php">FORUM</a></li>
+			        <li><a href="../Contact/Contact.php">CONTACT</a></li>
+			        <li><a href="../Connexion/Connexion.php">CONNEXION</a></li>
+			        <li><a href="../Inscription/Inscription.php">INSCRIPTION</a></li>
+			        <li><a href="../Aide/Aide.php">AIDE</a></li>
 	       		</ul>
 	    	</div>
+	   
 			<div class="Sports">
 			    <table>
 			    	<tbody>
 						<?php
-		    			$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root' , '');
+		    			$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root' , 'root');
 						$req = $bdd->query('SELECT sport FROM sport ORDER BY sport');
 						$donnees = $req-> fetch();
 						$a=0;

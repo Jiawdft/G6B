@@ -6,6 +6,10 @@
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
+		<?php
+		include"../Header/Header.php";
+		?>
+		<!--
 		<div class="HOMETOP" style="height: 100vh;">
 		    <div class="menu">
 			      <div id="left">
@@ -17,9 +21,14 @@
 			          <li><a href="../Contact/Contact.php">CONTACT</a></li>
 			          <li><a href="../Connexion/Connexion.php">CONNEXION</a></li>
 			          <li><a href="../Inscription/Inscription.php">INSCRIPTION</a></li>
-			          <li><a href="#">AIDE</a></li>
+			          <li><a href="../Aide/Aide.php">AIDE</a></li>
 			      </ul>
 			   </div>
+			-->
+
+
+
+
 			   		<a id="inscription" href="../Inscription/Inscription.html">Je m'inscris</a>
 			   <div class="slider">
 			    	<figure>
@@ -37,7 +46,7 @@
 					<select name="choix">
 					    <option value="">Sport</option>
 					    <?php
-					    $bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root' , '');
+					    $bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root' , 'root');
 						$req = $bdd->query('SELECT sport FROM sport ORDER BY sport');		
 						while($donnees = $req->fetch())
 						{

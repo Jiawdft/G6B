@@ -4,7 +4,7 @@
 
 
 function InscriptionSport($Sport,$Information){
-	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', '');
+	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
 	$req = $bdd->prepare('INSERT INTO sport(sport, information) 
 		VALUES(:sport, :information)');
 $req->execute(array(
