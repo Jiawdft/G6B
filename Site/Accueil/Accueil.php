@@ -42,7 +42,6 @@
 			   	<div class="search">
 				<ul>
 					<form action="#" method="post">
-
 					<select name="choix">
 					    <option value="">Sport</option>
 					    <?php
@@ -59,9 +58,6 @@
 				    <input type="text" CodePostal="id" placeholder="Code Postal" />
 				    <input type="submit" value="Rechercher" />
 					</form>
-
-
-
 				</ul>
 			</div>
 	    </div>
