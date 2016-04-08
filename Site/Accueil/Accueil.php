@@ -29,7 +29,7 @@
 
 
 
-			   		<a id="inscription" href="../Inscription/Inscription.html">Je m'inscris</a>
+			   		<a id="inscription" href="../Inscription/Inscription.php">Je m'inscris</a>
 			   <div class="slider">
 			    	<figure>
 	    				<img src="../Images/Wallpaper/Slider.jpg">

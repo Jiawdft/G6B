@@ -16,7 +16,7 @@ else
 	}
 	else
 	{
-		$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', '');
+		$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
 		$req = $bdd->query('SELECT adresse_mail,mdp FROM membre');
 		while($donnees = $req -> fetch())
 		{
@@ -31,7 +31,7 @@ else
 		if(!$donnees = $req-> fetch())
 		{
 
-		echo 'echec'.'</br>';
+		echo '</br>'.'echec';
 		}
 	}
 }

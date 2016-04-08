@@ -13,11 +13,11 @@
 		       </div>
 		       <ul id="right">
 		           <li><a href="../Sports/Sports.php">LES SPORTS</a></li>
-		           <li><a href="#">FORUM</a></li>
-		           <li><a href="#">CONTACT</a></li>
+		           <li><a href="../Forum/Forum.php">FORUM</a></li>
+		           <li><a href="../Contact/Contact.php">CONTACT</a></li>
 		           <li><a href="../Connexion/Connexion.php">CONNEXION</a></li>
-		           <li><a href="../Inscription/Inscription.html">INSCRIPTION</a></li>
-		           <li><a href="#">AIDE</a></li>
+		           <li><a href="../Inscription/Inscription.php">INSCRIPTION</a></li>
+		           <li><a href="../Aide/Aide.php">AIDE</a></li>
 		       </ul>
 		    </div>
 		    <div class="Connexion">
