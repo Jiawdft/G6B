@@ -33,11 +33,10 @@
 			   	<div class="search">
 				<ul>
 					<form action="#" method="post">
-
 					<select name="choix">
 					    <option value="">Sport</option>
 					    <?php
-					    $bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root' , '');
+					    $bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root' , 'root');
 						$req = $bdd->query('SELECT sport FROM sport ORDER BY sport');		
 						while($donnees = $req->fetch())
 						{
@@ -50,9 +49,6 @@
 				    <input type="text" CodePostal="id" placeholder="Code Postal" />
 				    <input type="submit" value="Rechercher" />
 					</form>
-
-
-
 				</ul>
 			</div>
 	    </div>
