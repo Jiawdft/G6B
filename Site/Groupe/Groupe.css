@@ -16,8 +16,12 @@ header
 }
 
 .menu {
-    background-color: rgba(0,0,0,0.7);
-    padding: 1.9%;
+	position: relative;
+	z-index: 3;
+	width: auto;
+	background-color: rgba(0,0,0,0.7);
+	padding: 2%;
+	margin-top: -0.2em;
 }
 
 .menu li {
@@ -34,22 +38,67 @@ header
     color: #999999;
 }
 
-#left {
-    float: left;
-    margin-top: -1.4em;
+
+#left img {
+	position: absolute;
+	height: 4em;
+	margin-top: -1.3em;
+	margin-left: 0.91em;
 }
 
-#left img 
-{
-    line-height: 4.5em;
-    margin-left: 1em;
-}
 
 #right 
 {
     text-align: right;
 }
 
+@keyframes slider {
+  0% { left: 0%; }
+  20% { left: 0%; }
+  25% { left: -100%; }
+  45% { left: -100%; }
+  50% { left: -200%; }
+  70% { left: -200%; }
+  75% { left: -300%; }
+  95% { left: -300%; }
+  100% { left: -400%; }
+}
+
+.slider figure {
+	position: relative;
+  	width: 500%;
+  	font-size: 0;
+  	animation: 25s slider infinite;
+}
+
+.slider {
+	margin-top: -4.5em;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.slider img {
+	 width: 20%; 
+	 height: 100vh;
+}
+
+#descriptiongroupe
+{
+	background-color: #31313a;
+	color: white;
+	text-align: center;
+}
 
 
+h1
+{
+	font-size: 3em;
+	font-weight: bold;
+	padding : 2em; 
+}
 
+
+p
+{
+	padding-bottom: 6em;
+}
