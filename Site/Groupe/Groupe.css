@@ -1,0 +1,55 @@
+*
+{
+	margin : 0;
+}
+
+body
+{
+	font-family: Helvetica;
+	background-color: rgba(220,220,220,0.7);
+}
+
+header
+{  
+	width:100%;
+    margin:auto;
+}
+
+.menu {
+    background-color: rgba(0,0,0,0.7);
+    padding: 1.9%;
+}
+
+.menu li {
+    display: inline;
+    padding: 0.5em;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu li a:hover {
+    color: #999999;
+}
+
+#left {
+    float: left;
+    margin-top: -1.4em;
+}
+
+#left img 
+{
+    line-height: 4.5em;
+    margin-left: 1em;
+}
+
+#right 
+{
+    text-align: right;
+}
+
+
+
+
