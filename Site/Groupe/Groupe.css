@@ -100,5 +100,28 @@ h1
 
 p
 {
-	padding-bottom: 6em;
+	padding-bottom: 16em;
+}
+
+#bouton
+{
+	text-decoration: none;
+	color: white;
+	font-size: 1.5em;
+	font-weight: bold;
+	position:relative;
+	bottom: 4em;
+	padding: 0.5em;
+	border: 0.1em solid white;
+	border-radius: 0.5em;
+}
+
+#bouton:hover 
+{
+	color: #ffffff;
+	border: 0.2em solid #ffffff;
+}
+
+.googlemaps {
+	height: 30em;
 }
