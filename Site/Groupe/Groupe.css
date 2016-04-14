@@ -90,7 +90,7 @@ header
 }
 
 
-h1
+#descriptiongroupe h1
 {
 	font-size: 3em;
 	font-weight: bold;
@@ -98,7 +98,7 @@ h1
 }
 
 
-p
+#descriptiongroupe p
 {
 	padding-bottom: 16em;
 }
@@ -124,4 +124,17 @@ p
 
 .googlemaps {
 	height: 30em;
+	position: relative;
+	bottom: 0em;
+	left: 22em;
+}
+
+#adresse
+{
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #31313a;
+	position: relative;
+	top: 10em;
+	left: 10em;
 }
