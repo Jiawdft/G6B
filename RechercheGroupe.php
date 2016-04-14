@@ -25,6 +25,7 @@ function RechercheGroupe($Sport,$CodePostal){
 	{
 		echo $donnees['nom'].'</br>';
 	}
+	
 }
 
 RechercheGroupe('karaté',75000);
