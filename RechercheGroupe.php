@@ -3,7 +3,7 @@
 <?php
 
 function RechercheGroupe($Sport,$CodePostal){
-	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', '');
+	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
 	if ($Sport==''){
 		$req = $bdd->prepare('SELECT nom FROM groupe WHERE codepostal = :codepostal');
 	$req->execute(array(

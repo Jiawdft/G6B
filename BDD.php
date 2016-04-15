@@ -1,0 +1,6 @@
+<?php 
+
+	$mysqlhost='localhost';
+
+
+ ?>
