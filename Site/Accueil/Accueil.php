@@ -41,7 +41,8 @@
   				</div>
 			   	<div class="search">
 				<ul>
-					<form action="#" method="post">
+					<form action="Page_Groupe.php" method="post">
+				<!--
 					<select name="choix">
 					    <option value="">Sport</option>
 					    <?php
@@ -55,6 +56,7 @@
 						}
 						?>
 					</select>
+				-->
 				    <input type="text" CodePostal="id" placeholder="Code Postal" />
 				    <input type="submit" value="Rechercher" />
 					</form>
