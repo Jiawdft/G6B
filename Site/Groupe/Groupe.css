@@ -103,6 +103,7 @@ header
 	padding-bottom: 16em;
 }
 
+
 #bouton_rejoindre
 {
 	text-decoration: none;
@@ -122,38 +123,40 @@ header
 	border: 0.2em solid #ffffff;
 }
 
-.googlemaps {
-	height: 30em;
-	position: relative;
-	bottom: 0em;
-	left: 22em;
-}
-
-#adresse
-{
-	font-size: 1.5em;
-	font-weight: bold;
-	color: #31313a;
-	position: relative;
-	top: 10em;
-	left: 10em;
-}
-
 #event
 {
 	text-align: center;
-	font-size: 1.5em;
+}
+
+#event h2
+{	
+	text-align: left;
+	text-decoration: underline;
+	color: #4A1A2C;
+	position: relative;
+	left: 5em;
+	top: 3em;
+	font-weight: bold;
+
+}
+
+#event h3
+{
+	padding-bottom: 8em;
 }
 
 #bouton_inscription_event
 {
 	text-decoration: none;
+	font-size: 1.5em;
 	color: #31313a;
 	font-weight: bold;
 	text-align: center;
 	padding: 0.5em;
 	border: 0.1em solid #706B78;
 	border-radius: 0.5em;
+	position: relative;
+	bottom: 3.5em;
 }
 
 #bouton_inscription_event:hover 
@@ -164,10 +167,121 @@ header
 
 #event h1
 {
-	margin-top: 4em;
+	padding: 2em;
+	margin-top: 1em;
+	font-weight: bold;
+	font-size: 3em;
 }
 
 #event p 
 {
-	margin: 2em;
+	padding-bottom: 3em;
+}
+
+#localisation
+{
+	background-color: #31313a;
+}
+
+.googlemaps {
+	height: 30em;
+	position: relative;
+	bottom: 2.5em;
+	left: 22em;
+}
+
+#adresse
+{
+	font-size: 1.5em;
+	font-weight: bold;
+	color: white;
+	position: relative;
+	top: 10em;
+	left: 10em;
+}
+
+#social {
+	height: 4em;
+	background-color: rgb(40,40,40);
+}
+
+#social img {
+	margin: 0.5em;
+	height: 2em;
+    filter: brightness(100%);
+        -webkit-filter: brightness(100%);
+        -moz-filter: brightness(100%);
+        -o-filter: brightness(100%);
+        -ms-filter: brightness(100%);
+}
+
+#social img:hover {
+	margin: 0.5em;
+	height: 2em;
+    filter: brightness(300%);
+    -webkit-filter: brightness(300%);
+    -moz-filter: brightness(300%);
+    -o-filter: brightness(300%);
+    -ms-filter: brightness(300%);
+}
+
+#copyright
+{
+	background-color: rgb(40,40,40);
+}
+
+#copyright a {
+	font-size: 0.6em;
+	color: rgba(220,220,220,0.7);
+	text-decoration: none;
+}
+
+.organisation {
+  background-color: rgb(40,40,40);
+  padding: 2em;
+}
+
+.organisation h3{
+	margin-left: 40em;
+	text-decoration: none;
+  	color: rgba(220,220,220,0.7);
+}
+
+.organisation h4{
+	text-decoration: none;
+  	color: rgba(220,220,220,0.7);
+}
+
+.organisation td h4:hover {
+  	text-decoration: none;
+  	color: white;
+}
+
+.organisation td {
+ 	padding: 3em;
+}
+
+.organisation td a {
+  	text-decoration: none;
+  	color: rgba(220,220,220,0.7);
+}
+
+.organisation td img {
+  	height: 4em;
+}
+
+.organisation table {
+  	margin: auto;
+  	text-align: center;
+}
+
+.organisation br {
+  	line-height: 1.5em;
+}
+
+#L2 {
+  	background-color: rgba(220,220,220,0.7);
+  	height: 0.1em;
+  	width: 92%;
+  	margin: auto;
 }
