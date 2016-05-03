@@ -13,7 +13,7 @@
 		<div class="HOMETOP" style="height: 100vh;">
 		    <div class="menu">
 			      <div id="left">
-			       	<a href="../Accueil/Accueil.html"><img src="../Images/Logos/Sporciety.png" /></a>
+			       	<a href="../controleur/Accueil.php"><img src="../Images/Logos/Sporciety.png" /></a>
 			      </div>
 			      <ul id="right">
 			          <li><a href="../Sports/Sports.php">LES SPORTS</a></li>
@@ -58,7 +58,7 @@
 						?>
 					</select>
 				
-				    <input type="text" CodePostal="id" placeholder="Code Postal" />
+				    <input type="text" CodePostal="CodePostal" placeholder="Code Postal" />
 				    <input type="submit" value="Rechercher" />
 					</form>
 				</ul>
