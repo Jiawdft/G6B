@@ -6,11 +6,6 @@
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
-		<!--
-		<?php
-		//include"../Header/Header.php";
-		?>
-		-->
 	    <div class="HOMETOP" style="height: 100vh;">
 	    	<div class="menu">
 		       	<div id="left">
@@ -33,7 +28,7 @@
 						foreach($sports as $sport)
 						{	
 						?>
-						<td><a href="../controleur/fichesporttype.php" <?php /* value= <?php $_POST ($sport['sport'])?> */ ?> > <?php echo mb_strtoupper($sport['sport'])?></a></td>
+						<td><a href="../fichesporttype.php" <?php /* value= <?php $_POST ($sport['sport'])?> */ ?> > <?php echo mb_strtoupper($sport['sport'])?></a></td>
 						<?php
 							$a++;
 							if($a%3==0)
