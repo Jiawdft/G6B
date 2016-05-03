@@ -28,13 +28,8 @@
 						foreach($sports as $sport)
 						{	
 						?>
-<<<<<<< HEAD
-						<td><a href="../fichesporttype.php" <?php /* value= <?php $_POST ($sport['sport']);?>*/ ?> >  <?php echo mb_strtoupper($sport['sport'])?></a></td>
-						<?php 
-=======
-						<td><a href="../fichesporttype.php" <?php /* value= <?php $_POST ($sport['sport'])?> */ ?> > <?php echo mb_strtoupper($sport['sport'])?></a></td>
+						<td><a href='../fichesporttype.php?sport= <?php echo mb_strtoupper($sport['sport'])?>'>  <?php echo mb_strtoupper($sport['sport'])?></a></td>
 						<?php
->>>>>>> origin/master
 							$a++;
 							if($a%3==0)
 							{
