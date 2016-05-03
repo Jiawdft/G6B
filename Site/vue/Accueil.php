@@ -5,11 +5,7 @@
 		<link href="../vue/Accueil.css" rel="stylesheet" type="text/css" media="screen" />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
-	<body>
-		<?php
-		//include"../Header/Header.php";
-		?>
-		
+	<body>		
 		<div class="HOMETOP" style="height: 100vh;">
 		    <div class="menu">
 			      <div id="left">
@@ -17,22 +13,13 @@
 			      </div>
 			      <ul id="right">
 			          <li><a href="../controleur/Sports.php">LES SPORTS</a></li>
-<<<<<<< Updated upstream
-			          <li><a href="..//Forum.php">FORUM</a></li>
-=======
 			          <li><a href="../Forum/Forum.php">FORUM</a></li>
->>>>>>> Stashed changes
 			          <li><a href="../Contact/Contact.php">CONTACT</a></li>
 			          <li><a href="../controleur/Connexion.php">CONNEXION</a></li>
 			          <li><a href="../controleur/Inscription.php">INSCRIPTION</a></li>
 			          <li><a href="../Aide/Aide.php">AIDE</a></li>
 			      </ul>
 			   </div>
-			
-
-
-
-
 			   		<a id="inscription" href="../Inscription/Inscription.php">Je m'inscris</a>
 			   <div class="slider">
 			    	<figure>

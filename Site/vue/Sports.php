@@ -6,12 +6,6 @@
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
-		<!--
-		<?php
-		//include"../Header/Header.php";
-		?>
-	-->
-	
 	    <div class="HOMETOP" style="height: 100vh;">
 	    	<div class="menu">
 		       	<div id="left">
@@ -26,7 +20,6 @@
 			        <li><a href="../Aide/Aide.php">AIDE</a></li>
 	       		</ul>
 	    	</div>
-	   
 			<div class="Sports">
 			    <table>
 			    	<tbody>
@@ -35,8 +28,13 @@
 						foreach($sports as $sport)
 						{	
 						?>
+<<<<<<< HEAD
 						<td><a href="../fichesporttype.php" <?php /* value= <?php $_POST ($sport['sport']);?>*/ ?> >  <?php echo mb_strtoupper($sport['sport'])?></a></td>
 						<?php 
+=======
+						<td><a href="../fichesporttype.php" <?php /* value= <?php $_POST ($sport['sport'])?> */ ?> > <?php echo mb_strtoupper($sport['sport'])?></a></td>
+						<?php
+>>>>>>> origin/master
 							$a++;
 							if($a%3==0)
 							{
