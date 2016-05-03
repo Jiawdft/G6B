@@ -1,5 +1,5 @@
 <?php
-include 'mdpTest.php';
+include 'password_maker.php';
 
 function inscription_membre($Civilite,$Nom,$Prenom,$DateNaissance,$CodePostal,$Adresse,$AdresseMail,$NumeroDePortable,$Mdp){
 	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
@@ -14,7 +14,7 @@ $req->execute(array(
 	'adresse' => $Adresse,
 	'adresse_mail' => $AdresseMail,
 	'numero_de_portable' => $NumeroDePortable,
-	'mdp'=> NewPassword($Mdp)
+	'mdp'=> password_maker($Mdp)
 	));
 }
 

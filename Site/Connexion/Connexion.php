@@ -9,10 +9,10 @@
 		<div class="HOMETOP">
 	    	<div class="menu">
 		       <div id="left">
-		       		<a href="../Accueil/Accueil.php"><img src="../Images/Logos/Sporciety.png" style="height: 4em;" /></a>
+		       		<a href="../controleur/Accueil.php"><img src="../Images/Logos/Sporciety.png" style="height: 4em;" /></a>
 		       </div>
 		       <ul id="right">
-		           <li><a href="../Sports/Sports.php">LES SPORTS</a></li>
+		           <li><a href="../controleur/Sports.php">LES SPORTS</a></li>
 		           <li><a href="../Forum/Forum.php">FORUM</a></li>
 		           <li><a href="../Contact/Contact.php">CONTACT</a></li>
 		           <li><a href="../Connexion/Connexion.php">CONNEXION</a></li>
