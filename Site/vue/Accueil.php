@@ -17,7 +17,11 @@
 			      </div>
 			      <ul id="right">
 			          <li><a href="../controleur/Sports.php">LES SPORTS</a></li>
+<<<<<<< Updated upstream
 			          <li><a href="..//Forum.php">FORUM</a></li>
+=======
+			          <li><a href="../Forum/Forum.php">FORUM</a></li>
+>>>>>>> Stashed changes
 			          <li><a href="../Contact/Contact.php">CONTACT</a></li>
 			          <li><a href="../controleur/Connexion.php">CONNEXION</a></li>
 			          <li><a href="../controleur/Inscription.php">INSCRIPTION</a></li>
