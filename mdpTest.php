@@ -1,21 +1,20 @@
 <?php
  
-function hashPassword( $pwd )
-{
-    return sha1('e*?g^*~Ga7' . $pwd . '9!cF;.!Y)?');
-}
 
-function NewPassword($pwd){
+function Password($pwd){
 $hash = password_hash($pwd,PASSWORD_DEFAULT);
 	return$hash;
 }
 
 function PasswordVerify($saisi,$password){
-if(password_verify($saisi,$password)){
-	echo 'bon mdp'.'</br>';
-}else{
-	echo 'mauvais mdp'.'</br>';
-}
+	if(password_verify($saisi,$password))
+	{
+		echo 'bon mdp'.'</br>';
+	}
+	else
+	{
+		echo 'mauvais mdp'.'</br>';
+	}
 }
 
 

@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Test</title>
-		<link href="../Connexion/Connexion.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="../vue/Connexion.css" rel="stylesheet" type="text/css" media="screen" />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
@@ -15,8 +15,8 @@
 		           <li><a href="../controleur/Sports.php">LES SPORTS</a></li>
 		           <li><a href="../Forum/Forum.php">FORUM</a></li>
 		           <li><a href="../Contact/Contact.php">CONTACT</a></li>
-		           <li><a href="../Connexion/Connexion.php">CONNEXION</a></li>
-		           <li><a href="../Inscription/Inscription.php">INSCRIPTION</a></li>
+		           <li><a href="../controleur/Connexion.php">CONNEXION</a></li>
+		           <li><a href="../controleur/Inscription.php">INSCRIPTION</a></li>
 		           <li><a href="../Aide/Aide.php">AIDE</a></li>
 		       </ul>
 		    </div>
