@@ -48,6 +48,10 @@ body {
     height: 100%;
 }
 
+.Contact div {
+    display: inline-block;
+}
+
 .Contact {
     height: 70vh;
     width: 80%;
@@ -64,7 +68,8 @@ body {
 }
 
 .Presentation {
-    height: 55vh;
+    text-align: justify;
+    height: 50vh;
     width: 40%;
 }
 
@@ -74,16 +79,31 @@ body {
     font-weight: bold;
 }
 
-.Mail {
-    padding: 1em;
-    margin-left: 70%;
+.Carte {
+    padding-left: 5em;
 }
 
-.Mail a {
+#Mail {
+    padding: 1em;
+    text-align: center;
+    padding-left: 10em;
+}
+
+#Mail p { 
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#Mail a {
+    line-height: 2em;
     color: #ffffff;
     font-size: 2em;
     font-weight: bold;
     text-decoration: none;
+    border: 0.1em solid #ffffff;
+    border-radius: 0.2em;
+    padding: 0.1em;
 }
 
 #social img {
