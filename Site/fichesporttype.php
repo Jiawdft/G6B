@@ -22,7 +22,7 @@
 	    	</div>
 	    	<div class="center">
 	    	<div class="titre">
-		<h1><?php echo $_Get['sport'];?></h1>
+		<h1><?php echo $_GET['sport'];?></h1>
 	    	</div>
 	    	<div class="texte">
 	    		<p> Texte descriptif du sport en question.  </p>
