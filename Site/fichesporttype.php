@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Sports</title>
-		<link href="../Sports/fichesporttype.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="fichesporttype.css" rel="stylesheet" type="text/css" media="screen" />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
@@ -22,7 +22,7 @@
 	    	</div>
 	    	<div class="center">
 	    	<div class="titre">
-		<h1><?php echo $_Get['sport']?></h1>
+		<h1><?php echo $_Get['sport'];?></h1>
 	    	</div>
 	    	<div class="texte">
 	    		<p> Texte descriptif du sport en question.  </p>
