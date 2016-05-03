@@ -25,6 +25,25 @@
 		<h1><?php echo $_GET['sport'];?></h1>
 	    	</div>
 	    	<div class="texte">
+	    		<?php
+	    		include'modele/get_sports.php';
+	    		$sports=get_sports();
+	    		
+	    		foreach($sports as $cle => $sport)
+				{
+					$sports[$cle]['sport'] = htmlspecialchars($sport['sport']);
+				}
+				
+				foreach ($sports as $sport)
+				{
+					if(strtolower($sport['sport'])==strtolower($_GET['sport']))
+					{
+						break;
+					}
+				}
+	    		?>
+	    		<p> <?php echo ucfirst(strtolower($sport['information'])).'</br>' ?> </p>
+
 	    		<p> Texte descriptif du sport en question.  </p>
 	    	</div>
 			<div class="Groupes">
