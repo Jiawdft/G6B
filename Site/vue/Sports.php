@@ -35,7 +35,7 @@
 						foreach($sports as $sport)
 						{	
 						?>
-						<td><a href="#"><?php echo mb_strtoupper($sport['sport'])?></a></td>
+						<td><a href="../controleur/fichesporttype.php" <?php /* value= <?php $_POST ($sport['sport'])?> */ ?> > <?php echo mb_strtoupper($sport['sport'])?></a></td>
 						<?php
 							$a++;
 							if($a%3==0)
