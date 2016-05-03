@@ -9,6 +9,7 @@
 		<?php
 		//include"../Header/Header.php";
 		?>
+		
 		<div class="HOMETOP" style="height: 100vh;">
 		    <div class="menu">
 			      <div id="left">
@@ -27,19 +28,27 @@
 			          <li><a href="../Aide/Aide.php">AIDE</a></li>
 			      </ul>
 			   </div>
+			
+
+
+
+
 			   		<a id="inscription" href="../Inscription/Inscription.php">Je m'inscris</a>
 			   <div class="slider">
 			    	<figure>
+			    		
 	    				<img src="../Images/Wallpaper/Slider.jpg">
 	    				<img src="../Images/Wallpaper/Slider2.jpg">
 	    				<img src="../Images/Wallpaper/Slider.jpg">
 	    				<img src="../Images/Wallpaper/Slider2.jpg">
 	    				<img src="../Images/Wallpaper/Slider.jpg">
+	    		
 	  				</figure>
   				</div>
 			   	<div class="search">
 				<ul>
 					<form action="Page_Groupe.php" method="post">
+				
 					<select name="choix">
 					    <option value="">Sport</option>
 					    <?php	
@@ -52,12 +61,8 @@
 						}
 						?>
 					</select>
-<<<<<<< HEAD
-				    <input type="text" CodePostal="id" placeholder="Code Postal" />
-=======
 				
 				    <input type="text" CodePostal="CodePostal" placeholder="Code Postal" />
->>>>>>> origin/master
 				    <input type="submit" value="Rechercher" />
 					</form>
 				</ul>
