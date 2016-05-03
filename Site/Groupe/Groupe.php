@@ -46,38 +46,30 @@
 
 
   				<p>Ceci est la description du groupe</p>
-          <a id="bouton" href="../Groupe/Rejoindre.php">Rejoindre</a>
+          <a id="bouton_rejoindre" href="../Groupe/Rejoindre.php">Rejoindre</a>
   			</div>
 
-  			<div>
-          <p id="adresse">Club de paris <br> 1 rue de Paris <br>75001 Paris</p>
-  			</div>
-
-        <div class="googlemaps" style="text-align: center">
-           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d85161.85430845951!2d2.3617916544987367!3d48.864518359376234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1457358140451" style="height: 100%; width: 45%; border: none;"></iframe>
-        </div>
 
 
   		</section>
 
   		<section class="planning">
-  			<div id="calendrier">
-
+  			<div id="event"> 
+          <h1>Fit Party</h1>
+          <p>La déscription de l'event</p>
+          <p>03/06/2016</p>
+          <a id="bouton_inscription_event" href="../Groupe/Inscription_event.php">Inscription</a>
   			</div>
 
-  			<div id="inscription">
-            <?php 
-              include"../../BDD.php";
-              $bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8','root','root');
-              $req = $bdd->query('SELECT `information` FROM `groupe` WHERE`nom`= :nomGroupe');
-              $req->execute(array(
-                ':nomGroupe' => $nomGroupe
-              ));
 
-              $donnees = $req->fetch();
-              echo $donnees[`information`];
-            ?>
-  			</div>
+        <div>
+          <p id="adresse">Club de paris <br> 1 rue de Paris <br>75001 Paris</p>
+        </div>
+
+        <div class="googlemaps" style="text-align: center">
+           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d85161.85430845951!2d2.3617916544987367!3d48.864518359376234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1457358140451" style="height: 100%; width: 45%; border: none;"></iframe>
+        </div>
+
   		</section>
 
     </body>
