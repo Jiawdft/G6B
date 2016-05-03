@@ -48,43 +48,67 @@ body {
     height: 100%;
 }
 
+.Contact div {
+    display: inline-block;
+}
+
 .Contact {
-    height: 56vh;
-    width: 60%;
+    height: 70vh;
+    width: 80%;
     border-radius: 5%;
-    padding: 2em;
+    padding: 3em;
     background-color: rgba(0,0,0,0.5);
-    margin: 6% auto;
+    margin: 3% auto;
 }
 
 .Contact h1 {
     color: #ffffff;
     font-size: 2em;
     font-weight: bold;
-    padding: 0.8em;
-    padding-bottom: 1em;
-    
 }
 
-.Contact input[type="submit"] {
-    background-color: rgb(140,140,140);
-    border: 0.2em solid rgb(140,140,140);
-    width: 30%;
-    border-radius: 0.5em;
-    margin: 2em 35%;
-    display: inline-block;
-    cursor: pointer;
+.Presentation {
+    text-align: justify;
+    height: 50vh;
+    width: 40%;
+}
+
+.Presentation a{ 
     color: #ffffff;
-    line-height: 0.1em;
     font-size: 1em;
+    font-weight: bold;
+}
+
+.Carte {
+    padding-left: 5em;
+}
+
+#Mail {
     padding: 1em;
+    text-align: center;
+    padding-left: 10em;
+}
+
+#Mail p { 
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#Mail a {
+    line-height: 2em;
+    color: #ffffff;
+    font-size: 2em;
+    font-weight: bold;
     text-decoration: none;
+    border: 0.1em solid #ffffff;
+    border-radius: 0.2em;
+    padding: 0.1em;
 }
 
 #social img {
     padding: 1em;
     width: 2em;
-    margin-top: -5em;
     filter: brightness(100%);
     -webkit-filter: brightness(100%);
     -moz-filter: brightness(100%);
@@ -99,3 +123,4 @@ body {
     -o-filter: brightness(300%);
     -ms-filter: brightness(300%);
 }
+
