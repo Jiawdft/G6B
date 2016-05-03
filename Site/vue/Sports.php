@@ -10,8 +10,7 @@
 		<?php
 		//include"../Header/Header.php";
 		?>
-	-->
-	
+		-->
 	    <div class="HOMETOP" style="height: 100vh;">
 	    	<div class="menu">
 		       	<div id="left">
@@ -26,7 +25,6 @@
 			        <li><a href="../Aide/Aide.php">AIDE</a></li>
 	       		</ul>
 	    	</div>
-	   
 			<div class="Sports">
 			    <table>
 			    	<tbody>
