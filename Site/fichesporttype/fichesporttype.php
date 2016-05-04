@@ -9,11 +9,7 @@
 	    <div class="HOMETOP" style="height: 100vh;">
 	    	<div class="menu">
 		       	<div id="left">
-<<<<<<< Updated upstream
-		       		<a href="../controleur/Accueil.php"><img src="../Images/Logos/Sporciety.png" style="height: 4em;" style="border:none"/></a>
-=======
-		       		<a href="../controleur/Accueil.php"><img src="../Images/Logos/Sporciety.png" style="height: 3.8em;" style="border:none"/></a>
->>>>>>> Stashed changes
+		       		<a href="../controleur/Accueil.php"><img src="../Images/Logos/Sporciety.png" style="height: 3.8em;" /></a>
 			    </div>
 			    <ul id="right">
 		       	   	<li><a href="../controleur/Sports.php">LES SPORTS</a></li>
