@@ -9,7 +9,7 @@
 	    <div class="HOMETOP" style="height: 100vh;">
 	    	<div class="menu">
 		       	<div id="left">
-		       		<a href="../controleur/Accueil.php"><img src="Images/Logos/Sporciety.png" style="height: 4em;" style="border:none"/></a>
+		       		<a href="../controleur/Accueil.php"><img src="../Images/Logos/Sporciety.png" style="height: 4em;" style="border:none"/></a>
 			    </div>
 			    <ul id="right">
 		       	   	<li><a href="#">LES SPORTS</a></li>
@@ -26,8 +26,8 @@
 	    		</div>
 	    		<div class="texte">
 	    			<?php
-	    			include'modele/get_sports.php';
-	    			$sports=get_sports();
+	    			include'../modele/get_sports.php';
+	    			$sports=get_sports('');
 	    			/*
 	    			foreach($sports as $cle => $sport)
 					{
@@ -49,7 +49,7 @@
 			    	<tbody>
 						<tr>
 							<?php
-							include'modele/get_sports_groupes.php';
+							include'../modele/get_sports_groupes.php';
 							$sports_groupes= get_sports_groupes($_GET['sport'],'');
 							$a=0;
 							foreach ($sports_groupes as $sports_groupe) 
