@@ -34,7 +34,7 @@
   				</div>
 			   	<div class="search">
 				<ul>
-					<form action="Page_Groupe.php" method="post">
+					<form action="../fichesporttype/fichesporttype.php" method="post">
 				
 					<select name="choix">
 					    <option value="">Sport</option>

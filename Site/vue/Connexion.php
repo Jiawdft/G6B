@@ -22,7 +22,7 @@
 		    </div>
 		    <div class="Connexion">
 			  <h1 style="text-align: center;">CONNECTEZ-VOUS</h1>
-			  <form method="post" action="traitement.php">
+			  <form method="post" action="../controleur/Accueil.php">
 			    <input type="email" name="mail" placeholder="Adresse Mail" />
 			    <input type="password" name="passe" placeholder="Mot de Passe" />
 			    <input type="submit" value="CONNEXION" />

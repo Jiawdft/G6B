@@ -58,6 +58,14 @@
 
 							<td><a href="#"><?php echo ucfirst(strtolower($sports_groupe['groupe'])) ?></a></td>
 							<?php	
+							$a++;
+							if($a%3==0)
+								{
+									?>
+									</tr>
+									<tr>
+									<?php
+								}
 							}
 
 							?>
