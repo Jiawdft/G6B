@@ -36,11 +36,14 @@ html, footer{
 	color: #999999;
 }
 
-#left img {
+#left {
 	position: absolute;
-	height: 4em;
-	margin-top: -1.3em;
-	margin-left: 0.91em;
+	float: left;
+	margin-top: -1.4em;
+}
+
+#left img {
+	margin-left: 1em;
 }
 
 #right {
