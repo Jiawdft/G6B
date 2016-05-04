@@ -1,3 +1,5 @@
+
+<meta charset="utf8" />
 <!DOCTYPE html>
 <html>
 	<head>
@@ -9,7 +11,7 @@
 	    <div class="HOMETOP" style="height: 100vh;">
 	    	<div class="menu">
 		       	<div id="left">
-		       		<a href="../Accueil/Accueil.html"><img src="../Images/Logos/Sporciety.png" style="	height: 4em;" /></a>
+		       		<a href="../Accueil/Accueil.html"><img src="Images/Logos/Sporciety.png" style="	height: 4em;" /></a>
 			    </div>
 			    <ul id="right">
 		       	   	<li><a href="#">LES SPORTS</a></li>
@@ -27,13 +29,13 @@
 	    	<div class="texte">
 	    		<?php
 	    		include'modele/get_sports.php';
-	    		$sports=get_sports();
-	    		
+	    		$sports=get_sports('');
+	    		/*
 	    		foreach($sports as $cle => $sport)
 				{
 					$sports[$cle]['sport'] = htmlspecialchars($sport['sport']);
 				}
-				
+				*/
 				foreach ($sports as $sport)
 				{
 					if(strtolower($sport['sport'])==strtolower($_GET['sport']))
@@ -50,6 +52,19 @@
 			    <table>
 			    	<tbody>
 						<tr>
+							<?php
+							include'modele/get_sports_groupes.php';
+							$sports_groupes= get_sports_groupes($_GET['sport'],'');
+							$a=0;
+							foreach ($sports_groupes as $sports_groupe) 
+							{
+								?>
+
+							<td><a href="#"><?php echo ucfirst(strtolower($sports_groupe['groupe'])) ?></a></td>
+							<?php	
+							}
+
+							?>
 							<td><a href="#">x</a></td>
 							<td><a href="#">y</a></td>
 							<td><a href="#">z</a></td>
