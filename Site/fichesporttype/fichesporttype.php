@@ -9,15 +9,19 @@
 	    <div class="HOMETOP" style="height: 100vh;">
 	    	<div class="menu">
 		       	<div id="left">
+<<<<<<< Updated upstream
 		       		<a href="../controleur/Accueil.php"><img src="../Images/Logos/Sporciety.png" style="height: 4em;" style="border:none"/></a>
+=======
+		       		<a href="../controleur/Accueil.php"><img src="../Images/Logos/Sporciety.png" style="height: 3.8em;" style="border:none"/></a>
+>>>>>>> Stashed changes
 			    </div>
 			    <ul id="right">
-		       	   	<li><a href="#">LES SPORTS</a></li>
-		           	<li><a href="#">FORUM</a></li>
-		           	<li><a href="#">CONTACT</a></li>
-		           	<li><a href="#">CONNEXION</a></li>
-		           	<li><a href="#">INSCRIPTION</a></li>
-	         		<li><a href="#">AIDE</a></li>
+		       	   	<li><a href="../controleur/Sports.php">LES SPORTS</a></li>
+		           	<li><a href="../controleur/Forum.php">FORUM</a></li>
+		           	<li><a href="../controleur/Contat.php">CONTACT</a></li>
+		           	<li><a href="../controleur/Connexion.php">CONNEXION</a></li>
+		           	<li><a href="../controleur/Inscription.php">INSCRIPTION</a></li>
+	         		<li><a href="../controleur/Aide.php">AIDE</a></li>
 	       		</ul>
 	    	</div>
 	    	<div class="center">

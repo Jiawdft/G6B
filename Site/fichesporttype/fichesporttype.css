@@ -27,11 +27,10 @@ html, body {
 
 #left {
 	float: left;
-	margin-top: -1.6em;
+	margin-top: -1.4em;
 }
 
 #left img {
-	line-height: 4.5em;
 	margin-left: 1em;
 }
 
