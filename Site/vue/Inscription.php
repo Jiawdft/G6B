@@ -9,7 +9,7 @@
 		<div class="HOMETOP">
 	    	<div class="menu">
 		       <div id="left">
-		       		<a href="../controleur/Accueil.php"><img src="../Images/Logos/Sporciety.png" style="height: 4em;" /></a>
+		       		<a href="../controleur/Accueil.php"><img src="../Images/Logos/Sporciety.png" style="height: 3.8em;" /></a>
 		       </div>
 		       <ul id="right">
 		            <li><a href="../controleur/Sports.php">LES SPORTS</a></li>
