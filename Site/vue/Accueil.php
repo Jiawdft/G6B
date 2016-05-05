@@ -20,7 +20,7 @@
 			          <li><a href="../controleur/Aide.php">AIDE</a></li>
 			      </ul>
 			   </div>
-			   		<a id="inscription" href="../Inscription/Inscription.php">Je m'inscris</a>
+			   		<a id="inscription" href="../controleur/Inscription.php">Je m'inscris</a>
 			   <div class="slider">
 			    	<figure>
 			    		
