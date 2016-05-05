@@ -14,7 +14,7 @@ function get_groupes($groupe)
 	$reponse -> execute(array(
 			':groupe' => $groupe
 			));
-	$groupes = $reponse->fetchAll();
+	$groupes = $reponse->fetch();
 	return $groupes;	
 	}
 }

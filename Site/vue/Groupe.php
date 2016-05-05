@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-    	<title><?php echo $nomGroupe; ?></title>
+    	<title><?php echo $_GET['groupe']; ?></title>
     	<link rel="stylesheet" type="text/css" href="../vue/Groupe.css" media="screen" />
     	<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
     </head>
@@ -15,16 +15,16 @@
     	<header>
     		<div class="menu">
 		       <div id="left">
-		       		<a href="../Accueil/Accueil.php"><img src="../Images/Logos/Sporciety.png" style="height: 4em;" /></a>
+		       		<a href="../controleur/Accueil.php"><img src="../Images/Logos/Sporciety.png" style="height: 4em;" /></a>
 		       </div>
 
 		       <ul id="right">
-		          	<li><a href="../Sports/Sports.php">LES SPORTS</a></li>
-		  	    	<li><a href="../Forum/Forum.php">FORUM</a></li>
-		            <li><a href="../Contact/Contact.php">CONTACT</a></li>
-		            <li><a href="../Connexion/Connexion.php">CONNEXION</a></li>
-		            <li><a href="../Inscription/Inscription.php">INSCRIPTION</a></li>
-		            <li><a href="../Aide/Aide.php">AIDE</a></li>
+		            <li><a href="../controleur/Sports.php">LES SPORTS</a></li>
+                <li><a href="../controleur/Forum.php">FORUM</a></li>
+                <li><a href="../controleur/Contat.php">CONTACT</a></li>
+                <li><a href="../controleur/Connexion.php">CONNEXION</a></li>
+                <li><a href="../controleur/Inscription.php">INSCRIPTION</a></li>
+                <li><a href="../controleur/Aide.php">AIDE</a></li>
 		       </ul>
 		   </div>
 
@@ -42,11 +42,15 @@
 
   		<section class="information">
   			<div id="descriptiongroupe">
-  				<h1><?php echo $nomGroupe; ?></h1>
+  				<h1><?php echo $_GET['groupe']; ?></h1>
 
+          <?php
+            include'../modele/get_groupes.php';
+            $groupes=get_groupes($_GET['groupe']);
 
-  				<p>Le fitness trouve ses origines dans l'aérobic (gymnastique modelant le corps par des mouvements effectués en musique), qui lui-même naît du jazz-dance ou gym-jazz. <br> En 1968, le docteur en médecine Kenneth H. Cooper (en), lieutenant-colonel dans l'armée de terre des États-Unis,<br> élabore un concept d'activités physiques visant à apporter un gain de forme (reposant sur une activation du système cardio-vasculaire) à ses pratiquants. <br> Afin de prouver l'utilité de ses exercices, il publie un ouvrage intitulé Aérobic.</p>
-          <a id="bouton_rejoindre" href="../Groupe/Rejoindre.php">Rejoindre</a>
+          ?>
+          <p><?php echo $groupes['information'] ?>
+          <a id="bouton_rejoindre" href='../controleur/Groupe.php?groupe=<?php echo $_GET['groupe']?>'>Rejoindre</a>
   			</div>
 
 
@@ -62,7 +66,7 @@
 
           </p>
           <h3>03/06/2016</h3>
-          <a id="bouton_inscription_event" href="../Groupe/Inscription_event.php">Inscription</a>
+          <a id="bouton_inscription_event" href='../controleur/Groupe.php?groupe=<?php echo $_GET['groupe']?>'>Inscription</a>
   			</div>
 
   		</section>
