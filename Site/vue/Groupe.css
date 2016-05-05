@@ -79,7 +79,7 @@ header
 
 .slider img {
 	 width: 20%; 
-	 height: 100vh;
+	 height: 70vh;
 }
 
 #descriptiongroupe
@@ -183,6 +183,15 @@ header
 	background-color: #31313a;
 }
 
+#localisation h1
+{
+	color: white;
+	text-decoration: underline;
+	position: relative;
+	left: 1em;
+	top: 4em;
+}
+
 .googlemaps {
 	height: 30em;
 	position: relative;
@@ -197,7 +206,7 @@ header
 	color: white;
 	position: relative;
 	top: 10em;
-	left: 10em;
+	left: 12em;
 }
 
 #social {
