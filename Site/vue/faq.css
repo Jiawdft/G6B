@@ -1,0 +1,195 @@
+*
+{
+	margin : 0;
+}
+
+body
+{
+	font-family: Helvetica;
+	background-color: rgba(220,220,220,0.7);
+}
+
+header
+{  
+	width:100%;
+    margin:auto;
+}
+
+.menu {
+	position: relative;
+	z-index: 3;
+	width: auto;
+	background-color: rgba(0,0,0,0.7);
+	padding: 2%;
+	margin-top: -0.2em;
+}
+
+.menu li {
+    display: inline;
+    padding: 0.5em;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu li a:hover {
+    color: #999999;
+}
+
+
+#left img {
+	position: absolute;
+	height: 4em;
+	margin-top: -1.3em;
+	margin-left: 0.91em;
+}
+
+
+#right 
+{
+    text-align: right;
+}
+
+
+h1
+{
+	text-align: center;
+	margin-top: 5em;
+	margin-bottom: 3em;
+}
+
+.question
+{
+	font-weight: bold;
+	font-size: 1.3em;
+	margin-bottom: 1em;
+	padding-left: 4em;
+
+}
+
+.reponse
+{
+	margin-bottom: 2em;
+	padding-left: 12em;
+}
+
+#mail {
+    padding: 1em;
+    text-align: center;
+    padding-left: 4em;
+    margin-bottom: 6em;
+}
+
+#mail p { 
+    color: black;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+#bouton_contact
+{
+	text-decoration: none;
+	color: black;
+	font-size: 1.5em;
+	font-weight: bold;
+	padding: 0.5em;
+	border: 0.1em solid black;
+	border-radius: 0.5em;
+}
+
+#bouton_contact:hover 
+{
+	color: black;
+	border: 0.2em solid black;
+}
+
+
+#social {
+	height: 4em;
+	background-color: rgb(40,40,40);
+}
+
+#social img {
+	margin: 0.5em;
+	height: 2em;
+    filter: brightness(100%);
+        -webkit-filter: brightness(100%);
+        -moz-filter: brightness(100%);
+        -o-filter: brightness(100%);
+        -ms-filter: brightness(100%);
+}
+
+#social img:hover {
+	margin: 0.5em;
+	height: 2em;
+    filter: brightness(300%);
+    -webkit-filter: brightness(300%);
+    -moz-filter: brightness(300%);
+    -o-filter: brightness(300%);
+    -ms-filter: brightness(300%);
+}
+
+#copyright
+{
+	background-color: rgb(40,40,40);
+}
+
+#copyright a {
+	font-size: 0.6em;
+	color: rgba(220,220,220,0.7);
+	text-decoration: none;
+}
+
+.organisation {
+  background-color: rgb(40,40,40);
+  padding: 2em;
+}
+
+.organisation h3{
+	margin-left: 40em;
+	text-decoration: none;
+  	color: rgba(220,220,220,0.7);
+}
+
+.organisation h4{
+	text-decoration: none;
+  	color: rgba(220,220,220,0.7);
+}
+
+.organisation td h4:hover {
+  	text-decoration: none;
+  	color: white;
+}
+
+.organisation td {
+ 	padding: 3em;
+}
+
+.organisation td a {
+  	text-decoration: none;
+  	color: rgba(220,220,220,0.7);
+}
+
+.organisation td img {
+  	height: 4em;
+}
+
+.organisation table {
+  	margin: auto;
+  	text-align: center;
+}
+
+.organisation br {
+  	line-height: 1.5em;
+}
+
+#L2 {
+  	background-color: rgba(220,220,220,0.7);
+  	height: 0.1em;
+  	width: 92%;
+  	margin: auto;
+}

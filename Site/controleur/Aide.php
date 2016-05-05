@@ -1,3 +1,3 @@
 <?php
-	include'../controleur/Accueil.php';
-?>
+
+	include_once('../vue/faq.php');
