@@ -1,4 +1,3 @@
 <?php
 
-
-include_once('../vue/Groupe.php');
+	include_once('../vue/Groupe.php');

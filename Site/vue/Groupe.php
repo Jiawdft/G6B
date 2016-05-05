@@ -47,7 +47,7 @@
             $groupes=get_groupes($_GET['groupe']);
 
           ?>
-          <p><?php echo $groupes['information'] ?>
+          <p><?php echo $groupes['information'] ?></p>
           <a id="bouton_rejoindre" href='../controleur/Groupe.php?groupe=<?php echo $_GET['groupe']?>'>Rejoindre</a>
   			</div>
 
