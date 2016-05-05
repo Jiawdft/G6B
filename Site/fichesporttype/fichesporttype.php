@@ -71,10 +71,13 @@
 							include'../modele/get_sports_groupes.php';
 							if(!isset($_GET['sport'])or $_GET['sport']=='')
 							{
-								$sports_groupes= get_sports_groupes('','');
+								include'../modele/get_groupes.php';
+								$sports_groupes= get_groupes('');
 							}
+
 							else
 							{
+							
 								if(isset($_GET['codepostal'])and $_GET['codepostal']!='')
 								{
 
@@ -82,8 +85,9 @@
 								else
 								{
 									$sports_groupes= get_sports_groupes($_GET['sport'],'');
-								}
+								}	
 							}
+							
 							$a=0;
 							foreach ($sports_groupes as $sports_groupe) 
 							{
@@ -102,17 +106,6 @@
 							}
 
 							?>
-							<td><a href="#">x</a></td>
-							<td><a href="#">y</a></td>
-						</tr>
-						<tr>
-							<td><a href="#">x1</a></td>
-							<td><a href="#">y1</a></td>
-						</tr>
-						<tr>
-							<td><a href="#">x2</a></td>
-							<td><a href="#">y2</a></td>
-						</tr>
 					</tbody>
 				</table>
 			</div>

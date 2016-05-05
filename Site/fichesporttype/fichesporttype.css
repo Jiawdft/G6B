@@ -42,23 +42,23 @@ html, body {
 	clear: both;
 	background-image: url("../Images/Wallpaper/PageSport.jpg");
 }
-
+/*
 .Groupes {
 	background-color: red;
 	margin-top: 4em;
 }
-
+*/
 
 .titre h1 {
 	text-align: center;
 }
-
+/*
 .Groupes table {
 	border-width: 0.1em; 
  	border-style: solid; 
  	border-color: black;
 }
-
+*/
 .Groupes a {
 	font-size: 1.3em;
 	font-weight: bold;

@@ -15,7 +15,7 @@ function get_membres($membre)
 		':membre' => $membre
 		));
 	$membres = $reponse->fetchAll();
-	return $membres
+	return $membres;
 	}
 }
 ?>
