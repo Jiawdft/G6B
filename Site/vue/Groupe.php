@@ -1,6 +1,4 @@
-<?php
-  $nomGroupe='Get fit';
-?>
+
 
 
 <!DOCTYPE html>
@@ -21,7 +19,7 @@
 		       <ul id="right">
 		            <li><a href="../controleur/Sports.php">LES SPORTS</a></li>
                 <li><a href="../controleur/Forum.php">FORUM</a></li>
-                <li><a href="../controleur/Contat.php">CONTACT</a></li>
+                <li><a href="../controleur/Contact.php">CONTACT</a></li>
                 <li><a href="../controleur/Connexion.php">CONNEXION</a></li>
                 <li><a href="../controleur/Inscription.php">INSCRIPTION</a></li>
                 <li><a href="../controleur/Aide.php">AIDE</a></li>
