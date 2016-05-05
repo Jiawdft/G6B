@@ -7,7 +7,7 @@
 <html>
     <head>
     	<title><?php echo $nomGroupe; ?></title>
-    	<link rel="stylesheet" type="text/css" href="../Groupe/Groupe.css" media="screen" />
+    	<link rel="stylesheet" type="text/css" href="../vue/Groupe.css" media="screen" />
     	<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
     </head>
 
