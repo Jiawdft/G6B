@@ -69,16 +69,6 @@
 							}
 
 							?>
-							<td><a href="#">x</a></td>
-							<td><a href="#">y</a></td>
-						</tr>
-						<tr>
-							<td><a href="#">x1</a></td>
-							<td><a href="#">y1</a></td>
-						</tr>
-						<tr>
-							<td><a href="#">x2</a></td>
-							<td><a href="#">y2</a></td>
 						</tr>
 					</tbody>
 				</table>
