@@ -14,8 +14,8 @@ function get_membres($membre)
 	$reponse -> execute(array(
 		':membre' => $membre
 		));
-	$membres = $reponse->fetchAll();
-	return $membres
+	$membres = $reponse->fetch();
+	return $membres;
 	}
 }
 ?>

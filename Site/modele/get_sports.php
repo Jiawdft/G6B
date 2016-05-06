@@ -15,7 +15,7 @@ function get_sports($sport)
     $req->execute(array(
     	':sport'=>$sport
     	));
-    $sports = $req->fetchAll();
+    $sports = $req->fetch();
     return $sports;
 	}
 }

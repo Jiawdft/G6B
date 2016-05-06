@@ -20,7 +20,7 @@
 			          <li><a href="../controleur/Aide.php">AIDE</a></li>
 			      </ul>
 			   </div>
-			   		<a id="inscription" href="../Inscription/Inscription.php">Je m'inscris</a>
+			   		<a id="inscription" href="../controleur/Inscription.php">Je m'inscris</a>
 			   <div class="slider">
 			    	<figure>
 			    		
@@ -60,17 +60,17 @@
 		</div>
 		<div class="picture">
 			<div class="pline1"; style="text-align: center">
-				<div class="p1"><a href="#">BASKET</a></div>
-				<div class="p2"><a href="#">BOXE</a></div>
-				<div class="p3"><a href="#">SKI</a></div>
+				<div class="p1"><a href="../fichesporttype/fichesporttype.php?sport=BASKETBALL">BASKETBALL</a></div>
+				<div class="p2"><a href="../fichesporttype/fichesporttype.php?sport=BOXE">BOXE</a></div>
+				<div class="p3"><a href="../fichesporttype/fichesporttype.php?sport=SKI">SKI</a></div>
 			</div>
 			<div class="pline2"; style="text-align: center">
-				<div class="p4"><a href="#">ATHLETISME</a></div>
-				<div class="p5"><a href="#">RUGBY</a></div>
+				<div class="p4"><a href="../fichesporttype/fichesporttype.php?sport=ATHLETISME">ATHLETISME</a></div>
+				<div class="p5"><a href="../fichesporttype/fichesporttype.php?sport=RUGBY">RUGBY</a></div>
 			</div>
 			<div class="pline3"; style="text-align: center">
-				<div class="p6"><a href="#">NATATION</a></div>
-				<div class="p7"><a href="#">TENNIS</a></div>
+				<div class="p6"><a href="../fichesporttype/fichesporttype.php?sport=NATATION">NATATION</a></div>
+				<div class="p7"><a href="../fichesporttype/fichesporttype.php?sport=TENNIS">TENNIS</a></div>
 			</div>
 		</div>
 		<div id="MAPS" style="text-align: center">

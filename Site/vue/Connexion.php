@@ -27,7 +27,7 @@
 			    <input type="password" name="passe" placeholder="Mot de Passe" />
 			    <input type="submit" value="CONNEXION" />
 			  </form>
-			  <a id="inscription" href="#">Pas encore inscrit ? Inscris toi !</a>
+			  <a id="inscription" href="../controleur/Inscription.php">Pas encore inscrit ? Inscris toi !</a>
 			  <div id="social" style="text-align: center; margin-top: 10%">
 				<a href="https://www.facebook.com/workoutsociety/?ref=aymt_homepage_panel"><img src="../Images/Logos/Fb.png"></a>
 		    	<a href="https://twitter.com/?lang=fr"><img src="../Images/Logos/Tw.png"></a>
