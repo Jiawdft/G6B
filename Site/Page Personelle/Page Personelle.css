@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: Helvetica;
+    background-color: rgba(200,200,200,0.7);
+}
+
+.menu {
+    background-color: rgba(0,0,0,0.7);
+    padding: 1.9%;
+}
+
+.menu li {
+    display: inline;
+    padding: 0.5em;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu li a:hover {
+    color: #999999;
+}
+
+#left {
+    float: left;
+    margin-top: -1.4em;
+}
+
+#left img {
+    line-height: 4.5em;
+    margin-left: 1em;
+}
+
+#right {
+    text-align: right;
+}
+
+.user {
+    margin: 5em 0 0 5em;
+}
+
+.user div {
+    display: inline;
+}
+
+#uinfo table {
+    display: inline-block;
+    border: 0.2em solid black;
+    margin-left: 2em;
+    height: 7em;
+    width: 20em;
+}
+
+.mygroups {
+    margin: 3em 0 0 2em;
+}
+
+.mygroups div {
+    display: inline-block;
+}
+
+.mygroups table {
+    display: inline-block;
+    margin-top: 3em;
+    border: 0.2em solid black;
+    height: 25em;
+    width: 20em;
+}
+
+.mygroups li {
+    text-align: left;
+    font-size: 1.5em;
+}
+
+#m, #c {
+    padding-left: 10%;
+}
+
+.more {
+    margin: 3em 0 0 2em;
+}
+
+.more div {
+    display: inline-block;
+}
+
+.more table {
+    display: inline-block;
+    margin-top: 3em;
+    border: 0.2em solid black;
+    height: 15em;
+    width: 20em;
+}
+
+.more li {
+    text-align: left;
+    font-size: 1.5em;
+}
+
+#p, #f {
+    padding-left: 15%;
+}
