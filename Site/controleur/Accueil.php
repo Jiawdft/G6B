@@ -5,7 +5,7 @@ session_start();
 }
 
 include_once('../modele/get_sports.php');
-$sports = get_sports(0,50);
+$sports = get_sports('');
 
 
 foreach($sports as $cle => $sport)

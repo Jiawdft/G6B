@@ -5,7 +5,6 @@ session_start();
 if(!isset($_POST['mail']) OR !isset($_POST['passe']))
 {
 	include('../controleur/Connexion.php');
-	echo 'veuillez saisir un identifiant et un mot de passe'.' bonjour';
 
 }
 else
@@ -13,7 +12,6 @@ else
 	if(($_POST['mail']=="" OR $_POST['passe']==""))
 	{
 		include('../controleur/Connexion.php');
-		echo 'veuillez saisir un identifiant et un mot de passe';
 
 	}
 	else

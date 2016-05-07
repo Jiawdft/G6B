@@ -19,7 +19,7 @@
 		           if(isset($_SESSION['mail']))
 		           {
 		       		   	?>
-			          	<li><a href="../modele/session_destroy.php">DECONNEXION
+			          	<li><a href="../controleur/session_destroy.php">DECONNEXION
 		          		
 			          	</a></li>
 			          	<?php
