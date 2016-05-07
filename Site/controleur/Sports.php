@@ -1,4 +1,8 @@
 <?php
+if(!isset($_SESSION['mail']))
+{
+session_start();
+}
 include_once('../modele/get_sports.php');
 $sports = get_sports('');
 

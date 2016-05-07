@@ -15,8 +15,21 @@
 			    	<li><a href="../controleur/Sports.php">LES SPORTS</a></li>
 			        <li><a href="../controleur/Forum.php">FORUM</a></li>
 			        <li><a href="../controleur/Contact.php">CONTACT</a></li>
-			        <li><a href="../controleur/Connexion.php">CONNEXION</a></li>
-			        <li><a href="../controleur/Inscription.php">INSCRIPTION</a></li>
+			        <?php if(isset($_SESSION['mail'])){
+			          	?>
+			          	<li><a href="../modele/session_destroy.php">DECONNEXION
+
+			          	</a></li>
+			          	<?php
+			          }
+			          else
+			          {
+			          	?>
+			          <li><a href="../controleur/Connexion.php">CONNEXION</a></li>
+			          <li><a href="../controleur/Inscription.php">INSCRIPTION</a></li>
+			          <?php
+			          }
+			          ?>
 			        <li><a href="../controleur/Aide.php">AIDE</a></li>
 			   	</ul>
 		    </div>

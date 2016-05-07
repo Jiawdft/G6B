@@ -15,14 +15,29 @@
 		           <li><a href="../controleur/Sports.php">LES SPORTS</a></li>
 		           <li><a href="../controleur/Forum.php">FORUM</a></li>
 		           <li><a href="../controleur/Contact.php">CONTACT</a></li>
-		           <li><a href="../controleur/Connexion.php">CONNEXION</a></li>
-		           <li><a href="../controleur/Inscription.php">INSCRIPTION</a></li>
+		           <?php 
+		           if(isset($_SESSION['mail']))
+		           {
+		       		   	?>
+			          	<li><a href="../modele/session_destroy.php">DECONNEXION
+		          		
+			          	</a></li>
+			          	<?php
+		         	}
+			        else
+			        {
+			          	?>
+			          <li><a href="../controleur/Connexion.php">CONNEXION</a></li>
+			          <li><a href="../controleur/Inscription.php">INSCRIPTION</a></li>
+			          <?php
+			          }
+			          ?>
 		           <li><a href="../controleur/Aide.php">AIDE</a></li>
 		       </ul>
 		    </div>
 		    <div class="Connexion">
 			  <h1 style="text-align: center;">CONNECTEZ-VOUS</h1>
-			  <form method="post" action="../controleur/Accueil.php">
+			  <form method="post" action="../test/test_session.php">
 			    <input type="email" name="mail" placeholder="Adresse Mail" />
 			    <input type="password" name="passe" placeholder="Mot de Passe" />
 			    <input type="submit" value="CONNEXION" />

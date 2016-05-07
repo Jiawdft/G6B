@@ -1,5 +1,5 @@
 <?php
-function password_verify($saisi,$password){
+function pass_verify($saisi,$password){
 	if(password_verify($saisi,$password))
 	{
 		echo 'bon mdp'.'</br>';
