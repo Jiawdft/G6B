@@ -24,7 +24,15 @@
 	    		<div class="titre">
 					<h1>
 						<?php
-						if(!isset($_GET['sport'])or $_GET['sport']=='')
+						if(isset($_POST['choix']) and $_POST['choix']!='')
+						{
+							echo $_POST['choix'];
+						}
+						elseif((!isset($_POST['choix']) or $_POST['choix']=='') and !isset($_GET['sport']))
+						{
+							echo 'SPORTS';
+						}
+						elseif(!isset($_GET['sport'])or $_GET['sport']=='')
 						{
 							echo'SPORTS';
 						}
@@ -39,18 +47,26 @@
 	    			<?php
 	    			include'../modele/get_sports.php';
 	    			$sports=get_sports('');
-	    			/*
-	    			foreach($sports as $cle => $sport)
-					{
-						$sports[$cle]['sport'] = htmlspecialchars($sport['sport']);
-					}
-					*/
-					if(!isset($_GET['sport'])or $_GET['sport']=='')
+					if((!isset($_GET['sport']) or $_GET['sport']=='') and (!isset($_POST['choix']) or $_POST['choix']==''))
 					{
 
 					}
-					else
+					elseif(isset($_POST['choix']))
 					{
+						foreach ($sports as $sport)
+						{
+							if(strtolower($sport['sport'])==strtolower($_POST['choix']))
+							{
+								break;
+							}
+						}
+		    			?>
+		    			<p><?php echo ucfirst(strtolower($sport['information'])).'</br>' ?></p>
+		    			<?php
+	    			}
+	    			else
+	    			{
+
 						foreach ($sports as $sport)
 						{
 							if(strtolower($sport['sport'])==strtolower($_GET['sport']))
@@ -61,7 +77,9 @@
 		    			?>
 		    			<p><?php echo ucfirst(strtolower($sport['information'])).'</br>' ?></p>
 		    			<?php
-	    			}?>
+
+	    			}
+	    			?>
 	    	</div>
 			<div class="Groupes">
 			    <table>
@@ -69,27 +87,61 @@
 						<tr>
 							<?php
 							include'../modele/get_sports_groupes.php';
-							if(!isset($_GET['sport'])or $_GET['sport']=='')
-							{
-								include'../modele/get_groupes.php';
-								$sports_groupes= get_groupes('');
-							}
-
-							else
-							{
+							include'../modele/get_groupes.php';
 							
-								if(isset($_GET['codepostal'])and $_GET['codepostal']!='')
+							if((!isset($_GET['sport']) or $_GET['sport']=='')and (!isset($_POST['choix']) or $_POST['choix']==''))
+							{								
+								if(isset($_POST['codepostal'])and $_POST['codepostal']!='')
 								{
-
+									//echo $_POST['codepostal'];
+									$sports_groupes=get_groupes('',$_POST['codepostal']);
+									//$sports_groupes= get_sports_groupes($_POST['choix'],'');
 								}
 								else
 								{
-									$sports_groupes= get_sports_groupes($_GET['sport'],'');
+									$sports_groupes= get_groupes('','');
+									
+								}
+							}
+
+							elseif(isset($_POST['choix']) and $_POST['choix']!='')
+							{
+							
+								if(isset($_POST['codepostal'])and $_POST['codepostal']!='')
+								{
+									$sports_groupe= get_sports_groupes($_POST['choix'],'');
+									$sports_groupes=array();
+									$a=0;
+									foreach($sports_groupe as $sport_groupe)
+									{
+									$groupe= get_groupes($sport_groupe['groupe'],'');
+										if($groupe['codepostal']==round($_POST['codepostal']/1000))
+										{?>
+											<td><a href='../controleur/Groupe.php?groupe=<?php echo $groupe['groupe']?>'><?php echo ucfirst(strtolower($groupe['groupe'])) ?></a></td>
+										<?php
+										$a++;
+										if($a%3==0)
+											{
+												?>
+												</tr>
+												<tr>
+												<?php
+											}	
+										}
+									}
+									
+								}
+								else
+								{
+									$sports_groupes= get_sports_groupes($_POST['choix'],'');
 								}	
 							}
-							
+							else
+							{
+									$sports_groupes= get_sports_groupes($_GET['sport'],'');
+							}
 							$a=0;
-							foreach ($sports_groupes as $sports_groupe) 
+							foreach($sports_groupes as $sports_groupe) 
 							{
 								?>
 

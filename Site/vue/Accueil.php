@@ -34,22 +34,21 @@
   				</div>
 			   	<div class="search">
 				<ul>
-					<form action="../fichesporttype/fichesporttype.php" method="post">
+					<form action='../fichesporttype/fichesporttype.php' method="post">
 				
 					<select name="choix">
-					    <option value="">Sport</option>
-					    <?php	
-					    echo count($sports);
+					    <option value=''>Sport</option>
+					    <?php
 						foreach($sports as $sport)
 						{
 							?>
-							<option value= <?php echo ucfirst(strtolower($sport['sport'])) ?>><?php echo ucfirst(strtolower($sport['sport'])) ?></option>
+							<option value= <?php echo $sport['sport'] ?>><?php echo ucfirst(strtolower($sport['sport'])) ?></option>
 							<?php
 						}
 						?>
 					</select>
 				
-				    <input type="text" CodePostal="CodePostal" placeholder="Code Postal" />
+				    <input type="int" name="codepostal" placeholder="Code Postal" />
 				    <input type="submit" value="Rechercher" />
 					</form>
 				</ul>
