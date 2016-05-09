@@ -35,12 +35,12 @@
 		    </div>
 		    <div class="Inscription">
 		    	<h1 style="text-align: center;">INSCRIS-TOI</h1>
-		    	<form method="post" action="../controleur/Accueil.php">
+		    	<form method="post" action="../controleur/inscription2.php">
 		    		<input type="radio" name="Genre" value="Homme" /> <p>Homme</p>
 		    		<input type="radio" name="Genre" value="Femme" /> <p>Femme</p>
 		    		<input type="text" name="Prenom" placeholder="Prénom" />
 		    		<input type="text" name="Nom" placeholder="Nom" />
-		    		<input type="text" name="Date_de_Naisssance" placeholder="Date de Naisssance (JJ/MM/AAAA)" />
+		    		<input type="text" name="Date_de_Naisssance" placeholder="Date de Naisssance (AAAA/MM/JJ)" />
 		    		<input type="text" name="Numéro_de_Téléphone" placeholder="Numéro de Téléphone" />
 		    		<input type="text" name="Adresse" placeholder="Adresse" />
 		    		<input type="text" name="Code_Postal" placeholder="Code Postal" />

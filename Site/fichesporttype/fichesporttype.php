@@ -115,7 +115,7 @@
 									foreach($sports_groupe as $sport_groupe)
 									{
 									$groupe= get_groupes($sport_groupe['groupe'],'');
-										if($groupe['codepostal']==round($_POST['codepostal']/1000))
+										if(round($groupe['codepostal']/1000)==round($_POST['codepostal']/1000))
 										{?>
 											<td><a href='../controleur/Groupe.php?groupe=<?php echo $groupe['groupe']?>'><?php echo ucfirst(strtolower($groupe['groupe'])) ?></a></td>
 										<?php
