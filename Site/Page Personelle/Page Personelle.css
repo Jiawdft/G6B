@@ -41,11 +41,11 @@ body {
 }
 
 .user {
-    margin: 5em 0 0 5em;
+    margin: 2em 0 0 5em;
 }
 
 .user div {
-    display: inline;
+    display: inline-block;
 }
 
 #uinfo table {
@@ -57,7 +57,7 @@ body {
 }
 
 .mygroups {
-    margin: 3em 0 0 2em;
+    margin: 4em 0 0 2em;
 }
 
 .mygroups div {
@@ -69,7 +69,7 @@ body {
     margin-top: 3em;
     border: 0.2em solid black;
     height: 25em;
-    width: 20em;
+    width: 40em;
 }
 
 .mygroups li {
@@ -82,7 +82,11 @@ body {
 }
 
 .more {
-    margin: 3em 0 0 2em;
+    position: absolute;
+    float: right;
+    margin: -0.5em 0em 0 2em;
+    padding-left: 5%;
+
 }
 
 .more div {
@@ -91,10 +95,10 @@ body {
 
 .more table {
     display: inline-block;
-    margin-top: 3em;
+    margin-top: 2em;
     border: 0.2em solid black;
     height: 15em;
-    width: 20em;
+    width: 35em;
 }
 
 .more li {
@@ -104,4 +108,5 @@ body {
 
 #p, #f {
     padding-left: 15%;
+    padding-top: 5%;
 }
