@@ -4,7 +4,7 @@ include 'password_maker.php';
 function inscription_membre($Civilite,$Nom,$Prenom,$DateNaissance,$CodePostal,$Adresse,$AdresseMail,$NumeroDePortable,$Mdp){
 	$Nom=htmlspecialchars($Nom);
 	$Prenom=htmlspecialchars($Prenom);
-	$DateNaissance=(int)$DateNaissance;
+	$DateNaissance=htmlspecialchars($DateNaissance);
 	$CodePostal=(int)$CodePostal;
 	$Adresse=htmlspecialchars($Adresse);
 	$AdresseMail=htmlspecialchars($AdresseMail);
