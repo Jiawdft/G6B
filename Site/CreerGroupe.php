@@ -36,7 +36,7 @@
 		    	<h1 style="text-align: center;">CREER UN GROUPE</h1>
 		    	<form action='' method="post">
 		    		<input type="text" name="NomG" placeholder="Nom du Groupe" />
-					<select name="Sport">
+					<select name="choix">
 					    <option value=''>Sport</option>
 					    <?php
 						include_once('../modele/get_sports.php');

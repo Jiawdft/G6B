@@ -86,3 +86,18 @@ html, body {
 	text-align: center;
 }
 
+.NouveauGroupe {
+	margin-top: 27em;
+}
+
+.NouveauGroupe a {
+	margin-left: 40em;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #ffffff;
+	text-decoration: none;
+	border: 0.1em solid #ffffff;
+	padding: 0.5em;
+	border-radius: 0.5em;
+
+}
