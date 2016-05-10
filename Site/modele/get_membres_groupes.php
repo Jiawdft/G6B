@@ -27,6 +27,15 @@ function get_membres_groupes($mail,$groupe){
 		$mails_groupes = $reponse->fetchAll();
 		return $mails_groupes;
 	}
+	elseif ($mail!='' and $groupe!='') {
+		$reponse = $bdd->prepare('SELECT * FROM groupe_contient_membre WHERE membre= :mail AND groupe= :groupe');
+		$reponse -> execute(array(
+			':mail' => $mail
+			':groupe' => $groupe
+			));
+		$mails_groupes = $reponse->fetchALL();
+		return $mails_groupes;
+	}
 	else
 	{
 		return;
