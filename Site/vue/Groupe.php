@@ -28,7 +28,7 @@
                   ?>
                 <li><a href="../controleur/Connexion.php">CONNEXION</a></li>
                 <li><a href="../controleur/Inscription.php">INSCRIPTION</a></li>
-                <?php echo $_SESSION['mail'];
+                <?php //echo $_SESSION['mail'];
                 }
                 ?>
                 <li><a href="../controleur/Aide.php">AIDE</a></li>
@@ -54,7 +54,7 @@
           </div>
           <?php
             include'../modele/get_groupes.php';
-            $groupes=get_groupes($_GET['groupe']);
+            $groupes=get_groupes($_GET['groupe'],'');
           ?>
 
           <p style="padding-bottom: 16em;"><?php echo $groupes['information'] ?></p>
