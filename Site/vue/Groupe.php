@@ -51,12 +51,12 @@
   		<section class="information">
   			<div id="descriptiongroupe">
   				<h1><?php echo $_GET['groupe']; ?></h1>
-
+          
           <?php
             include'../modele/get_groupes.php';
             $groupes=get_groupes($_GET['groupe']);
-
           ?>
+
           <p><?php echo $groupes['information'] ?></p>
           <a id="bouton_rejoindre" href='../controleur/Groupe.php?groupe=<?php echo $_GET['groupe']?>'>Rejoindre</a>
   			</div>
@@ -85,7 +85,7 @@
         </div>  
 
         <div>
-          <p id="adresse">Club de paris <br> 1 rue de Paris <br>75001 Paris</p>
+          <p id="adresse">Club de paris <br> 1 Rue de Paris <br>75001 Paris</p>
         </div>
 
         <div class="googlemaps" style="text-align: center">
