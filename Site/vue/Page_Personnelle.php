@@ -2,22 +2,21 @@
 <html>
 	<head>
 		<title>PagePersonnelle</title>
-		<link href="../Page Personelle/Page_Personelle.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="../vue/Page_Personelle.css" rel="stylesheet" type="text/css" media="screen" />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
 		<div class="HOMETOP">
 	    	<div class="menu">
 		       <div id="left">
-		       		<a href="../Accueil/Accueil.php"><img src="../Images/Logos/Sporciety.png" style="height: 4em;" /></a>
+		       		<a href="../controleur/Accueil.php"><img src="../Images/Logos/Sporciety.png" style="height: 4em;" /></a>
 		       </div>
 		       <ul id="right">
-		           <li><a href="../Sports/Sports.php">LES SPORTS</a></li>
+		           <li><a href="../controleur/Sports.php">LES SPORTS</a></li>
 		           <li><a href="../Forum/Forum.php">FORUM</a></li>
-		           <li><a href="../Contact/Contact.php">CONTACT</a></li>
-		           <li><a href="../Connexion/Connexion.php">CONNEXION</a></li>
-		           <li><a href="../Inscription/Inscription.php">INSCRIPTION</a></li>
-		           <li><a href="../Aide/Aide.php">AIDE</a></li>
+		           <li><a href="../controleur/Contact.php">CONTACT</a></li>
+				   <li><a href="../controleur/session_destroy.php">DECONNEXION</a></li>
+		           <li><a href="../controleur/Aide.php">AIDE</a></li>
 		       </ul>
 		    </div>
 		</div>
@@ -26,16 +25,19 @@
 			<div id="uinfo">
 				<table>
 					<tr>
+						<th>
 						<?php
-						include'../modele/get_membre.php';
+						include'../modele/get_membres.php';
 						$membre=get_membres($_SESSION['mail']);
 						echo $membre['prenom']." ".$membre['nom']
 						?>
+						</th>
 					</tr>
-					<tr>
+					<tr><th>
 					<?php
 					echo $membre['codepostal'];
 					?>
+				</th></tr>
 				</table>	
 			</div>
 			<div class="more">
@@ -45,12 +47,6 @@
 						<tr>
 							<th>
 								<ul>
-									<li>a</li>
-									<li>b</li>
-									<li>a</li>
-									<li>b</li>
-									<li>a</li>
-									<li>b</li>
 									<li>a</li>
 								</ul>
 							</th>
@@ -64,11 +60,7 @@
 							<th>
 								<ul>
 									<li>a</li>
-									<li>a</li>
-									<li>b</li>
-									<li>a</li>
-									<li>b</li>
-									<li>a</li>
+									
 								</ul>
 							</th>
 						</tr>
@@ -87,26 +79,15 @@
 								$groupes=get_membres_groupes($_SESSION['mail'],'');
 								foreach ($groupes as $groupe) {
 									?>
-									<li>
-										<?php
-											echo $groupe['groupe'];
-										?>
+									<li><a href="../controleur/Groupe.php?groupe=<?php echo $groupe['groupe']?>" ><?php echo $groupe['groupe']?></a>
+										
 									</li>
 									<?php
 								}
 							?>
 							
 							<li>b</li>
-							<li>a</li>
-							<li>b</li>
-							<li>a</li>
-							<li>b</li>
-							<li>a</li>
-							<li>b</li>
-							<li>a</li>
-							<li>b</li>
-							<li>a</li>
-							<li>b</li>
+							
 						</ul>
 					</th>
 				</tr>

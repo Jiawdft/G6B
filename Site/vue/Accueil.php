@@ -17,9 +17,8 @@
 			          <li><a href="../controleur/Contact.php">CONTACT</a></li>
 			          <?php if(isset($_SESSION['mail'])){
 			          	?>
-			          	<li><a href="../controleur/session_destroy.php">DECONNEXION
-
-			          	</a></li>
+			          	<li><a href="../controleur/session_destroy.php">DECONNEXION</a></li>
+			          	<li><a href="../controleur/Page_Personnelle.php">PROFIL</a></li>
 			          	<?php
 			          }
 			          else
