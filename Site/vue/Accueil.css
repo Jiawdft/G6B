@@ -112,29 +112,26 @@ html, footer{
 	margin-left: 10%;
 	margin-right: 7.5%;
 	width: 20%;
-}
-
-.search select {
-	text-decoration: none;
-	color: #999999;
-}
-
-.search select:hover {
-	color: black;
-}
-.search input {
-	width: 20%;
-	margin-right: 7.5%;
+    outline: none;
+    color: #ffffff;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    background: transparent;
+    font-size: 1em;
+    padding-top: 1.5em;
 }
 
 .search input {
-	text-decoration: none;
-	color: #999999;
+    outline: none;
+    width: 20%;
+    margin-right: 7.5%;
+    color: #ffffff;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    background: transparent;
+    font-size: 1em;
 }
 
-.search input:hover {
-	color: black;
-}
 
 .search input[type="submit"] {
     background-color: rgb(140,140,140);

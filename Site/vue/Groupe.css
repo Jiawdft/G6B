@@ -103,6 +103,13 @@ header
 	padding-bottom: 16em;
 }
 
+#modg p {
+	position: absolute;
+	z-index: 1;
+	top: 100em;
+	left: 10em;
+}
+
 
 #bouton_rejoindre
 {
