@@ -47,24 +47,22 @@
 	    		<img src="../Images/Wallpaper/get_fit.jpg">
 	  		</figure>
   		</div>
-
   		<section class="information">
   			<div id="descriptiongroupe">
   				<h1><?php echo $_GET['groupe']; ?></h1>
-          
+          <div id="modg">
+            <a href="#">Modifier le Groupe</a>
+          </div>
           <?php
             include'../modele/get_groupes.php';
             $groupes=get_groupes($_GET['groupe']);
           ?>
 
-          <p><?php echo $groupes['information'] ?></p>
+          <p style="padding-bottom: 16em;"><?php echo $groupes['information'] ?></p>
           <a id="bouton_rejoindre" href='../controleur/Groupe.php?groupe=<?php echo $_GET['groupe']?>'>Rejoindre</a>
   			</div>
 
-
-
   		</section>
-
   		<section class="planning">
   			<div id="event"> 
           <h2>Prochainement :</h2>

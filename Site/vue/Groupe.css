@@ -97,17 +97,13 @@ header
 	padding : 2em; 
 }
 
-
-#descriptiongroupe p
-{
-	padding-bottom: 16em;
-}
-
-#modg p {
+#descriptiongroupe #modg a {
 	position: absolute;
-	z-index: 1;
-	top: 100em;
-	left: 10em;
+	top: 52.5em;
+	left: 70em;
+	font-size: 0.8em;
+	text-decoration: underline;
+	color: white;
 }
 
 
