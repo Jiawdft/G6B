@@ -40,7 +40,7 @@
 						foreach($sports as $sport)
 						{	
 						?>
-						<td><a href='../fichesporttype/fichesporttype.php?sport=<?php echo ($sport['sport'])?>'>  <?php echo mb_strtoupper($sport['sport'])?></a></td>
+						<td><a href='../controleur/Fichesporttype.php?sport=<?php echo ($sport['sport'])?>'>  <?php echo mb_strtoupper($sport['sport'])?></a></td>
 						<?php
 							$a++;
 							if($a%3==0)

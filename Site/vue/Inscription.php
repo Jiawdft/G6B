@@ -34,7 +34,7 @@
 		    </div>
 		    <div class="Inscription">
 		    	<h1 style="text-align: center;">INSCRIS-TOI</h1>
-		    	<form method="post" action="../controleur/inscription2.php">
+		    	<form method="post" action="../controleur/inscription?inscription=true.php">
 		    		<input type="radio" name="Genre" value="Homme" /> <p>Homme</p>
 		    		<input type="radio" name="Genre" value="Femme" /> <p>Femme</p>
 		    		<input type="text" name="Prenom" placeholder="Prénom" />
@@ -46,6 +46,13 @@
 				    <input type="email" name="Adresse_Mail" placeholder="Adresse Mail" />
 				    <input type="password" name="Mot_de_Passe" placeholder="Mot de Passe" />
 				    <input type="submit" value="INSCRIPTION" />
+				    <?php
+				    if(isset($erreur)and $erreur!=''){
+				    	?>
+				    	<h4><?php echo $erreur ?></h4>
+				    	<?php
+				    }
+				    ?>
 				</form>
 		    </div>
 		</div>

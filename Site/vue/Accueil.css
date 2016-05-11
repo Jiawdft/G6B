@@ -113,7 +113,7 @@ html, footer{
 	margin-right: 7.5%;
 	width: 20%;
     outline: none;
-    color: #ffffff;
+    color:grey; /*#ffffff;*/
     border: none;
     border-bottom: 1px solid #ffffff;
     background: transparent;

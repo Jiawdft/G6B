@@ -28,8 +28,6 @@
 					<tr>
 						<th>
 						<?php
-						include'../modele/get_membres.php';
-						$membre=get_membres($_SESSION['mail']);
 						echo $membre['prenom']." ".$membre['nom']
 						?>
 						</th>
@@ -76,13 +74,9 @@
 					<th>
 						<ul>
 							<?php
-								include'../modele/get_membres_groupes.php';
-								$groupes=get_membres_groupes($_SESSION['mail'],'');
 								foreach ($groupes as $groupe) {
 									?>
-									<li><a href="../controleur/Groupe.php?groupe=<?php echo $groupe['groupe']?>" ><?php echo $groupe['groupe']?></a>
-										
-									</li>
+									<li><a href="../controleur/Groupe.php?groupe=<?php echo $groupe['groupe']?>" ><?php echo $groupe['groupe']?></a></li>
 									<?php
 								}
 							?>

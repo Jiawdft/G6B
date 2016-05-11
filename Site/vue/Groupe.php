@@ -19,16 +19,14 @@
                 <li><a href="../controleur/Contact.php">CONTACT</a></li>
                 <?php if(isset($_SESSION['mail'])){
                   ?>
-                  <li><a href="../controleur/session_destroy.php">DECONNEXION</a></li>
+                  <li><a href="../controleur/Accueil.php?deconnexion=true">DECONNEXION</a></li>
                   <li><a href="../controleur/Page_Personnelle.php">PROFIL</a></li>
                   <?php
-                }
-                else
-                {
+                }else{
                   ?>
                 <li><a href="../controleur/Connexion.php">CONNEXION</a></li>
                 <li><a href="../controleur/Inscription.php">INSCRIPTION</a></li>
-                <?php //echo $_SESSION['mail'];
+                <?php
                 }
                 ?>
                 <li><a href="../controleur/Aide.php">AIDE</a></li>
@@ -52,11 +50,6 @@
           <div id="modg">
             <a href="#">Modifier le Groupe</a>
           </div>
-          <?php
-            include'../modele/get_groupes.php';
-            $groupes=get_groupes($_GET['groupe'],'');
-          ?>
-
           <p style="padding-bottom: 16em;"><?php echo $groupes['information'] ?></p>
           <a id="bouton_rejoindre" href='../controleur/Groupe.php?groupe=<?php echo $_GET['groupe']?>'>Rejoindre</a>
   			</div>

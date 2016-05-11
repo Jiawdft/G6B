@@ -32,14 +32,14 @@ if(isset($_POST['Genre']) and isset($_POST['Prenom']) and isset($_POST['Nom']) a
 		else
 		{
 			$erreur='Mot de passe invalide 6 caractères minimum';
-			//return $erreur;
+			return $erreur;
 			include'Inscription.php';
 		}	
 	}
 	else
 	{
 		$erreur='Adresse mail invalide';
-		//return $erreur;
+		return $erreur;
 		include'Inscription.php';
 	}
 }
