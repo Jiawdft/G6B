@@ -44,19 +44,13 @@
 		    		<table>
 		    			<th>
 		    				<tr>
-		    					<?php
-								include'../modele/get_membres_groupes.php';
-								$groupes=get_membres_groupes($_SESSION['mail'],'getfit');
-								foreach ($groupes as $groupe) {
-									?>
-									<li>
-										<?php
-											echo $groupe['groupe'];
-										?>
-									</li>
-									<?php
-								}
-							?>
+		    					<ul>
+		    						<li>
+		    							<?php
+		    							echo ;
+		    							?>
+		    						</li>
+		    					</ul>
 		    				</tr>
 		    			</th>
 		    		</table>
