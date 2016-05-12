@@ -3,7 +3,7 @@
 <?php
 if(!isset($_POST['mail']) OR !isset($_POST['passe']))
 {
-	$erreur="Veuillez saisir votre adresse mail "
+	$erreur="Veuillez saisir votre adresse mail ";
 	include('../controleur/Connexion.php');
 
 }

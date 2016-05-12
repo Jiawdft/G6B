@@ -17,7 +17,7 @@
 			          <li><a href="../controleur/Contact.php">CONTACT</a></li>
 			          <?php if(isset($_SESSION['mail'])){
 			          	?>
-			          	<li><a href="../controleur/session_destroy.php">DECONNEXION</a></li>
+			          	<li><a href="../controleur/Accueil.php?deconnexion=true">DECONNEXION</a></li>
 			          	<li><a href="../controleur/Page_Personnelle.php">PROFIL</a></li>
 			          	<?php
 			          }
@@ -46,7 +46,7 @@
   				</div>
 			   	<div class="search">
 				<ul>
-					<form action='../fichesporttype/fichesporttype.php' method="post">
+					<form action='../controleur/Fichesporttype.php' method="post">
 				
 					<select name="choix">
 					    <option value=''>Sport</option>
@@ -71,17 +71,17 @@
 		</div>
 		<div class="picture">
 			<div class="pline1"; style="text-align: center">
-				<div class="p1"><a href="../fichesporttype/fichesporttype.php?sport=BASKETBALL">BASKETBALL</a></div>
-				<div class="p2"><a href="../fichesporttype/fichesporttype.php?sport=BOXE">BOXE</a></div>
-				<div class="p3"><a href="../fichesporttype/fichesporttype.php?sport=SKI">SKI</a></div>
+				<div class="p1"><a href="../controleur/Fichesporttype.php?sport=BASKETBALL">BASKETBALL</a></div>
+				<div class="p2"><a href="../controleur/Fichesporttype.php?sport=BOXE">BOXE</a></div>
+				<div class="p3"><a href="../controleur/Fichesporttype.php?sport=SKI">SKI</a></div>
 			</div>
 			<div class="pline2"; style="text-align: center">
-				<div class="p4"><a href="../fichesporttype/fichesporttype.php?sport=ATHLETISME">ATHLETISME</a></div>
-				<div class="p5"><a href="../fichesporttype/fichesporttype.php?sport=RUGBY">RUGBY</a></div>
+				<div class="p4"><a href="../controleur/Fichesporttype.php?sport=ATHLETISME">ATHLETISME</a></div>
+				<div class="p5"><a href="../controleur/Fichesporttype.php?sport=RUGBY">RUGBY</a></div>
 			</div>
 			<div class="pline3"; style="text-align: center">
-				<div class="p6"><a href="../fichesporttype/fichesporttype.php?sport=NATATION">NATATION</a></div>
-				<div class="p7"><a href="../fichesporttype/fichesporttype.php?sport=TENNIS">TENNIS</a></div>
+				<div class="p6"><a href="../controleur/Fichesporttype.php?sport=NATATION">NATATION</a></div>
+				<div class="p7"><a href="../controleur/Fichesporttype.php?sport=TENNIS">TENNIS</a></div>
 			</div>
 		</div>
 		<div id="MAPS" style="text-align: center">

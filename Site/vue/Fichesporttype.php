@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Page Sports</title>
-		<link href="fichesporttype.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="../vue/Fichesporttype.css" rel="stylesheet" type="text/css" media="screen" />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
@@ -11,14 +11,26 @@
 		       	<div id="left">
 		       		<a href="../controleur/Accueil.php"><img src="../Images/Logos/Sporciety.png" style="height: 3.8em;" /></a>
 			    </div>
-			    <ul id="right">
-		       	   	<li><a href="../controleur/Sports.php">LES SPORTS</a></li>
-		           	<li><a href="../controleur/Forum.php">FORUM</a></li>
-		           	<li><a href="../controleur/Contact.php">CONTACT</a></li>
-		           	<li><a href="../controleur/Connexion.php">CONNEXION</a></li>
-		           	<li><a href="../controleur/Inscription.php">INSCRIPTION</a></li>
-	         		<li><a href="../controleur/Aide.php">AIDE</a></li>
-	       		</ul>
+			   <ul id="right">
+			          <li><a href="../controleur/Sports.php">LES SPORTS</a></li>
+			          <li><a href="../controleur/Forum.php">FORUM</a></li>
+			          <li><a href="../controleur/Contact.php">CONTACT</a></li>
+			          <?php if(isset($_SESSION['mail'])){
+			          	?>
+			          	<li><a href="../controleur/Accueil.php?deconnexion=true">DECONNEXION</a></li>
+			          	<li><a href="../controleur/Page_Personnelle.php">PROFIL</a></li>
+			          	<?php
+			          }
+			          else
+			          {
+			          	?>
+			          <li><a href="../controleur/Connexion.php">CONNEXION</a></li>
+			          <li><a href="../controleur/Inscription.php">INSCRIPTION</a></li>
+			          <?php
+			          }
+			          ?>
+			          <li><a href="../controleur/Aide.php">AIDE</a></li>
+			      </ul>
 	    	</div>
 	    	<div class="center">
 	    		<div class="titre">
@@ -45,8 +57,8 @@
 	    		</div>
 	    		<div class="texte">
 	    			<?php
-	    			include'../modele/get_sports.php';
-	    			$sports=get_sports('');
+	    			//include'../modele/get_sports.php';
+	    			//$sports=get_sports('');
 					if((!isset($_GET['sport']) or $_GET['sport']=='') and (!isset($_POST['choix']) or $_POST['choix']==''))
 					{
 
@@ -86,8 +98,8 @@
 			    		<tbody>
 							<tr>
 								<?php
-								include'../modele/get_sports_groupes.php';
-								include'../modele/get_groupes.php';
+								//include'../modele/get_sports_groupes.php';
+								//include'../modele/get_groupes.php';
 							
 								if((!isset($_GET['sport']) or $_GET['sport']=='')and (!isset($_POST['choix']) or $_POST['choix']==''))
 								{								

@@ -48,31 +48,36 @@ body {
     height: 100%;
 }
 
-.Inscription {
-    height: 80%;
+.ModifGroupe {
+    height: 72vh;
     width: 60%;
     border-radius: 5%;
     padding: 1em;
     background-color: rgba(0,0,0,0.5);
-    margin: 1% auto;
+    margin: 4% auto;
 }
 
-.Inscription h1 {
+.ModifGroupe h1 {
     color: #ffffff;
     font-size: 2em;
     font-weight: bold;
 }
 
-.Inscription p {
+.ModifGroupe h3 {
+    color: #ffffff;
+    padding-top: 1em;
+}
+
+.ModifGroupe p {
     color: rgb(140,140,140);
-    display: inline;
+    
     padding-right: 2%;
 }
 
-.Inscription input[type="text"],
-.Inscription input[type="email"],
-.Inscription input[type="password"],
-.Inscription select {
+.ModifGroupe input[type="text"],
+.ModifGroupe input[type="email"],
+.ModifGroupe input[type="password"],
+.ModifGroupe select {
     outline: none;
     width: 100%;
     color: #ffffff;
@@ -83,10 +88,9 @@ body {
     padding-top: 1.5em;
 }
 
-.Inscription input[type="submit"] {
+.ModifGroupe input[type="submit"] {
     background-color: rgb(140,140,140);
     border: 0.2em solid rgb(140,140,140);
-    border-radius:0.5em;
     width: 30%;
     margin: 1em 35%;
     cursor: pointer;
@@ -95,7 +99,4 @@ body {
     font-size: 1em;
     padding: 1em;
     text-decoration: none;
-}
-.Inscription h4{
-    color: white;
 }

@@ -15,7 +15,8 @@
 		           <li><a href="../controleur/Sports.php">LES SPORTS</a></li>
 		           <li><a href="../Forum/Forum.php">FORUM</a></li>
 		           <li><a href="../controleur/Contact.php">CONTACT</a></li>
-				   <li><a href="../controleur/session_destroy.php">DECONNEXION</a></li>
+				   <li><a href="../controleur/Accueil.php?deconnexion=true">DECONNEXION</a></li>
+		           <li><a href="../controleur/Page_Personnelle.php">PROFIL</a></li>
 		           <li><a href="../controleur/Aide.php">AIDE</a></li>
 		       </ul>
 		    </div>
@@ -27,8 +28,6 @@
 					<tr>
 						<th>
 						<?php
-						include'../modele/get_membres.php';
-						$membre=get_membres($_SESSION['mail']);
 						echo $membre['prenom']." ".$membre['nom']
 						?>
 						</th>
@@ -75,13 +74,9 @@
 					<th>
 						<ul>
 							<?php
-								include'../modele/get_membres_groupes.php';
-								$groupes=get_membres_groupes($_SESSION['mail'],'');
 								foreach ($groupes as $groupe) {
 									?>
-									<li><a href="../controleur/Groupe.php?groupe=<?php echo $groupe['groupe']?>" ><?php echo $groupe['groupe']?></a>
-										
-									</li>
+									<li><a href="../controleur/Groupe.php?groupe=<?php echo $groupe['groupe']?>" ><?php echo $groupe['groupe']?></a></li>
 									<?php
 								}
 							?>
