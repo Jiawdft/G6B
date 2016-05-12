@@ -2,7 +2,10 @@
 if(!isset($_SESSION['mail']))
 {
 session_start();
-include_once'../controleur/Accueil.php';
+}
+if($_SESSION['mail']=='' or !isset($_SESSION['mail'])){
+	include_once'../controleur/Accueil.php';
+
 }
 
 include_once'../modele/get_membres.php';
