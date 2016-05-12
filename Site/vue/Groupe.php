@@ -51,6 +51,18 @@
             <a href="#">Modifier le Groupe</a>
           </div>
           <p style="padding-bottom: 16em;"><?php echo $groupes['information'] ?></p>
+
+          <?php 
+          if (!isset($_SESSION['mail'])) {
+          ?>
+
+          <?php 
+
+          }
+          ?>  
+          
+          
+
           <a id="bouton_rejoindre" href='../controleur/Groupe.php?groupe=<?php echo $_GET['groupe']?>'>Rejoindre</a>
   			</div>
 
