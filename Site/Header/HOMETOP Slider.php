@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link href="../Test/HOMETOP.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="../Header/HOMETOP Slider.css" rel="stylesheet" type="text/css" media="screen" />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
@@ -9,7 +9,7 @@
 			<div id="left">
 				<table>
 					<tr>
-						<th><a href="../controleur/Accueil.php"><img src="../Site/Images/Logos/Sporciety.png"></a></th>
+						<th><a href="../controleur/Accueil.php"><img src="../Images/Logos/Sporciety.png"></a></th>
 					</tr>
 				</table>
 			</div>

@@ -5,20 +5,34 @@
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
-		<div class="HOMETOP">
-	    	<div class="menu">
-		       <div id="left">
-		       		<a href="../Accueil/Accueil.html"><img src="../Images/Logos/Sporciety.png" style="height: 4em;" /></a>
-		       </div>
-		       <ul id="right">
-		           <li><a href="../Sports/Sports.html">LES SPORTS</a></li>
-		           <li><a href="#">FORUM</a></li>
-		           <li><a href="#">CONTACT</a></li>
-		           <li><a href="../Connexion/Connexion.html">CONNEXION</a></li>
-		           <li><a href="../Inscription/Inscription.html">INSCRIPTION</a></li>
-		           <li><a href="#">AIDE</a></li>
-		       </ul>
-		    </div>
+		<div class="menu">
+			<div id="left">
+				<table>
+					<tr>
+						<th><a href="../controleur/Accueil.php"><img src="../Images/Logos/Sporciety.png"></a></th>
+					</tr>
+				</table>
+			</div>
+			<div id="right">
+				<table>
+					<tr>
+						<th><a href="../controleur/Sports.php">LES SPORTS</a></th>
+						<th><a href="../controleur/Forum.php">FORUM</a></th>
+	                   	<th><a href="../controleur/Contact.php">CONTACT</a></th>
+
+	                   	<?php if (isset($_SESSION['mail'])) { ?>
+	                   	<th><a href="../controleur/Accueil.php?deconnexion=true">DECONNEXION</a></th>
+	                   	<th><a href="../controleur/Page_Personnelle.php">PROFIL</a></th>
+
+	                   	<?php } else { ?>
+	                   	<th><a href="../controleur/Connexion.php">CONNEXION</a></th>
+	                   	<th><a href="../controleur/Inscription.php">INSCRIPTION</a></th>
+
+	                   	<?php } ?>
+	                   	<th><a href="../controleur/Aide.php">AIDE</a></th>
+					</tr>
+				</table>
+			</div>
 		</div>
 	</body>
 </html>

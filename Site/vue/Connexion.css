@@ -4,12 +4,9 @@
 
 body {
     font-family: Helvetica;
-    clear: both;
-    position: fixed;
     background-image: url("../Images/Wallpaper/Connexion.jpg");
     background-size: cover;
-    width: 100%;
-    height: 100%;
+    overflow-y: hidden;
 }
 
 .Connexion {

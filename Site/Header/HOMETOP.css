@@ -2,39 +2,37 @@
     margin: 0;
 }
 
-body {
-    font-family: Helvetica;
+html, body {
+    font-family: Helvetica
 }
 
 .menu {
     background-color: rgba(0,0,0,0.7);
-    padding: 1.9%;
 }
 
-.menu li {
-    display: inline;
-    padding: 0.5em;
-}
-
-.menu li a {
-    text-decoration: none;
-    color: white;
-}
-
-.menu li a:hover {
-    color: #999999;
-}
-
-#left {
-    float: left;
-    margin-top: -1.4em;
+.menu  div {
+    display: inline-block;
 }
 
 #left img {
-    line-height: 4.5em;
-    margin-left: 1em;
+    margin-top: 0.2em;
+    height: 3.8em;
+    margin-left: 2em;
 }
 
 #right {
-    text-align: right;
+    float: right;
+    margin-right: 2em;
+}
+
+#right a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.8em;
+    line-height: 4em;
+}
+
+#right a:hover {
+    color: #999999;
 }
