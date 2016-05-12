@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>HOMETOP</title>
-		<link href="../Test/HOMETOP.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="../Header/HOMETOP.css" rel="stylesheet" type="text/css" media="screen" />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
 		<div class="HOMETOP">
 	    	<div class="menu">
 		       <div id="left">
-		       		<a href="../Accueil/Accueil.html"><img src="../Images/Logos/Sporciety.png" style="height: 4em;" /></a>
+		       		<a href="../controleur/Accueil.php"><img src="../Images/Logos/Sporciety.png" style="height: 3.8em;" /></a>
 		       </div>
 		       <ul id="right">
-		           <li><a href="../Sports/Sports.html">LES SPORTS</a></li>
-		           <li><a href="#">FORUM</a></li>
-		           <li><a href="#">CONTACT</a></li>
-		           <li><a href="../Connexion/Connexion.html">CONNEXION</a></li>
-		           <li><a href="../Inscription/Inscription.html">INSCRIPTION</a></li>
-		           <li><a href="#">AIDE</a></li>
+		           <li><a href="../controleur/Sports.php">LES SPORTS</a></li>
+		           <li><a href="../controleur/Forum.php">FORUM</a></li>
+		           <li><a href="../controleur/Contact.php">CONTACT</a></li>
+		           <?php 
+		           if(isset($_SESSION['mail']))
+		           {
+		       		   	?>
+			          	<li><a href="../controleur/Accueil.php?deconnexion=true">DECONNEXION</a></li>
+			          	<li><a href="../controleur/Page_Personnelle.php">PROFIL</a></li>
+			          	<?php
+		         	}
+			        else
+			        {
+			          	?>
+			          <li><a href="../controleur/Connexion.php">CONNEXION</a></li>
+			          <li><a href="../controleur/Inscription.php">INSCRIPTION</a></li>
+			          <?php
+			          }
+			          ?>
+		           <li><a href="../controleur/Aide.php">AIDE</a></li>
 		       </ul>
 		    </div>
 		</div>
