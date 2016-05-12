@@ -7,8 +7,9 @@ if(!isset($_GET['groupe']))
 {
 	include_once'../controleur/Accueil.php';
 }else{
-include_once'../modele/get_groupes.php';
-$groupes=get_groupes($_GET['groupe'],'');
-include_once'../vue/Groupe.php';
+	include_once'../modele/get_groupes.php';
+	$groupes=get_groupes($_GET['groupe'],'');
+	include_once'../vue/Groupe.php';
+	include_once'get_membres_groupes.php';
 }
 ?>
