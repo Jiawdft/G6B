@@ -1,25 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>PagePersonnelle</title>
-		<link href="../vue/Page_Personelle.css" rel="stylesheet" type="text/css" media="screen" />
+		<title>Page Personnelle</title>
+		<link href="../vue/Page_Personnelle.css" rel="stylesheet" type="text/css" media="screen" />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
-		<div class="HOMETOP">
-	    	<div class="menu">
-		       <div id="left">
-		       		<a href="../controleur/Accueil.php"><img src="../Images/Logos/Sporciety.png" style="height: 4em;" /></a>
-		       </div>
-		       <ul id="right">
-		           <li><a href="../controleur/Sports.php">LES SPORTS</a></li>
-		           <li><a href="../Forum/Forum.php">FORUM</a></li>
-		           <li><a href="../controleur/Contact.php">CONTACT</a></li>
-				   <li><a href="../controleur/session_destroy.php">DECONNEXION</a></li>
-		           <li><a href="../controleur/Aide.php">AIDE</a></li>
-		       </ul>
-		    </div>
-		</div>
+		
+		<?php include("../Header/HOMETOP.php"); ?>
+		
 		<div class="user">
 			<img src="../Images/Logos/User.png" style="height: 7em;">
 			<div id="uinfo">
@@ -27,8 +16,6 @@
 					<tr>
 						<th>
 						<?php
-						include'../modele/get_membres.php';
-						$membre=get_membres($_SESSION['mail']);
 						echo $membre['prenom']." ".$membre['nom']
 						?>
 						</th>
@@ -75,13 +62,9 @@
 					<th>
 						<ul>
 							<?php
-								include'../modele/get_membres_groupes.php';
-								$groupes=get_membres_groupes($_SESSION['mail'],'');
 								foreach ($groupes as $groupe) {
 									?>
-									<li><a href="../controleur/Groupe.php?groupe=<?php echo $groupe['groupe']?>" ><?php echo $groupe['groupe']?></a>
-										
-									</li>
+									<li><a href="../controleur/Page_Personnelle_mon_groupe.php?groupe=<?php echo $groupe['groupe']?>" ><?php echo $groupe['groupe']?></a></li>
 									<?php
 								}
 							?>

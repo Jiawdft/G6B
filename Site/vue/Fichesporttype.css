@@ -9,15 +9,15 @@ body {
     overflow-y: hidden;
 }
 
-.Sports {
-	margin-top: 4em;
+.titre h1 {
+	text-align: center;
 }
 
-.Sports a {
+.Groupes a {
 	font-size: 1.3em;
 	font-weight: bold;
 	text-decoration: none;
-	color: white;
+	color: black;
 	line-height: 2.2em;
 	margin: 6em;
 }
@@ -26,24 +26,27 @@ body {
 	font-size: 1.3em;
 	font-weight: bold;
 	text-decoration: none;
-	color: white;
+	color: black;
 	margin-left: 90%;
 }
 
-#Plus a:hover {
-	cursor: pointer;
+.center {
+	margin: auto;
+	text-align: center;
 }
 
-#divacacher {
-	height: 35em;
-	background-color: rgba(0,0,0,0.7);
+.NouveauGroupe {
+	margin-top: 27em;
 }
 
-#divacacher a {
+.NouveauGroupe a {
+	margin-left: 40em;
 	font-size: 1.5em;
-	line-height: 2em;
-	text-decoration: none;
 	font-weight: bold;
-	color: white;
-}
+	color: #ffffff;
+	text-decoration: none;
+	border: 0.1em solid #ffffff;
+	padding: 0.5em;
+	border-radius: 0.5em;
 
+}

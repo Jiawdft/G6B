@@ -7,35 +7,8 @@
     </head>
 
     <body>
-    	<header>
-    		<div class="menu">
-		       <div id="left">
-		       		<a href="../controleur/Accueil.php"><img src="../Images/Logos/Sporciety.png" style="height: 4em;" /></a>
-		       </div>
 
-		       <ul id="right">
-		            <li><a href="../controleur/Sports.php">LES SPORTS</a></li>
-                <li><a href="../controleur/Forum.php">FORUM</a></li>
-                <li><a href="../controleur/Contact.php">CONTACT</a></li>
-                <?php if(isset($_SESSION['mail'])){
-                  ?>
-                  <li><a href="../controleur/session_destroy.php">DECONNEXION</a></li>
-                  <li><a href="../controleur/Page_Personnelle.php">PROFIL</a></li>
-                  <?php
-                }
-                else
-                {
-                  ?>
-                <li><a href="../controleur/Connexion.php">CONNEXION</a></li>
-                <li><a href="../controleur/Inscription.php">INSCRIPTION</a></li>
-                <?php echo $_SESSION['mail'];
-                }
-                ?>
-                <li><a href="../controleur/Aide.php">AIDE</a></li>
-		       </ul>
-		   </div>
-
-    	</header>
+      <?php include("../Header/HOMETOP Slider.php"); ?>
 
     	<div class="slider">
 			<figure>
@@ -52,13 +25,23 @@
           <div id="modg">
             <a href="#">Modifier le Groupe</a>
           </div>
-          <?php
-            include'../modele/get_groupes.php';
-            $groupes=get_groupes($_GET['groupe']);
-          ?>
-
           <p style="padding-bottom: 16em;"><?php echo $groupes['information'] ?></p>
-          <a id="bouton_rejoindre" href='../controleur/Groupe.php?groupe=<?php echo $_GET['groupe']?>'>Rejoindre</a>
+          <?php 
+          if (!isset($_SESSION['mail'])) {
+          ?>
+          <a id="bouton_rejoindre" href='../controleur/Connexion.php'>Rejoindre</a>
+          <?php 
+          }
+          else {
+            $deja_membre=get_membres_groupes($_SESSION['mail'],$_GET['groupe']);
+            if($deja_membre['membre']=''){
+          ?>
+          <a id="bouton_rejoindre" href='../controleur/Accueil.php'>Rejoindre</a>
+          <?php
+            }
+          }
+          ?>  
+          
   			</div>
 
   		</section>
@@ -76,19 +59,11 @@
 
   		</section>
 
-      <section id="localisation">
-        <div>
-          <h1>Point de rendez-vous de Fit Party : </h1>
-        </div>  
-
-        <div>
-          <p id="adresse">Club de paris <br> 1 Rue de Paris <br>75001 Paris</p>
-        </div>
-
-        <div class="googlemaps" style="text-align: center">
-           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d85161.85430845951!2d2.3617916544987367!3d48.864518359376234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1457358140451" style="height: 100%; width: 45%; border: none;"></iframe>
-        </div>
-      </section>
+	    <div class="localisation">
+	        <h1>Point de rendez-vous de Fit Party : </h1>
+	        <p id="adresse">Club de paris <br> 1 Rue de Paris <br>75001 Paris</p>
+		    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d85161.85430845951!2d2.3617916544987367!3d48.864518359376234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1457358140451"></iframe>
+	    </div>
 
     </body>
 

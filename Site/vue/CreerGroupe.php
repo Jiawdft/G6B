@@ -2,14 +2,14 @@
 <html>
 	<head>
 		<title>Inscription</title>
-		<link href="CreerGroupe.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="../vue/CreerGroupe.css" rel="stylesheet" type="text/css" media="screen" />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
 		<div class="HOMETOP">
 	    	<div class="menu">
 		       <div id="left">
-		       		<a href="../controleur/Accueil.php"><img src="Images/Logos/Sporciety.png" style="height: 3.8em;" /></a>
+		       		<a href="../controleur/Accueil.php"><img src="../Images/Logos/Sporciety.png" style="height: 3.8em;" /></a>
 		       </div>
 		       <ul id="right">
 		            <li><a href="../controleur/Sports.php">LES SPORTS</a></li>
@@ -17,7 +17,14 @@
 		           <li><a href="../controleur/Contact.php">CONTACT</a></li>
 		           <?php if(isset($_SESSION['mail'])){
 			          	?>
+<<<<<<< HEAD:Site/CreerGroupe.php
 			          	<li><a href="../controleur/session_destroy.php">DECONNEXION</a></li>
+=======
+			          	<li><a href="../controleur/session_destroy.php">DECONNEXION
+			          	</a></li>
+			          	<li><a href="../controleur/Page_Personnelle.php">PROFIL</a></li>
+
+>>>>>>> origin/master:Site/vue/CreerGroupe.php
 			          	<?php
 			          }
 			          else
@@ -34,7 +41,7 @@
 		    <div class="Creation">
 		    	<h1 style="text-align: center;">CREER UN GROUPE</h1>
 		    	<form action='' method="post">
-		    		<input type="text" name="NomG" placeholder="Nom du Groupe" />
+		    		<input type="text" name="nom_groupe" placeholder="Nom du Groupe" />
 					<select name="choix">
 					    <option value=''>Sport</option>
 					    <?php
@@ -44,12 +51,12 @@
 						{
 							?>
 							<option value= <?php echo $sport['sport'] ?>><?php echo ucfirst(strtolower($sport['sport'])) ?></option>
-							<?php
+							*/<?php
 						}
 						?>
 					</select>
 		    		<textarea type="text" name="Description" placeholder="Description du groupe"></textarea>
-		    		<input type="text" name="RégionG" placeholder="Région" />
+		    		<input type="text" name="code_postal" placeholder="Code Postal" />
 		    		<input type="text" name="AdresseG" placeholder="Adresse" />
 				    <input type="submit" value="CREER" />
 				</form>

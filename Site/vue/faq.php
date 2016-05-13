@@ -6,56 +6,36 @@
 	<meta http-equiv="content-type" content="text/html" charset="UTF-8">
 </head>
 <body>
-	<header>
-		<div class="menu">
-			<div id="left">
-		    	<a href="../controleur/Accueil.php"><img src="../Images/Logos/Sporciety.png" style="height: 4em;" /></a>
-			</div>
-
-			<ul id="right">
-		    	<li><a href="../controleur/Sports.php">LES SPORTS</a></li>
-            	<li><a href="../controleur/Forum.php">FORUM</a></li>
-            	<li><a href="../controleur/Contact.php">CONTACT</a></li>
-           		<?php if(isset($_SESSION['mail'])){
-			          	?>
-			          	<li><a href="../controleur/session_destroy.php">DECONNEXION</a></li>
-			          	<li><a href="../controleur/Page_Personnelle.php">PROFIL</a></li>
-			          	<?php
-			          }
-			          else
-			          {
-			          	?>
-			          <li><a href="../controleur/Connexion.php">CONNEXION</a></li>
-			          <li><a href="../controleur/Inscription.php">INSCRIPTION</a></li>
-			          <?php
-			          }
-			          ?>
-            	<li><a href="../controleur/Aide.php">AIDE</a></li>
-			</ul>
-		</div>
-	</header>
+	
+	<?php include("../Header/HOMETOP.php"); ?>
 
 	<h1>Une question ? Une réponse </h1>
 
 
-
 	<section>
 		<div class="question">Comment s'inscrire ?</div>
-		<div class="reponse">Ceci est la réponse !</div>
+		<div class="reponse"><a href="../controleur/Inscription.php">Cliquer ici !</a></div>
 
 		<div class="question">Comment se connecter ?</div>
-		<div class="reponse">Ceci est la réponse !</div>
+		<div class="reponse"><a href="../controleur/Connexion.php">Cliquer ici !</a></div>
 
 		<div class="question">Comment trouver ou rejoindre un groupe</div>
-		<div class="reponse">Ceci est la réponse !</div>
+		<div class="reponse"><a href="../controleur/Sports.php">Faites une recherche ici en fonction de votre sport</a></div>
 
 		<div class="question">Gérer votre mot de passe</div>
-		<div class="reponse">Ceci est la réponse !</div>
+		<div class="reponse"><?php if(isset($_SESSION['mail'])and $_SESSION['mail']!=""){ ?>
+			<a href="../controleur/Page_Personnelle.php">Cliquer ici pour accèder à votre profil et aller dans modifier</a></div><?php
+		}else{?>
+			<a href="../controleur/Connexion.php">Connectez vous d'abord</a></div><?php
+		} ?>
 
 		<div class="question">Crée votre groupe</div>
-		<div class="reponse">Ceci est la réponse !</div>
+		<div class="reponse"><?php if(isset($_SESSION['mail'])and $_SESSION['mail']!=""){ ?>
+			<a href="../controleur/Page_Personnelle.php">Cliquer ici pour accèder à votre profil et aller dans groupe puis créer un groupe</a></div><?php
+		}else{?>
+			<a href="../controleur/Connexion.php">Connectez vous d'abord</a></div><?php
+		} ?>
 	</section>	
-
 	<section id="mail">
 		<p>Pour toute autre question, n'hésitez pas à nous contacter en nous envoyant un mail :</p>
 		<a href="mailto:adresse@serveur.com" id="bouton_contact">Contactez-nous</a>

@@ -1,67 +1,20 @@
-*
-{
+* {
 	margin : 0;
 }
 
-body
-{
+body {
 	font-family: Helvetica;
-	background-color: rgba(220,220,220,0.7);
+  background-color: rgba(220,220,220,0.7);
+  overflow-y: hidden;
 }
 
-header
-{  
-	width:100%;
-    margin:auto;
-}
-
-.menu {
-	position: relative;
-	z-index: 3;
-	width: auto;
-	background-color: rgba(0,0,0,0.7);
-	padding: 2%;
-	margin-top: -0.2em;
-}
-
-.menu li {
-    display: inline;
-    padding: 0.5em;
-}
-
-.menu li a {
-    text-decoration: none;
-    color: white;
-}
-
-.menu li a:hover {
-    color: #999999;
-}
-
-
-#left img {
-	position: absolute;
-	height: 4em;
-	margin-top: -1.3em;
-	margin-left: 0.91em;
-}
-
-
-#right 
-{
-    text-align: right;
-}
-
-
-h1
-{
+h1 {
 	text-align: center;
-	margin-top: 5em;
+	margin-top: 3em;
 	margin-bottom: 3em;
 }
 
-.question
-{
+.question {
 	font-weight: bold;
 	font-size: 1.3em;
 	margin-bottom: 1em;
@@ -69,8 +22,7 @@ h1
 
 }
 
-.reponse
-{
+.reponse {
 	margin-bottom: 2em;
 	padding-left: 12em;
 }
@@ -87,11 +39,14 @@ h1
     font-size: 1em;
     font-weight: bold;
     margin-top: 2em;
-    margin-bottom: 2em;
+    margin-bottom: 4.5em;
 }
 
-#bouton_contact
-{
+#mail a {
+	margin-top: 2em;
+}
+
+#bouton_contact {
 	text-decoration: none;
 	color: black;
 	font-size: 1.5em;
@@ -101,8 +56,7 @@ h1
 	border-radius: 0.5em;
 }
 
-#bouton_contact:hover 
-{
+#bouton_contact:hover  {
 	color: black;
 	border: 0.2em solid black;
 }
@@ -133,8 +87,7 @@ h1
     -ms-filter: brightness(300%);
 }
 
-#copyright
-{
+#copyright {
 	background-color: rgb(40,40,40);
 }
 
@@ -149,13 +102,13 @@ h1
   padding: 2em;
 }
 
-.organisation h3{
+.organisation h3 {
 	margin-left: 40em;
 	text-decoration: none;
   	color: rgba(220,220,220,0.7);
 }
 
-.organisation h4{
+.organisation h4 {
 	text-decoration: none;
   	color: rgba(220,220,220,0.7);
 }

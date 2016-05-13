@@ -1,55 +1,30 @@
-*
-{
+* {
 	margin : 0;
 }
 
-body
-{
+body {
 	font-family: Helvetica;
 	background-color: rgba(220,220,220,0.7);
+	overflow-y: hidden;
 }
 
-header
-{  
-	width:100%;
-    margin:auto;
+.slider {
+  width: auto;
+  overflow-x: hidden;
 }
 
-.menu {
-	position: relative;
-	z-index: 3;
-	width: auto;
-	background-color: rgba(0,0,0,0.7);
-	padding: 2%;
-	margin-top: -0.2em;
+.slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  animation: 25s slider infinite;
 }
 
-.menu li {
-    display: inline;
-    padding: 0.5em;
-}
-
-.menu li a {
-    text-decoration: none;
-    color: white;
-}
-
-.menu li a:hover {
-    color: #999999;
-}
-
-
-#left img {
-	position: absolute;
-	height: 4em;
-	margin-top: -1.3em;
-	margin-left: 0.91em;
-}
-
-
-#right 
-{
-    text-align: right;
+.slider img {
+  width: 20%; 
+  height: 70vh;
 }
 
 @keyframes slider {
@@ -62,24 +37,6 @@ header
   75% { left: -300%; }
   95% { left: -300%; }
   100% { left: -400%; }
-}
-
-.slider figure {
-	position: relative;
-  	width: 500%;
-  	font-size: 0;
-  	animation: 25s slider infinite;
-}
-
-.slider {
-	margin-top: -4.5em;
-	z-index: 1;
-	overflow: hidden;
-}
-
-.slider img {
-	 width: 20%; 
-	 height: 70vh;
 }
 
 #descriptiongroupe
@@ -135,12 +92,10 @@ header
 {	
 	text-align: left;
 	text-decoration: underline;
-	color: #4A1A2C;
-	position: relative;
-	left: 5em;
-	top: 3em;
+	color: black;
 	font-weight: bold;
-
+	margin-top: 3em;
+  	margin-left: 5em;
 }
 
 #event h3
@@ -171,7 +126,7 @@ header
 #event h1
 {
 	padding: 2em;
-	margin-top: 1em;
+	margin-top: -2em;
 	font-weight: bold;
 	font-size: 3em;
 }
@@ -181,35 +136,37 @@ header
 	padding-bottom: 3em;
 }
 
-#localisation
+.localisation
 {
-	background-color: #31313a;
+  background-color: #31313a;
+  display: inline-block;
+  width: 100%;
+  height: 90vh;
 }
 
-#localisation h1
+.localisation h1
 {
-	color: white;
-	text-decoration: underline;
-	position: relative;
-	left: 1em;
-	top: 4em;
+  color: white;
+  text-decoration: underline;
+  margin-left: 2em;
+  margin-top: 2.5em;
 }
 
-.googlemaps {
-	height: 30em;
-	position: relative;
-	bottom: 2.5em;
-	left: 22em;
+.localisation iframe {
+  width: 40em; 
+  height: 30em; 
+  border: none;
+  margin-left: 45em;
+  margin-top: -20em;
 }
 
 #adresse
 {
-	font-size: 1.5em;
-	font-weight: bold;
-	color: white;
-	position: relative;
-	top: 10em;
-	left: 12em;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  margin-top: 10em;
+  margin-left: 12em;
 }
 
 #social {

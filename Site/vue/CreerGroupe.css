@@ -42,7 +42,7 @@ body {
 .HOMETOP {
     clear: both;
     position: fixed;
-    background-image: url("Images/Wallpaper/Connexion.jpg");
+    background-image: url("../Images/Wallpaper/Connexion.jpg");
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -85,7 +85,7 @@ body {
     margin-top: 2em;
     outline: none;
     width: 100%;
-    color: #ffffff;
+    color: grey;//#ffffff;
     border: none;
     border-bottom: 1px solid #ffffff;
     background: transparent;

@@ -3,6 +3,10 @@
 <?php
 if(!isset($_POST['mail']) OR !isset($_POST['passe']))
 {
+<<<<<<< HEAD:Site/test/test_session.php
+=======
+	$erreur="Veuillez saisir votre adresse mail ";
+>>>>>>> origin/master:Site/controleur/test_session.php
 	include('../controleur/Connexion.php');
 
 }
