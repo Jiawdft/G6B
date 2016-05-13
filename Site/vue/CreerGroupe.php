@@ -2,14 +2,14 @@
 <html>
 	<head>
 		<title>Inscription</title>
-		<link href="CreerGroupe.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="../vue/CreerGroupe.css" rel="stylesheet" type="text/css" media="screen" />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
 		<div class="HOMETOP">
 	    	<div class="menu">
 		       <div id="left">
-		       		<a href="../controleur/Accueil.php"><img src="Images/Logos/Sporciety.png" style="height: 3.8em;" /></a>
+		       		<a href="../controleur/Accueil.php"><img src="../Images/Logos/Sporciety.png" style="height: 3.8em;" /></a>
 		       </div>
 		       <ul id="right">
 		            <li><a href="../controleur/Sports.php">LES SPORTS</a></li>
@@ -46,13 +46,13 @@
 						foreach($sports as $sport)
 						{
 							?>
-							<option value= <?php echo  'coucou'//$sport['sport'] ?>><?php echo ucfirst(strtolower(/*$sport['sport']*/('coucou'))) ?></option>
+							<option value= <?php echo $sport['sport'] ?>><?php echo ucfirst(strtolower($sport['sport'])) ?></option>
 							*/<?php
 						}
 						?>
 					</select>
 		    		<textarea type="text" name="Description" placeholder="Description du groupe"></textarea>
-		    		<input type="text" name="RégionG" placeholder="Région" />
+		    		<input type="text" name="code_postal" placeholder="Code Postal" />
 		    		<input type="text" name="AdresseG" placeholder="Adresse" />
 				    <input type="submit" value="CREER" />
 				</form>
