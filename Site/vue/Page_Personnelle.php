@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Page Personnelle</title>
-		<link href="../vue/Page_Personelle.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="../vue/Page_Personnelle.css" rel="stylesheet" type="text/css" media="screen" />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
