@@ -76,7 +76,7 @@
 							<?php
 								foreach ($groupes as $groupe) {
 									?>
-									<li><a href="../controleur/Groupe.php?groupe=<?php echo $groupe['groupe']?>" ><?php echo $groupe['groupe']?></a></li>
+									<li><a href="../controleur/Page_Personnelle_mon_groupe.php?groupe=<?php echo $groupe['groupe']?>" ><?php echo $groupe['groupe']?></a></li>
 									<?php
 								}
 							?>

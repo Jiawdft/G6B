@@ -19,6 +19,8 @@
 			          	?>
 			          	<li><a href="../controleur/session_destroy.php">DECONNEXION
 			          	</a></li>
+			          	<li><a href="../controleur/Page_Personnelle.php">PROFIL</a></li>
+
 			          	<?php
 			          }
 			          else
@@ -35,7 +37,7 @@
 		    <div class="Creation">
 		    	<h1 style="text-align: center;">CREER UN GROUPE</h1>
 		    	<form action='' method="post">
-		    		<input type="text" name="NomG" placeholder="Nom du Groupe" />
+		    		<input type="text" name="nom_groupe" placeholder="Nom du Groupe" />
 					<select name="choix">
 					    <option value=''>Sport</option>
 					    <?php
@@ -44,8 +46,8 @@
 						foreach($sports as $sport)
 						{
 							?>
-							<option value= <?php echo $sport['sport'] ?>><?php echo ucfirst(strtolower($sport['sport'])) ?></option>
-							<?php
+							<option value= <?php echo  'coucou'//$sport['sport'] ?>><?php echo ucfirst(strtolower(/*$sport['sport']*/('coucou'))) ?></option>
+							*/<?php
 						}
 						?>
 					</select>
