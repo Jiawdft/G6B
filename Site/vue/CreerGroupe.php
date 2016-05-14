@@ -17,14 +17,8 @@
 		           <li><a href="../controleur/Contact.php">CONTACT</a></li>
 		           <?php if(isset($_SESSION['mail'])){
 			          	?>
-<<<<<<< HEAD:Site/CreerGroupe.php
 			          	<li><a href="../controleur/session_destroy.php">DECONNEXION</a></li>
-=======
-			          	<li><a href="../controleur/session_destroy.php">DECONNEXION
-			          	</a></li>
 			          	<li><a href="../controleur/Page_Personnelle.php">PROFIL</a></li>
-
->>>>>>> origin/master:Site/vue/CreerGroupe.php
 			          	<?php
 			          }
 			          else
