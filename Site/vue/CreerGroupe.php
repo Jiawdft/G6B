@@ -36,7 +36,7 @@
 		    </div>
 		    <div class="Creation">
 		    	<h1 style="text-align: center;">CREER UN GROUPE</h1>
-		    	<form action='' method="post">
+		    	<form action='../controleur/Page_Personnelle_mon_groupe.php?new=true' method="post">
 		    		<input type="text" name="nom_groupe" placeholder="Nom du Groupe" />
 					<select name="choix">
 					    <option value=''>Sport</option>
@@ -51,11 +51,21 @@
 						}
 						?>
 					</select>
-		    		<textarea type="text" name="Description" placeholder="Description du groupe"></textarea>
+					<h5><a href="../controleur/Add_Sport.php" >Ajouter un sport</a></li></h5>
+									
+		    		<textarea type="text" name="description" placeholder="Description du groupe"></textarea>
 		    		<input type="text" name="code_postal" placeholder="Code Postal" />
+		    		<!--
 		    		<input type="text" name="AdresseG" placeholder="Adresse" />
+				    -->
+				    <?php
+				    if(isset($erreur) and $erreur!=""){?>
+				    	 <h4><?php echo $erreur?></h4><?php
+					}?>
+				   
 				    <input type="submit" value="CREER" />
 				</form>
+
 				<div id="social" style="text-align: center; margin-top: 10%">
 				<a href="https://www.facebook.com/workoutsociety/?ref=aymt_homepage_panel"><img src="../Images/Logos/Fb.png"></a>
 		    	<a href="https://twitter.com/?lang=fr"><img src="../Images/Logos/Tw.png"></a>

@@ -25,7 +25,9 @@
 					echo $membre['codepostal'];
 					?>
 				</th></tr>
-				</table>	
+				</table></br>
+					<h4><a href="../controleur/CreerGroupe.php" > Créer un groupe </a></li></h>
+									
 			</div>
 			<div class="more">
 				<div id="p">

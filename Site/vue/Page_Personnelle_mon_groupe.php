@@ -6,7 +6,7 @@
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
-<<<<<<< HEAD
+<!--
 		<div class="HOMETOP">
 	    	<div class="menu">
 		       <div id="left">
@@ -23,10 +23,9 @@
 		    </div>
 		</div>
 =======
+-->
 		
 		<?php include("../Header/HOMETOP.php"); ?>
-		
->>>>>>> a9b48113d563696ecf88bbaf108e1f5a363325fe
 		<div class="mygroups">
 			<h1 style="padding-left: 20%;"><?php echo $_GET['groupe']?></h1>
 			<div class="members">
