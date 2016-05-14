@@ -35,7 +35,7 @@
 		    <div class="Creation">
 		    	<h1 style="text-align: center;">AJOUTER UN SPORT</h1>
 		    	<form action='../controleur/CreerGroupe.php?new=true' method="post">
-		    		<input type="text" name="nom_groupe" placeholder="Nom du Sport" />
+		    		<input type="text" name="nom_sport" placeholder="Nom du Sport" />
 		    		<textarea type="text" name="description" placeholder="Description du sport"></textarea>
 
 				    <?php
@@ -45,13 +45,14 @@
 				   
 				    <input type="submit" value="CREER" />
 				</form>
-
+<!--
 				<div id="social" style="text-align: center; margin-top: 10%">
 				<a href="https://www.facebook.com/workoutsociety/?ref=aymt_homepage_panel"><img src="../Images/Logos/Fb.png"></a>
 		    	<a href="https://twitter.com/?lang=fr"><img src="../Images/Logos/Tw.png"></a>
 				<a href="https://www.instagram.com"><img src="../Images/Logos/Insta.png"></a>
 		    	<a href="https://www.pinterest.com"><img src="../Images/Logos/Pint.png"></a>
 			</div>
+		-->
 		    </div>
 		</div>
 	</body>

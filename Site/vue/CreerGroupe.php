@@ -6,6 +6,7 @@
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
+		
 		<div class="HOMETOP">
 	    	<div class="menu">
 		       <div id="left">
@@ -53,9 +54,6 @@
 									
 		    		<textarea type="text" name="description" placeholder="Description du groupe"></textarea>
 		    		<input type="text" name="code_postal" placeholder="Code Postal" />
-		    		<!--
-		    		<input type="text" name="AdresseG" placeholder="Adresse" />
-				    -->
 				    <?php
 				    if(isset($erreur) and $erreur!=""){?>
 				    	 <h4><?php echo $erreur?></h4><?php
