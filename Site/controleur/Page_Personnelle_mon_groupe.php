@@ -3,7 +3,7 @@ if(!isset($_SESSION['mail']))
 {
 session_start();
 }
-if($_SESSION['mail']=='' or !isset($_SESSION['mail'])/*or !isset($_GET['groupe'])or$_GET['groupe']==''*/){
+if($_SESSION['mail']=='' or !isset($_SESSION['mail'])){
 	include_once'../controleur/Accueil.php';
 
 }

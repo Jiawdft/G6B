@@ -3,7 +3,7 @@ if(!isset($_SESSION['mail']))
 {
 session_start();
 }
-if(isset($_GET['new'])and $_GET['new']==true)
+if(isset($_GET['newsport'])and $_GET['newsport']==true)
 {
 	if(!isset($_POST['nom_sport'])or  $_POST['nom_sport']==''or !isset($_POST['description'])){
 		

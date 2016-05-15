@@ -34,7 +34,7 @@
 		    </div>
 		    <div class="Creation">
 		    	<h1 style="text-align: center;">AJOUTER UN SPORT</h1>
-		    	<form action='../controleur/CreerGroupe.php?new=true' method="post">
+		    	<form action='../controleur/CreerGroupe.php?newsport=true' method="post">
 		    		<input type="text" name="nom_sport" placeholder="Nom du Sport" />
 		    		<textarea type="text" name="description" placeholder="Description du sport"></textarea>
 
