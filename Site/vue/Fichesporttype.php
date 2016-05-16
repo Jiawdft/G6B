@@ -153,7 +153,7 @@
 		<?php
 			if(isset($_SESSION['mail'])){
 				?>
-				<a href="../CreerGroupe.php">Creer un Groupe</a>
+				<a href="../controleur/CreerGroupe.php">Creer un Groupe</a>
 				<?php
 	 		}	
 	   		else {

@@ -11,7 +11,7 @@
 
 	    <div class="ModifGroupe">
 	    	<h1 style="text-align: center;">MODIFIE LE GROUPE</h1>
-	    	<form>
+	    	<form action='../controleur/Page_Personnelle_mon_groupe.php' method="post">
 	    		<input type="text" name="Nom du Groupe" placeholder="Entre un nouveau nom de groupe" />
 	    		<input type="text" name="Code Postal" placeholder="Votre groupe déménage ? Entre un nouveau code postal" />
 	    		<input type="text" name="Description" placeholder="Entre une nouvelle description de groupe" />
