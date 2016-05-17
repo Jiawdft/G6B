@@ -2,9 +2,15 @@
 	margin: 0;
 }
 
+*::-webkit-scrollbar { display: none }
+
 body {
 	font-family: Helvetica;
 	background-color: rgba(220,220,220,0.7);
+<<<<<<< HEAD
+	
+=======
+>>>>>>> origin/master
 }
 *::-webkit-scrollbar{ display: none}
 
@@ -76,7 +82,7 @@ footer{
 	margin-right: 7.5%;
 	width: 20%;
     outline: none;
-    color:grey; /*#ffffff;*/
+    color: grey;
     border: none;
     border-bottom: 1px solid #ffffff;
     background: transparent;
