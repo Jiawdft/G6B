@@ -26,6 +26,7 @@
             <a href="#">Modifier le Groupe</a>
           </div>
           <p style="padding-bottom: 16em;"><?php echo $groupes['information'] ?></p>
+
           <?php 
           if (!isset($_SESSION['mail'])) {
           ?>
@@ -33,12 +34,9 @@
           <?php 
           }
           else {
-            $deja_membre=get_membres_groupes($_SESSION['mail'],$_GET['groupe']);
-            if($deja_membre['membre']=''){
           ?>
-          <a id="bouton_rejoindre" href='../controleur/Accueil.php'>Rejoindre</a>
+          <a id="bouton_rejoindre" href='../controleur/inscription_groupe_membre.php?groupe=<?php echo $_GET['groupe']?>'>Rejoindre</a>
           <?php
-            }
           }
           ?>  
           

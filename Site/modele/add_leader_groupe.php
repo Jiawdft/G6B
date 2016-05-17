@@ -1,14 +1,14 @@
 <?php
-function add_sport_groupe($Sport,$Groupe){
-	$Sport=htmlspecialchars($Sport);
+function add_leader_groupe($Membre,$Groupe){
+	$Sport=htmlspecialchars($Membre);
 	$Groupe=htmlspecialchars($Groupe);
 	
 	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
-	$req = $bdd->prepare('INSERT INTO sport_groupe(sport,groupe) 
-		VALUES(:sport,
+	$req = $bdd->prepare('INSERT INTO groupe_leader(membre,groupe) 
+		VALUES(:membre,
 			:groupe)');
 $req->execute(array(
-	'sport' => $Sport,
+	'membre' => $Sport,
 	'groupe' => $Groupe,
 	));
 }
