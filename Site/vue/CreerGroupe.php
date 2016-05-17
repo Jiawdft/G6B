@@ -50,7 +50,7 @@
 						}
 						?>
 					</select>
-					<h5><a href="../controleur/Add_Sport.php" >Ajouter un sport</a></li></h5>
+					<p><a href="../controleur/Add_Sport.php" >Ajouter un sport</a></li></p>
 									
 		    		<textarea type="text" name="description" placeholder="Description du groupe"></textarea>
 		    		<input type="text" name="code_postal" placeholder="Code Postal" />
