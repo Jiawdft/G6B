@@ -26,26 +26,9 @@
 				}
 				?>
 				</select>
-					<p><a href="../controleur/Add_Sport.php" >Ajouter un sport</a></li></p>
-									
+					<a href="../controleur/Add_Sport.php" ><p>Ajouter un sport<p></a>
 		    		<textarea type="text" name="description" placeholder="Description du groupe"></textarea>
 		    		<input type="text" name="code_postal" placeholder="Code Postal" />
-
-				    <?php
-					include_once('../modele/get_sports.php');
-					$sports = get_sports('');
-					foreach($sports as $sport)
-					{
-						?>
-						<option value= <?php echo $sport['sport'] ?>><?php echo ucfirst(strtolower($sport['sport'])) ?></option>
-						*/<?php
-					}
-					?>
-				</select>
-				<h5><a href="../controleur/Add_Sport.php" >Ajouter un sport</a></li></h5>
-								
-	    		<textarea type="text" name="description" placeholder="Description du groupe"></textarea>
-	    		<input type="text" name="code_postal" placeholder="Code Postal" />
 			    <?php
 			    if(isset($erreur) and $erreur!=""){?>
 			    	 <h4><?php echo $erreur?></h4><?php
@@ -54,7 +37,7 @@
 			    <input type="submit" value="CREER" />
 			</form>
 
-			<div id="social" style="text-align: center; margin-top: 10%">
+			<div id="social" style="text-align: center; ">
 			<a href="https://www.facebook.com/workoutsociety/?ref=aymt_homepage_panel"><img src="../Images/Logos/Fb.png"></a>
 	    	<a href="https://twitter.com/?lang=fr"><img src="../Images/Logos/Tw.png"></a>
 			<a href="https://www.instagram.com"><img src="../Images/Logos/Insta.png"></a>
