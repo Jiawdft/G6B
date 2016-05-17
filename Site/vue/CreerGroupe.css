@@ -85,19 +85,7 @@ body {
     text-decoration: none;
 }
 
-.Creation h5{
-    color: #ffffff;
-    /*
-    background-color: rgb(140,140,140);
-    border: 0.2em solid rgb(140,140,140);
-    border-radius:0.5em;
-    width: 32%;
-    margin: 1em 35%;
-    cursor: pointer;
-    color: #ffffff;
-    line-height: 0.1em;
-    font-size: 1em;
-    padding: 1em;
+.Creation p {
+    color: white;
     text-decoration: none;
 }
-*/

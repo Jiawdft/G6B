@@ -7,6 +7,7 @@
 	</head>
 	<body>
 		
+<<<<<<< HEAD
 		<?php include("../Header/HOMETOP.php"); ?>
 
 		<div class="Creation">
@@ -15,6 +16,55 @@
 		    	<input type="text" name="nom_groupe" placeholder="Nom du Groupe" />
 				<select name="choix">
 				    <option value=''>Sport</option>
+=======
+		<div class="HOMETOP">
+	    	<div class="menu">
+		       <div id="left">
+		       		<a href="../controleur/Accueil.php"><img src="../Images/Logos/Sporciety.png" style="height: 3.8em;" /></a>
+		       </div>
+		       <ul id="right">
+		            <li><a href="../controleur/Sports.php">LES SPORTS</a></li>
+		           <li><a href="../controleur/Forum.php">FORUM</a></li>
+		           <li><a href="../controleur/Contact.php">CONTACT</a></li>
+		           <?php if(isset($_SESSION['mail'])){
+			          	?>
+			          	<li><a href="../controleur/session_destroy.php">DECONNEXION</a></li>
+			          	<li><a href="../controleur/Page_Personnelle.php">PROFIL</a></li>
+			          	<?php
+			          }
+			          else
+			          {
+			          	?>
+			          <li><a href="../controleur/Connexion.php">CONNEXION</a></li>
+			          <li><a href="../controleur/Inscription.php">INSCRIPTION</a></li>
+			          <?php
+			          }
+			          ?>
+		           <li><a href="../controleur/Aide.php">AIDE</a></li>
+		       </ul>
+		    </div>
+		    <div class="Creation">
+		    	<h1 style="text-align: center;">CREER UN GROUPE</h1>
+		    	<form action='../controleur/Page_Personnelle_mon_groupe.php?new=true' method="post">
+		    		<input type="text" name="nom_groupe" placeholder="Nom du Groupe" />
+					<select name="choix">
+					    <option value=''>Sport</option>
+					    <?php
+						include_once('../modele/get_sports.php');
+						$sports = get_sports('');
+						foreach($sports as $sport)
+						{
+							?>
+							<option value= <?php echo $sport['sport'] ?>><?php echo ucfirst(strtolower($sport['sport'])) ?></option>
+							*/<?php
+						}
+						?>
+					</select>
+					<p><a href="../controleur/Add_Sport.php" >Ajouter un sport</a></li></p>
+									
+		    		<textarea type="text" name="description" placeholder="Description du groupe"></textarea>
+		    		<input type="text" name="code_postal" placeholder="Code Postal" />
+>>>>>>> origin/master
 				    <?php
 					include_once('../modele/get_sports.php');
 					$sports = get_sports('');
