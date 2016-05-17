@@ -6,7 +6,7 @@ function modif_groupe($ID,$Nom,$Description,$Date){
 	$Date=htmlspecialchars($Date);	
 	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
 	if(isset($Nom)and $Nom!=''){
-		$req = $bdd->prepare('UPDATE event SET numero_de_portable = :telephone WHERE id =:ID');
+		$req = $bdd->prepare('UPDATE event SET nom = :nom WHERE id =:ID');
 			$req->execute(array(
 				'ID' => $ID,
 				'nom' => $Nom));

@@ -7,6 +7,13 @@ if($_SESSION['mail']=='' or !isset($_SESSION['mail'])){
 	include_once'../controleur/Accueil.php';
 
 }
+
+if(isset($_POST['Description']) or isset($_POST['Codepostal']))
+{
+	include'../modele/modif_groupe.php';
+	modif_groupe($_SESSION['groupe'],$_POST['Codepostal'],$_POST['Description']);
+}
+
 if(isset($_GET['new']) and $_GET['new']==true){
 	if(!isset($_POST['nom_groupe'])or$_POST['nom_groupe']==""or!isset($_POST['code_postal'])or$_POST['code_postal']==""or!isset($_POST['description'])or$_POST['description']==""){
 		$erreur='information manquante';
