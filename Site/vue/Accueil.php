@@ -131,11 +131,10 @@
 					</tr>
 					<div id="L1"></div>
 					<tr>
-						<td><h4 href="#"><br>Aide<br/></h4></td>
-						<td><h4 href="#"><br>Langue<br/></h4></td>
-						<td><h4 href="#"><br>Contact<br/></h4></td>
-						<td><h4 href="#"><br>Plan du Site<br/></h4></td>
-						<td><h4 href="#"><br>Mentions légales<br/></h4></td>
+						<td></td>
+						<td><a href="../Controleur/Aide.php"><p>Aide</p></a></td>
+						<td><a href="../Controleur/Contact.php"><p>Contact</p></a></td>
+						<td><a href="../Controleur/Architecture.php"><p>Plan du Site</p></a></td>
 					</tr>
 				</tbody>
 			</table>
