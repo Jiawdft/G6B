@@ -72,48 +72,18 @@
 			<div class="vline"; style="text-align: center">
 				<div class="v1">
 					<a href="#">Patriots</a>
-					<br />
-					<img id="a1" src="../Images/Logos/Star.png">
-					<img id="a2" src="../Images/Logos/Star.png">
-					<img src="../Images/Logos/Star.png">
-					<img src="../Images/Logos/Star.png">
-					<img src="../Images/Logos/Star.png">
 				</div>
 				<div class="v2">
 					<a href="#">Red Rings</a>
-					<br />
-					<img src="../Images/Logos/Star.png">
-					<img src="../Images/Logos/Star.png">
-					<img src="../Images/Logos/Star.png">
-					<img src="../Images/Logos/Star.png">
-					<img src="../Images/Logos/Star.png">
+				</div>
+				<div class="v3">
+					<a href="#">Red Rings</a>
 				</div>
 				<div class="v3">
 					<a href="#">Chicago Bulls</a>
-					<br />
-					<img src="../Images/Logos/Star.png">
-					<img src="../Images/Logos/Star.png">
-					<img src="../Images/Logos/Star.png">
-					<img src="../Images/Logos/Star.png">
-					<img src="../Images/Logos/Star.png">
 				</div>
 				<div class="v3">
 					<a href="#">Chicago Bulls</a>
-					<br />
-					<img src="../Images/Logos/Star.png">
-					<img src="../Images/Logos/Star.png">
-					<img src="../Images/Logos/Star.png">
-					<img src="../Images/Logos/Star.png">
-					<img src="../Images/Logos/Star.png">
-				</div>
-				<div class="v3">
-					<a href="#">Chicago Bulls</a>
-					<br />
-					<img src="../Images/Logos/Star.png">
-					<img src="../Images/Logos/Star.png">
-					<img src="../Images/Logos/Star.png">
-					<img src="../Images/Logos/Star.png">
-					<img src="../Images/Logos/Star.png">
 				</div>
 			</div>
 	</body>

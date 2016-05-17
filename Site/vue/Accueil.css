@@ -241,7 +241,7 @@ footer{
 
 .v1 {
 	border: solid 0.5em rgb(40,40,40);
-	background-image: url("../Images/Sports/PatriotB&W.jpg");
+	background-image: url("../");
 	margin-left: 2em;
 	margin-right: 0.5em;
 	overflow-x:scroll;
@@ -252,16 +252,12 @@ footer{
 }
 
 .v1:hover {
-	background-image: url("../Images/Sports/Patriot.png");
-}
-
-#a1 img:hover {
-	background-image: url("../Images/Logos/Star1.png");
+	cursor: pointer;
 }
 
 .v2 { 
 	border: solid 0.5em rgb(40,40,40);
-	background-image: url("../Images/Sports/RedRingsB&W.jpg");
+	background-image: url("../");
 	margin-left: 0.5em;
 	margin-right: 0.5em;
 }
@@ -271,12 +267,12 @@ footer{
 }
 
 .v2:hover{
-	background-image: url("../Images/Sports/RedRings.jpg");
+	cursor: pointer;
 }
 
 .v3 {
 	border: solid 0.5em rgb(40,40,40); 
-	background-image: url("../Images/Sports/ChicagoBullsB&W.jpg");
+	background-image: url("../");
 	margin-left: 0.5em;
 	margin-right: 2em;
 }
@@ -286,7 +282,7 @@ footer{
 }
 
 .v3:hover{
-	background-image: url("../Images/Sports/ChicagoBulls.jpg");
+	cursor: pointer;
 }
 
 #social {
