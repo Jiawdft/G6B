@@ -52,7 +52,8 @@ body {
     background-color: rgb(140,140,140);
     border: 0.2em solid rgb(140,140,140);
     width: 30%;
-    margin: 1em 35%;
+    margin: 2.5em 35%;
+    margin-bottom: -0.1em;
     cursor: pointer;
     color: #ffffff;
     line-height: 0.1em;
