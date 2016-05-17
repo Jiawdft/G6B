@@ -8,6 +8,7 @@ html, body {
 
 .menu {
     background-color: rgba(0,0,0,0.7);
+    height: 4.55em;
 }
 
 .menu  div {

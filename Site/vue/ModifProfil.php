@@ -12,9 +12,12 @@
 	    <div class="ModifProfil">
 	    	<h1 style="text-align: center;">MODIFIE VOS INFORMATIONS</h1>
 	    	<form action='../controleur/Page_Personnelle.php' method="post">
-	    		<input type="text" name="adresse" placeholder="modifier votre adresse " /></br>
-	    		<input type="text" name="codepostal" placeholder="modifier votre code postal" /></br>
-	    		<input type="text" name="mdp" placeholder="modifier votre mot de passe " />	</br>    		
+	    		<input type="text" name="adresse" placeholder="modifier votre adresse" /></br>
+	    		<input type="text" name="codepostal" placeholder="modifier votre code postal" />
+	    		<input type="submit" value="VALIDER" />
+	    		<input type="text" name="mdp" placeholder="Veuillez rentrer votre ancien mot de passe" /></br>
+	    		<input type="text" name="mdp" placeholder="Veuillez rentrer votre nouveau mot de passe" /></br>
+	    		<input type="text" name="mdp" placeholder="Veuillez rentrer votre nouveau mot de passe" />   		
 			    <input type="submit" value="VALIDER" />
 			</form>
 	    </div>
