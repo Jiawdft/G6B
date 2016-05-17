@@ -11,7 +11,7 @@
 
 	    <div class="Inscription">
 	    	<h1 style="text-align: center;">INSCRIS-TOI</h1>
-	    	<form method="post" action="../controleur/Inscription.php?inscription=true">
+	    	<form method="post" action="../controleur/Accueil.php?inscription=true">
 	    		<input type="radio" name="Genre" value="Homme" /> <p>Homme</p>
 	    		<input type="radio" name="Genre" value="Femme" /> <p>Femme</p>
 	    		<input type="text" name="Prenom" placeholder="Prénom" />

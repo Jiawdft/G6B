@@ -36,7 +36,7 @@ function modif_membre($Mail,$Telephone,$Adresse,$Codepostal,$MDP){
 		$req = $bdd->prepare('UPDATE membre SET mdp = :mdp WHERE adresse_mail =:mail');
 			$req->execute(array(
 				'mail' => $Mail,
-				'mdp' => password_maker($Mdp)
+				'mdp' => password_maker($MDP)
 				));
 
 	

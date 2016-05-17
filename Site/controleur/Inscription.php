@@ -1,8 +1,10 @@
 <?php
+/*
 if(!isset($_SESSION['mail']))
 {
 session_start();
-}
+}*/
+/*
 if(isset($_GET['inscription']) and $_GET['inscription']==true)
 {
 		if(isset($_POST['Genre']) and isset($_POST['Prenom']) and isset($_POST['Nom']) and isset($_POST['Code_Postal']) and isset($_POST['Adresse_Mail']) and isset($_POST['Mot_de_Passe']))
@@ -22,7 +24,7 @@ if(isset($_GET['inscription']) and $_GET['inscription']==true)
 				else{$Naissance='';}
 				if(isset($_POST['Numéro_de_Téléphone']))
 				{
-					$telephone=(int)($_POST['Numéro_de_Téléphone']);
+					$telephone=htmlspecialchars($_POST['Numéro_de_Téléphone']);
 				}
 				else{$telephone='';}
 				if(isset($_POST['Adresse']))
@@ -33,25 +35,28 @@ if(isset($_GET['inscription']) and $_GET['inscription']==true)
 				$_POST['Code_Postal']=htmlspecialchars($_POST['Code_Postal']);
 				
 				inscription_membre($_POST['Genre'],$_POST['Nom'],$_POST['Prenom'],$Naissance,$_POST['Code_Postal'],$adresse,$_POST['Adresse_Mail'],$telephone,$_POST['Mot_de_Passe']);	
-				include'Accueil.php';
+				include'../controleur/Accueil.php';
 			}
 			else
 			{
 				$erreur='Mot de passe invalide 6 caractères minimum';
-				//include'Inscription.php';
+				include'../controleur/Inscription.php';
 			}	
 		}
 		else
 		{
 			$erreur='Adresse mail invalide';
-			//include'Inscription.php';
+			include'../controleur/Inscription.php';
 		}
 	}
 	else
 	{
 		$erreur='informations incomplètes';
-		//include'Inscription.php';
+		include'../controleur/Inscription.php';
 	}
 
-}
+}else{
+	*/
 include_once('../vue/Inscription.php');
+//}
+?>

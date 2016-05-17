@@ -15,6 +15,11 @@
 		    	<input type="email" name="mail" placeholder="Adresse Mail" />
 		    	<input type="password" name="passe" placeholder="Mot de Passe" />
 		    	<input type="submit" value="CONNEXION" />
+		    	<?php if(isset($erreur)and $erreur!=''){?>
+			    	<h4><?php echo $erreur ?></h4>
+			    	<?php
+			    }
+			    ?>
 			</form>
 			<a id="inscription" href="../controleur/Inscription.php">Pas encore inscrit ? Inscris toi !</a>
 			<div id="social" style="text-align: center; margin-top: 10%">
