@@ -130,12 +130,6 @@
 						<td><br><img src="../Images/Logos/BNP.png"><br/></td>
 					</tr>
 					<div id="L1"></div>
-					<tr>
-						<td></td>
-						<td><a href="../Controleur/Aide.php"><p>Aide</p></a></td>
-						<td><a href="../Controleur/Contact.php"><p>Contact</p></a></td>
-						<td><a href="../Controleur/Architecture.php"><p>Plan du Site</p></a></td>
-					</tr>
 				</tbody>
 			</table>
 			<div id="L2"></div>
