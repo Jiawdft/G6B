@@ -1,0 +1,46 @@
+* {
+	margin: 0;
+}
+
+*::-webkit-scrollbar {
+	display: none;
+}
+
+html, body {
+	font-family: Helvetica;
+	background-color: rgba(150,150,150,0.7);
+	height: 0em;
+}
+
+.bo div div {
+	cursor: default;
+}
+
+.bo h1 {
+	margin: 1em 2em;
+	color: white;
+}
+
+.bo div h3{
+	width: 10em;
+	height: 4em;
+	color: white;
+	cursor: pointer;
+	border: 0.2em solid white;
+	border-radius: 1em;
+	text-align: center;
+	line-height: 4em;
+	margin: auto;
+	margin-bottom: 3em;
+	margin-top: 3em;
+}
+
+.bo p {
+	color: white;
+	height: 20em;
+	background-color: rgba(0,0,0,0.7);
+	padding: 2em;
+}
+
+
+
