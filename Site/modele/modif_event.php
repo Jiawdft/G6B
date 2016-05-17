@@ -1,34 +1,30 @@
 <?php
-function modif_groupe($Nom,$CodePostal,$Info){
-	$Nom=htmlspecialchars($Nom);
-	$CodePostal=(int) $CodePostal;
-	$Info=htmlspecialchars($Info);	
+function modif_groupe($ID,$Nom,$Description,$Date){
+
+	$ID=(int) $ID;
+	$Description=htmlspecialchars($Description);
+	$Date=htmlspecialchars($Date);	
 	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
-	if (!isset($CodePostal)or $CodePostal==''){
-			$req = $bdd->prepare('UPDATE groupe SET information = :information WHERE groupe =:groupe');
+	if(isset($Nom)and $Nom!=''){
+		$req = $bdd->prepare('UPDATE event SET numero_de_portable = :telephone WHERE id =:ID');
 			$req->execute(array(
-				'groupe' => $Nom,
-				'information' => $Info));
-
-	}elseif (!isset($Info)or $Info=='') {
-		$req = $bdd->prepare('UPDATE groupe SET codepostal=:codepostal  WHERE groupe =:groupe');
-		$req->execute(array(
-			'groupe' => $Nom,
-			'codepostal'=>$CodePostal,
-
-	}elseif((!isset($Info)or $Info=='') and (!isset($CodePostal)or $CodePostal==''))
-	{
+				'ID' => $ID,
+				'nom' => $Nom));
 
 	}
-	 else
-	{
-	$req = $bdd->prepare('UPDATE groupe SET information = :information,codepostal=:codepostal  WHERE groupe =:groupe');
-		$req->execute(array(
-			'groupe' => $Nom,
-			'information' => $Info,
-			'codepostal'=>$CodePostal
+	if(isset($Description)and $Description!=''){
+		$req = $bdd->prepare('UPDATE event SET adresse = :adresse WHERE id =:ID');
+			$req->execute(array(
+				'ID' => $ID,
+				'description' => $Description));
 
-	));
+	
+
 	}
+	if(isset($Date)and $Date!=''){
+		$req = $bdd->prepare('UPDATE event SET date = :Date WHERE id =:ID');
+			$req->execute(array(
+				'ID' => $ID,
+				'Date' => $Date));
 }
 ?>
