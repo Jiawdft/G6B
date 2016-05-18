@@ -38,6 +38,9 @@ html, body {
 .bo p {
 	color: white;
 	height: 20em;
+	width: 90%;
+	margin: auto;
+	border-radius: 1em;
 	background-color: rgba(0,0,0,0.7);
 	padding: 2em;
 }
