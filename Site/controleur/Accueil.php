@@ -2,9 +2,12 @@
 
 if(isset($_GET['inscription']) and $_GET['inscription']==true)
 {
-		if(isset($_POST['Genre']) and isset($_POST['Prenom']) and isset($_POST['Nom']) and isset($_POST['Code_Postal']) and isset($_POST['Adresse_Mail']) and isset($_POST['Mot_de_Passe']) and $_POST['Mot_de_Passe']!='')
+		if(isset($_POST['Genre']) and isset($_POST['Prenom']) and $_POST['Prenom']!="" and isset($_POST['Nom']) and $_POST['Nom']!="" and isset($_POST['Code_Postal']) and $_POST['Code_Postal']!="" and isset($_POST['Adresse_Mail']) and $_POST['Adresse_Mail']!="" and isset($_POST['Mot_de_Passe']) and $_POST['Mot_de_Passe']!='')
 	{
-		if(filter_var($_POST['Adresse_Mail'],FILTER_VALIDATE_EMAIL))
+		include_once'../modele/get_membres.php';
+		$_POST['Adresse_Mail']=htmlspecialchars($_POST['Adresse_Mail']);
+		$mails=get_membres(htmlspecialchars($_POST['Adresse_Mail']));
+		if(filter_var($_POST['Adresse_Mail'],FILTER_VALIDATE_EMAIL) and $mails['adresse_mail']=='')
 		{
 			$_POST['Mot_de_Passe']=htmlspecialchars($_POST['Mot_de_Passe']);
 			if(strlen($_POST['Mot_de_Passe'])>=6)
@@ -43,7 +46,7 @@ if(isset($_GET['inscription']) and $_GET['inscription']==true)
 		}
 		else
 		{
-			$erreur='Adresse mail invalide';
+			$erreur='Adresse mail invalide ou déjà utilisée';
 			include_once'../controleur/Inscription.php';
 		}
 	}
