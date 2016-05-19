@@ -20,6 +20,7 @@ body {
 }
 
 .mygroups a {
+    clear: all;
     padding-left: 12%;
     color: black;
     font-size: 0.9em;
@@ -49,8 +50,8 @@ body {
 
 .more {
     position: absolute;
-    padding-left: 42%;
-    margin-top: -43em;
+    left: 42%;
+    top: 8%;
 }
 
 .more div {

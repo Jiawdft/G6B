@@ -8,6 +8,7 @@
 	<body>
 
 		<?php include("../Header/HOMETOP.php"); ?>
+
 		<div class="mygroups">
 			<h1><?php echo $_GET['groupe']?></h1><br />
 			<a href="../controleur/ModifGroupe.php">Modifie ton Groupe</a>
