@@ -16,8 +16,9 @@ function get_sports_groupes($sport,$groupe){
 		$reponse -> execute(array(
 			':sport' => $sport
 			));
-		$sports_groupes = $reponse->fetchAll();
-		return $sports_groupes;
+//		$sports_groupes = $reponse->fetch();
+//		return $sports_groupes;
+		return $reponse;
 	}
 	elseif ($sport=='') 
 	{

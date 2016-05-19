@@ -34,6 +34,22 @@
 				<h3 onclick="bascule('g'); return false;">Groupes</h3>
 				<div id='g' style='display:none;'>
 					<p>Liste des Groupes :</p>
+					<form action='../Controleur/Back_office_groupes.php' method="post">
+						<select name="sport">
+			    		<option value=''>Sport</option>
+			    		<?php
+						include_once('../modele/get_sports.php');
+						$sports = get_sports('');
+						foreach($sports as $sport)
+						{
+							?>
+							<option value= <?php echo $sport['sport'] ?>><?php echo ucfirst(strtolower($sport['sport'])) ?></option>
+							*/<?php
+						}
+						?>
+						</select> 
+						<input type="submit" value="Rechercher" />
+					</form>
 				</div>
 			</div>
 

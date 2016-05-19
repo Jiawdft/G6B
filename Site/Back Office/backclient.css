@@ -35,7 +35,7 @@ html, body {
 	margin-top: 3em;
 }
 
-.bo p {
+.bo #m, #g, #s, #i {
 	color: white;
 	height: 20em;
 	width: 90%;
@@ -43,6 +43,17 @@ html, body {
 	border-radius: 1em;
 	background-color: rgba(0,0,0,0.7);
 	padding: 2em;
+}
+
+#g select {
+	width: 20%;
+    outline: none;
+    color: grey;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    background: transparent;
+    font-size: 1em;
+    margin-top: 1em;
 }
 
 
