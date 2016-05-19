@@ -2,7 +2,7 @@
 
 if(!isset($_POST['mail']) OR !isset($_POST['passe']))
 {
-	$erreur="Veuillez saisir votre adresse mail ";
+	$erreur="Veuillez saisir votre adresse mail";
 	include('../controleur/Connexion.php');
 
 }
@@ -11,7 +11,7 @@ else
 	if(($_POST['mail']=="" OR $_POST['passe']==""))
 	{
 
-	$erreur="Veuillez saisir votre adresse mail ";
+	$erreur="Veuillez saisir votre adresse mail";
 		include('../controleur/Connexion.php');
 
 	}
@@ -34,10 +34,13 @@ else
 				include'../controleur/Accueil.php';
 				break;	
 			}
+			else
+			{
+				$erreur='mauvais mot de passe';
+				include('../controleur/Connexion.php');
+			}
 			
 		}
-		$erreur='mauvais mot de passe ';
-		include('../controleur/Connexion.php');
 
 	}
 }
