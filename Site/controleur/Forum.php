@@ -1,4 +1,4 @@
 <?php
 
-include'../controleur/Accueil.php';
+include'../vue/forum.php';
 ?>

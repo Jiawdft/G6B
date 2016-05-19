@@ -32,7 +32,7 @@
 					$Sports=get_sports('');
 					$a=0;
 					foreach ($Sports as $Sport) { ?>
-						<a href="../vue/forum.php?Sport=<?php echo $Sport['sport']?>"><?php echo $Sport['sport']?></a>
+						<a href="../controleur/Post.php?sujet=sport&sous_sujet=<?php echo $Sport['sport']?>"><?php echo $Sport['sport']?></a>
 					<?php
 					$a++;
 					if($a%3==0){
@@ -54,7 +54,7 @@
 					$Groupes=get_groupes('','');
 					$a=0;
 					foreach ($Groupes as $Groupe) { ?>
-						<a href="../vue/forum.php?GROUPE=<?php echo $Groupe['groupe']?>"><?php echo $Groupe['groupe']?></a>
+						<a href="../controleur/Post.php?sujet=groupe&sous_sujet=<?php echo $Groupe['groupe']?>"><?php echo $Groupe['groupe']?></a>
 					<?php
 					$a++;
 					if($a%3==0){
