@@ -26,8 +26,8 @@
 					?>
 				</th></tr>
 				</table></br>
-					<h4><a href="../controleur/CreerGroupe.php" > Créer un groupe </a></li></h4>
-					<h4><a href="../controleur/ModifProfil.php" > Modifier votre profil </a></li></h4>
+				<a href="../controleur/CreerGroupe.php">Créer un groupe</a><br />
+				<a href="../controleur/ModifProfil.php">Modifier votre profil</a>
 									
 			</div>
 			<div class="more">

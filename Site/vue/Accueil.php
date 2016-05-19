@@ -104,13 +104,13 @@
 			</table>
 			<div id="L2"></div>
 		</div>
-		<div id="social" style="text-align: center">
+		<div id="social">
 			<a href="https://www.facebook.com/workoutsociety/?ref=aymt_homepage_panel"><img src="../Images/Logos/Fb.png"></a>
 	    	<a href="https://twitter.com/?lang=fr"><img src="../Images/Logos/Tw.png"></a>
 			<a href="https://www.instagram.com"><img src="../Images/Logos/Insta.png"></a>
 	    	<a href="https://www.pinterest.com"><img src="../Images/Logos/Pint.png"></a>
 		</div>
-		<div id="copyright" style="text-align: center">
+		<div id="copyright">
 			<a>Copyright www.sportciety.com </a>
 			<a><br>Sportciety : 28 Rue Notre Dame des Champs, 75006 Paris </br></a>
 		</div>
