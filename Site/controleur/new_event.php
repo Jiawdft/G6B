@@ -5,6 +5,6 @@ if(!isset($_SESSION['mail']))
 }
 
 include_once'../modele/new_event.php';
-new_event($_POST['nom_event'],$_POST['description'],$_POST['date'],'');
+new_event($_POST['nom_event'],$_POST['description'],$_POST['date'],$_POST['adresse'],'');
 
 ?>
