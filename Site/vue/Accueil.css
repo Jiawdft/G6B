@@ -286,16 +286,17 @@ footer{
 
 #social {
 	height: 4em;
+	text-align: center;
 }
 
 #social img {
 	margin: 0.5em;
 	height: 2em;
     filter: brightness(100%);
-        -webkit-filter: brightness(100%);
-        -moz-filter: brightness(100%);
-        -o-filter: brightness(100%);
-        -ms-filter: brightness(100%);
+    -webkit-filter: brightness(100%);
+    -moz-filter: brightness(100%);
+    -o-filter: brightness(100%);
+    -ms-filter: brightness(100%);
 }
 
 #social img:hover {
@@ -306,6 +307,10 @@ footer{
     -moz-filter: brightness(300%);
     -o-filter: brightness(300%);
     -ms-filter: brightness(300%);
+}
+
+#copyright {
+	text-align: center;
 }
 
 #copyright a {

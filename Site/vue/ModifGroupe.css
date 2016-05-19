@@ -38,6 +38,11 @@ body {
     padding-right: 2%;
 }
 
+.ModifGroupe li {
+	margin-top: 1em;
+	color: white;
+}
+
 .ModifGroupe input[type="text"],
 .ModifGroupe input[type="email"],
 .ModifGroupe input[type="password"],

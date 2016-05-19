@@ -8,7 +8,7 @@
 
 body {
     font-family: Helvetica;
-    background-color: rgba(200,200,200,0.7);
+    background-color: rgba(150,150,150,0.7);
 }
 
 .user {
@@ -27,6 +27,13 @@ body {
     width: 20em;
 }
 
+.user a {
+    margin-left: 2.2em;
+    color: black;
+    font-size: 0.9em;
+    font-weight: 100;
+}
+
 .mygroups {
     margin: 4em 0 0 2em;
 }
@@ -39,7 +46,7 @@ body {
     display: inline-block;
     margin-top: 3em;
     border: 0.2em solid black;
-    height: 25em;
+    height: 22em;
     width: 40em;
 }
 
@@ -68,7 +75,7 @@ body {
     display: inline-block;
     margin-top: 2em;
     border: 0.2em solid black;
-    height: 15em;
+    height: 14.2em;
     width: 35em;
 }
 

@@ -8,11 +8,23 @@
 
 body {
     font-family: Helvetica;
-    background-color: rgba(200,200,200,0.7);
+    background-color: rgba(150,150,150,0.7);
 }
 
 .mygroups {
     margin: 2em 0 0 2em;
+}
+
+.mygroups h1 {
+    padding-left: 12%;
+}
+
+.mygroups a {
+    clear: all;
+    padding-left: 12%;
+    color: black;
+    font-size: 0.9em;
+    font-weight: 100;
 }
 
 .members {
@@ -32,14 +44,14 @@ body {
     display: inline-block;
     border: 0.2em solid black;
     margin: 2em 0 0 2em;
-    height: 33em;
+    height: 30em;
     width: 20em;
 }
 
 .more {
     position: absolute;
-    padding-left: 42%;
-    margin-top: -43em;
+    left: 42%;
+    top: 8%;
 }
 
 .more div {
