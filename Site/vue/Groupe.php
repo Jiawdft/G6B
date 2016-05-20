@@ -23,7 +23,7 @@
   			<div id="descriptiongroupe">
   				<h1><?php echo $_GET['groupe']; ?></h1>
           <div id="modg">
-            <a href="#">Modifier le Groupe</a>
+            <a href="../controleur/ModifGroupe.php">Modifier le Groupe</a>
           </div>
           <p style="padding-bottom: 16em;"><?php echo $groupes['information'] ?></p>
 
