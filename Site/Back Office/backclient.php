@@ -65,6 +65,18 @@
 					<p>Imagerie :</p>
 				</div>
 			</div>
+			<div id="Forum">
+				<h3 onclick="bascule('f'); return false;">Forum</h3>
+				<div id='f' style='display:none;'>
+					<p>Modérer les messages :</p>
+				</div>
+			</div>
+			<div id="Aide">
+				<h3 onclick="bascule('a'); return false;">Aide</h3>
+				<div id='a' style='display:none;'>
+					<p>Administrer la rubrique "Aide" :</p>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
