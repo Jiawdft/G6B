@@ -31,15 +31,14 @@ else
 				if(isset($groupe['groupe']) and $groupe['groupe']!=''){
 					$_SESSION['groupe']=$groupe['groupe'];
 				}
-				include'../controleur/Accueil.php';
-				break;	
+				include_once'../controleur/Accueil.php';
 			}
-			else
-			{
-				$erreur='mauvais mot de passe';
-				include('../controleur/Connexion.php');
-			}
+
 			
+		}
+		if(!password_verify($_POST['passe'],$membre['mdp'])){
+		$erreur='Mot de passe incorrect';
+		include_once('../controleur/Connexion.php');
 		}
 
 	}
