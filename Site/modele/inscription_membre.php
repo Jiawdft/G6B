@@ -8,7 +8,7 @@ function inscription_membre($Civilite,$Nom,$Prenom,$DateNaissance,$CodePostal,$A
 	$CodePostal=(int)$CodePostal;
 	$Adresse=htmlspecialchars($Adresse);
 	$AdresseMail=htmlspecialchars($AdresseMail);
-	$NumeroDePortable=(int)$NumeroDePortable;
+	$NumeroDePortable=htmlspecialchars($NumeroDePortable);
 	$Mdp=htmlspecialchars($Mdp);
 	
 	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
