@@ -16,15 +16,31 @@
 					<tr>
 						<th>
 						<?php
-						echo $membre['prenom']." ".$membre['nom']
+							echo $membre['prenom'] . " " . $membre['nom'] . " " . "(mail : " . $membre['adresse_mail'] . ")";
 						?>
 						</th>
 					</tr>
-					<tr><th>
-					<?php
-					echo $membre['codepostal'];
-					?>
-				</th></tr>
+					<tr>
+						<th>
+							<?php
+								echo $membre['adresse'] . ", " . $membre['codepostal'] . $membre['ville'];
+							?>
+						</th>
+					</tr>
+					<tr>
+						<th>
+							<?php
+								echo $membre['numero_de_portable'];
+							?>
+						</th>
+					</tr>
+					<tr>
+						<th>
+							<?php
+								echo $membre['date_de_naissance'];
+							?>
+						</th>
+					</tr>
 				</table></br>
 				<a href="../controleur/CreerGroupe.php">Créer un groupe</a><br />
 				<a href="../controleur/ModifProfil.php">Modifier votre profil</a>
@@ -37,7 +53,7 @@
 						<tr>
 							<th>
 								<ul>
-									<li>a</li>
+									<li></li>
 								</ul>
 							</th>
 						</tr>
@@ -49,8 +65,7 @@
 						<tr>
 							<th>
 								<ul>
-									<li>a</li>
-									
+									<li></li>
 								</ul>
 							</th>
 						</tr>
@@ -71,9 +86,6 @@
 									<?php
 								}
 							?>
-							
-							<li>b</li>
-							
 						</ul>
 					</th>
 				</tr>
