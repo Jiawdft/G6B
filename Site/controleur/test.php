@@ -4,9 +4,9 @@
 	{
 	session_start();
 	}
-	include_once'../modele/get_membres_groupes.php';
-	$test=get_membres_groupes('k@gmail.com','Get fit');
-	echo $test['membre'];
+	include_once'../modele/inscription_event.php';
+	inscription_event('j@gmail.com',"2");
+	
 
 
 
