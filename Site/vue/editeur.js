@@ -7,6 +7,7 @@ function commande(nom, argument){
 		argument = prompt("Quelle est l'adresse du lien ?");
 	break;
 	}
+	
 	if(document.queryCommandValue("bold")){
 	    document.getElementById("bouton_bold").className = "actif";
 	}

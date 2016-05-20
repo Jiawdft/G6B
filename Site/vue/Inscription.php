@@ -20,6 +20,7 @@
 	    		<input type="text" name="Numéro_de_Téléphone" placeholder="Numéro de Téléphone" />
 	    		<input type="text" name="Adresse" placeholder="Adresse" />
 	    		<input type="text" name="Code_Postal" placeholder="Code Postal" />
+	    		<input type="text" name="Ville" placeholder="Ville" />
 			    <input type="email" name="Adresse_Mail" placeholder="Adresse Mail" />
 			    <input type="password" name="Mot_de_Passe" placeholder="Mot de Passe" />
 			    <input type="submit" value="INSCRIPTION" />

@@ -14,23 +14,16 @@ body {
 
 .titre h1 {
 	text-align: center;
+	color: white;
 }
 
 .Groupes a {
 	font-size: 1.3em;
 	font-weight: bold;
 	text-decoration: none;
-	color: black;
+	color: white;
 	line-height: 2.2em;
 	margin: 6em;
-}
-
-#Plus a {
-	font-size: 1.3em;
-	font-weight: bold;
-	text-decoration: none;
-	color: black;
-	margin-left: 90%;
 }
 
 .center {
@@ -51,5 +44,16 @@ body {
 	border: 0.1em solid #ffffff;
 	padding: 0.5em;
 	border-radius: 0.5em;
-
 }
+
+.NouveauGroupe a:hover {
+	color: #ffffff;
+	border: 0.2em solid #ffffff;
+	margin-left: 39.9em;
+}
+
+.texte {
+	color: white;
+}
+
+

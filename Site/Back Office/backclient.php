@@ -155,7 +155,16 @@
 			<div id="Aide">
 				<h3 onclick="bascule('a'); return false;">Aide</h3>
 				<div id='a' style='display:none;'>
+<<<<<<< HEAD
 					<p>ADMINISTRER LA RUBRIQUE "AIDE" :</p>
+=======
+					<p>Administrer la rubrique "Aide" :</p><br>
+					<p>Ajouter une question :</p><br>
+					<textarea name="Question" rows="5" cols="100">Saisir une question ici.</textarea><br><br>
+					<p>Ajouter sa réponse :</p> <br>
+					<textarea name="Réponse" rows="7" cols="100">Saisir la réponse ici.</textarea><br><br>
+					<input type="submit" value="Ajouter">
+>>>>>>> origin/master
 				</div>
 			</div>
 		</div>

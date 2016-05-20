@@ -1,9 +1,9 @@
 <?php 
 
-include_once'../modele/get_membres_groupes.php';
-$go=get_membres_groupes('','');
+include_once'../modele/get_event.php';
+$go=get_event('Get fit');
 foreach ($go as $test) {
-	echo $test['groupe'];
+	echo $test['id'];
 }
 
  ?>
