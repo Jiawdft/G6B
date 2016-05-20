@@ -7,7 +7,7 @@
 	</head>
 	<body>
 	    
-	    <?php include("../Header/HOMETOP.php"); ?>
+	    <?php include("../Header/HOMETOP.php"); ?><br><br>
 
     	<div class="center">
     		<div class="titre">
@@ -31,7 +31,7 @@
 					}	
 				 	?>
 				</h1>
-    		</div>
+    		</div><br><br>
     		<div class="texte">
     			<?php
     			//include'../modele/get_sports.php';
@@ -69,7 +69,7 @@
 
     			}
     			?>
-    		</div>
+    		</div><br>
 			<div class="Groupes">
 		   		<table>
 		    		<tbody>

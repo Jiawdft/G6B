@@ -14,23 +14,16 @@ body {
 
 .titre h1 {
 	text-align: center;
+	color: white;
 }
 
 .Groupes a {
 	font-size: 1.3em;
 	font-weight: bold;
 	text-decoration: none;
-	color: black;
+	color: white;
 	line-height: 2.2em;
 	margin: 6em;
-}
-
-#Plus a {
-	font-size: 1.3em;
-	font-weight: bold;
-	text-decoration: none;
-	color: black;
-	margin-left: 90%;
 }
 
 .center {
@@ -53,3 +46,4 @@ body {
 	border-radius: 0.5em;
 
 }
+
