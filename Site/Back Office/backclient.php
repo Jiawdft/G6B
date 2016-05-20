@@ -26,55 +26,136 @@
 			<div id="Membres">
 				<h3 onclick="bascule('m'); return false;">Membres</h3>
 				<div id='m' style='display:none;'>
-					<p>Liste des Membres :</p>
+					<p>LISTE DES MEMBRES :</p>
+					<h4>
+					<table>
+		    		<tbody>
+					<?php
+					include_once'../modele/get_membres.php';
+					$Membres=get_membres('','');
+					$a=0;
+					foreach ($Membres as $Membre) { ?>
+						<td><?php echo $Membre['adresse_mail']?></td>
+					<?php
+					$a++;
+					if($a%7==0)
+								{
+									?>
+									</tr>
+									<tr>
+									<?php
+								}
+					}
+					?>
+					</h4>
+					</table>
+		    		</tbody>
 				</div>
 			</div>
 
 			<div id="Groupes">
 				<h3 onclick="bascule('g'); return false;">Groupes</h3>
 				<div id='g' style='display:none;'>
-					<p>Liste des Groupes :</p>
-					<form action='../Controleur/Back_office_groupes.php' method="post">
-						<select name="sport">
-			    		<option value=''>Sport</option>
-			    		<?php
-						include_once('../modele/get_sports.php');
-						$sports = get_sports('');
-						foreach($sports as $sport)
-						{
-							?>
-							<option value= <?php echo $sport['sport'] ?>><?php echo ucfirst(strtolower($sport['sport'])) ?></option>
-							*/<?php
-						}
-						?>
-						</select> 
-						<input type="submit" value="Rechercher" />
-					</form>
+					<p>LISTE DES GROUPES :</p>
+					<h4>
+					<table>
+		    		<tbody>
+					<?php
+					include_once'../modele/get_groupes.php';
+					$Groupes=get_groupes('','');
+					$a=0;
+					foreach ($Groupes as $Groupe) { ?>
+						<td><?php echo $Groupe['groupe']?></td>
+					<?php
+					$a++;
+					if($a%10==0)
+								{
+									?>
+									</tr>
+									<tr>
+									<?php
+								}
+					}
+					?>
+					</h4>
+					</table>
+		    		</tbody>
 				</div>
 			</div>
 
 			<div id="Sports">
 				<h3 onclick="bascule('s'); return false;">Sports</h3>
 				<div id='s' style='display:none;'>
-					<p>Liste des Sports :</p>
+					<p>LISTE DES SPORTS :</p>
+					<h4>
+					<table>
+		    			<tbody>
+						<tr>
+						<?php
+						include_once'../modele/get_sports.php';
+						$Sports=get_sports('');
+						$a=0;
+						foreach ($Sports as $Sport) { ?>
+							<td><?php echo $Sport['sport']?></td>
+							<?php
+							$a++;
+							if($a%10==0)
+								{
+									?>
+									</tr>
+									<tr>
+									<?php
+								}
+						}
+						?>
+						</tr>
+						</tbody>
+					</table>
+					</h4>
 				</div>
 			</div>
+
 			<div id="Images">
 				<h3 onclick="bascule('i'); return false;">Images</h3>
 				<div id='i' style='display:none;'>
-					<p>Imagerie :</p>
+					<p>IMAGERIE :</p>
+					<h4>
+					<table>
+		    			<tbody>
+						<tr>
+							<td>Page accueil - Carrousel</td>
+							<td>Page accueil - Grille</td>
+						</tr>
+						<tr>
+							<td>Page Contact</td>
+							<td>Page Inscription</td>
+							<td>Page Connexion</td>
+						</tr>
+						<tr>
+							<td>Page Recherche/Sport</td>
+							<td>Page Recherche/Groupe</td>
+							<td>Page Création/Groupe</td>
+							<td>Page Sport - Carrousel</td>
+						</tr>
+						<tr>
+							<td>Page Modification - Groupe</td>
+							<td>Page Modification - Informations</td>
+						</tr>
+						</tbody>
+					</table>
+					</h4>
 				</div>
 			</div>
 			<div id="Forum">
 				<h3 onclick="bascule('f'); return false;">Forum</h3>
 				<div id='f' style='display:none;'>
-					<p>Modérer les messages :</p>
+					<p>MODERER LES MESSAGES :</p>
 				</div>
 			</div>
 			<div id="Aide">
 				<h3 onclick="bascule('a'); return false;">Aide</h3>
 				<div id='a' style='display:none;'>
-					<p>Administrer la rubrique "Aide" :</p>
+					<p>ADMINISTRER LA RUBRIQUE "AIDE" :</p>
 				</div>
 			</div>
 		</div>
