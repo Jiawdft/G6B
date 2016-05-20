@@ -44,7 +44,12 @@ body {
 	border: 0.1em solid #ffffff;
 	padding: 0.5em;
 	border-radius: 0.5em;
+}
 
+.NouveauGroupe a:hover {
+	color: #ffffff;
+	border: 0.2em solid #ffffff;
+	margin-left: 39.9em;
 }
 
 .texte {

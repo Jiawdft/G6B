@@ -19,8 +19,8 @@ footer{
 #inscription {
 	position: absolute;
 	z-index: 3;
-	margin-left: 65%;
-	margin-top: 20%;
+	top: 12em;
+	right: 15em;
 	font-size: 1.5em;
 	font-weight: bold;
 	color: #ffffff;
@@ -31,7 +31,11 @@ footer{
 }
 
 #inscription:hover {
-	color: #ffffff;
+	position: absolute;
+	z-index: 3;
+	top: 11.88em;
+	right: 14.9em;
+	
 	border: 0.2em solid #ffffff;
 }
 

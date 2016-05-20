@@ -34,8 +34,7 @@
     		</div><br><br>
     		<div class="texte">
     			<?php
-    			//include'../modele/get_sports.php';
-    			//$sports=get_sports('');
+    			
 				if((!isset($_GET['sport']) or $_GET['sport']=='') and (!isset($_POST['choix']) or $_POST['choix']==''))
 				{
 
@@ -75,16 +74,12 @@
 		    		<tbody>
 						<tr>
 							<?php
-							//include'../modele/get_sports_groupes.php';
-							//include'../modele/get_groupes.php';
 						
 							if((!isset($_GET['sport']) or $_GET['sport']=='')and (!isset($_POST['choix']) or $_POST['choix']==''))
 							{								
 								if(isset($_POST['codepostal'])and $_POST['codepostal']!='')
 								{
-									//echo $_POST['codepostal'];
 									$sports_groupes=get_groupes('',$_POST['codepostal']);
-									//$sports_groupes= get_sports_groupes($_POST['choix'],'');
 								}
 								else
 								{
@@ -153,12 +148,12 @@
 		<?php
 			if(isset($_SESSION['mail'])){
 				?>
-				<a href="../controleur/CreerGroupe.php">Creer un Groupe</a>
+				<a href="../controleur/CreerGroupe.php">Créer un Groupe</a>
 				<?php
 	 		}	
 	   		else {
       			?>
-	    		<a href="../Controleur/Connexion.php">Creer un Groupe</a>
+	    		<a href="../Controleur/Connexion.php">Créer un Groupe</a>
 	    		<?php
 	   		}
       	?>

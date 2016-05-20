@@ -39,7 +39,6 @@
 						<tr>
 							<th>
 								<ul>
-									<li>a</li>
 									
 								</ul>
 							</th>
@@ -52,7 +51,6 @@
 						<tr>
 							<th>
 								<ul>
-									<li>a</li>
 									
 								</ul>
 							</th>
