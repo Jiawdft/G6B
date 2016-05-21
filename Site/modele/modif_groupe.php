@@ -14,7 +14,7 @@ function modif_groupe($Nom,$CodePostal,$Info){
 		$req = $bdd->prepare('UPDATE groupe SET codepostal=:codepostal  WHERE groupe =:groupe');
 		$req->execute(array(
 			'groupe' => $Nom,
-			'codepostal'=>$CodePostal,
+			'codepostal'=>$CodePostal));
 
 	}elseif((!isset($Info)or $Info=='') and (!isset($CodePostal)or $CodePostal==''))
 	{

@@ -2,13 +2,14 @@
 <html>
 	<head>
 		<title>Sporciety</title>
-		<link href="#" rel="stylesheet" type="text/css" media="screen" />
+		<link href="../vue/forum.css" rel="stylesheet" type="text/css" media="screen" />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 
 	<body>
 		
 		<?php include("../Header/HOMETOP.php"); ?>
+		
 		<div class="bo">
 			<script language="javascript" type="text/javascript">
 			function bascule(elem)
@@ -23,6 +24,7 @@
 			   }
 			</script>
 			<h1> Forum </h1>
+			<table><th>
 			<div id="Sports">
 				<h3 onclick="bascule('m'); return false;">Les Sports</h3>
 				<div id='m' style='display:none;'>
@@ -43,8 +45,8 @@
 					}
 					?></h4>
 				</div>
-			</div>
-
+			</div></th>
+			<th>
 			<div id="Groupes">
 				<h3 onclick="bascule('g'); return false;">Les Groupes</h3>
 				<div id='g' style='display:none;'>
@@ -66,21 +68,23 @@
 					?>
 				</h4>
 				</div>
-			</div>
-
+			</div></th>
+			<th>
 			<div id="Club">
 				<h3 onclick="bascule('s'); return false;">Les Clubs</h3>
 				<div id='s' style='display:none;'>
 				
 				</div>
-			</div>
-
+			</div></th>
+			<th>
 			<div id="Question">
 				<h3 onclick="bascule('t'); return false;">Question</h3>
 				<div id='t' style='display:none;'>
 					<p><h4>Question</h4></p>
 				</div>
 			</div>
+		</th>
+		</table>
 
 
 	<table>
