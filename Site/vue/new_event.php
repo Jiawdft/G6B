@@ -13,7 +13,8 @@
 
 		<form action='../controleur/new_event.php' method="post">
 			<input type="text" name="nom_event" placeholder="Nom du l'événement" />
-			<textarea type="text" name="description" placeholder="Description de l'événement"></textarea>
+
+			<textarea type="text" name="description" placeholder="Description de l'événement"></textarea> 
 			<textarea type="text" name="adresse" placeholder="Adresse ou a lieu l'événement"></textarea>
 			<input type="datetime-local" name="date">
 			<?php

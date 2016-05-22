@@ -13,4 +13,4 @@ include_once'../modele/inscription_event.php';
 
 inscription_event($_SESSION['mail'],$next_event['id']);
 
-include_once'../controleur/Groupe.php';
+header('Location: ../controleur/Page_Personnelle_mon_groupe.php?groupe='.$_GET['groupe']);
