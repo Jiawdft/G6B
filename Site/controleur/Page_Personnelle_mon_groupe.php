@@ -16,13 +16,15 @@ if(isset($_POST['Description']) or isset($_POST['Codepostal']))
 
 if(isset($_GET['new']) and $_GET['new']==true){
 	if(!isset($_POST['nom_groupe'])or$_POST['nom_groupe']==""or!isset($_POST['code_postal'])or$_POST['code_postal']==""or!isset($_POST['description'])or$_POST['description']==""){
-		$erreur='information manquante';
+		$erreur='Information manquante';
 		include'../controleur/CreerGroupe.php';
 	}
 	else
 	{
 	include'../modele/inscription_groupe.php';
 	inscription_groupe($_POST['nom_groupe'],$_POST['code_postal'],$_POST['description']);
+	include'../modele/add_sport_groupe.php';
+	add_sport_groupe($_POST['choix'],$_POST['nom_groupe']);
 	include'../modele/add_membre_groupe.php';
 	add_membre_groupe($_SESSION['mail'],$_POST['nom_groupe']);
 	include'../modele/add_leader_groupe.php';
