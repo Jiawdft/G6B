@@ -1,34 +1,47 @@
-*{
-	
-	margin: 0;
-	color: black;
+* {
+    margin: 0;
 }
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
 html, body {
-	font-family: Helvetica;
-	background-color: rgba(150,150,150,0.7);
-	height: 0em;
+    font-family: Helvetica;
+    background-color: rgba(150,150,150,0.7);
+    height: 0em;
 }
-.bo {
 
-    margin-left: 15%;
-    margin-bottom: 5%;
+.forum {
+    text-align: center;
 }
-.bo h1{
-    margin-left: 40%;
-    margin-bottom: 4em;
-    margin-top: 2em;
+
+.forum h1 {
+    text-align: center;
+    padding: 2em;
+    font-weight: 300;
+    color: #ffffff;
 }
-.bo table th{
+
+.forum a {
+    text-decoration: none;
+    font-size: 2.5em;
+    font-weight: 200;
+    color: #ffffff;
+
+}
+
+.forum div {
     display: inline-block;
-    border: 0.2em solid black;
-    width: auto;
-    margin-left:8em;
-    margin-bottom: 2em;
-    height: auto;
-    padding: 0.5em;
-    text-align: left;
-
+    text-decoration: none;
+    border: 0.1em solid #ffffff;
+    padding: 0.8em;
+    border-radius: 0.5em;
+    margin: 5em;
 }
 
-#Sports{
+.forum div:hover {
+    border: 0.2em solid #ffffff;
+    box-shadow: 0em 0em 0.5em 0.2em #ffffff;
+    margin: 4.9em;
 }

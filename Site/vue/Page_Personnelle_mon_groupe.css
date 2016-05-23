@@ -15,8 +15,11 @@ body {
     margin: 2em 0 0 2em;
 }
 
-.mygroups h1 {
+#titre_h1 {
     padding-left: 12%;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
 }
 
 .mygroups a {

@@ -9,42 +9,88 @@
 	<body>
 		
 		<?php include("../Header/HOMETOP.php"); ?>
-		<?php	
-		if(isset($_GET['sujet'])and isset($_GET['sous_sujet']))
-		{
-			?>
-			<h1><?php echo strtoupper($_GET['sujet']) ?></h1>
-			<h3><?php echo $_GET['sous_sujet'] ?></h3>
-			<?php
-			include'../modele/get_post.php';
-			$posts=get_post($_GET['sujet'],$_GET['sous_sujet']);
-			foreach($posts as $post)
-			{
-				?>
-				<div id="post">
-					<table>
-						<th>
-						<h5><?php echo $post['auteur'].'</br>'.$post['date']; ?> </h5>
-					</th>
-						<th>
-							<h6> <?php echo $post['post'] ?></h6>
-						</th>
-					</table>
-				</div>
-			<?php
 
+		<div class='Sujet'>
 
+			<?php
+			if($_GET['sujet']=='sport') {
+				include_once'../modele/get_sports.php';
+				$Sports=get_sports('');
+				foreach ($Sports as $Sport) { ?>
+					<a href="../controleur/Post.php?sujet=sport&sous_sujet=<?php echo $Sport['sport']?>"><?php echo $Sport['sport']?></a>
+					<br />
+					<br />
+				<?php
+				}
 			}
-		}
+			?>
 
-		?>
-		<div id="topic">
-	
-		
-		
+			<?php
+			if($_GET['sujet']=='groupe') {
+				include_once'../modele/get_groupes.php';
+				$Groupes=get_groupes('','');
+				foreach ($Groupes as $Groupe) { ?>
+					<a href="../controleur/Post.php?sujet=groupe&sous_sujet=<?php echo $Groupe['groupe']?>"><?php echo $Groupe['groupe']?></a>
+					<br />
+					<br />
+				<?php
+				}
+			}
+			?>
 
+			<?php
+				if($_GET['sujet']=='club') {
+				
+				}
+			?>
 
+			<?php
+				if($_GET['sujet']=='question') {
+
+				}
+			?>
+		</div>
+		<div class="Posts" >
+			<h1><?php echo strtoupper($_GET['sujet']) ?>S</h1>
+			<div id="p">
+				<?php	
+					if(isset($_GET['sujet']) and isset($_GET['sous_sujet'])) {
+						?>
+						<h3><?php echo $_GET['sous_sujet'] ?></h3>
+						<?php
+						include'../modele/get_post.php';
+						$posts=get_post($_GET['sujet'],$_GET['sous_sujet']);
+						foreach($posts as $post) {
+						?>
+						<div id="ligne"></div>
+						<table>
+							<tr>
+								<td id="left">
+									<p><?php echo $post['auteur'].'</br>'.$post['date']; ?></p>
+								</td>
+								<td id="right">
+									<p><?php echo $post['post'] ?></p>
+								</td>
+							</tr>
+						</table>
+						<br />
+						<?php
+						}
+					}
+					else {
+						if($_GET['sujet']=='question') {
+							?>
+							<h3>Veuillez sélectionner une <?php echo $_GET['sujet'] ?> pour décourvir les posts qui y sont associés</h3>
+							<?php
+						}
+						else {
+							?>
+							<h3>Veuillez sélectionner un <?php echo $_GET['sujet'] ?> pour décourvir les posts qui y sont associés</h3>
+							<?php
+						}
+					}
+				?>
+			</div>
+		</div>
 	</body>
-	<footer>
-	</footer>
 </html>

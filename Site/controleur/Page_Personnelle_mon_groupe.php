@@ -51,6 +51,9 @@ include'../modele/get_membres_groupes.php';
 include'../modele/get_membres.php';
 $mails= get_membres_groupes('',$_GET['groupe']);
 $membres=get_membres('');
+if ($_SESSION['mail']!='') {
+	$deja_membre=get_membres_groupes($_SESSION['mail'],$_GET['groupe']);
+}
 include'../vue/Page_Personnelle_mon_groupe.php';
 }
 ?>

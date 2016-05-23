@@ -1,38 +1,75 @@
-*{
-	
-	margin: 0;
-	color: black;
-}
-html, body {
-	font-family: Helvetica;
-	background-color: rgba(150,150,150,0.7);
-	height: 0em;
-}
-h1,h3{
-
-    margin-left: 50%;
-    margin-right: 50%;
-    margin-bottom: 5%;
-	color: black;
-}
-#post{
-
-    margin-left: 45%;
-    margin-right: 45%;
-}
-#post table {
-
-    display: inline-block;
-    border: 0.2em solid black;
+* {
     margin: 0;
-    height: 5em;
-    width: 20em;
-    padding: 0.5em;
-    text-align: left;
 }
-#post h5{
-text-align: left;
+
+*::-webkit-scrollbar {
+    display: none;
 }
-#post h6{
-	text-align: right;
+
+html, body {
+    font-family: Helvetica;
+    background-color: rgba(150,150,150,0.7);
+    height: 0em;
+}
+
+.Posts h1 {
+    position: absolute;
+    top: 2.5em;
+    left: 23em;
+    padding: 1em;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.Posts div {
+    display: inline-block;
+}
+
+.Sujet {
+    position: absolute;
+    top: 8em;
+    left: 1em;
+}
+
+.Sujet a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 200;
+}
+
+.Sujet a:hover {
+    text-shadow: 0em 0em 0.5em #ffffff;
+}
+
+#p {
+    position: absolute;
+    top: 12em;
+    left: 15.9em;
+    width: 70em;
+    background-color: rgba(100,100,100,0.7);
+    border-radius: 1em;
+    padding: 1em;
+    color: white;
+}
+
+#p h3 {
+    text-align: center;
+    padding: 1em;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+#ligne {
+    width: 69.8em;
+    border-bottom: 0.08em solid white;
+    margin-bottom: 1.5em;
+}
+
+#right {
+    margin-left: 4em;
+}
+
+#left {
+    text-align: center;
 }

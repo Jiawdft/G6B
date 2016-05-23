@@ -22,6 +22,7 @@
 			   }
 			   }
 			</script>
+
 			<h1> Page Administrateur </h1>
 			<div id="Membres">
 				<h3 onclick="bascule('m'); return false;">Membres</h3>
@@ -121,31 +122,107 @@
 					<p>IMAGERIE :</p>
 					<h4>
 					<table>
-		    			<tbody>
-						<tr>
-							<td>Page accueil - Carrousel</td>
-							<td>Page accueil - Grille</td>
-						</tr>
-						<tr>
-							<td>Page Contact</td>
-							<td>Page Inscription</td>
-							<td>Page Connexion</td>
-						</tr>
-						<tr>
-							<td>Page Recherche/Sport</td>
-							<td>Page Recherche/Groupe</td>
-							<td>Page Création/Groupe</td>
-							<td>Page Sport - Carrousel</td>
-						</tr>
-						<tr>
-							<td>Page Modification - Groupe</td>
-							<td>Page Modification - Informations</td>
-						</tr>
+						<tbody>
+							<tr>
+							<?php
+							$Pages=array('Page accueuil - Carousel','Page Accueil - Grille', 'Page Contact', 'Page Inscription', 'Page Connexion', 'Page Recherche/Sport', 'Page Recherche/Groupe', 'Page Création/Groupe', 'Page Sport - Carousel', 'Page Modification - Groupe', 'Page Modification - Informations');
+							$a=0;
+							foreach ($Pages as $page){
+								if($a==0 or $a==8){
+									?><td><a href = "javascript:void(0)" onclick = "document.getElementById('light1').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre').innerHTML='<?php echo $page ?>'"><?php echo $page ?></a></td>
+								<?php
+								}
+								else{
+									?><td><a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre2').innerHTML='<?php echo $page ?>'"><?php echo $page ?></a></td>
+								<?php
+								}
+								?>
+							<?php
+							$a++;
+								if($a%4==0)
+									{
+										?>
+										</tr>
+										<tr>
+										<?php
+									}
+							}
+							?>
+							</tr>
 						</tbody>
 					</table>
-					</h4>
+					</h4>			
+					<div id="light1" class="white_content">
+					<h2 id="titre"></h2> 
+      				<form enctype="multipart/form-data" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+      					<fieldset>
+        				<legend>Images 1 :</legend>
+          					<p>
+            				<label for="fichier_a_uploader" title="Recherchez le fichier à uploader !">Selectionner le fichier :</label>
+            				<input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_SIZE; ?>" />
+            				<input name="fichier" type="file" id="fichier_a_uploader" />
+            				<input type="submit" name="submit" value="Uploader" />
+          					</p>
+      					</fieldset>
+      					<fieldset>
+        				<legend>Images 2 :</legend>
+          					<p>
+            				<label for="fichier_a_uploader" title="Recherchez le fichier à uploader !">Selectionner le fichier :</label>
+            				<input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_SIZE; ?>" />
+            				<input name="fichier" type="file" id="fichier_a_uploader" />
+            				<input type="submit" name="submit" value="Uploader" />
+          					</p>
+      					</fieldset>
+      					<fieldset>
+        				<legend>Images 3 :</legend>
+          					<p>
+            				<label for="fichier_a_uploader" title="Recherchez le fichier à uploader !">Selectionner le fichier :</label>
+            				<input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_SIZE; ?>" />
+            				<input name="fichier" type="file" id="fichier_a_uploader" />
+            				<input type="submit" name="submit" value="Uploader" />
+          					</p>
+      					</fieldset>
+      					<fieldset>
+        				<legend>Images 4 :</legend>
+          					<p>
+            				<label for="fichier_a_uploader" title="Recherchez le fichier à uploader !">Selectionner le fichier :</label>
+            				<input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_SIZE; ?>" />
+            				<input name="fichier" type="file" id="fichier_a_uploader" />
+            				<input type="submit" name="submit" value="Uploader" />
+          					</p>
+      					</fieldset>
+      					<fieldset>
+        				<legend>Images 5 :</legend>
+          					<p>
+            				<label for="fichier_a_uploader" title="Recherchez le fichier à uploader !">Selectionner le fichier :</label>
+            				<input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_SIZE; ?>" />
+            				<input name="fichier" type="file" id="fichier_a_uploader" />
+            				<input type="submit" name="submit" value="Uploader" />
+          					</p>
+      					</fieldset>
+      				</form>
+      				<a href = "javascript:void(0)" onclick = "document.getElementById('light1').style.display='none';document.getElementById('fade').style.display='none'"><h5>CLOSE<h5></a>
+    				</div>
+
+
+					<div id="light" class="white_content">
+					<h2 id="titre2"></h2> 
+      				<form enctype="multipart/form-data" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+      					<fieldset>
+        				<legend>Images</legend>
+          					<p>
+            				<label for="fichier_a_uploader" title="Recherchez le fichier à uploader !">Selectionner le fichier :</label>
+            				<input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_SIZE; ?>" />
+            				<input name="fichier" type="file" id="fichier_a_uploader" />
+            				<input type="submit" name="submit" value="Uploader" />
+          					</p>
+      					</fieldset>
+      				</form>
+      				<a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><h5>CLOSE<h5></a>
+    				</div>
+    				<div id="fade" class="black_overlay"></div>
+					</div>
 				</div>
-			</div>
 			<div id="Forum">
 				<h3 onclick="bascule('f'); return false;">Forum</h3>
 				<div id='f' style='display:none;'>
@@ -155,16 +232,13 @@
 			<div id="Aide">
 				<h3 onclick="bascule('a'); return false;">Aide</h3>
 				<div id='a' style='display:none;'>
-<<<<<<< HEAD
 					<p>ADMINISTRER LA RUBRIQUE "AIDE" :</p>
-=======
 					<p>Administrer la rubrique "Aide" :</p><br>
 					<p>Ajouter une question :</p><br>
 					<textarea name="Question" rows="5" cols="100">Saisir une question ici.</textarea><br><br>
 					<p>Ajouter sa réponse :</p> <br>
 					<textarea name="Réponse" rows="7" cols="100">Saisir la réponse ici.</textarea><br><br>
 					<input type="submit" value="Ajouter">
->>>>>>> origin/master
 				</div>
 			</div>
 		</div>

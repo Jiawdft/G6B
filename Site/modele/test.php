@@ -1,9 +1,6 @@
 <?php 
 
-include_once'../modele/get_event.php';
-$go=get_event('Get fit');
-foreach ($go as $test) {
-	echo $test['id'];
-}
 
- ?>
+include_once'../modele/desinscrire_event.php';
+desinscrire_event(2,'j@gmail.com');
+
