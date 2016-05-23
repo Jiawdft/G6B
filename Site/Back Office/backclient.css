@@ -35,8 +35,9 @@ html, body {
 	margin-top: 3em;
 }
 
-.bo p {
-	margin-bottom: 2em;
+.bo a {
+	color: white;
+	text-decoration: none;
 }
 
 #m, #g, #s, #i, #f, #a {
@@ -56,9 +57,98 @@ html, body {
 	verflow-y:scroll;
 }
 
-.bo td {
-	padding: 0.8em;
+#Membres p {
+	padding-bottom: 3em;
 }
+
+#Membres td {
+	padding-right: 1em;
+	padding-bottom: 2em;
+}
+
+#Groupes p {
+	padding-bottom: 3em;
+}
+
+#Groupes td {
+	padding-right: 3em;
+	padding-bottom: 2em;
+}
+#Sports p {
+	padding-bottom: 3em;
+}
+
+#Sports td {
+	padding-right: 1.5em;
+	padding-bottom: 2em;
+}
+
+#Images p {
+	margin-bottom: 3em;
+}
+
+#Images td {
+	padding-right: 6em;
+	padding-bottom: 2em;
+}
+
+.black_overlay {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 300%;
+    background-color: black;
+    z-index:1;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=80);
+}
+
+.white_content {
+    display: none;
+    position: absolute;
+    top: 97%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    padding: 2em;
+    border: 0.5em solid grey;
+    border-radius: 2em;
+    background-color: white;
+    z-index:2;
+    overflow: auto;
+}
+
+.white_content h2 {
+    color: black;
+    padding-bottom: 1em;
+}
+
+.white_content h5 {
+    color: black;
+    padding-left: 44em;
+}
+
+.white_content label, legend {
+    color: black;
+}
+
+.white_content input[type="submit"] {
+    background-color: rgb(140,140,140);
+    border: 0.2em solid rgb(140,140,140);
+    border-radius: 0.5em;
+    width: 20%;
+    cursor: pointer;
+    color: #ffffff;
+    line-height: 0.1em;
+    font-size: 1em;
+    padding: 0.5em;
+    text-decoration: none;
+}
+
+
 
 
 
