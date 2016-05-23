@@ -23,7 +23,7 @@
 					<tr>
 						<th>
 							<?php
-								echo $membre['adresse'] . ", " . $membre['codepostal'] . $membre['ville'];
+								echo $membre['adresse'] . ", " . $membre['codepostal'] . ", " . $membre['ville'];
 							?>
 						</th>
 					</tr>

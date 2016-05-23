@@ -9,8 +9,7 @@ function get_event($groupe)
 	$reponse -> execute(array(
 			'groupe' => $groupe,
 			));
-	$events = $reponse->fetch();
-	return $events;
+	return $reponse;
 }
 
  ?>

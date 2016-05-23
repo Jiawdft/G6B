@@ -41,7 +41,7 @@
             }
             else{
               ?>
-              <a id="bouton_rejoindre" href='../controleur/inscription_groupe_membre.php?groupe=<?php echo $_GET['groupe']?>'>Bienvenue</a>
+              <a id="bouton_rejoindre" href='../controleur/Page_Personnelle_mon_groupe.php?groupe=<?php echo $_GET['groupe']?>'>Bienvenue</a>
               <?php
             }
           }
@@ -53,20 +53,44 @@
   		<section class="planning">
   			<div id="event"> 
           <h2>Prochainement :</h2>
-          <h1> <?php echo $events['nom']; ?> </h1>
-          <p> <?php echo $events['description'] ?> </p>
-          <h3> <?php echo $events['date'] ?> </h3>
-          <a id="bouton_inscription_event" href='../controleur/Groupe.php?groupe=<?php echo $_GET['groupe']?>'>Inscription</a>
+          <h1> <?php echo $next_event['nom']; ?> </h1>
+          <p> <?php echo $next_event['description'] ?> </p>
+          <h3> <?php echo $next_event['date'] ?> </h3>
+
+          <?php 
+          if (!isset($_SESSION['mail'])) {
+          ?>
+            <a id="bouton_inscription_event" href='../controleur/Connexion.php'>Inscription</a>
+          <?php
+          }
+          else{
+            if ($deja_membre=='') {
+            ?>
+              <a id="bouton_inscription_event" onclick="popAlert('Veuillez rejoindre le groupe!');">Inscription</a>    
+            <?php
+            }
+            else{
+              if ($deja_event=='') {
+            ?>
+              <a id="bouton_inscription_event" href='../controleur/inscription_event.php?groupe=<?php echo $_GET['groupe']?>'>Inscription</a>    
+            <?php    
+              }
+              else{
+              }
+            }
+          }
+           ?>
+          
   			</div>
 
   		</section>
 
 	    <div class="localisation">
 	        <h1>Point de rendez-vous de Fit Party : </h1>
-	        <p id="adresse"> <?php echo $events['adresse']; ?> </p>
+	        <p id="adresse"> <?php echo $next_event['adresse']; ?> </p>
 		    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d85161.85430845951!2d2.3617916544987367!3d48.864518359376234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1457358140451"></iframe>
 	    </div>
-
+      <script type="text/javascript" src="../vue/Groupe.js"></script>
     </body>
 
 
