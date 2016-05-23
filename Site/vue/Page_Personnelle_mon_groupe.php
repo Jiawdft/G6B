@@ -10,8 +10,15 @@
 		<?php include("../Header/HOMETOP.php"); ?>
 
 		<div class="mygroups">
-			<h1><?php echo $_GET['groupe']?></h1><br />
-			<a href="../controleur/ModifGroupe.php">Modifie ton Groupe</a>
+			<a href="../controleur/Groupe.php?groupe=<?php echo $_GET['groupe']; ?>" id="titre_h1"><?php echo $_GET['groupe']?></a><br /><br />
+			<a href="../controleur/ModifGroupe.php">Modifie ton Groupe</a><br /><br />
+			<?php 
+			if ($deja_membre!='') {
+			?>
+				<a href="../controleur/quitter_groupe.php?groupe=<?php echo $_GET['groupe']; ?>">Quitter le groupe</a>
+			<?php
+			}
+			 ?>
 			<div class="members">
 				<h3>Les Membres :</h3>
 				<table>

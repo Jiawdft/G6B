@@ -76,6 +76,9 @@
             <?php    
               }
               else{
+              ?>
+                <a id="bouton_inscription_event" href='../controleur/desinscrire_event.php?groupe=<?php echo $_GET['groupe']?>'>Desinscrire</a>    
+              <?php
               }
             }
           }
