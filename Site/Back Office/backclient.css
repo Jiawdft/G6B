@@ -12,6 +12,8 @@ html, body {
 	height: 0em;
 }
 
+
+
 .bo div div {
 	cursor: default;
 }
@@ -40,12 +42,6 @@ html, body {
 	text-decoration: none;
 }
 
-#m, #g, #s, #i, #f, #a {
-	overflow: auto;
-	margin: 0 auto;
-	white-space: nowrap
-}
-
 .bo #m, #g, #s, #i, #f, #a {
 	color: white;
 	height: 20em;
@@ -54,7 +50,7 @@ html, body {
 	border-radius: 1em;
 	background-color: rgba(0,0,0,0.7);
 	padding: 2em;
-	verflow-y:scroll;
+	overflow: auto;
 }
 
 #Membres p {
@@ -109,7 +105,7 @@ html, body {
 .white_content {
     display: none;
     position: absolute;
-    top: 97%;
+    top: 98%;
     left: 25%;
     width: 50%;
     height: 50%;
@@ -128,6 +124,7 @@ html, body {
 
 .white_content h5 {
     color: black;
+    text-decoration: none;
     padding-left: 44em;
 }
 
