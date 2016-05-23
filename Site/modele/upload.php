@@ -11,11 +11,12 @@ function upload($index,$destination,$maxsize=FALSE,$extensions=FALSE)
    //Déplacement
      return move_uploaded_file($_FILES[$index]['tmp_name'],$destination);
 }
- 
+/* 
 //EXEMPLES
   $upload1 = upload('icone','uploads/monicone1',15360, array('png','gif','jpg','jpeg') );
   $upload2 = upload('mon_fichier','uploads/file112',1048576, FALSE );
  
   if ($upload1) "Upload de l'icone réussi!<br />";
   if ($upload2) "Upload du fichier réussi!<br />";
+  */
 ?>

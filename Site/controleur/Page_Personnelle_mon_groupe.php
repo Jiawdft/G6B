@@ -8,14 +8,29 @@ if($_SESSION['mail']=='' or !isset($_SESSION['mail'])){
 
 }
 
-if(isset($_POST['Description']) or isset($_POST['Codepostal']))
-{
-	include'../modele/modif_groupe.php';
-	modif_groupe($_SESSION['groupe'],$_POST['Codepostal'],$_POST['Description']);
-}
+
+if(isset($_POST['Description']) or isset($_POST['Codepostal'])or isset($_FILES['image_groupe'])or isset($_POST['case'])){
+	if(isset($_POST['Description']) or isset($_POST['Codepostal']))
+	{
+		include'../modele/modif_groupe.php';
+		modif_groupe($_SESSION['groupe'],$_POST['Codepostal'],$_POST['Description']);
+	}
+	include_once'../modele/upload.php';
+	if(isset($_FILES['image_groupe'])){
+		if(!upload($_SESSION['groupe'],'../Image/'.$_SESSION['groupe'],10485760,array('png','gif','jpg','jpeg'))){
+			$erreur= 'Problème lors de l upload';
+		}
+	}
+	if(isset($_POST['case'])){
+		include_once'../modele/delete_membre_groupe.php';
+		foreach($_POST['case'] as $case){
+				delete_membre_groupe($case,$_SESSION['groupe']);
+			}
+		}
+
 
 if(isset($_GET['new']) and $_GET['new']==true){
-	if(!isset($_POST['nom_groupe'])or$_POST['nom_groupe']==""or!isset($_POST['code_postal'])or$_POST['code_postal']==""or!isset($_POST['description'])or$_POST['description']==""){
+	if(!isset($_POST['nom_groupe'])or$_POST['nom_groupe']==""or !isset($_POST['code_postal'])or$_POST['code_postal']==""or!isset($_POST['description'])or$_POST['description']==""){
 		$erreur='Information manquante';
 		include'../controleur/CreerGroupe.php';
 	}
