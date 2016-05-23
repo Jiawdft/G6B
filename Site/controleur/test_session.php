@@ -32,6 +32,7 @@ else
 					$_SESSION['groupe']=$groupe['groupe'];
 				}
 				include_once'../controleur/Accueil.php';
+				break;
 			}
 
 			
