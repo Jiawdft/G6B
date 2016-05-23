@@ -217,7 +217,9 @@ footer{
 	color: black;
 	line-height: 5em;
 }
-
+.vedettes{
+	margin: 0;
+}
 .vedettes > div div {
 	display: inline-block;
 	height: 30em;
@@ -235,7 +237,7 @@ footer{
 .vline{
 	overflow: auto;
 	margin: 0 auto;
-	white-space: nowrap
+	white-space: nowrap;
 }
 .vline > div {
 	width : 29%;

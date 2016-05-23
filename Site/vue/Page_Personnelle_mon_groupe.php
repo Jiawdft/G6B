@@ -11,6 +11,7 @@
 
 		<div class="mygroups">
 			<a href='../controleur/Groupe.php?groupe=<?php echo $Groupe ?>' id="titre_h1"><?php echo $Groupe?></a><br /><br />
+			
 			<a href="../controleur/ModifGroupe.php">Modifie ton Groupe</a><br /><br />
 			<?php 
 			if(isset($deja_membre)){
