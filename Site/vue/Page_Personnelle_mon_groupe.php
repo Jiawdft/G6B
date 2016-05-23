@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title><?php echo $_GET['groupe']?></title>
+		<title><?php echo $Groupe?></title>
 		<link href="../vue/Page_Personnelle_mon_groupe.css" rel="stylesheet" type="text/css" media="screen" />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
@@ -10,10 +10,10 @@
 		<?php include("../Header/HOMETOP.php"); ?>
 
 		<div class="mygroups">
-			<a href="../controleur/Groupe.php?groupe=<?php echo $_GET['groupe']; ?>" id="titre_h1"><?php echo $_GET['groupe']?></a><br /><br />
+			<a href='../controleur/Groupe.php?groupe=<?php echo $Groupe ?>' id="titre_h1"><?php echo $Groupe?></a><br /><br />
 			<a href="../controleur/ModifGroupe.php">Modifie ton Groupe</a><br /><br />
 			<?php 
-			if ($deja_membre!='') {
+			if(isset($deja_membre)){
 			?>
 				<a href="../controleur/quitter_groupe.php?groupe=<?php echo $_GET['groupe']; ?>">Quitter le groupe</a>
 			<?php

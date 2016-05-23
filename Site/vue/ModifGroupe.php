@@ -11,7 +11,7 @@
 
 	    <div class="ModifGroupe">
 	    	<h1 style="text-align: center;">MODIFIE TON GROUPE: <?php echo $_SESSION['groupe']?></h1>
-	    	<form action='../test.php' method="post" enctype="multipart/form-data">
+	    	<form action='../controleur/Page_Personnelle_mon_groupe.php' method="post" enctype="multipart/form-data">
 	    		<!--
 	    		<input type="text" name="nom_groupe" placeholder="Entre un nouveau nom de groupe" />
 	    		-->

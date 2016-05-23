@@ -9,7 +9,7 @@ function upload($index,$destination,$maxsize=FALSE,$extensions=FALSE)
      $ext = substr(strrchr($_FILES[$index]['name'],'.'),1);
      if ($extensions !== FALSE AND !in_array($ext,$extensions)) return FALSE;
    //Déplacement
-     return move_uploaded_file($_FILES[$index]['tmp_name'],$destination);
+     return move_uploaded_file($_FILES[$index]['tmp_name'],$destination.$_FILES[$index]['name']);
 }
 /* 
 //EXEMPLES

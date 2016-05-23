@@ -10,7 +10,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'r
 		$groupes = $reponse->fetchAll();
 		return $groupes;
 	}
-	elseif($Sujet!=''){
+	elseif($Sujet!='' and $Sous_sujet==''){
 
 		$reponse = $bdd->prepare('SELECT * FROM post WHERE sujet= :sujet ORDER BY date');
 		$reponse-> execute(array(
@@ -20,7 +20,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'r
 		return $groupes;
 
 	}
-	elseif($Sous_sujet!=''){
+	elseif($Sous_sujet!='' and $Sujet==''){
 
 		$reponse = $bdd->prepare('SELECT * FROM post WHERE sous_sujet= :sous_sujet ORDER BY date');
 		$reponse-> execute(array(
@@ -31,7 +31,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'r
 
 	}elseif($Sujet!='' and $Sous_sujet!='')
 	{
-		$reponse = $bdd->prepare('SELECT * FROM post WHERE sujet= :sujet,sous_sujet=:sous_sujet ORDER BY date');
+		$reponse = $bdd->prepare('SELECT * FROM post WHERE sujet= :sujet AND sous_sujet=:sous_sujet ORDER BY date');
 		$reponse-> execute(array(
 			':sujet'=> $Sujet,
 			':sous_sujet'=>$Sous_sujet
