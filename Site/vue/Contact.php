@@ -27,7 +27,7 @@
 		  	</div>
 		  	<div id="Mail">
 		  		<p>Pour toute demande d'information, n'hésitez pas à nous contacter en nous envoyant un mail :<p>
-		  		<a href="mailto:adresse@serveur.com">Contactez-nous</a>
+		  		<a href="mailto:sporciety@gmail.com">Contactez-nous</a>
 		  	</div>
 		</div>
 	</body>
