@@ -46,7 +46,7 @@ html, body {
     position: absolute;
     top: 12em;
     left: 15.9em;
-    width: 70em;
+    width: 78%;
     background-color: rgba(100,100,100,0.7);
     border-radius: 1em;
     padding: 1em;
@@ -61,7 +61,7 @@ html, body {
 }
 
 #ligne {
-    width: 69.8em;
+    width: 100%;
     border-bottom: 0.08em solid white;
     margin-bottom: 1.5em;
 }
