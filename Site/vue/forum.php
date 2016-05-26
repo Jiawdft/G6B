@@ -30,6 +30,31 @@
 				<a href="../vue/Post.php?sujet=question">Questions</a>
 			</div>
 
+<<<<<<< Updated upstream
 		</div>
+=======
+			<div class="sommaire">
+			<table>
+				<tr>
+					<td><div id="Question">
+						<h3 onclick="bascule('t'); return false;">Question</h3>
+						<div id='t' style='display:none;'>
+						<p><h4>Question</h4></p>
+					</div>
+					</div></td>
+					<td><h5>x</h5></td>
+					<td><h5>x</h5></td>
+					<td><h5>x</h5></td>
+				</tr>
+			</table>
+				</div>
+
+
+	<table>
+	</table>		
+		
+
+
+>>>>>>> Stashed changes
 	</body>
 </html>
