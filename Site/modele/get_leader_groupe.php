@@ -6,7 +6,7 @@ function get_leader_groupe($mail,$groupe){
 	if($groupe=='' and $mail=='')
 	{
 		$reponse = $bdd->query('SELECT * FROM groupe_leader');
-		$mails_groupes = $reponse->fetch();
+		$mails_groupes = $reponse->fetchAll();
 		return $mails_groupes;
 	}
 	elseif($groupe=='')
@@ -15,7 +15,7 @@ function get_leader_groupe($mail,$groupe){
 		$reponse -> execute(array(
 			':mail' => $mail
 			));
-		$mails_groupes = $reponse->fetch();
+		$mails_groupes = $reponse->fetchAll();
 		return $mails_groupes;
 	}
 	elseif ($mail=='') 
@@ -24,7 +24,7 @@ function get_leader_groupe($mail,$groupe){
 		$reponse -> execute(array(
 		':groupe' => $groupe
 		));
-		$mails_groupes = $reponse->fetch();
+		$mails_groupes = $reponse->fetchAll();
 		return $mails_groupes;
 	}
 	elseif ($groupe!='' and $mail!='') {
@@ -33,7 +33,7 @@ function get_leader_groupe($mail,$groupe){
 			':mail' => $mail,
 			':groupe' => $groupe
 			));
-		$mails_groupes = $reponse->fetch();
+		$mails_groupes = $reponse->fetchAll();
 		return $mails_groupes;
 	}
 	else

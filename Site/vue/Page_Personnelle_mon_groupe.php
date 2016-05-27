@@ -11,8 +11,14 @@
 
 		<div class="mygroups">
 			<a href='../controleur/Groupe.php?groupe=<?php echo $Groupe ?>' id="titre_h1"><?php echo $Groupe?></a><br /><br />
+			<?php
 			
-			<a href="../controleur/ModifGroupe.php">Modifie ton Groupe</a><br /><br />
+			foreach ($leader as $lead) {
+				if($lead['membre']==$_SESSION['mail'] and $lead['groupe']==$Groupe){?>
+					<a href="../controleur/ModifGroupe.php">Modifie ton Groupe</a><br /><br /> <?php
+				}
+			}
+				?>
 			<?php 
 			if(isset($deja_membre)){
 			?>

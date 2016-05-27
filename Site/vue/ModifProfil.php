@@ -15,6 +15,7 @@
 	    		<input type="text" name="telephone" placeholder="modifier votre numero de téléphone" /></br>
 	    		<input type="text" name="adresse" placeholder="modifier votre adresse" /></br>
 	    		<input type="text" name="codepostal" placeholder="modifier votre code postal" />
+	    		
 	    		<input type="submit" value="VALIDER" />
 	    	</form>
 	    	<form action='../controleur/Page_Personnelle.php' method="post">

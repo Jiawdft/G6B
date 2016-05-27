@@ -8,11 +8,13 @@ if($_SESSION['mail']=='' or !isset($_SESSION['mail']))
 	include_once'../controleur/Accueil.php';
 
 }
-if(!isset($_GET['new']) and (!isset($_POST['Description']) and !isset($_POST['Codepostal'])and !isset($_FILES['image_groupe']['name'])and !isset($_POST['case'])) and !isset($_POST['nom_groupe'])){
+include'../modele/get_leader_groupe.php';
+$leader=get_leader_groupe('','');
+if(!isset($_GET['groupe']) and !isset($_GET['new']) and (!isset($_POST['Description']) and !isset($_POST['Codepostal'])and !isset($_FILES['image_groupe']['name'])and !isset($_POST['case'])) and !isset($_POST['nom_groupe'])){
 	include'../controleur/Accueil.php';
 }
 
-elseif(isset($_POST['Description']) or isset($_POST['Codepostal'])or isset($_FILES['image_groupe']['name'])or isset($_POST['case']))
+elseif(isset($_POST['Description']) or isset($_POST['Codepostal'])or isset($_FILES['image_groupe']['name'])or isset($_POST['case']) or isset($_POST['radio']))
 {
 	if(isset($_POST['Description']) or isset($_POST['Codepostal']))
 	{
@@ -22,7 +24,7 @@ elseif(isset($_POST['Description']) or isset($_POST['Codepostal'])or isset($_FIL
 	include_once'../modele/upload.php';
 	if(isset($_FILES['image_groupe']))
 	{
-		if(upload('image_groupe','C:\Users\alexandre\Desktop/',10485760,array('png','gif','jpg','jpeg'))==false)
+		if(upload('image_groupe','../Images',10485760,array('png','gif','jpg','jpeg'))==false)
 		{
 			$erreur= 'Problème lors de l upload';
 		}
@@ -34,6 +36,13 @@ elseif(isset($_POST['Description']) or isset($_POST['Codepostal'])or isset($_FIL
 		{
 				delete_membre_groupe($case,$_SESSION['groupe']);
 		}
+	}
+	if(isset($_POST['radio'])){
+		include_once'../modele/delete_leader_groupe.php';
+		include_once'../modele/add_leader_groupe.php';
+		delete_leader_groupe($_SESSION['mail'],$_SESSION['groupe']);
+		add_leader_groupe($_POST['radio'],$_SESSION['groupe']);
+
 	}
 include'../modele/get_membres_groupes.php';
 include'../modele/get_membres.php';
