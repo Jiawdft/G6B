@@ -19,3 +19,4 @@ function get_sports($sport)
     return $sports;
 	}
 }
+?>

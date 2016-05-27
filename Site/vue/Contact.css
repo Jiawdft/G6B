@@ -18,10 +18,12 @@ body {
 
 .Contact {
     width: 80%;
-    border-radius: 5%;
+    height: 32em;
+    border-radius: 2em;
     padding: 3em;
     background-color: rgba(0,0,0,0.5);
     margin: 3% auto;
+    text-align: center;
 }
 
 .Contact h1 {
@@ -33,6 +35,7 @@ body {
 .Presentation {
     text-align: justify;
     width: 40%;
+    margin-right: 2em;
 }
 
 .Presentation a{ 
@@ -48,13 +51,14 @@ body {
 #Mail {
     padding: 1em;
     text-align: center;
-    padding-left: 10em;
+    margin-top: 1em;
 }
 
 #Mail p { 
     color: #ffffff;
     font-size: 1em;
     font-weight: bold;
+    margin-bottom: 1em;
 }
 
 #Mail a {
@@ -67,6 +71,12 @@ body {
     border-radius: 0.2em;
     padding: 0.1em;
 }
+
+#Mail a:hover {
+    box-shadow: 0em 0em 0.5em #ffffff;
+}
+
+
 
 #social img {
     padding: 1em;

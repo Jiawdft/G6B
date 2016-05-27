@@ -6,9 +6,8 @@
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
-	    
 		<?php include("../Header/HOMETOP.php"); ?>
-
+		<?php include("../modele/Popup_images.php"); ?>
 		<div class="bo">
 			<script language="javascript" type="text/javascript">
 			function bascule(elem)
@@ -30,27 +29,29 @@
 					<p>LISTE DES MEMBRES :</p>
 					<h4>
 					<table>
-		    		<tbody>
-					<?php
-					include_once'../modele/get_membres.php';
-					$Membres=get_membres('','');
-					$a=0;
-					foreach ($Membres as $Membre) { ?>
-						<td><?php echo $Membre['adresse_mail']?></td>
-					<?php
-					$a++;
-					if($a%7==0)
-								{
-									?>
-									</tr>
-									<tr>
-									<?php
-								}
-					}
-					?>
+		    			<tbody>
+		    			<tr>
+						<?php
+						include_once'../modele/get_membres.php';
+						$Membres=get_membres('','');
+						$a=0;
+						foreach ($Membres as $Membre) {
+							?><td><a href = "javascript:void(0)" onclick = "document.getElementById('light3').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre3').innerHTML='<?php echo $Membre['adresse_mail']?>'"><?php echo $Membre['adresse_mail']?></a></td>
+						<?php
+						$a++;
+						if($a%7==0)
+							{
+								?>
+								</tr>
+								<tr>
+								<?php
+							}
+						}
+						?>
+						</tbody>
+						<tr>
 					</h4>
-					</table>
-		    		</tbody>
+		    		</table>
 				</div>
 			</div>
 
@@ -60,27 +61,29 @@
 					<p>LISTE DES GROUPES :</p>
 					<h4>
 					<table>
-		    		<tbody>
-					<?php
-					include_once'../modele/get_groupes.php';
-					$Groupes=get_groupes('','');
-					$a=0;
-					foreach ($Groupes as $Groupe) { ?>
-						<td><?php echo $Groupe['groupe']?></td>
-					<?php
-					$a++;
-					if($a%10==0)
+		    			<tbody>
+		    			<tr>
+						<?php
+						include_once'../modele/get_groupes.php';
+						$Groupes=get_groupes('','');
+						$a=0;
+						foreach ($Groupes as $Groupe){
+							?><td><a href = "javascript:void(0)" onclick = "document.getElementById('light3').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre3').innerHTML='<?php echo $Groupe['groupe']?>'"><?php echo $Groupe['groupe']?></a></td>
+							<?php
+							$a++;
+							if($a%10==0)
 								{
 									?>
 									</tr>
 									<tr>
 									<?php
 								}
-					}
-					?>
-					</h4>
+							}
+							?>
+						</tr>
+						</tbody>
 					</table>
-		    		</tbody>
+		    		</h4>
 				</div>
 			</div>
 
@@ -91,13 +94,13 @@
 					<h4>
 					<table>
 		    			<tbody>
-						<tr>
+		    			<tr>
 						<?php
 						include_once'../modele/get_sports.php';
 						$Sports=get_sports('');
 						$a=0;
-						foreach ($Sports as $Sport) { ?>
-							<td><?php echo $Sport['sport']?></td>
+						foreach ($Sports as $Sport){
+							?><td><a href = "javascript:void(0)" onclick = "document.getElementById('light3').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre3').innerHTML='<?php echo $Sport['sport']?>'"><?php echo $Sport['sport']?></a></td>
 							<?php
 							$a++;
 							if($a%10==0)
@@ -129,106 +132,39 @@
 							$a=0;
 							foreach ($Pages as $page){
 								if($a==0 or $a==8){
-									?><td><a href = "javascript:void(0)" onclick = "document.getElementById('light1').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre').innerHTML='<?php echo $page ?>'"><?php echo $page ?></a></td>
+									?><td><a href = "javascript:void(0)" onclick = "document.getElementById('light1').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre1').innerHTML='<?php echo $page ?>'"><?php echo $page ?></a></td>
 								<?php
 								}
 								else{
-									?><td><a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre2').innerHTML='<?php echo $page ?>'"><?php echo $page ?></a></td>
+									?><td><a href = "javascript:void(0)" onclick = "document.getElementById('light2').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre2').innerHTML='<?php echo $page ?>'"><?php echo $page ?></a></td>
 								<?php
 								}
 								?>
 							<?php
 							$a++;
-								if($a%4==0)
-									{
-										?>
-										</tr>
-										<tr>
-										<?php
-									}
+							if($a%4==0)
+								{
+									?>
+									</tr>
+									<tr>
+									<?php
+								}
 							}
 							?>
 							</tr>
 						</tbody>
 					</table>
 					</h4>			
-					<div id="light1" class="white_content">
-					<h2 id="titre"></h2> 
-      				<form enctype="multipart/form-data" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
-      					<fieldset>
-        				<legend>Images 1 :</legend>
-          					<p>
-            				<label for="fichier_a_uploader" title="Recherchez le fichier à uploader !">Selectionner le fichier :</label>
-            				<input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_SIZE; ?>" />
-            				<input name="fichier" type="file" id="fichier_a_uploader" />
-            				<input type="submit" name="submit" value="Uploader" />
-          					</p>
-      					</fieldset>
-      					<fieldset>
-        				<legend>Images 2 :</legend>
-          					<p>
-            				<label for="fichier_a_uploader" title="Recherchez le fichier à uploader !">Selectionner le fichier :</label>
-            				<input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_SIZE; ?>" />
-            				<input name="fichier" type="file" id="fichier_a_uploader" />
-            				<input type="submit" name="submit" value="Uploader" />
-          					</p>
-      					</fieldset>
-      					<fieldset>
-        				<legend>Images 3 :</legend>
-          					<p>
-            				<label for="fichier_a_uploader" title="Recherchez le fichier à uploader !">Selectionner le fichier :</label>
-            				<input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_SIZE; ?>" />
-            				<input name="fichier" type="file" id="fichier_a_uploader" />
-            				<input type="submit" name="submit" value="Uploader" />
-          					</p>
-      					</fieldset>
-      					<fieldset>
-        				<legend>Images 4 :</legend>
-          					<p>
-            				<label for="fichier_a_uploader" title="Recherchez le fichier à uploader !">Selectionner le fichier :</label>
-            				<input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_SIZE; ?>" />
-            				<input name="fichier" type="file" id="fichier_a_uploader" />
-            				<input type="submit" name="submit" value="Uploader" />
-          					</p>
-      					</fieldset>
-      					<fieldset>
-        				<legend>Images 5 :</legend>
-          					<p>
-            				<label for="fichier_a_uploader" title="Recherchez le fichier à uploader !">Selectionner le fichier :</label>
-            				<input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_SIZE; ?>" />
-            				<input name="fichier" type="file" id="fichier_a_uploader" />
-            				<input type="submit" name="submit" value="Uploader" />
-          					</p>
-      					</fieldset>
-      				</form>
-      				<a href = "javascript:void(0)" onclick = "document.getElementById('light1').style.display='none';document.getElementById('fade').style.display='none'"><h5>CLOSE<h5></a>
-    				</div>
+				</div>	
+			</div>
 
-
-					<div id="light" class="white_content">
-					<h2 id="titre2"></h2> 
-      				<form enctype="multipart/form-data" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
-      					<fieldset>
-        				<legend>Images</legend>
-          					<p>
-            				<label for="fichier_a_uploader" title="Recherchez le fichier à uploader !">Selectionner le fichier :</label>
-            				<input type="hidden" name="MAX_FILE_SIZE" value="<?php echo MAX_SIZE; ?>" />
-            				<input name="fichier" type="file" id="fichier_a_uploader" />
-            				<input type="submit" name="submit" value="Uploader" />
-          					</p>
-      					</fieldset>
-      				</form>
-      				<a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><h5>CLOSE<h5></a>
-    				</div>
-    				<div id="fade" class="black_overlay"></div>
-					</div>
-				</div>
 			<div id="Forum">
 				<h3 onclick="bascule('f'); return false;">Forum</h3>
 				<div id='f' style='display:none;'>
 					<p>MODERER LES MESSAGES :</p>
 				</div>
 			</div>
+
 			<div id="Aide">
 				<h3 onclick="bascule('a'); return false;">Aide</h3>
 				<div id='a' style='display:none;'>

@@ -15,7 +15,7 @@ html, body {
 .Posts h1 {
     position: absolute;
     top: 2.5em;
-    left: 23em;
+    left: 49.9%;
     padding: 1em;
     font-weight: 300;
     color: #ffffff;
@@ -46,7 +46,7 @@ html, body {
     position: absolute;
     top: 12em;
     left: 15.9em;
-    width: 70em;
+    width: 75%;
     background-color: rgba(100,100,100,0.7);
     border-radius: 1em;
     padding: 1em;
@@ -61,7 +61,7 @@ html, body {
 }
 
 #ligne {
-    width: 69.8em;
+    width: 100%;
     border-bottom: 0.08em solid white;
     margin-bottom: 1.5em;
 }
