@@ -30,24 +30,30 @@
 					<h4>
 					<table>
 		    			<tbody>
-		    			<tr>
-						<?php
-						include_once'../modele/get_membres.php';
-						$Membres=get_membres('','');
-						$a=0;
-						foreach ($Membres as $Membre) {
-							?><td><a href = "javascript:void(0)" onclick = "document.getElementById('light3').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre3').innerHTML='<?php echo $Membre['adresse_mail']?>'"><?php echo $Membre['adresse_mail']?></a></td>
-						<?php
-						$a++;
-						if($a%7==0)
-							{
-								?>
-								</tr>
-								<tr>
-								<?php
+			    			<form method="post" action="#">
+			    			<tr>
+							<?php
+							include_once'../modele/get_membres.php';
+							$Membres=get_membres('','');
+							$a=0;
+
+							foreach ($Membres as $Membre) {
+								?><td>
+								<input type="checkbox" name="case[]"  value='<?php echo $Membre['adresse_mail'] ?>' />
+								<a href = "javascript:void(0)" onclick = "document.getElementById('light3').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre3').innerHTML='<?php echo $Membre['adresse_mail']?>'"><?php echo $Membre['adresse_mail']?></a></td>
+							<?php
+							$a++;
+							if($a%5==0)
+								{
+									?>
+									</tr>
+									<tr>
+									<?php
+								}
 							}
-						}
-						?>
+							?>
+							<input type="submit" value="Supprimer" />
+							</form>
 						</tbody>
 						<tr>
 					</h4>
@@ -62,16 +68,18 @@
 					<h4>
 					<table>
 		    			<tbody>
+		    				<form method="post" action="#">
 		    			<tr>
 						<?php
 						include_once'../modele/get_groupes.php';
 						$Groupes=get_groupes('','');
 						$a=0;
 						foreach ($Groupes as $Groupe){
-							?><td><a href = "javascript:void(0)" onclick = "document.getElementById('light3').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre3').innerHTML='<?php echo $Groupe['groupe']?>'"><?php echo $Groupe['groupe']?></a></td>
+							?><td>
+							<input type="checkbox" name="case[]"  value='<?php echo $Groupe['groupe'] ?>' /><a href = "javascript:void(0)" onclick = "document.getElementById('light3').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre3').innerHTML='<?php echo $Groupe['groupe']?>'"><?php echo $Groupe['groupe']?></a></td>
 							<?php
 							$a++;
-							if($a%10==0)
+							if($a%7==0)
 								{
 									?>
 									</tr>
@@ -81,6 +89,8 @@
 							}
 							?>
 						</tr>
+						<input type="submit" value="Supprimer" />
+					</form>
 						</tbody>
 					</table>
 		    		</h4>
@@ -94,16 +104,18 @@
 					<h4>
 					<table>
 		    			<tbody>
+		    				<form method="post" action="#">
 		    			<tr>
 						<?php
 						include_once'../modele/get_sports.php';
 						$Sports=get_sports('');
 						$a=0;
 						foreach ($Sports as $Sport){
-							?><td><a href = "javascript:void(0)" onclick = "document.getElementById('light3').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre3').innerHTML='<?php echo $Sport['sport']?>'"><?php echo $Sport['sport']?></a></td>
+							?><td><input type="checkbox" name="case[]"  value='<?php echo $Sport['sport'] ?>' />
+							<a href = "javascript:void(0)" onclick = "document.getElementById('light3').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre3').innerHTML='<?php echo $Sport['sport']?>'"><?php echo $Sport['sport']?></a></td>
 							<?php
 							$a++;
-							if($a%10==0)
+							if($a%7==0)
 								{
 									?>
 									</tr>
@@ -113,6 +125,8 @@
 						}
 						?>
 						</tr>
+					</form>
+					<input type="submit" value="Supprimer" />
 						</tbody>
 					</table>
 					</h4>
@@ -126,23 +140,28 @@
 					<h4>
 					<table>
 						<tbody>
+							<form method="post" action="#">
 							<tr>
 							<?php
 							$Pages=array('Page accueuil - Carousel','Page Accueil - Grille', 'Page Contact', 'Page Inscription', 'Page Connexion', 'Page Recherche/Sport', 'Page Recherche/Groupe', 'Page Création/Groupe', 'Page Sport - Carousel', 'Page Modification - Groupe', 'Page Modification - Informations');
 							$a=0;
 							foreach ($Pages as $page){
 								if($a==0 or $a==8){
-									?><td><a href = "javascript:void(0)" onclick = "document.getElementById('light1').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre1').innerHTML='<?php echo $page ?>'"><?php echo $page ?></a></td>
+									?><td>
+									<input type="checkbox" name="case[]"  value='<?php echo $page ?>' />
+									<a href = "javascript:void(0)" onclick = "document.getElementById('light1').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre1').innerHTML='<?php echo $page ?>'"><?php echo $page ?></a></td>
 								<?php
 								}
 								else{
-									?><td><a href = "javascript:void(0)" onclick = "document.getElementById('light2').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre2').innerHTML='<?php echo $page ?>'"><?php echo $page ?></a></td>
+									?><td>
+									<input type="checkbox" name="case[]"  value='<?php echo $page ?>' />
+									<a href = "javascript:void(0)" onclick = "document.getElementById('light2').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre2').innerHTML='<?php echo $page ?>'"><?php echo $page ?></a></td>
 								<?php
 								}
 								?>
 							<?php
 							$a++;
-							if($a%4==0)
+							if($a%3==0)
 								{
 									?>
 									</tr>
@@ -151,7 +170,8 @@
 								}
 							}
 							?>
-							</tr>
+							</tr><input type="submit" value="Supprimer" />
+						</form>
 						</tbody>
 					</table>
 					</h4>			
@@ -162,6 +182,19 @@
 				<h3 onclick="bascule('f'); return false;">Forum</h3>
 				<div id='f' style='display:none;'>
 					<p>MODERER LES MESSAGES :</p>
+					<form method="post" action="#">
+					<?php 
+					include'../modele/get_post.php';
+					$posts=get_post('','');
+					foreach ($posts as $post) {?>
+						<td>
+							<input type="checkbox" name="case[]"  value='<?php echo $post['id'] ?>' />
+							<a href = "javascript:void(0)" onclick = "document.getElementById('light3').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre3').innerHTML='<?php echo $post['post']?>'"><?php echo $post['id']?></a></td>
+							<?php
+					}
+					?>
+					<input type="submit" value="Supprimer" />
+				</form>
 				</div>
 			</div>
 
