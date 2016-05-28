@@ -29,6 +29,14 @@ if(isset($_POST['mdp1'])and isset($_POST['mdp2'])and isset($_POST['mdp3'])){
 			{
 				$groupes[$cle]['groupe'] = htmlspecialchars($groupe['groupe']);
 			}
+			include_once'../modele/get_event.php';
+			include_once'../modele/get_post.php';
+			$event=get_event('');
+			$post=get_post('','');
+
+
+
+
 
 			include_once('../vue/Page_Personnelle.php');
 		}
@@ -52,6 +60,10 @@ $groupes=get_membres_groupes($_SESSION['mail'],'');
 foreach ($groupes as $cle =>$groupe) {
 	$groupes[$cle]['groupe'] = htmlspecialchars($groupe['groupe']);
 }
+include_once'../modele/get_event.php';
+include_once'../modele/get_post.php';
+$event=get_event('');
+$post=get_post('','');
 
 include_once('../vue/Page_Personnelle.php');	
 }

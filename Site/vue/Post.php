@@ -40,12 +40,28 @@
 
 			<?php
 				if($_GET['sujet']=='club') {
+					include_once'../modele/get_club.php';
+				$Groupes=get_club('','');
+				foreach ($Groupes as $Groupe) { ?>
+					<a href="../controleur/Post.php?sujet=groupe&sous_sujet=<?php echo $Groupe['groupe']?>"><?php echo $Groupe['groupe']?></a>
+					<br />
+					<br />
+				<?php
+				}
 				
 				}
 			?>
 
 			<?php
 				if($_GET['sujet']=='question') {
+				include_once'../modele/get_question.php';
+				$Groupes=get_question('','');
+				foreach ($Groupes as $Groupe) { ?>
+					<a href="../controleur/Post.php?sujet=groupe&sous_sujet=<?php echo $Groupe['groupe']?>"><?php echo $Groupe['groupe']?></a>
+					<br />
+					<br />
+				<?php
+				}
 
 				}
 			?>
@@ -57,6 +73,7 @@
 					if(isset($_GET['sujet']) and isset($_GET['sous_sujet'])) {
 						?>
 						<h3><?php echo $_GET['sous_sujet'] ?></h3>
+						<a href="#">Répondre</a>
 						<?php
 						include'../modele/get_post.php';
 						$posts=get_post($_GET['sujet'],$_GET['sous_sujet']);

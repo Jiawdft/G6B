@@ -2,6 +2,13 @@
 
 function get_event($groupe)
 {
+	if($groupe==''){
+		$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
+	$reponse = $bdd->query('SELECT * FROM event');
+	$event=$reponse->fetchAll();
+	return $event;
+
+	}else{
 	$groupe=htmlspecialchars($groupe);
 
 	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
@@ -9,7 +16,8 @@ function get_event($groupe)
 	$reponse -> execute(array(
 			'groupe' => $groupe,
 			));
-	return $reponse;
+	$event= $reponse->fetchAll();
+	return $event;}
 }
 
  ?>

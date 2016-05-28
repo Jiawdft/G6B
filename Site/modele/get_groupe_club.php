@@ -28,7 +28,7 @@ function get_groupe_club($groupe,$club)
 		$reponse -> execute(array(
 				':groupe' => $groupe
 				));
-		$groupes = $reponse->fetch();
+		$groupes = $reponse->fetchAll();
 		return $groupes;	
 	}
 	else

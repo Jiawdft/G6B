@@ -53,7 +53,11 @@
 						<tr>
 							<th>
 								<ul>
-									
+									<?php
+									foreach($club as $clubs){
+											?><li><a href="../controleur/Club.php?club=<?php echo $clubs['club']?>" ><?php echo $clubs['club']?></li><?php
+										}								
+									?>
 								</ul>
 							</th>
 						</tr>
@@ -65,7 +69,13 @@
 						<tr>
 							<th>
 								<ul>
-									
+									<?php
+									foreach($event as $events){
+										if($events['groupe']==$Groupe ){
+											?><li><a href="../controleur/Event.php?id=<?php echo $events['id']?>" ><?php echo $events['nom']?></li><?php
+										}
+										}									
+									?>
 								</ul>
 							</th>
 						</tr>

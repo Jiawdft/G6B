@@ -10,6 +10,10 @@ if($_SESSION['mail']=='' or !isset($_SESSION['mail']))
 }
 include'../modele/get_leader_groupe.php';
 $leader=get_leader_groupe('','');
+include'../modele/get_event.php';
+$event=get_event('');
+include'../modele/get_groupe_club.php';
+
 if(!isset($_GET['groupe']) and !isset($_GET['new']) and (!isset($_POST['Description']) and !isset($_POST['Codepostal'])and !isset($_FILES['image_groupe']['name'])and !isset($_POST['case'])) and !isset($_POST['nom_groupe'])){
 	include'../controleur/Accueil.php';
 }
@@ -84,6 +88,7 @@ if ($_SESSION['mail']!='') {
 	$deja_membre=get_membres_groupes($_SESSION['mail'],$_GET['groupe']);
 }
 $Groupe=$_GET['groupe'];
+$club=get_groupe_club($Groupe,'');
 include'../vue/Page_Personnelle_mon_groupe.php';
 }
 ?>

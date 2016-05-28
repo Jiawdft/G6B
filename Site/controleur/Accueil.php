@@ -17,7 +17,11 @@ if(isset($_GET['inscription']) and $_GET['inscription']==true)
 				$_POST['Nom']=htmlspecialchars($_POST['Nom']);
 				if(isset($_POST['Date_de_Naissance']))
 				{
-					$Naissance=htmlspecialchars($_POST['Date_de_Naissance']);
+					$Naissance = htmlspecialchars($_POST['Date_de_Naissance']);
+					$annee = substr($Naissance, 6, 4); 
+					$mois = substr($Naissance, 3, 2); 
+					$jour = substr($Naissance, 0, 2);  
+ 					$Naissance = $annee . '-' . $mois . '-' . $jour; 
 				}
 				else{$Naissance='';}
 				if(isset($_POST['Numéro_de_Téléphone']))

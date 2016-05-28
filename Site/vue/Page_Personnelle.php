@@ -23,7 +23,7 @@
 					<tr>
 						<th>
 							<?php
-								echo $membre['adresse'] . ", " . $membre['codepostal'] . ", " . $membre['ville'];
+								echo $membre['adresse'] . "</br>" . $membre['codepostal'] . "</br>" . $membre['ville']."</br>";
 							?>
 						</th>
 					</tr>
@@ -52,8 +52,17 @@
 					<table>
 						<tr>
 							<th>
-								<ul>
-									<li></li>
+								<ul><?php
+									foreach($event as $events){
+										foreach ($groupes as $groupe) {
+										if($events['groupe']==$groupe['groupe'] ){
+											?><li><a href="../controleur/Event.php?id=<?php echo $events['id']?>" ><?php echo $events['nom']?></li><?php
+										}
+										}
+									}
+
+									
+									?>								
 								</ul>
 							</th>
 						</tr>
@@ -64,8 +73,19 @@
 					<table>
 						<tr>
 							<th>
-								<ul>
-									<li></li>
+								<ul><?php
+									foreach($post as $posts){
+										foreach ($groupes as $groupe) {
+										if($posts['auteur']==$_SESSION['mail']){
+											?>
+											<li><a href="../controleur/Post.php?sujet=<?php echo $posts['sujet']?>" ><?php echo $posts['sujet']?></a></li>
+											<?php
+										}
+										}
+									}
+
+									
+									?>
 								</ul>
 							</th>
 						</tr>
