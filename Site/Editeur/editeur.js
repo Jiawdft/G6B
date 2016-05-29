@@ -1,15 +1,18 @@
-function commande(nom, argument, target){
+function commande(nom, argument,target){
     if (typeof argument === 'undefined') {
         argument = '';
     }
-    if (document.getElementById(target).style.backgroundColor=="") {
+
+    document.execCommand(nom, false, argument);
+
+    if (document.queryCommandValue(nom)=="true") {
       document.getElementById(target).style.backgroundColor="#cecece";
     }
     else {
       document.getElementById(target).style.backgroundColor="";
     }
 
-    document.execCommand(nom, false, argument);
+
 }
 
 
