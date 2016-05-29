@@ -11,17 +11,26 @@
 	<div class="Creation">
 		<h1 style="text-align: center;">CREER UN EVENEMENT</h1>
 
-		<form action='../controleur/new_event.php' method="post">
-			<input type="text" name="nom_event" placeholder="Nom du l'événement" />
-
-			<textarea type="text" name="description" placeholder="Description de l'événement"></textarea> 
-			<textarea type="text" name="adresse" placeholder="Adresse ou a lieu l'événement"></textarea>
-			<input type="datetime-local" name="date">
+			<input type="text" placeholder="Nom du l'événement" id="nom_event"/>
+      <br>
+      <input type="button" value="G" style="font-weight:bold;" onclick="commande('bold','','bouton_bold');" id="bouton_bold"/>
+      <input type="button" value="I" style="font-style:italic;" onclick="commande('italic','','bouton_italic');" id="bouton_italic"/>
+      <input type="button" value="S" style="text-decoration:underline;" onclick="commande('underline','','bouton_underline');" id="bouton_underline"/>
+      <div id="editeur_description" contentEditable onclick="enleve('editeur_description','Description de l\'événement');">Description de l'événement</div>
+      <div id="editeur_adresse" contentEditable onclick="enleve('editeur_adresse','Adresse ou a lieu l\'événement');">Adresse ou a lieu l'événement</div>
+			<input id="editeur_date" type="datetime-local" name="date">
 			<?php
 				if(isset($erreur) and $erreur!=""){?>
 				<h4><?php echo $erreur?></h4><?php
 			}?>
-			<input type="submit" value="CREER" />
+
+			<input type="submit" value="CREER" onclick="resultat();"/>
+<!--    <form name="form" action='../controleur/new_event.php' method="post">-->
+    <form name="form" action='../Editeur/test.php' method="post">
+      <input type="hidden" name="resultat_nom_event" id="resultat_nom_event">
+      <input type="hidden" name="resultat_description" id="resultat_description">
+      <input type="hidden" name="resultat_adresse" id="resultat_adresse">
+      <input type="hidden" name="resultat_date" id="resultat_date">
 		</form>
 	</div>
 	<div id="social" style="text-align: center; margin-top: 10%">
@@ -30,6 +39,6 @@
 		<a href="https://www.instagram.com"><img src="../Images/Logos/Insta.png"></a>
 		<a href="https://www.pinterest.com"><img src="../Images/Logos/Pint.png"></a>
 	</div>
-
+	<script type="text/javascript" src="../vue/new_event.js"></script>
 </body>
 </html>

@@ -22,8 +22,8 @@ body {
     color:#ffffff;
 }
 
-.Creation input[type="text"],
-.Creation input {
+.Creation input[type="text"], .Creation input[type="datetime-local"]
+ {
     outline: none;
     width: 70%;
     color: #ffffff;
@@ -35,6 +35,16 @@ body {
     margin-left: 15%;
 }
 
+#bouton_bold{
+  margin-left: 15%;
+
+}
+
+.Creation input[type="button"]{
+  margin-top: 2em;
+}
+
+
 .Creation textarea {
     width: 70%;
     height: 10em;
@@ -45,6 +55,29 @@ body {
     resize: none;
     font-size: 17px;
     margin-left: 14.7%;
+}
+#editeur_description{
+  width: 70%;
+  height: 10em;
+  margin-top: 1em;
+  border-radius: 1em;
+  border: 0.2em solid rgb(140,140,140);
+  background-color: white;
+  resize: none;
+  font-size: 17px;
+  margin-left: 14.7%;
+}
+
+#editeur_adresse{
+  width: 70%;
+  height: 10em;
+  margin-top: 2em;
+  border-radius: 1em;
+  border: 0.2em solid rgb(140,140,140);
+  background-color: white;
+  resize: none;
+  font-size: 17px;
+  margin-left: 14.7%;
 }
 
 .Creation input[type="submit"] {
