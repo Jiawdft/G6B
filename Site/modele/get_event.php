@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 function get_event($groupe)
 {
@@ -20,4 +20,29 @@ function get_event($groupe)
 	return $event;}
 }
 
+function get_list_event($groupe){
+	if ($groupe!='') {
+		$groupe=htmlspecialchars($groupe);
+
+		$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
+		$reponse = $bdd->prepare('SELECT * FROM event WHERE groupe= :groupe ORDER BY date');
+		$reponse -> execute(array(
+				'groupe' => $groupe,
+				));
+		$event= $reponse->fetchAll();
+		return $event;
+	}
+}
+
+function selection_event($id){
+	$id=htmlspecialchars($id);
+
+	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
+	$reponse = $bdd->prepare('SELECT * FROM event WHERE id= :id');
+	$reponse -> execute(array(
+			'id' => $id,
+			));
+	$event= $reponse->fetch();
+	return $event;
+}
  ?>
