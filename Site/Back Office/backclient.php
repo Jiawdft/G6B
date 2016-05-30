@@ -144,7 +144,7 @@
 					<h4>
 					<table>
 						<tbody>
-							<form method="post" action="#">
+							<form method="post" action="../controleur/backclient.php">
 							<tr>
 							<?php
 							$Pages=array('Page accueuil - Carousel','Page Accueil - Grille', 'Page Contact', 'Page Inscription', 'Page Connexion', 'Page Recherche/Sport', 'Page Recherche/Groupe', 'Page Création/Groupe', 'Page Sport - Carousel', 'Page Modification - Groupe', 'Page Modification - Informations');
