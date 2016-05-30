@@ -39,8 +39,8 @@
 
 							foreach ($Membres as $Membre) {
 								?><td>
-								<input type="checkbox" name="case[]"  value='<?php echo $Membre['adresse_mail'] ?>' />
-								<a href = "javascript:void(0)" onclick = "document.getElementById('light3').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre3').innerHTML='<?php echo $Membre['adresse_mail']?>'"><?php echo $Membre['adresse_mail']?></a></td>
+								<input type="checkbox" name="case[]"  value='<?php echo $Membre['adresse_mail'] ?>' /><a><?php echo $Membre['adresse_mail']?></a>					
+
 							<?php
 							$a++;
 							if($a%5==0)
@@ -76,7 +76,10 @@
 						$a=0;
 						foreach ($Groupes as $Groupe){
 							?><td>
-							<input type="checkbox" name="case[]"  value='<?php echo $Groupe['groupe'] ?>' /><a href = "javascript:void(0)" onclick = "document.getElementById('light3').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre3').innerHTML='<?php echo $Groupe['groupe']?>'"><?php echo $Groupe['groupe']?></a></td>
+							<input type="checkbox" name="case[]"  value='<?php echo $Groupe['groupe'] ?>' /><a href = "javascript:void(0)" onclick = "document.getElementById('light3').style.display='block';
+							document.getElementById('fade').style.display='block';
+							document.getElementById('titre3').innerHTML='<?php echo $Groupe['groupe']?>';">
+							<?php echo $Groupe['groupe']?></a></td>
 							<?php
 							$a++;
 							if($a%7==0)
