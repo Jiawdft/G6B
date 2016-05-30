@@ -78,9 +78,8 @@
 
 		<div id="light3" class="white_content">
 		  	<h2 id="titre3"></h2>
-			<form action="" method="post" enctype="multipart/form-data">
+			<form action="#" method="post" enctype="multipart/form-data">
 				<input type="submit" name="modifier " id="modification "value="Modifier" />
-				<input type="submit" name="supprimer" value="Supprimer" />
 			</form>
 		  	<a href = "javascript:void(0)" onclick = "document.getElementById('light3').style.display='none';document.getElementById('fade').style.display='none'"><h5>Close<h5></a>
 		</div>

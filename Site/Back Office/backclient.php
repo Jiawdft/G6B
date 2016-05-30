@@ -140,7 +140,11 @@
 					<h4>
 					<table>
 						<tbody>
+<<<<<<< HEAD
 							<form method="post" action="../controleur/backclient.php?Image=true">
+=======
+							<form method="post" action="../controleur/backclient.php">
+>>>>>>> acac2b9b0337d07865aff2d47e0227d28eff429d
 							<tr>
 							<?php
 							$Pages=array('Page accueuil - Carousel','Page Accueil - Grille', 'Page Contact', 'Page Inscription', 'Page Connexion', 'Page Recherche/Sport', 'Page Recherche/Groupe', 'Page Création/Groupe', 'Page Sport - Carousel', 'Page Modification - Groupe', 'Page Modification - Informations');
