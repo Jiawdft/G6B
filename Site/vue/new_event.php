@@ -25,8 +25,8 @@
 			}?>
 
 			<input type="submit" value="CREER" onclick="resultat();"/>
-<!--    <form name="form" action='../controleur/new_event.php' method="post">-->
-    <form name="form" action='../Editeur/test.php' method="post">
+      <form name="form" action='../controleur/new_event.php?groupe=<?php echo $_GET['groupe']?>' method="post">
+
       <input type="hidden" name="resultat_nom_event" id="resultat_nom_event">
       <input type="hidden" name="resultat_description" id="resultat_description">
       <input type="hidden" name="resultat_adresse" id="resultat_adresse">
