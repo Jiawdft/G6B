@@ -12,14 +12,14 @@
 		<div class="mygroups">
 			<a href='../controleur/Groupe.php?groupe=<?php echo $Groupe ?>' id="titre_h1"><?php echo $Groupe?></a><br /><br />
 			<?php
-			
+
 			foreach ($leader as $lead) {
 				if($lead['membre']==$_SESSION['mail'] and $lead['groupe']==$Groupe){?>
 					<a href="../controleur/ModifGroupe.php">Modifie ton Groupe</a><br /><br /> <?php
 				}
 			}
 				?>
-			<?php 
+			<?php
 			if(isset($deja_membre)){
 			?>
 				<a href="../controleur/quitter_groupe.php?groupe=<?php echo $_GET['groupe']; ?>">Quitter le groupe</a>
@@ -40,7 +40,7 @@
 								<?php
 							}}}
 								?>
-								
+
 							</ul>
 						</th>
 					</tr>
@@ -56,7 +56,7 @@
 									<?php
 									foreach($club as $clubs){
 											?><li><a href="../controleur/Club.php?club=<?php echo $clubs['club']?>" ><?php echo $clubs['club']?></li><?php
-										}								
+										}
 									?>
 								</ul>
 							</th>
@@ -65,6 +65,7 @@
 				</div>
 				<div id="cal">
 					<h3>Le Calendrier :</h3>
+					<a href="../vue/new_event.php?groupe=<?php echo $_GET['groupe'] ?>">Créer un événement</a>
 					<table>
 						<tr>
 							<th>
@@ -74,7 +75,7 @@
 										if($events['groupe']==$Groupe ){
 											?><li><a href="../controleur/Event.php?id=<?php echo $events['id']?>" ><?php echo $events['nom']?></li><?php
 										}
-										}									
+										}
 									?>
 								</ul>
 							</th>

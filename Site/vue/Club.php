@@ -23,7 +23,9 @@
 						?>
 						</th>
 					</tr>
-				</table>	
+				</table>
+			</div>
+		</div>	<br />
 			<div class="more">
 				<div id="p">
 					
