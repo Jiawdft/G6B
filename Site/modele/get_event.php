@@ -4,7 +4,7 @@ function get_event($groupe)
 {
 	if($groupe==''){
 		$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
-	$reponse = $bdd->query('SELECT * FROM event');
+	$reponse = $bdd->query('SELECT * FROM event ORDER BY date');
 	$event=$reponse->fetchAll();
 	return $event;
 
@@ -16,7 +16,7 @@ function get_event($groupe)
 	$reponse -> execute(array(
 			'groupe' => $groupe,
 			));
-	$event= $reponse->fetchAll();
+	$event= $reponse->fetch();
 	return $event;}
 }
 

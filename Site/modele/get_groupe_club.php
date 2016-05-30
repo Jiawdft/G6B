@@ -22,7 +22,7 @@ function get_groupe_club($groupe,$club)
 		return $groupes;
 		
 	}
-	elseif($groupe!='')
+	elseif($groupe!=''and $club=='')
 	{
 		$reponse = $bdd->prepare('SELECT * FROM club_groupe WHERE groupe= :groupe');
 		$reponse -> execute(array(
