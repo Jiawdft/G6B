@@ -41,7 +41,6 @@
 							include_once'../modele/get_membres.php';
 							$Membres=get_membres('','');
 							$a=0;
-
 							foreach ($Membres as $Membre) {
 								?><td>
 								<input type="checkbox" name="case[]"  value='<?php echo $Membre['adresse_mail'] ?>' />
@@ -154,13 +153,13 @@
 								if($a==0 or $a==8){
 									?><td>
 									<input type="checkbox" name="case[]"  value='<?php echo $page ?>' />
-									<a href = "javascript:void(0)" onclick = "document.getElementById('light1').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre1').innerHTML='<?php echo $page ?>'"><?php echo $page ?></a></td>
+									<a href = "javascript:void(0)" onclick = "changement_name_image() ; document.getElementById('light1').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre1').innerHTML='<?php echo $page ?>'"><?php echo $page ?></a></td>
 								<?php
 								}
 								else{
 									?><td>
 									<input type="checkbox" name="case[]"  value='<?php echo $page ?>' />
-									<a href = "javascript:void(0)" onclick = "document.getElementById('light2').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre2').innerHTML='<?php echo $page ?>'"><?php echo $page ?></a></td>
+									<a href = "javascript:void(0)" onclick = "changement_name_image() ; document.getElementById('light2').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre2').innerHTML='<?php echo $page ?>'"><?php echo $page ?></a></td>
 								<?php
 								}
 								?>

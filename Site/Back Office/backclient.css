@@ -130,10 +130,14 @@ html, body {
     padding-bottom: 1em;
 }
 
-.white_content h5 {
+.white_content a {
     color: black;
     text-decoration: none;
-    padding-left: 44em;
+    padding-left: 45em;
+}
+
+.white_content h5 {
+    padding-left: 45em;
 }
 
 .white_content label, legend {
