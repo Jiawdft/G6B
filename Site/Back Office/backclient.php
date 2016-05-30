@@ -20,6 +20,11 @@
 			   document.getElementById(elem).style.display="none";
 			   }
 			   }
+			function changement_name_image()
+				{
+				var field = document.getElementById("fichier_a_uploader");
+				field.setAttribute("name", "<?php echo $page ?>");
+				}
 			</script>
 
 			<h1> Page Administrateur </h1>
