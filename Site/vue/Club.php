@@ -23,11 +23,12 @@
 						?>
 						</th>
 					</tr>
-					
+				</table>	
 			<div class="more">
 				<div id="p">
-					<h3>Les Groupes :</h3>
+					
 					<table>
+						<h3>Les Groupes :</h3>
 						<tr>
 							<th>
 								<ul><?php

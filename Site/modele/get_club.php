@@ -21,9 +21,9 @@ function get_club($Nom,$codepostal)
 		return $club;
 		
 	}
-	elseif($Nom!='')
+	elseif($Nom!='' and $codepostal=='')
 	{
-		$reponse = $bdd->prepare('SELECT * FROM nom WHERE nom= :nom');
+		$reponse = $bdd->prepare('SELECT * FROM club WHERE nom= :nom');
 		$reponse -> execute(array(
 				':nom' => $Nom
 				));
