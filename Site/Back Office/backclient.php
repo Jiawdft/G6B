@@ -76,10 +76,8 @@
 						$a=0;
 						foreach ($Groupes as $Groupe){
 							?><td>
-							<input type="checkbox" name="case[]"  value='<?php echo $Groupe['groupe'] ?>' /><a href = "javascript:void(0)" onclick = "document.getElementById('light3').style.display='block';
-							document.getElementById('fade').style.display='block';
-							document.getElementById('titre3').innerHTML='<?php echo $Groupe['groupe']?>';">
-							<?php echo $Groupe['groupe']?></a></td>
+							<input type="checkbox" name="case[]"  value='<?php echo $Groupe['groupe'] ?>' />
+							<a href="#"><?php echo $Groupe['groupe']?></a></td>	
 							<?php
 							$a++;
 							if($a%7==0)
@@ -115,7 +113,7 @@
 						$a=0;
 						foreach ($Sports as $Sport){
 							?><td><input type="checkbox" name="case[]"  value='<?php echo $Sport['sport'] ?>' />
-							<a href = "javascript:void(0)" onclick = "document.getElementById('light3').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre3').innerHTML='<?php echo $Sport['sport']?>'"><?php echo $Sport['sport']?></a></td>
+							<a href="#"><?php echo $Sport['sport']?></a></td>	
 							<?php
 							$a++;
 							if($a%7==0)
@@ -143,17 +141,14 @@
 					<h4>
 					<table>
 						<tbody>
-<<<<<<< HEAD
 							<form method="post" action="../controleur/backclient.php?Image=true">
-=======
 							<form method="post" action="../controleur/backclient.php">
->>>>>>> acac2b9b0337d07865aff2d47e0227d28eff429d
 							<tr>
 							<?php
 							$Pages=array('Page accueuil - Carousel','Page Accueil - Grille', 'Page Contact', 'Page Inscription', 'Page Connexion', 'Page Recherche/Sport', 'Page Recherche/Groupe', 'Page Création/Groupe', 'Page Sport - Carousel', 'Page Modification - Groupe', 'Page Modification - Informations');
 							$a=0;
 							foreach ($Pages as $page){
-								if($a==0 or $a==8){
+								/*if($a==0 or $a==8){
 									?><td>
 									<input type="checkbox" name="case[]"  value='<?php echo $page ?>' />
 									<a href = "javascript:void(0)" onclick = "document.getElementById('light1').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre1').innerHTML='<?php echo $page ?>'"><?php echo $page ?></a></td>
@@ -164,8 +159,12 @@
 									<input type="checkbox" name="case[]"  value='<?php echo $page ?>' />
 									<a href = "javascript:void(0)" onclick = "document.getElementById('light2').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre2').innerHTML='<?php echo $page ?>'"><?php echo $page ?></a></td>
 								<?php
-								}
+								}*/
 								?>
+								<td>
+								<input type="checkbox" name="case[]"  value='<?php echo $page ?>' />
+								<a href="#"><?php echo $page ?></a></td>	
+								
 							<?php
 							$a++;
 							if($a%3==0)
@@ -196,8 +195,8 @@
 					foreach ($posts as $post) {?>
 						<td>
 							<input type="checkbox" name="case[]"  value='<?php echo $post['id'] ?>' />
-							<a href = "javascript:void(0)" onclick = "document.getElementById('light3').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre3').innerHTML='<?php echo $post['post']?>'"><?php echo $post['id']?></a></td>
-							<?php
+							<a href="#"><?php echo $post['id'] ?></a></td>
+					<?php
 					}
 					?>
 					<input type="submit" value="Supprimer" />

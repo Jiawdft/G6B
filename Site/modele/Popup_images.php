@@ -79,6 +79,9 @@
 		<div id="light3" class="white_content">
 		  	<h2 id="titre3"></h2>
 			<form action="#" method="post" enctype="multipart/form-data">
+			<h4 id ="description"></h4>
+			<input type="text" name="info" placeholder="Votre description"/>
+
 				
 
 				<input type="submit" name="modifier " id="modification "value="Modifier" />
