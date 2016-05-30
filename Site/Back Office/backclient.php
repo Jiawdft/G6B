@@ -20,11 +20,6 @@
 			   document.getElementById(elem).style.display="none";
 			   }
 			   }
-			function changement_name_image()
-				{
-				var field = document.getElementById("fichier_a_uploader");
-				field.setAttribute("name", "<?php echo $page ?>");
-				}
 			</script>
 
 			<h1> Page Administrateur </h1>
@@ -35,12 +30,13 @@
 					<h4>
 					<table>
 		    			<tbody>
-			    			<form method="post" action='../controleur/backclient.php?Membre=true'>
+			    			<form method="post" action="../controleur/backclient.php?Membre=true">
 			    			<tr>
 							<?php
 							include_once'../modele/get_membres.php';
 							$Membres=get_membres('','');
 							$a=0;
+
 							foreach ($Membres as $Membre) {
 								?><td>
 								<input type="checkbox" name="case[]"  value='<?php echo $Membre['adresse_mail'] ?>' />
@@ -144,7 +140,7 @@
 					<h4>
 					<table>
 						<tbody>
-							<form method="post" action="#">
+							<form method="post" action="../controleur/backclient.php?Image=true">
 							<tr>
 							<?php
 							$Pages=array('Page accueuil - Carousel','Page Accueil - Grille', 'Page Contact', 'Page Inscription', 'Page Connexion', 'Page Recherche/Sport', 'Page Recherche/Groupe', 'Page Création/Groupe', 'Page Sport - Carousel', 'Page Modification - Groupe', 'Page Modification - Informations');
@@ -153,13 +149,13 @@
 								if($a==0 or $a==8){
 									?><td>
 									<input type="checkbox" name="case[]"  value='<?php echo $page ?>' />
-									<a href = "javascript:void(0)" onclick = "changement_name_image() ; document.getElementById('light1').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre1').innerHTML='<?php echo $page ?>'"><?php echo $page ?></a></td>
+									<a href = "javascript:void(0)" onclick = "document.getElementById('light1').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre1').innerHTML='<?php echo $page ?>'"><?php echo $page ?></a></td>
 								<?php
 								}
 								else{
 									?><td>
 									<input type="checkbox" name="case[]"  value='<?php echo $page ?>' />
-									<a href = "javascript:void(0)" onclick = "changement_name_image() ; document.getElementById('light2').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre2').innerHTML='<?php echo $page ?>'"><?php echo $page ?></a></td>
+									<a href = "javascript:void(0)" onclick = "document.getElementById('light2').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre2').innerHTML='<?php echo $page ?>'"><?php echo $page ?></a></td>
 								<?php
 								}
 								?>
@@ -186,7 +182,7 @@
 				<h3 onclick="bascule('f'); return false;">Forum</h3>
 				<div id='f' style='display:none;'>
 					<p>MODERER LES MESSAGES :</p>
-					<form method="post" action="../controleur/backclient.php?Post=true">
+					<form method="post" action="../controleur/backclient.php?Forum=true">
 					<?php 
 					include'../modele/get_post.php';
 					$posts=get_post('','');
@@ -205,6 +201,7 @@
 			<div id="Aide">
 				<h3 onclick="bascule('a'); return false;">Aide</h3>
 				<div id='a' style='display:none;'>
+					<form method="post" action="../controleur/backclient.php?Aide=true">
 					<p>ADMINISTRER LA RUBRIQUE "AIDE" :</p>
 					<p>Administrer la rubrique "Aide" :</p><br>
 					<p>Ajouter une question :</p><br>
@@ -212,6 +209,7 @@
 					<p>Ajouter sa réponse :</p> <br>
 					<textarea name="Réponse" rows="7" cols="100">Saisir la réponse ici.</textarea><br><br>
 					<input type="submit" value="Ajouter">
+				</form>
 				</div>
 			</div>
 		</div>
