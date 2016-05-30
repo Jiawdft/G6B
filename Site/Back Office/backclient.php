@@ -40,7 +40,6 @@
 							foreach ($Membres as $Membre) {
 								?><td>
 								<input type="checkbox" name="case[]"  value='<?php echo $Membre['adresse_mail'] ?>' /><a><?php echo $Membre['adresse_mail']?></a>					
-
 							<?php
 							$a++;
 							if($a%5==0)
@@ -77,7 +76,7 @@
 						foreach ($Groupes as $Groupe){
 							?><td>
 							<input type="checkbox" name="case[]"  value='<?php echo $Groupe['groupe'] ?>' />
-							<a href="#"><?php echo $Groupe['groupe']?></a></td>	
+							<a href="../controleur/backclientmodif.php?groupe=<?php echo $Groupe['groupe']?>"><?php echo $Groupe['groupe']?></a></td>	
 							<?php
 							$a++;
 							if($a%7==0)
@@ -113,7 +112,7 @@
 						$a=0;
 						foreach ($Sports as $Sport){
 							?><td><input type="checkbox" name="case[]"  value='<?php echo $Sport['sport'] ?>' />
-							<a href="#"><?php echo $Sport['sport']?></a></td>	
+							<a href="../controleur/backclientmodif.php?sport=<?php echo $Sport['sport']?>"><?php echo $Sport['sport']?></a></td>	
 							<?php
 							$a++;
 							if($a%7==0)
@@ -163,7 +162,7 @@
 								?>
 								<td>
 								<input type="checkbox" name="case[]"  value='<?php echo $page ?>' />
-								<a href="#"><?php echo $page ?></a></td>	
+								<a href="../controleur/backclientmodif.php?page=<?php echo $page ?>"><?php echo $page ?></a></td>	
 								
 							<?php
 							$a++;
@@ -195,7 +194,7 @@
 					foreach ($posts as $post) {?>
 						<td>
 							<input type="checkbox" name="case[]"  value='<?php echo $post['id'] ?>' />
-							<a href="#"><?php echo $post['id'] ?></a></td>
+							<a href="../controleur/backclientmodif.php?post=<?php echo $post['id'] ?>"><?php echo $post['id'] ?></a></td>
 					<?php
 					}
 					?>

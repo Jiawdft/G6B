@@ -6,7 +6,8 @@ session_start();
 $Admin="o@gmail.com"
 if($_SESSION['mail']!=$Admin){
 	include_once('../controleur/Accueil.php');
-}
+}else{
+
 if(isset($_Get['Membre']) and $_Get['Membre']==true){
 	include_once'../modele/delete_membre.php';
 	include_once'../modele/delete_leader_groupe.php';
@@ -55,4 +56,5 @@ if(isset($_Get['Sport']) and $_Get['Sport']=='Modif'){
 
 
 include_once('../Back Office/backclient..php');
+}
 ?>
