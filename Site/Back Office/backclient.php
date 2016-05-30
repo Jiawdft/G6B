@@ -30,7 +30,7 @@
 					<h4>
 					<table>
 		    			<tbody>
-			    			<form method="post" action="#">
+			    			<form method="post" action='../controleur/backclient.php?Membre=true'>
 			    			<tr>
 							<?php
 							include_once'../modele/get_membres.php';
@@ -68,7 +68,7 @@
 					<h4>
 					<table>
 		    			<tbody>
-		    				<form method="post" action="#">
+		    				<form method="post" action="../controleur/backclient.php?Groupe=true">
 		    			<tr>
 						<?php
 						include_once'../modele/get_groupes.php';
@@ -104,7 +104,7 @@
 					<h4>
 					<table>
 		    			<tbody>
-		    				<form method="post" action="#">
+		    				<form method="post" action="../controleur/backclient.php?Sport=true">
 		    			<tr>
 						<?php
 						include_once'../modele/get_sports.php';
@@ -182,7 +182,7 @@
 				<h3 onclick="bascule('f'); return false;">Forum</h3>
 				<div id='f' style='display:none;'>
 					<p>MODERER LES MESSAGES :</p>
-					<form method="post" action="#">
+					<form method="post" action="../controleur/backclient.php?Post=true">
 					<?php 
 					include'../modele/get_post.php';
 					$posts=get_post('','');
