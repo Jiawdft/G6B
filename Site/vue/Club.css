@@ -26,7 +26,7 @@ body {
 }
 
 #uinfo table {
-    display: inline-block;
+    display: block;
     border: 0.2em solid black;
     margin-left: 7em;
     height: 7em;
@@ -50,7 +50,7 @@ body {
 }
 
 .mygroups table {
-    display: inline-block;
+    display: block;
     margin-top: 3em;
     border: 0.2em solid black;
     height: 20.8em;
@@ -74,7 +74,6 @@ body {
 }
 
 .more {
-    position: absolute;
     top: 5.1em;
     left: 44em;
 
