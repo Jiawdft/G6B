@@ -28,30 +28,36 @@
       <p style="padding-bottom: 16em;"><?php echo $groupes['information'] ?></p>
 
       <?php 
-      if (!isset($_SESSION['mail'])) {
-      ?>
-      <a id="bouton_rejoindre" href='../controleur/Connexion.php'>Rejoindre</a>
-      <?php 
+      if (!isset($_SESSION['mail']))
+      {
+        ?>
+        <a id="bouton_rejoindre" href='../controleur/Connexion.php'>Rejoindre</a>
+        <?php 
       }
-      else {
-        if ($deja_membre=='') {
+      else
+      {
+        if ($deja_membre=='')
+        {
           ?>
-<<<<<<< Updated upstream
           <a id="bouton_rejoindre" href='../controleur/Connexion.php'>Rejoindre</a>
           <?php 
+        }
+        else
+        {
+          if ($deja_membre=='')
+          {
+            ?>
+            <a id="bouton_rejoindre" href='../controleur/inscription_groupe_membre.php?groupe=<?php echo $_GET['groupe']?>'>Rejoindre</a>
+          <?php
           }
-          else {
-            if ($deja_membre=='') {
-              ?>
-              <a id="bouton_rejoindre" href='../controleur/inscription_groupe_membre.php?groupe=<?php echo $_GET['groupe']?>'>Rejoindre</a>
+          else
+          {
+            ?>
+            <a id="bouton_rejoindre" href='../controleur/Page_Personnelle_mon_groupe.php?groupe=<?php echo $_GET['groupe']?>'>Bienvenue</a>
             <?php
-            }
-            else{
-              ?>
-              <a id="bouton_rejoindre" href='../controleur/Page_Personnelle_mon_groupe.php?groupe=<?php echo $_GET['groupe']?>'>Bienvenue</a>
-              <?php
-            }
           }
+        }
+      }
           ?>  
           
   			</div>
@@ -62,7 +68,8 @@
           <h2>Prochainement :</h2>
 
           
-          <?php foreach($event as $ev){
+          <?php foreach($event as $ev)
+          {
             ?>
             <h4><?php echo $ev['nom'];?><h4>
             <?php
@@ -75,32 +82,35 @@
           <h3> <?php echo $next_event['date'] ?> </h3>
           -->
           <?php 
-          if (!isset($_SESSION['mail'])) {
-=======
+          if (!isset($_SESSION['mail']))
+          {
+              ?>
           <a id="bouton_rejoindre" href='../controleur/inscription_groupe_membre.php?groupe=<?php echo $_GET['groupe']?>'>Rejoindre</a>
-        <?php
-        }
-        else{
->>>>>>> Stashed changes
-          ?>
-          <a id="bouton_rejoindre" href='../controleur/Page_Personnelle_mon_groupe.php?groupe=<?php echo $_GET['groupe']?>'>Bienvenue</a>
           <?php
-        }
-      }
+          }
+          else
+          {
+            ?>
+            <a id="bouton_rejoindre" href='../controleur/Page_Personnelle_mon_groupe.php?groupe=<?php echo $_GET['groupe']?>'>Bienvenue</a>
+            <?php
+          }
+      
       ?>  
 		</div>
-
+    <!--
 		<div id="event"> 
       <?php
         include_once'../modele/get_event.php';
         $events=get_event('');
-        foreach ($events as $event) {?> <h3><?php
+        foreach ($events as $event) {
+          ?> <h3><?php
           echo $event['groupe'];?></h3>
           <br />
           <br />
-        }
+        <?php }
       ?>
 		</div>
+  -->
 
     <div class="localisation">
       <h1>Point de rendez-vous de Fit Party : </h1>
