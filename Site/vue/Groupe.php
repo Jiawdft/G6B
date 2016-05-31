@@ -53,10 +53,20 @@
   		<section class="planning">
   			<div id="event"> 
           <h2>Prochainement :</h2>
+
+          
+          <?php foreach($event as $ev){
+            ?>
+            <h4><?php echo $ev['nom'];?><h4>
+            <?php
+          }
+          ?>
+
+          <!--
           <h1> <?php echo $next_event['nom']; ?> </h1>
           <p> <?php echo $next_event['description'] ?> </p>
           <h3> <?php echo $next_event['date'] ?> </h3>
-
+          -->
           <?php 
           if (!isset($_SESSION['mail'])) {
           ?>

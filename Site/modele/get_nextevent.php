@@ -1,6 +1,6 @@
 <?php
 
-function get_event($groupe)
+function get_nextevent($groupe)
 {
 	if($groupe==''){
 		$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
@@ -16,10 +16,10 @@ function get_event($groupe)
 	$reponse -> execute(array(
 			'groupe' => $groupe,
 			));
-	$event= $reponse->fetchAll();
+	$event= $reponse->fetch();
 	return $event;}
 }
-
+/*
 function get_list_event($groupe){
 	if ($groupe!='') {
 		$groupe=htmlspecialchars($groupe);
@@ -44,7 +44,8 @@ function selection_event($groupe,$nom){
 			'groupe' => $groupe,
 			'nom' => $nom,
 			));
-	$event= $reponse->fetchAll();
+	$event= $reponse->fetch();
 	return $event;
 }
+*/
  ?>
