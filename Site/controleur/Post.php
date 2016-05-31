@@ -3,5 +3,11 @@ if(!isset($_SESSION['mail']))
 {
 session_start();
 }
+if(isset($_POST['resultat'])){
+	include('../modele/add_post.php');
+	add_post('')
+} 
+else{
 include_once('../vue/Post.php');
+}
 ?>

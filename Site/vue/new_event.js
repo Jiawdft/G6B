@@ -25,6 +25,10 @@ function resultat(){
   document.form.submit();
 
 }
+function resultat_post(){
+  document.getElementById("resultat").value = document.getElementById("editeur_description").innerHTML;
+}
+
 
 function enleve(nom,contenu){
   if (document.getElementById(nom).textContent==contenu) {
