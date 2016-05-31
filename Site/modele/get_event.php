@@ -47,4 +47,5 @@ function selection_event($groupe,$nom){
 	$event= $reponse->fetch();
 	return $event;
 }
+
  ?>
