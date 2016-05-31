@@ -149,13 +149,11 @@
 							foreach ($Pages as $page){
 								/*if($a==0 or $a==8){
 									?><td>
-									<input type="checkbox" name="case[]"  value='<?php echo $page ?>' />
 									<a href = "javascript:void(0)" onclick = "document.getElementById('light1').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre1').innerHTML='<?php echo $page ?>'"><?php echo $page ?></a></td>
 								<?php
 								}
 								else{
 									?><td>
-									<input type="checkbox" name="case[]"  value='<?php echo $page ?>' />
 									<a href = "javascript:void(0)" onclick = "document.getElementById('light2').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre2').innerHTML='<?php echo $page ?>'"><?php echo $page ?></a></td>
 								<?php
 								}*/
