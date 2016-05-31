@@ -9,6 +9,23 @@
   <body>
 
     <?php include("../Header/HOMETOP Slider.php"); ?>
+    <script language="javascript" type="text/javascript">
+      function bascule(elem) {
+      var i, str;
+         if(document.getElementById(elem).style.display=="none") {
+         for (i=1; i<=6; i++) {
+         str='div'+i;
+         if (document.getElementById(str).style.display=="block") {
+         document.getElementById(str).style.display = 'none';
+         }
+         }
+         document.getElementById(elem).style.display="block";
+         }
+         else {
+        document.getElementById(elem).style.display = 'none';
+         }
+      }
+      </script>
 
     <div class="slider">
 			<figure>
@@ -55,19 +72,21 @@
             ?>
             <a id="bouton_rejoindre" href='../controleur/Page_Personnelle_mon_groupe.php?groupe=<?php echo $_GET['groupe']?>'>Bienvenue</a>
             <?php
-          }
-        }
-      }
-          ?>  
-          
-  			</div>
+          } } } ?></div>
+
+
 
   			<div id="event"> 
-          <div id="l_event">
-            <?php 
-          foreach($event as $ev) {
+          <?php 
+          foreach($event as $ev) {?>
+          <h3 onclick="bascule('div2'); return false;"><?php echo $ev['nom']?></h3>
+            <div id="">
+
             ?>
-            <a href="../controleur/Groupe.php?groupe=<?php echo $groupe['groupe']?>&event=<?php echo $ev['nom']?>#bouton_rejoindre"><?php echo $ev['nom'];?></a>
+            <!--
+            <a href="../controleur/Groupe.php?groupe=<?php echo $_GET['groupe']?>&event=<?php echo $ev['nom']?>"><?php echo $ev['nom'];?></a>
+            -->
+
             <br />
             <br />
             <?php

@@ -34,15 +34,15 @@ function get_list_event($groupe){
 	}
 }
 
-function selection_event($groupe,$nom){
+function selection_event($groupe,$ID){
 	$groupe=htmlspecialchars($groupe);
-	$nom=htmlspecialchars($nom);
+	$ID=htmlspecialchars($ID);
 
 	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
-	$reponse = $bdd->prepare('SELECT * FROM event WHERE groupe= :groupe AND nom= :nom');
+	$reponse = $bdd->prepare('SELECT * FROM event WHERE groupe= :groupe AND id= :id');
 	$reponse -> execute(array(
 			'groupe' => $groupe,
-			'nom' => $nom,
+			'id' => $ID,
 			));
 	$event= $reponse->fetch();
 	return $event;

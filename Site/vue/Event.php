@@ -24,7 +24,7 @@
   <div class="detail">
     <?php
       include_once'../modele/get_event.php';
-      $selected_event=selection_event($_GET['groupe'],$_GET['event']);
+      $selected_event=selection_event($_GET['groupe'],$_GET['id']);
     ?>
     <?php if (isset($_GET['event'])): ?>
       <h3><?php echo $_GET['event'] ?></h3>
