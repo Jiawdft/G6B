@@ -79,7 +79,7 @@ html {
   outline: none;
 }
 
-.Creation input[type="submit"] {
+#creer{
   background-color: rgb(140,140,140);
   border: 0.2em solid rgb(140,140,140);
   border-radius:0.5em;

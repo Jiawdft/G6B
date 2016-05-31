@@ -66,7 +66,7 @@
 				<div id="cal">
 					<h3>Le Calendrier :</h3>
 					<a href="../controleur/Event.php?groupe=<?php echo $_GET['groupe'] ?>">Le Calendrier :</a>
-					<a href="../vue/new_event.php?groupe=<?php echo $_GET['groupe'] ?>">Créer un événement</a>
+					<a href="../controleur/new_event.php?groupe=<?php echo $_GET['groupe'] ?>">Créer un événement</a>
 					<table>
 						<tr>
 							<th>
