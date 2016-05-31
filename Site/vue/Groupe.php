@@ -36,7 +36,6 @@
       else {
         if ($deja_membre=='') {
           ?>
-<<<<<<< Updated upstream
           <a id="bouton_rejoindre" href='../controleur/Connexion.php'>Rejoindre</a>
           <?php 
           }
@@ -68,20 +67,16 @@
             <?php
           }
           ?>
-
-          <!--
           <h1> <?php echo $next_event['nom']; ?> </h1>
           <p> <?php echo $next_event['description'] ?> </p>
           <h3> <?php echo $next_event['date'] ?> </h3>
-          -->
           <?php 
           if (!isset($_SESSION['mail'])) {
-=======
+          ?>
           <a id="bouton_rejoindre" href='../controleur/inscription_groupe_membre.php?groupe=<?php echo $_GET['groupe']?>'>Rejoindre</a>
         <?php
         }
         else{
->>>>>>> Stashed changes
           ?>
           <a id="bouton_rejoindre" href='../controleur/Page_Personnelle_mon_groupe.php?groupe=<?php echo $_GET['groupe']?>'>Bienvenue</a>
           <?php
