@@ -22,13 +22,17 @@
   </div>
 
   <div class="detail">
+    <?php
+      include_once'../modele/get_event.php';
+      $selected_event=selection_event($_GET['groupe'],$_GET['event']);
+    ?>
     <?php if (isset($_GET['event'])): ?>
       <h3><?php echo $_GET['event'] ?></h3>
     <?php endif; ?>
     <div id="ligne"></div>
-      <p> <?php echo Event['description'];?> </p>
-      <p> <?php echo Event['adresse'];?> </p>
-      <p> <?php echo Event['date'];?> </p>
+      <p> <?php echo $selected_event['description'];?> </p>
+      <p> <?php echo $selected_event['adresse'];?> </p>
+      <p> <?php echo $selected_event['date'];?> </p>
     </div>
 
 
