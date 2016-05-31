@@ -16,7 +16,7 @@ function get_event($groupe)
 	$reponse -> execute(array(
 			'groupe' => $groupe,
 			));
-	$event= $reponse->fetchAll();
+	$event= $reponse->fetch();
 	return $event;}
 }
 
@@ -44,7 +44,8 @@ function selection_event($groupe,$nom){
 			'groupe' => $groupe,
 			'nom' => $nom,
 			));
-	$event= $reponse->fetchAll();
+	$event= $reponse->fetch();
 	return $event;
 }
+
  ?>
