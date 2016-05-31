@@ -44,7 +44,7 @@
 
 							foreach ($Membres as $Membre) {
 								?><td>
-								<input type="checkbox" name="case[]"  value='<?php echo $Membre['adresse_mail'] ?>' /><a><?php echo $Membre['adresse_mail']?></a>					
+								<input type="checkbox" name="case[]"  value='<?php echo $Membre['adresse_mail'] ?>' /><label for="case"><a><?php echo $Membre['adresse_mail']?></a>	</label>				
 							<?php
 							$a++;
 							if($a%5==0)
@@ -81,8 +81,8 @@
 						$a=0;
 						foreach ($Groupes as $Groupe){
 							?><td>
-							<input type="checkbox" name="case[]"  value='<?php echo $Groupe['groupe'] ?>' />
-							<a href="../controleur/backclientmodif.php?groupe=<?php echo $Groupe['groupe']?>"><?php echo $Groupe['groupe']?></a></td>	
+							<input type="checkbox" name="case[]"  value='<?php echo $Groupe['groupe'] ?>' /><label for="case">
+							<a href="../controleur/backclientmodif.php?groupe=<?php echo $Groupe['groupe']?>"><?php echo $Groupe['groupe']?></a></label></td>	
 							<?php
 							$a++;
 							if($a%7==0)
@@ -117,8 +117,8 @@
 						$Sports=get_sports('');
 						$a=0;
 						foreach ($Sports as $Sport){
-							?><td><input type="checkbox" name="case[]"  value='<?php echo $Sport['sport'] ?>' />
-							<a href="../controleur/backclientmodif.php?sport=<?php echo $Sport['sport']?>"><?php echo $Sport['sport']?></a></td>	
+							?><td><input type="checkbox" name="case[]"  value='<?php echo $Sport['sport'] ?>' /><label for="case">
+							<a href="../controleur/backclientmodif.php?sport=<?php echo $Sport['sport']?>"><?php echo $Sport['sport']?></a></label></td>	
 							<?php
 							$a++;
 							if($a%7==0)
@@ -191,8 +191,8 @@
 					$posts=get_post('','');
 					foreach ($posts as $post) {?>
 						<td>
-							<input type="checkbox" name="case[]"  value='<?php echo $post['id'] ?>' />
-							<a href="../controleur/backclientmodif.php?post=<?php echo $post['id'] ?>"><?php echo $post['id'] ?></a></td>
+							<input type="checkbox" name="case[]"  value='<?php echo $post['id'] ?>' /><label for="case">
+							<a href="../controleur/backclientmodif.php?post=<?php echo $post['id'] ?>"><?php echo $post['id'] ?></a></label></td>
 					<?php
 					}
 					?>
