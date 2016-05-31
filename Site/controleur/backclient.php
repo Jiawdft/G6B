@@ -53,7 +53,8 @@ if(isset($_Get['Sport']) and $_Get['Sport']=='Modif'){
 	//modif_sport();
 }
 
-
+if(isset($_Get['Image']) and $_Get['Image']==true){
+	include_once'../modele/upload.php';
 
 include_once('../Back Office/backclient.php');
 }

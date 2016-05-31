@@ -10,22 +10,27 @@
 		<?php include("../modele/Popup_images.php"); ?>
 		<div class="bo">
 			<script language="javascript" type="text/javascript">
-			function bascule(elem)
-			   {
-			   etat=document.getElementById(elem).style.display;
-			   if(etat=="none"){
-			   document.getElementById(elem).style.display="block";
-			   }
-			   else{
-			   document.getElementById(elem).style.display="none";
-			   }
-			   }
+			function bascule(elem) {
+			var i, str;
+			   if(document.getElementById(elem).style.display=="none") {
+			   for (i=1; i<=6; i++) {
+			   str='div'+i;
+			   if (document.getElementById(str).style.display=="block") {
+			   document.getElementById(str).style.display = 'none';
+			   }
+			   }
+			   document.getElementById(elem).style.display="block";
+			   }
+			   else {
+			  document.getElementById(elem).style.display = 'none';
+			   }
+			}
 			</script>
 
 			<h1> Page Administrateur </h1>
 			<div id="Membres">
-				<h3 onclick="bascule('m'); return false;">Membres</h3>
-				<div id='m' style='display:none;'>
+				<h3 onclick="bascule('div1'); return false;">Membres</h3>
+				<div id='div1' style='display:none;'>
 					<p>LISTE DES MEMBRES :</p>
 					<h4>
 					<table>
@@ -51,6 +56,7 @@
 								}
 							}
 							?>
+							</tr>
 							<input type="submit" value="Supprimer" />
 							</form>
 						</tbody>
@@ -61,8 +67,8 @@
 			</div>
 
 			<div id="Groupes">
-				<h3 onclick="bascule('g'); return false;">Groupes</h3>
-				<div id='g' style='display:none;'>
+				<h3 onclick="bascule('div2'); return false;">Groupes</h3>
+				<div id='div2' style='display:none;'>
 					<p>LISTE DES GROUPES :</p>
 					<h4>
 					<table>
@@ -90,7 +96,7 @@
 							?>
 						</tr>
 						<input type="submit" value="Supprimer" />
-					</form>
+						</form>
 						</tbody>
 					</table>
 		    		</h4>
@@ -98,8 +104,8 @@
 			</div>
 
 			<div id="Sports">
-				<h3 onclick="bascule('s'); return false;">Sports</h3>
-				<div id='s' style='display:none;'>
+				<h3 onclick="bascule('div3'); return false;">Sports</h3>
+				<div id='div3' style='display:none;'>
 					<p>LISTE DES SPORTS :</p>
 					<h4>
 					<table>
@@ -125,8 +131,8 @@
 						}
 						?>
 						</tr>
-					</form>
-					<input type="submit" value="Supprimer" />
+						<input type="submit" value="Supprimer" />
+						</form>
 						</tbody>
 					</table>
 					</h4>
@@ -134,36 +140,29 @@
 			</div>
 
 			<div id="Images">
-				<h3 onclick="bascule('i'); return false;">Images</h3>
-				<div id='i' style='display:none;'>
+				<h3 onclick="bascule('div4'); return false;">Images</h3>
+				<div id='div4' style='display:none;'>
 					<p>IMAGERIE :</p>
 					<h4>
 					<table>
 						<tbody>
 							<form method="post" action="../controleur/backclient.php?Image=true">
-							<form method="post" action="../controleur/backclient.php">
 							<tr>
 							<?php
 							$Pages=array('Page accueuil - Carousel','Page Accueil - Grille', 'Page Contact', 'Page Inscription', 'Page Connexion', 'Page Recherche/Sport', 'Page Recherche/Groupe', 'Page Création/Groupe', 'Page Sport - Carousel', 'Page Modification - Groupe', 'Page Modification - Informations');
 							$a=0;
 							foreach ($Pages as $page){
-								/*if($a==0 or $a==8){
+								if($a==0 or $a==8){
 									?><td>
-									<input type="checkbox" name="case[]"  value='<?php echo $page ?>' />
 									<a href = "javascript:void(0)" onclick = "document.getElementById('light1').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre1').innerHTML='<?php echo $page ?>'"><?php echo $page ?></a></td>
 								<?php
 								}
 								else{
 									?><td>
-									<input type="checkbox" name="case[]"  value='<?php echo $page ?>' />
 									<a href = "javascript:void(0)" onclick = "document.getElementById('light2').style.display='block';document.getElementById('fade').style.display='block' ; document.getElementById('titre2').innerHTML='<?php echo $page ?>'"><?php echo $page ?></a></td>
 								<?php
-								}*/
+								}
 								?>
-								<td>
-								<input type="checkbox" name="case[]"  value='<?php echo $page ?>' />
-								<a href="../controleur/backclientmodif.php?page=<?php echo $page ?>"><?php echo $page ?></a></td>	
-								
 							<?php
 							$a++;
 							if($a%3==0)
@@ -175,7 +174,6 @@
 								}
 							}
 							?>
-							</tr><input type="submit" value="Supprimer" />
 						</form>
 						</tbody>
 					</table>
@@ -184,8 +182,8 @@
 			</div>
 
 			<div id="Forum">
-				<h3 onclick="bascule('f'); return false;">Forum</h3>
-				<div id='f' style='display:none;'>
+				<h3 onclick="bascule('div5'); return false;">Forum</h3>
+				<div id='div5' style='display:none;'>
 					<p>MODERER LES MESSAGES :</p>
 					<form method="post" action="../controleur/backclient.php?Forum=true">
 					<?php 
@@ -204,8 +202,8 @@
 			</div>
 
 			<div id="Aide">
-				<h3 onclick="bascule('a'); return false;">Aide</h3>
-				<div id='a' style='display:none;'>
+				<h3 onclick="bascule('div6'); return false;">Aide</h3>
+				<div id='div6' style='display:none;'>
 					<form method="post" action="../controleur/backclient.php?Aide=true">
 					<p>ADMINISTRER LA RUBRIQUE "AIDE" :</p>
 					<p>Administrer la rubrique "Aide" :</p><br>

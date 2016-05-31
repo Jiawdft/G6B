@@ -7,7 +7,7 @@
 	<body>
 		<div id="light1" class="white_content">
 			<h2 id="titre1"></h2> 
-		  	<form enctype="multipart/form-data" action="" method="post">
+		  	<form enctype="multipart/form-data" action="../controleur/backclient.php?Image=true" method="post">
 		    <fieldset>
 		    <legend>Images 1 :</legend>
 					<p>
@@ -60,7 +60,7 @@
 
 		<div id="light2" class="white_content">
 		  	<h2 id="titre2"></h2> 
-		  	<form enctype="multipart/form-data" action="" method="post">
+		  	<form enctype="multipart/form-data" action="../controleur/backclient.php?Image=true" method="post">
 		    	<fieldset>
 		    	<legend>Image</legend>
 		      	<p>
@@ -72,21 +72,6 @@
 		    </fieldset>
 		  </form>
 		  <a href = "javascript:void(0)" onclick = "document.getElementById('light2').style.display='none';document.getElementById('fade').style.display='none'"><h5>Close<h5></a>
-		</div>
-		<div id="fade" class="black_overlay"></div>
-		</div>
-
-		<div id="light3" class="white_content">
-		  	<h2 id="titre3"></h2>
-			<form action="#" method="post" enctype="multipart/form-data">
-			<h4 id ="description"></h4>
-			<input type="text" name="info" placeholder="Votre description"/>
-
-				
-
-				<input type="submit" name="modifier " id="modification "value="Modifier" />
-			</form>
-		  	<a href = "javascript:void(0)" onclick = "document.getElementById('light3').style.display='none';document.getElementById('fade').style.display='none'"><h5>Close<h5></a>
 		</div>
 		<div id="fade" class="black_overlay"></div>
 		</div>
