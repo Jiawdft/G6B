@@ -79,32 +79,17 @@
           <p> <?php echo $next_event['description'] ?> </p>
           <h3> <?php echo $next_event['date'] ?> </h3>
           <?php 
-<<<<<<< HEAD
           if (!isset($_SESSION['mail']))
           {
               ?>
           <a id="bouton_rejoindre" href='../controleur/inscription_groupe_membre.php?groupe=<?php echo $_GET['groupe']?>'>Rejoindre</a>
-=======
-          if (!isset($_SESSION['mail'])) {
-          ?>
-          <a id="bouton_rejoindre" href='../controleur/inscription_groupe_membre.php?groupe=<?php echo $_GET['groupe']?>'>Rejoindre</a>
-        <?php
-        }
+          <?php
+          }
         else{
           ?>
           <a id="bouton_rejoindre" href='../controleur/Page_Personnelle_mon_groupe.php?groupe=<?php echo $_GET['groupe']?>'>Bienvenue</a>
->>>>>>> d0feb1c99e1095cec12402e6c832303458e979c1
-          <?php
-          }
-          else
-          {
-            ?>
-            <a id="bouton_rejoindre" href='../controleur/Page_Personnelle_mon_groupe.php?groupe=<?php echo $_GET['groupe']?>'>Bienvenue</a>
-            <?php
-          }
-      
-      ?>  
-		</div>
+          <?php }
+?>		</div>
     <!--
 		<div id="event"> 
       <?php
