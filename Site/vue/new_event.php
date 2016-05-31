@@ -10,8 +10,7 @@
 
 	<div class="Creation">
 		<h1 style="text-align: center;">CREER UN EVENEMENT</h1>
-
-			<input type="text" placeholder="Nom du l'événement" id="nom_event"/>
+		<p id="nom_event">Nom de l'évènement</p>
       <br>
       <input type="button" value="G" style="font-weight:bold;" onclick="commande('bold','','bouton_bold');" id="bouton_bold"/>
       <input type="button" value="I" style="font-style:italic;" onclick="commande('italic','','bouton_italic');" id="bouton_italic"/>
