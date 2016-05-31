@@ -22,6 +22,7 @@ function resultat(){
   document.getElementById("resultat_adresse").value = document.getElementById("editeur_adresse").innerHTML;
   document.getElementById("resultat_nom_event").value = document.getElementById("nom_event").value;
   document.getElementById("resultat_date").value = document.getElementById("editeur_date").value;
+  document.getElementById("resultat_message").value = document.getElementById("editeur_description").innerHTML;
   document.form.submit();
 
 }
