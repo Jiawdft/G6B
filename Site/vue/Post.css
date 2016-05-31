@@ -73,3 +73,59 @@ html, body {
 #left {
     text-align: center;
 }
+
+#editeur_description {
+  width: 70%;
+  height: 15em;
+  margin-top: 1em;
+  border-radius: 1em;
+  border: 0.2em solid rgb(140,140,140);
+  background-color: rgba(255,255,255,0.7);
+  resize: none;
+  font-size: 17px;
+  margin-left: 14.7%;
+}
+
+#editeur_description:focus {
+  outline: none;
+}
+
+#divacacher p {
+  color: #ffffff;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#divacacher p,
+#divacacher input[type="datetime-local"] {
+  width: 70%;
+  color: #ffffff;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  background: transparent;
+  font-size: 1.3em;
+  padding-top: 1em;
+  margin-left: 15%;
+}
+
+#bouton_bold {
+  margin-left: 15%;
+}
+
+#divacacher input[type="button"] {
+  margin-top: 1em;
+}
+
+#divacacher input[type="submit"] {
+  background-color: rgb(140,140,140);
+  border: 0.2em solid rgb(140,140,140);
+  border-radius:0.5em;
+  width: 30%;
+  margin: 1em 35%;
+  cursor: pointer;
+  color: #ffffff;
+  line-height: 0.1em;
+  font-size: 1em;
+  padding: 1em;
+  text-decoration: none;
+}
