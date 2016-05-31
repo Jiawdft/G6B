@@ -92,20 +92,19 @@
           <a id="bouton_rejoindre" href='../controleur/Page_Personnelle_mon_groupe.php?groupe=<?php echo $_GET['groupe']?>'>Bienvenue</a>
           <?php }
 ?>		</div>
-    <!--
+
 		<div id="event"> 
       <?php
         include_once'../modele/get_event.php';
         $events=get_event('');
         foreach ($events as $event) {
-          ?> <h3><?php
-          echo $event['groupe'];?></h3>
+          ?> 
+          <h3><?php echo $event['groupe'];?></h3>
           <br />
           <br />
         <?php }
       ?>
 		</div>
-  -->
 
     <div class="localisation">
       <h1>Point de rendez-vous de Fit Party : </h1>
