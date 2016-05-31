@@ -9,23 +9,6 @@
   <body>
 
     <?php include("../Header/HOMETOP Slider.php"); ?>
-    <script language="javascript" type="text/javascript">
-      function bascule(elem) {
-      var i, str;
-         if(document.getElementById(elem).style.display=="none") {
-         for (i=1; i<=6; i++) {
-         str='div'+i;
-         if (document.getElementById(str).style.display=="block") {
-         document.getElementById(str).style.display = 'none';
-         }
-         }
-         document.getElementById(elem).style.display="block";
-         }
-         else {
-        document.getElementById(elem).style.display = 'none';
-         }
-      }
-      </script>
 
     <div class="slider">
 			<figure>
@@ -75,44 +58,48 @@
           } } } ?></div>
 
 
+          
+  			<div id="event">
 
-  			<div id="event"> 
+        
+        <h3>Veuillez sélectionner un évènement pour décourvir les informations qui y sont associées</h3>
+
+          
           <?php 
+          $a=0;
           foreach($event as $ev) {?>
-          <h3 onclick="bascule('div2'); return false;"><?php echo $ev['nom']?></h3>
-            <div id="">
+          <h3 onclick="bascule('div2'); return false;"><?php echo $ev['nom'].'bouton'?></h3>
+            <div id='div2' style='display:none;'>
+              <div id="e_infos"> 
+          <table><tbody>
+            <h1> <?php echo $ev['nom'].'coucou'; ?> </h1>
+            <p> <?php echo $ev['description'] ?></p>
+            <h3> <?php echo $ev['date'] ?> </h3>
+            <h1>Point de rendez-vous de <?php echo $ev['nom']?> : </h1>
+            <p id="adresse"> <?php echo $next_event['adresse']; ?> </p>
+          </tbody></table>
 
-            ?>
+            
             <!--
             <a href="../controleur/Groupe.php?groupe=<?php echo $_GET['groupe']?>&event=<?php echo $ev['nom']?>"><?php echo $ev['nom'];?></a>
             -->
 
             <br />
             <br />
+          </div>
+        </div>
             <?php
           }
           ?>
-          </div>
           
-          <div id="e_infos">
-            <?php
-              if (isset($_GET['event'])) {
-                echo $_GET['event'];
-                
-              }
-              else {
-                ?>
-                <h3>Veuillez sélectionner un évènement pour décourvir les informations qui y sont associées</h3>
-                <?php
-              }
-            ?>
-          </div>
+        </div>         
+          
           <!--
           <h1> <?php echo $next_event['nom']; ?> </h1>
           <p> <?php echo $next_event['description'] ?> </p>
           <h3> <?php echo $next_event['date'] ?> </h3>
           -->
-        </div>
+  
 
     <div class="localisation">
       <h1>Point de rendez-vous de Fit Party : </h1>
