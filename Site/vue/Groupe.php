@@ -75,9 +75,11 @@
             <?php
           }
           ?>
+          <!--
           <h1> <?php echo $next_event['nom']; ?> </h1>
           <p> <?php echo $next_event['description'] ?> </p>
           <h3> <?php echo $next_event['date'] ?> </h3>
+          -->
           <?php 
           if (!isset($_SESSION['mail']))
           {
