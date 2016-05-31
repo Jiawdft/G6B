@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Sporciety</title>
-		<link href="../vue/Post.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="../Test/test.css" rel="stylesheet" type="text/css" media="screen" />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 		<script type="text/javascript" src="../vue/new_event.js"></script>
 	</head>
@@ -80,36 +80,14 @@
 							<a>Répondre</a>
 						</div>
 						<div id="divacacher" style="display:none;">
-<<<<<<< HEAD
 							<p>Votre réponse : </p>
 								<form name="form" action='../controleur/Post.php?sujet=<?php echo $_GET['sujet']?>&sous_sujet=<?php echo $_GET['sous_sujet']?>' method="post">
-									
 									<input type="button" value="G" style="font-weight:bold;" onclick="commande('bold','','bouton_bold');" id="bouton_bold"/>
 									<input type="button" value="I" style="font-style:italic;" onclick="commande('italic','','bouton_italic');" id="bouton_italic"/>
 									<input type="button" value="S" style="text-decoration:underline;" onclick="commande('underline','','bouton_underline');" id="bouton_underline"/>
-
-									<div id="editeur_description" name="editeur_description" contentEditable ></div>
-								
-									<input type="hidden" name="resultat" id="resultat">
-									<!--
-									<input type="button" onclick="resultat_post();" value="Poster" ><br />
-									-->
-									<input type="submit" onclick="resultat_post();" value="Poster" >
-
-									
-
+									<div id="editeur_description" contentEditable onclick="enleve('editeur_description','Répondez ici');">Répondez ici</div>
+									<input type="submit" value="Poster"/>
 								</form>
-=======
-						<p>Votre réponse : </p>
-							<form name="form" action='../controleur/Post.php?sujet=<?php echo $_GET['sujet']?>&sous_sujet=<?php echo $_GET['sous_sujet']?>' method="post">
-								<input type="button" value="G" style="font-weight:bold;" onclick="commande('bold','','bouton_bold');" id="bouton_bold"/>
-								<input type="button" value="I" style="font-style:italic;" onclick="commande('italic','','bouton_italic');" id="bouton_italic"/>
-								<input type="button" value="S" style="text-decoration:underline;" onclick="commande('underline','','bouton_underline');" id="bouton_underline"/>
-								<div id="editeur_description" contentEditable onclick="enleve('editeur_description','Répondez ici');">Répondez ici</div>
-									<input type="submit" value="Poster" onclick="resultat();"/>
-									<input type="hidden" name="resultat_message" id="resultat_message">
-							</form>
->>>>>>> 3f85f4c1b061b55ecc7e4786acdf66f55d45ae18
 						</div>
 						<?php
 						include'../modele/get_post.php';

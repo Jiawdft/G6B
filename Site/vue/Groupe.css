@@ -66,7 +66,6 @@ html {
 	color: white;
 }
 
-
 #bouton_rejoindre
 {
 	text-decoration: none;
@@ -86,27 +85,48 @@ html {
 	border: 0.2em solid #ffffff;
 }
 
-#event
-{
-	text-align: center;
-	height: 30em;
+#bouton_rejoindre:focus {
+	outline: none;
 }
 
-#event h2
-{	
-	text-align: left;
-	text-decoration: underline;
+#event {
+	height: 35em;
+}
+
+#event div {
+	display: inline-block;
+}
+
+#l_event {
+	margin: 2em 2em;
+}
+
+#l_event a {
+	text-decoration: none;
 	color: black;
-	font-weight: bold;
-	margin-top: 3em;
-  	margin-left: 5em;
+	font-size: 2em;
+  	font-weight: 200;  	
 }
 
-#event h3
-{
-	padding-bottom: 8em;
+#e_infos {
+	float: right;
+	margin-top: 5em;
+	margin-right: 2em;
+	width: 75%;
+	background-color: rgba(100,100,100,0.7);
+	border-radius: 1em;
+	padding: 1em;
+	color: white;
 }
 
+#e_infos h3 {
+  text-align: center;
+  padding: 0.5em;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+/*
 #bouton_inscription_event
 {
 	text-decoration: none;
@@ -126,19 +146,7 @@ html {
 	color: #706B78;
 	border: 0.2em solid #706B78;
 }
-
-#event h1
-{
-	padding: 2em;
-	margin-top: -2em;
-	font-weight: bold;
-	font-size: 3em;
-}
-
-#event p 
-{
-	padding-bottom: 3em;
-}
+*/
 
 .localisation
 {
