@@ -4,13 +4,16 @@
    	<title>Créer votre événement</title>
     <link rel="stylesheet" type="text/css" href="../vue/new_event.css" media="screen" />
     <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+    <script type="text/javascript" src="../vue/new_event.js"></script>
 </head>
 <body>
 	<?php include("../Header/HOMETOP Slider.php"); ?>
 
 	<div class="Creation">
-		<h1 style="text-align: center;">CREER UN EVENEMENT</h1>
-		<p id="nom_event">Nom de l'évènement</p>
+		<h1>CREER UN EVENEMENT</h1>
+		      <form name="form" action='../controleur/new_event.php?groupe=<?php echo $_GET['groupe']?>' method="post">
+
+		<input id="nom_event" type="text" name="nom_event" placeholder="Nom de l'évènement"></input>
       <br>
       <input type="button" value="G" style="font-weight:bold;" onclick="commande('bold','','bouton_bold');" id="bouton_bold"/>
       <input type="button" value="I" style="font-style:italic;" onclick="commande('italic','','bouton_italic');" id="bouton_italic"/>
@@ -23,21 +26,14 @@
 				<h4><?php echo $erreur?></h4><?php
 			}?>
 
-			<input type="submit" value="CREER" onclick="resultat();"/>
-      <form name="form" action='../controleur/new_event.php?groupe=<?php echo $_GET['groupe']?>' method="post">
-
-      <input type="hidden" name="resultat_nom_event" id="resultat_nom_event">
-      <input type="hidden" name="resultat_description" id="resultat_description">
-      <input type="hidden" name="resultat_adresse" id="resultat_adresse">
-      <input type="hidden" name="resultat_date" id="resultat_date">
+      <input type="submit" value="CREER" onclick="resultat();"/>
 		</form>
 	</div>
-	<div id="social" style="text-align: center; margin-top: 10%">
+	<div id="social">
 		<a href="https://www.facebook.com/workoutsociety/?ref=aymt_homepage_panel"><img src="../Images/Logos/Fb.png"></a>
 		<a href="https://twitter.com/?lang=fr"><img src="../Images/Logos/Tw.png"></a>
 		<a href="https://www.instagram.com"><img src="../Images/Logos/Insta.png"></a>
 		<a href="https://www.pinterest.com"><img src="../Images/Logos/Pint.png"></a>
 	</div>
-	<script type="text/javascript" src="../vue/new_event.js"></script>
 </body>
 </html>
