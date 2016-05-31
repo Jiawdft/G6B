@@ -55,6 +55,6 @@ if(isset($_Get['Sport']) and $_Get['Sport']=='Modif'){
 
 
 
-include_once('../Back Office/backclient..php');
+include_once('../Back Office/backclient.php');
 }
 ?>
