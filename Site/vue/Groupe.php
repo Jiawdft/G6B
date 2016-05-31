@@ -62,49 +62,38 @@
           
   			</div>
 
-  		</section>
-  		<section class="planning">
   			<div id="event"> 
-          <h2>Prochainement :</h2>
-
-          
-          <?php foreach($event as $ev)
-          {
+          <div id="l_event">
+            <?php 
+          foreach($event as $ev) {
             ?>
-            <h4><?php echo $ev['nom'];?><h4>
+            <a href="../controleur/Groupe.php?groupe=<?php echo $groupe['groupe']?>&event=<?php echo $ev['nom']?>#bouton_rejoindre"><?php echo $ev['nom'];?></a>
+            <br />
+            <br />
             <?php
           }
           ?>
+          </div>
+          
+          <div id="e_infos">
+            <?php
+              if (isset($_GET['event'])) {
+                echo $_GET['event'];
+                
+              }
+              else {
+                ?>
+                <h3>Veuillez sélectionner un évènement pour décourvir les informations qui y sont associées</h3>
+                <?php
+              }
+            ?>
+          </div>
           <!--
           <h1> <?php echo $next_event['nom']; ?> </h1>
           <p> <?php echo $next_event['description'] ?> </p>
           <h3> <?php echo $next_event['date'] ?> </h3>
           -->
-          <?php 
-          if (!isset($_SESSION['mail']))
-          {
-              ?>
-          <a id="bouton_rejoindre" href='../controleur/inscription_groupe_membre.php?groupe=<?php echo $_GET['groupe']?>'>Rejoindre</a>
-          <?php
-          }
-        else{
-          ?>
-          <a id="bouton_rejoindre" href='../controleur/Page_Personnelle_mon_groupe.php?groupe=<?php echo $_GET['groupe']?>'>Bienvenue</a>
-          <?php }
-?>		</div>
-
-		<div id="event"> 
-      <?php
-        include_once'../modele/get_event.php';
-        $events=get_event('');
-        foreach ($events as $event) {
-          ?> 
-          <h3><?php echo $event['groupe'];?></h3>
-          <br />
-          <br />
-        <?php }
-      ?>
-		</div>
+        </div>
 
     <div class="localisation">
       <h1>Point de rendez-vous de Fit Party : </h1>
