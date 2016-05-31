@@ -65,8 +65,14 @@
 				</div>
 				<div id="cal">
 					<h3>Le Calendrier :</h3>
+					<!--
 					<a href="../controleur/Event.php?groupe=<?php echo $_GET['groupe'] ?>">Le Calendrier :</a>
+<<<<<<< HEAD
 					<a href="../controleur/new_event.php?groupe=<?php echo $_GET['groupe'] ?>">Créer un événement</a>
+=======
+					-->
+					<a href="../vue/new_event.php?groupe=<?php echo $_GET['groupe'] ?>">Créer un événement</a>
+>>>>>>> origin/master
 					<table>
 						<tr>
 							<th>
@@ -74,7 +80,7 @@
 									<?php
 									foreach($event as $events){
 										if($events['groupe']==$Groupe ){
-											?><li><a href="../controleur/Event.php?id=<?php echo $events['id']?>" ><?php echo $events['nom']?></li><?php
+											?><li><a href="../controleur/Event.php?id=<?php echo $events['id']?>&groupe=<?php echo $_GET['groupe']?>" ><?php echo $events['nom'] ?></li><?php
 										}
 										}
 									?>
