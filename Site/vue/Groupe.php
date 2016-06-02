@@ -90,7 +90,7 @@
                 <h3 id="inline"> Rendez vous le : <?php echo $ev['date'] ?> </h3>
                 <h3> <?php echo $ev['description'] ?></h3>
                 <?php 
-                if ($deja_event=='') { 
+                if (isset($deja_event) and $deja_event=='') { 
                   ?>
                   <a id="ins_ev" href='../controleur/inscription_event.php?groupe=<?php echo $_GET['groupe'] ?>&id=<?php echo $ev['id'] ?>'>Inscris toi à <?php echo $_GET['event']; ?></a>
                   <?php 

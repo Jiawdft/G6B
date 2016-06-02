@@ -48,13 +48,14 @@
 					include_once'../modele/get_club.php';
 				$Groupes=get_club('','');
 				foreach ($Groupes as $Groupe) { ?>
-					<a href="../controleur/Post.php?sujet=groupe&sous_sujet=<?php echo $Groupe['groupe']?>"><?php echo $Groupe['groupe']?></a>
+					<a href="../controleur/Post.php?sujet=club&sous_sujet=<?php echo $Groupe['nom']?>"><?php echo $Groupe['nom']?></a>
 					<br />
 					<br />
 				<?php
 				}
 				}
 			?>
+
 			<?php
 				if($_GET['sujet']=='question') {
 				include_once'../modele/get_question.php';
@@ -80,7 +81,6 @@
 							<a>Répondre</a>
 						</div>
 						<div id="divacacher" style="display:none;">
-<<<<<<< HEAD
 							<p>Votre réponse : </p>
 								<form name="form" action='../controleur/Post.php?sujet=<?php echo $_GET['sujet']?>&sous_sujet=<?php echo $_GET['sous_sujet']?>' method="post">
 									
@@ -91,25 +91,13 @@
 									<div id="editeur_description" name="editeur_description" contentEditable ></div>
 								
 									<input type="hidden" name="resultat" id="resultat">
-									<!--
-									<input type="button" onclick="resultat_post();" value="Poster" ><br />
-									-->
+									
 									<input type="submit" onclick="resultat_post();" value="Poster" >
 
 									
 
 								</form>
-=======
-						<p>Votre réponse : </p>
-							<form name="form" action='../controleur/Post.php?sujet=<?php echo $_GET['sujet']?>&sous_sujet=<?php echo $_GET['sous_sujet']?>' method="post">
-								<input type="button" value="G" style="font-weight:bold;" onclick="commande('bold','','bouton_bold');" id="bouton_bold"/>
-								<input type="button" value="I" style="font-style:italic;" onclick="commande('italic','','bouton_italic');" id="bouton_italic"/>
-								<input type="button" value="S" style="text-decoration:underline;" onclick="commande('underline','','bouton_underline');" id="bouton_underline"/>
-								<div id="editeur_description" contentEditable onclick="enleve('editeur_description','Répondez ici');">Répondez ici</div>
-									<input type="submit" value="Poster" onclick="resultat();"/>
-									<input type="hidden" name="resultat_message" id="resultat_message">
-							</form>
->>>>>>> 3f85f4c1b061b55ecc7e4786acdf66f55d45ae18
+
 						</div>
 						<?php
 						include'../modele/get_post.php';

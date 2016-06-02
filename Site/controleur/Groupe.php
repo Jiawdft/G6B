@@ -25,5 +25,4 @@ if(!isset($_GET['groupe']))
 	include_once'../vue/Groupe.php';
 
 
-//	include_once'get_membres_groupes.php';
 }
