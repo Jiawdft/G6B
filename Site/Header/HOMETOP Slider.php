@@ -29,7 +29,16 @@
 	                   	<th><a href="../controleur/Inscription.php">INSCRIPTION</a></th>
 
 	                   	<?php } ?>
-	                   	<th><a href="../controleur/Aide.php">AIDE</a></th>
+	                   	<th id="marge_d"><a href="../controleur/Aide.php">AIDE</a></th>
+	                   	<th class="langue">
+							<li>
+								<p>FR <img src="../Images/Logos/Triangle.png"></p>
+								<ul>
+									<li id="bottom1"><a href="#">FR</a></li>
+									<li id="bottom2"><a href="#">EN</a></li>
+								</ul>
+							</li>
+	                   	</th>
 					</tr>
 				</table>
 			</div>

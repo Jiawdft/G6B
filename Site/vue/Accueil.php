@@ -35,7 +35,7 @@
 					?>
 				</select>
 			
-			    <input type="int" name="codepostal" placeholder="Code Postal" />
+			    <input id="codepo" type="int" name="codepostal" placeholder="Code Postal" />
 			    <input type="submit" value="Rechercher" />
 				</form>
 			</ul>

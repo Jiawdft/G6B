@@ -16,10 +16,9 @@
 						<td><img src="../Images/Logos/Powerade.png"><br/></td>
 						<td><br><img src="../Images/Logos/BNP.png"><br/></td>
 					</tr>
-					<div id="L1"></div>
 				</tbody>
 			</table>
-			<div id="L2"></div>
+			<div id="ligne"></div>
 		</div>
 		<div id="social">
 			<a href="https://www.facebook.com/workoutsociety/?ref=aymt_homepage_panel"><img src="../Images/Logos/Fb.png"></a>

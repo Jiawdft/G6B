@@ -78,7 +78,7 @@ body {
 	margin-right: 7.5%;
 	width: 20%;
     outline: none;
-    color: grey;
+    color: white;
     border: none;
     border-bottom: 1px solid #ffffff;
     background: transparent;
@@ -90,18 +90,21 @@ body {
     outline: none;
     width: 20%;
     margin-right: 7.5%;
-    color: #ffffff;
     border: none;
+    color: white;
     border-bottom: 1px solid #ffffff;
     background: transparent;
     font-size: 1em;
 }
 
+#codepo::-webkit-input-placeholder {
+  color: white;
+}
 
 .search input[type="submit"] {
     background-color: rgb(140,140,140);
     border: 0.2em solid rgb(140,140,140);
-    border-radius: 0.5em;
+    border-radius: 0.3em;
     width: 20%;
     cursor: pointer;
     color: #ffffff;

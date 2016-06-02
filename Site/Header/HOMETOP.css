@@ -35,5 +35,79 @@ html, body {
 }
 
 #right a:hover {
-    color: #999999;
+    text-shadow: 0em 0em 0.5em #ffffff;
+}
+
+#marge_d a {
+    margin-right: 3.8em;
+}
+
+.langue {
+    position: absolute;
+    top: 1.1099em;
+    right: 1.7em;
+    height: 2em;
+    width: 3.5em;
+}
+
+.langue p {
+    color: white;
+    font-weight: 500;
+    line-height: 2em;
+    margin-right: 0.8em;
+}
+
+.langue a {
+    color: white;
+    font-weight: 500;
+}
+
+.langue img {
+    position: absolute;
+    top: 0.6em;
+    right: 0.4em;
+    height: 0.6em;
+}
+
+.langue li {
+    list-style: none;
+}
+
+.langue ul {
+    position:absolute;
+    max-height: 0;
+    top: 2em;
+    right: 0.05em;
+    width: 3.5em;
+    text-align: center;
+    overflow:hidden;
+    transition: .1s all .1s;
+}
+
+.langue li:hover ul {
+    max-height:10em;
+}
+
+.langue li li {
+    background-color: rgba(25,25,25,0.7);
+}
+
+.langue li:hover {
+    background-color: rgba(25,25,25,1);
+    border-top-right-radius: 0.3em;
+    border-top-left-radius: 0.3em;
+}
+
+.langue #bottom1 {
+    border-top-right-radius: 0em;
+    border-top-left-radius: 0em;
+    border-bottom-right-radius: 0em;
+    border-bottom-left-radius: 0em;
+}
+
+.langue #bottom2 {
+    border-top-right-radius: 0em;
+    border-top-left-radius: 0em;
+    border-bottom-right-radius: 0.3em;
+    border-bottom-left-radius: 0.3em;
 }

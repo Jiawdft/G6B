@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+}
+
 footer{
   font-family: Helvetica;
   background-color: rgb(40,40,40)
@@ -81,7 +85,7 @@ footer{
   line-height: 1.5em;
 }
 
-#L2 {
+#ligne {
   background-color: rgba(220,220,220,0.7);
   height: 0.1em;
   width: 92%;
