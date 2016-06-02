@@ -145,8 +145,8 @@ html {
 	border-radius: 0.5em;
 }
 
-#affiche_description{
-
+#affiche_description div{
+	display:block;
 }
 
 .localisation {
