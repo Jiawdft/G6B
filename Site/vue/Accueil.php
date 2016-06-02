@@ -66,25 +66,22 @@
 		</div>
 		</div>
 		<div id="GROUPES" style="text-align: center">
-			<a href="#">GROUPES POPULAIRES</a>
+			<a href="#">DERNIERS GROUPES</a>
 		</div>
 		<div class="vedettes">
 			<div class="vline"; style="text-align: center">
-				<div class="v1">
-					<a href="#">Patriots</a>
+				<?php
+				include ("../modele/get_last.php");
+				$groupes=get_last();
+				$a=1;
+				foreach ($groupes as $groupe) {
+					?>
+					<div class='v<?php echo $a ?>'>
+					<a href='../controleur/Groupe.php?groupe=<?php echo $groupe['groupe']?>'><?php echo ucfirst(strtolower($groupe['groupe']))?></a>
 				</div>
-				<div class="v2">
-					<a href="#">Red Rings</a>
-				</div>
-				<div class="v3">
-					<a href="#">Red Rings</a>
-				</div>
-				<div class="v3">
-					<a href="#">Chicago Bulls</a>
-				</div>
-				<div class="v3">
-					<a href="#">Chicago Bulls</a>
-				</div>
+					<?php
+				 } 
+				?>
 			</div>
 	</body>
 
