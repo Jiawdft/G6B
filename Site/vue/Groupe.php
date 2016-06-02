@@ -67,7 +67,7 @@
             <?php 
           foreach($event as $ev) {
             ?>
-            <a href="../controleur/Groupe.php?groupe=<?php echo $groupe['groupe']?>&event=<?php echo $ev['nom']?>#bouton_rejoindre"><?php echo $ev['nom'];?></a>
+            <a href="../controleur/Groupe.php?groupe=<?php echo $groupes['groupe']?>&event=<?php echo $ev['nom']?>#bouton_rejoindre"><?php echo $ev['nom'];?></a>
             <br />
             <br />
             <?php
@@ -77,15 +77,22 @@
           
           <div id="e_infos">
             <?php
-              if (isset($_GET['event'])) {
-                echo $_GET['event'];
-                
+            foreach ($event as $ev) 
+            {
+              if (isset($_GET['event']) and $_GET['event']==$ev['nom']) {?>
+                <h1> <?php echo $ev['nom']; ?> </h1>
+                <p> <?php echo $ev['description'] ?> </p>
+                <h3> <?php echo $ev['date'] ?> </h3>
+                <h3> <?php echo $ev['adresse'] ?> </h3>
+
+                <?php
               }
               else {
                 ?>
                 <h3>Veuillez sélectionner un évènement pour décourvir les informations qui y sont associées</h3>
                 <?php
               }
+            }
             ?>
           </div>
           <!--
