@@ -1,4 +1,4 @@
-<?php 
+<?php
 function get_membres_events($mail,$id){
 	$mail=htmlspecialchars($mail);
 	$id=htmlspecialchars($id);
@@ -9,7 +9,7 @@ function get_membres_events($mail,$id){
 			':mail' => $mail,
 			':id' => $id,
 			));
-		$mail_id = $reponse->fetchAll();
+		$mail_id = $reponse->fetch();
 		return $mail_id;
 	}
 
