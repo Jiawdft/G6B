@@ -22,9 +22,7 @@
 
 		<div id="descriptiongroupe">
 			<h1><?php echo $_GET['groupe']; ?></h1>
-      <div id="modg">
-        <a href="../controleur/ModifGroupe.php">Modifier le Groupe</a>
-      </div>
+        <a id="modg" href="../controleur/ModifGroupe.php">Modifier le Groupe</a>
       <p style="padding-bottom: 16em;"><?php echo $groupes['information'] ?></p>
 
       <?php
@@ -81,9 +79,9 @@
             <?php
 
             if(!isset($_GET['event'])) {
-                ?>
-                <h3>Veuillez sélectionner un évènement pour décourvir les informations qui y sont associées</h3>
-                <?php
+              ?>
+              <h3>Veuillez sélectionner un évènement pour décourvir les informations qui y sont associées</h3>
+              <?php
             }
             foreach ($event as $ev) {
               if (isset($_GET['event']) and $_GET['event']==$ev['nom']) {
@@ -91,9 +89,12 @@
                 <h1 id="inline"> <?php echo $ev['nom']; ?> </h1>
                 <h3 id="inline"> Rendez vous le : <?php echo $ev['date'] ?> </h3>
                 <h3> <?php echo $ev['description'] ?></h3>
-                <?php if ($deja_event==''): ?>
-                  <a href='../controleur/inscription_event.php?groupe=<?php echo $_GET['groupe'] ?>&id=<?php echo $ev['id'] ?>'>S'inscrire <?php echo $_GET['event']; ?></a>
-                  <?php endif;
+                <?php 
+                if ($deja_event=='') { 
+                  ?>
+                  <a id="ins_ev" href='../controleur/inscription_event.php?groupe=<?php echo $_GET['groupe'] ?>&id=<?php echo $ev['id'] ?>'>Inscris toi à <?php echo $_GET['event']; ?></a>
+                  <?php 
+                }
               }
             }
             ?>

@@ -57,7 +57,7 @@ html {
 	padding : 2em; 
 }
 
-#descriptiongroupe #modg a {
+#modg {
 	position: absolute;
 	top: 52.5em;
 	left: 70em;
@@ -113,7 +113,7 @@ html {
 	margin-top: 5em;
 	margin-right: 2em;
 	width: 75%;
-	background-color: rgba(100,100,100,0.7);
+	background-color: rgba(0,0,0,0.2);
 	border-radius: 1em;
 	padding: 1em;
 	color: white;
@@ -124,8 +124,6 @@ html {
   padding: 0.5em;
   font-weight: 300;
 }
-
-
 
 #e_infos h1 {
   font-weight: 300;
@@ -138,28 +136,14 @@ html {
 	display: inline-block;
 }
 
-
-/*
-#bouton_inscription_event
-{
+#ins_ev {
+	float: right;
+	color: white;
 	text-decoration: none;
-	font-size: 1.5em;
-	color: #31313a;
-	font-weight: bold;
-	text-align: center;
+	border: 0.2em solid #31313a;
 	padding: 0.5em;
-	border: 0.1em solid #706B78;
 	border-radius: 0.5em;
-	position: relative;
-	bottom: 3.5em;
 }
-
-#bouton_inscription_event:hover 
-{
-	color: #706B78;
-	border: 0.2em solid #706B78;
-}
-*/
 
 .localisation {
   background-color: #31313a;
