@@ -77,35 +77,46 @@
           
           <div id="e_infos">
             <?php
-            foreach ($event as $ev) 
-            {
-              if (isset($_GET['event']) and $_GET['event']==$ev['nom']) {?>
-                <h1> <?php echo $ev['nom']; ?> </h1>
-                <p> <?php echo $ev['description'] ?> </p>
-                <h3> <?php echo $ev['date'] ?> </h3>
-                <h3> <?php echo $ev['adresse'] ?> </h3>
-
-                <?php
-              }
-              else {
+            if(!isset($_GET['event'])) {
                 ?>
                 <h3>Veuillez sélectionner un évènement pour décourvir les informations qui y sont associées</h3>
+                <?php
+              }
+            foreach ($event as $ev) {
+              if (isset($_GET['event']) and $_GET['event']==$ev['nom']) {
+                ?>
+                <h1 id="inline"> <?php echo $ev['nom']; ?> </h1>
+                <h3 id="inline"> Rendez vous le : <?php echo $ev['date'] ?> </h3>
+                <h3> <?php echo $ev['description'] ?></h3>
+                
+                <h3> <?php echo $ev['adresse'] ?> </h3>
+
                 <?php
               }
             }
             ?>
           </div>
-          <!--
-          <h1> <?php echo $next_event['nom']; ?> </h1>
-          <p> <?php echo $next_event['description'] ?> </p>
-          <h3> <?php echo $next_event['date'] ?> </h3>
-          -->
         </div>
 
     <div class="localisation">
-      <h1>Point de rendez-vous de Fit Party : </h1>
-      <p id="adresse"> <?php echo $next_event['adresse']; ?> </p>
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d85161.85430845951!2d2.3617916544987367!3d48.864518359376234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1457358140451"></iframe>
+      <?php
+        if(!isset($_GET['event'])) {
+          ?>
+          <h1>Point de rendez-vous de : </h1>
+          <h2>Veuillez sélectionner un évènement ci-dessus</h2>
+          <?php
+        }
+        foreach ($event as $ev) {
+          if (isset($_GET['event']) and $_GET['event']==$ev['nom']) {
+            ?>
+            <h1>Point de rendez-vous de <?php echo $ev['nom']; ?> : </h1>
+            <p id="adresse"> <?php echo $ev['adresse'] ?> </p>
+            <?php
+          }
+        }
+      ?>
+      
     </div>
   
   </body>
