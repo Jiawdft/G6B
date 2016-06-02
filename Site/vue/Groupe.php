@@ -88,12 +88,16 @@
                 ?>
                 <h1 id="inline"> <?php echo $ev['nom']; ?> </h1>
                 <h3 id="inline"> Rendez vous le : <?php echo $ev['date'] ?> </h3>
-                <h3> <?php echo $ev['description'] ?></h3>
-                <?php 
-                if (isset($deja_event) and $deja_event=='') { 
+                <h3 id="affiche_description"></h3>
+                <script type="text/javascript">
+                    document.getElementById('affiche_description').innerHTML="<?php echo $ev['description'] ?>";
+                    document.getElementById('affiche_description').innerHTML=document.getElementById('affiche_description').innerText;
+                </script>
+                <?php
+                if (isset($deja_event) and $deja_event=='') {
                   ?>
                   <a id="ins_ev" href='../controleur/inscription_event.php?groupe=<?php echo $_GET['groupe'] ?>&id=<?php echo $ev['id'] ?>'>Inscris toi à <?php echo $_GET['event']; ?></a>
-                  <?php 
+                  <?php
                 }
               }
             }
@@ -114,12 +118,16 @@
           if (isset($_GET['event']) and $_GET['event']==$ev['nom']) {
             ?>
             <h1>Point de rendez-vous de <?php echo $ev['nom']; ?> : </h1>
-            <p id="adresse"> <?php echo $ev['adresse'] ?> </p>
+            <p id="adresse"></p>
+            <script type="text/javascript">
+                document.getElementById('adresse').innerHTML="<?php echo $ev['adresse'] ?>";
+                document.getElementById('adresse').innerHTML=document.getElementById('adresse').innerText;
+            </script>
             <?php
           }
         }
       ?>
-      
+
     </div>
 
   </body>
