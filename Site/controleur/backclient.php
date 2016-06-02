@@ -25,8 +25,10 @@ if(isset($_GET['Groupe']) and $_GET['Groupe']==true){
 	include_once'../modele/delete_leader_groupe.php';
 	include_once'../modele/delete_membre_groupe.php';
 	include_once'../modele/delete_club_groupe.php';
+	include_once'../modele/delete_sport_groupe.php';
 	include_once'../modele/delete_event.php';
 	foreach($_POST['case'] as $case){
+		delete_sport_groupe('',$case);
 		delete_groupe($case);
 		delete_membre_groupe('',$case);
 		delete_leader_groupe('',$case);

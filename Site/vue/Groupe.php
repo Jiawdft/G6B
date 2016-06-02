@@ -19,20 +19,18 @@
 	    		<img src="../Images/Wallpaper/get_fit.jpg">
 	  		</figure>
   	</div>
-	
+
 		<div id="descriptiongroupe">
 			<h1><?php echo $_GET['groupe']; ?></h1>
-      <div id="modg">
-        <a href="../controleur/ModifGroupe.php">Modifier le Groupe</a>
-      </div>
+        <a id="modg" href="../controleur/ModifGroupe.php">Modifier le Groupe</a>
       <p style="padding-bottom: 16em;"><?php echo $groupes['information'] ?></p>
 
-      <?php 
+      <?php
       if (!isset($_SESSION['mail']))
       {
         ?>
         <a id="bouton_rejoindre" href='../controleur/Connexion.php'>Rejoindre</a>
-        <?php 
+        <?php
       }
       else
       {
@@ -40,7 +38,7 @@
         {
           ?>
           <a id="bouton_rejoindre" href='../controleur/Connexion.php'>Rejoindre</a>
-          <?php 
+          <?php
         }
         else
         {
@@ -55,60 +53,77 @@
             ?>
             <a id="bouton_rejoindre" href='../controleur/Page_Personnelle_mon_groupe.php?groupe=<?php echo $_GET['groupe']?>'>Bienvenue</a>
             <?php
-          } } } ?></div>
+          }
+        }
+      }
+          ?>
 
+  			</div>
 
-          
   			<div id="event">
+          <div id="l_event">
+            <?php
+          foreach($event as $ev) {
+            ?>
 
-        
-        <h3>Veuillez sélectionner un évènement pour décourvir les informations qui y sont associées</h3>
-
-          
-          <?php 
-          $a=0;
-          foreach($event as $ev) {?>
-          <h3 onclick="bascule('div2'); return false;"><?php echo $ev['nom'].'bouton'?></h3>
-            <div id='div2' style='display:none;'>
-              <div id="e_infos"> 
-          <table><tbody>
-            <h1> <?php echo $ev['nom'].'coucou'; ?> </h1>
-            <p> <?php echo $ev['description'] ?></p>
-            <h3> <?php echo $ev['date'] ?> </h3>
-            <h1>Point de rendez-vous de <?php echo $ev['nom']?> : </h1>
-            <p id="adresse"> <?php echo $next_event['adresse']; ?> </p>
-          </tbody></table>
-
-            
-            <!--
-            <a href="../controleur/Groupe.php?groupe=<?php echo $_GET['groupe']?>&event=<?php echo $ev['nom']?>"><?php echo $ev['nom'];?></a>
-            -->
+            <a href="../controleur/Groupe.php?groupe=<?php echo $groupes['groupe']?>&event=<?php echo $ev['nom']?>#bouton_rejoindre"><?php echo $ev['nom'];?></a>
 
             <br />
             <br />
-          </div>
-        </div>
             <?php
           }
           ?>
-          
-        </div>         
-          
-          <!--
-          <h1> <?php echo $next_event['nom']; ?> </h1>
-          <p> <?php echo $next_event['description'] ?> </p>
-          <h3> <?php echo $next_event['date'] ?> </h3>
-          -->
-  
+          </div>
+
+          <div id="e_infos">
+            <?php
+
+            if(!isset($_GET['event'])) {
+              ?>
+              <h3>Veuillez sélectionner un évènement pour décourvir les informations qui y sont associées</h3>
+              <?php
+            }
+            foreach ($event as $ev) {
+              if (isset($_GET['event']) and $_GET['event']==$ev['nom']) {
+                ?>
+                <h1 id="inline"> <?php echo $ev['nom']; ?> </h1>
+                <h3 id="inline"> Rendez vous le : <?php echo $ev['date'] ?> </h3>
+                <h3> <?php echo $ev['description'] ?></h3>
+                <?php 
+                if ($deja_event=='') { 
+                  ?>
+                  <a id="ins_ev" href='../controleur/inscription_event.php?groupe=<?php echo $_GET['groupe'] ?>&id=<?php echo $ev['id'] ?>'>Inscris toi à <?php echo $_GET['event']; ?></a>
+                  <?php 
+                }
+              }
+            }
+            ?>
+          </div>
+        </div>
 
     <div class="localisation">
-      <h1>Point de rendez-vous de Fit Party : </h1>
-      <p id="adresse"> <?php echo $next_event['adresse']; ?> </p>
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d85161.85430845951!2d2.3617916544987367!3d48.864518359376234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1457358140451"></iframe>
+      <?php
+        if(!isset($_GET['event'])) {
+          ?>
+          <h1>Point de rendez-vous de : </h1>
+          <h2>Veuillez sélectionner un évènement ci-dessus</h2>
+          <?php
+        }
+        foreach ($event as $ev) {
+          if (isset($_GET['event']) and $_GET['event']==$ev['nom']) {
+            ?>
+            <h1>Point de rendez-vous de <?php echo $ev['nom']; ?> : </h1>
+            <p id="adresse"> <?php echo $ev['adresse'] ?> </p>
+            <?php
+          }
+        }
+      ?>
+      
     </div>
-  
+
   </body>
 
   <?php include("../Footer/Footer.php"); ?>
-  
+
 </html>
