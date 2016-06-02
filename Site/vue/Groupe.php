@@ -19,7 +19,7 @@
 	    		<img src="../Images/Wallpaper/get_fit.jpg">
 	  		</figure>
   	</div>
-	
+
 		<div id="descriptiongroupe">
 			<h1><?php echo $_GET['groupe']; ?></h1>
       <div id="modg">
@@ -27,12 +27,12 @@
       </div>
       <p style="padding-bottom: 16em;"><?php echo $groupes['information'] ?></p>
 
-      <?php 
+      <?php
       if (!isset($_SESSION['mail']))
       {
         ?>
         <a id="bouton_rejoindre" href='../controleur/Connexion.php'>Rejoindre</a>
-        <?php 
+        <?php
       }
       else
       {
@@ -40,7 +40,7 @@
         {
           ?>
           <a id="bouton_rejoindre" href='../controleur/Connexion.php'>Rejoindre</a>
-          <?php 
+          <?php
         }
         else
         {
@@ -58,29 +58,44 @@
           }
         }
       }
-          ?>  
-          
+          ?>
+
   			</div>
 
-  			<div id="event"> 
+  			<div id="event">
           <div id="l_event">
-            <?php 
+            <?php
           foreach($event as $ev) {
             ?>
+
             <a href="../controleur/Groupe.php?groupe=<?php echo $groupes['groupe']?>&event=<?php echo $ev['nom']?>#bouton_rejoindre"><?php echo $ev['nom'];?></a>
+
             <br />
             <br />
             <?php
           }
           ?>
           </div>
-          
+
           <div id="e_infos">
             <?php
+<<<<<<< HEAD
             if(!isset($_GET['event'])) {
                 ?>
                 <h3>Veuillez sélectionner un évènement pour décourvir les informations qui y sont associées</h3>
                 <?php
+=======
+            foreach ($event as $ev)
+            {
+              if (isset($_GET['event']) and $_GET['event']==$ev['nom']) {?>
+                <h1> <?php echo $ev['nom']; ?> </h1>
+                <p> <?php echo $ev['description'] ?> </p>
+                <h3> <?php echo $ev['date'] ?> </h3>
+                <h3> <?php echo $ev['adresse'] ?> </h3>
+                <?php if ($deja_event==''): ?>
+                    <a href='../controleur/inscription_event.php?groupe=<?php echo $_GET['groupe'] ?>&id=<?php echo $ev['id'] ?>'>S'inscrire <?php echo $_GET['event']; ?></a>
+                <?php endif;
+>>>>>>> origin/master
               }
             foreach ($event as $ev) {
               if (isset($_GET['event']) and $_GET['event']==$ev['nom']) {
@@ -118,9 +133,9 @@
       ?>
       
     </div>
-  
+
   </body>
 
   <?php include("../Footer/Footer.php"); ?>
-  
+
 </html>
