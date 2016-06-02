@@ -67,12 +67,11 @@
 					<h3>Le Calendrier :</h3>
 					<!--
 					<a href="../controleur/Event.php?groupe=<?php echo $_GET['groupe'] ?>">Le Calendrier :</a>
-<<<<<<< HEAD
+
 					<a href="../controleur/new_event.php?groupe=<?php echo $_GET['groupe'] ?>">Créer un événement</a>
-=======
+
 					-->
 					<a href="../vue/new_event.php?groupe=<?php echo $_GET['groupe'] ?>">Créer un événement</a>
->>>>>>> origin/master
 					<table>
 						<tr>
 							<th>
