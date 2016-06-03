@@ -64,7 +64,7 @@ if(isset($_GET['Forum']) and $_GET['Forum']==true){
 	foreach($_POST['case'] as $case){
 		delete_post($case);
 	}
-	include_once'../Back Office/backclient.php';
+include_once'../vue/backclient.php';
 
 
 }
