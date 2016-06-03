@@ -1,3 +1,6 @@
+<?php
+	//include('../Accueil_langue.php');
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -41,7 +44,7 @@
 			</ul>
 	    </div>
 		<div id="SPORT"; style="text-align: center">
-			<a href="../Sports/Sports.php">LES SPORTS</a>
+			<a href="../Sports/Sports.php"><?php echo SPORT ?></a>
 		</div>
 		<div class="picture">
 			<div class="pline1"; style="text-align: center">
@@ -66,7 +69,7 @@
 		</div>
 		</div>
 		<div id="GROUPES" style="text-align: center">
-			<a href="#">DERNIERS GROUPES</a>
+			<a href="#"><?php echo DGROUPES ?></a>
 		</div>
 		<div class="vedettes">
 			<div class="vline"; style="text-align: center">

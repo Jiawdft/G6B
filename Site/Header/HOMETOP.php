@@ -1,6 +1,12 @@
 <?php
-	include('../Header/HOMETOP_langue.php');
 	$url = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
+
+	if(isset($_SESSION['langue'])and $_SESSION['langue']=='fr') {
+		include'HOMETOP_fr.php';
+	}
+	elseif(isset($_SESSION['langue'])and $_SESSION['langue']=='en') {
+		include'HOMETOP_en.php';
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,8 +44,8 @@
 							<li>
 								<p>
 									<?php
-										if ($_GET['langue']) {
-											echo $_GET['langue'];
+										if ($_SESSION['langue']) {
+											echo $_SESSION['langue'];
 										}
 										else {
 											echo "FR";
