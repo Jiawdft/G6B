@@ -1,5 +1,7 @@
 <?php
-	include('../Header/HOMETOP Slider_langue.php')
+	include('../Header/HOMETOP Slider_langue.php');
+	$url = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -47,8 +49,8 @@
 									<img src="../Images/Logos/Triangle.png">
 								</p>
 								<ul>
-									<li id="bottom1"><a href="../Header/HOMETOP Slider.php?langue=fr">FR</a></li>
-									<li id="bottom2"><a href="../Header/HOMETOP Slider.php?langue=en">EN</a></li>
+									<li id="bottom1"><a href="<?php echo $url ?>?langue=fr">FR</a></li>
+									<li id="bottom2"><a href="<?php echo $url ?>?langue=en">EN</a></li>
 								</ul>
 							</li>
 	                   	</th>
