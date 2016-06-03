@@ -157,12 +157,12 @@ html {
 
 .localisation h1 {
   text-decoration: underline;
-  padding: 2em 2em;
+  padding: 2em 1em;
   font-weight: 300;
 }
 
 .localisation h2 {
-  padding: 4em 6em;
+  padding: 1em 2em;
   font-weight: 300;
 }
 
@@ -179,3 +179,8 @@ html {
   font-size: 1.5em;
   margin: 4em 8em;
 }
+
+.localisation iframe {
+	width: 40%;
+}
+
