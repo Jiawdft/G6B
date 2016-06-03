@@ -48,4 +48,14 @@ function selection_event($groupe,$nom){
 	return $event;
 }
 
+function selection_event_by_id($id){
+	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
+	$reponse = $bdd->prepare('SELECT * FROM event WHERE id= :id');
+	$reponse -> execute(array(
+			'id' => $id,
+			));
+	$event= $reponse->fetch();
+	return $event;
+}
+
  ?>

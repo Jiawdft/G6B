@@ -46,6 +46,8 @@
             </p>
             <p> <?php echo $selected_event['date'];?> </p>
 
+            <a href="../controleur/delete_event.php?id=<?php echo $selected_event['id'] ?>&groupe=<?php echo $_GET['groupe'] ?>">Supprimer cet événement</a>
+
           </div>
     </div>
 

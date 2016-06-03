@@ -1,9 +1,11 @@
 <?php
-function modif_groupe($ID,$Nom,$Description,$Date){
+function modif_event($ID,$Nom,$Description,$Date,$Adresse){
 
 	$ID=(int) $ID;
+	$Nom=htmlspecialchars($Nom);
 	$Description=htmlspecialchars($Description);
-	$Date=htmlspecialchars($Date);	
+	$Date=htmlspecialchars($Date);
+	$Adresse=htmlspecialchars($Adresse);
 	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
 	if(isset($Nom)and $Nom!=''){
 		$req = $bdd->prepare('UPDATE event SET nom = :nom WHERE id =:ID');
@@ -13,12 +15,12 @@ function modif_groupe($ID,$Nom,$Description,$Date){
 
 	}
 	if(isset($Description)and $Description!=''){
-		$req = $bdd->prepare('UPDATE event SET adresse = :adresse WHERE id =:ID');
+		$req = $bdd->prepare('UPDATE event SET description = :description WHERE id =:ID');
 			$req->execute(array(
 				'ID' => $ID,
 				'description' => $Description));
 
-	
+
 
 	}
 	if(isset($Date)and $Date!=''){
@@ -26,5 +28,11 @@ function modif_groupe($ID,$Nom,$Description,$Date){
 			$req->execute(array(
 				'ID' => $ID,
 				'Date' => $Date));
-}
+	}
+	if(isset($Date)and $Date!=''){
+		$req = $bdd->prepare('UPDATE event SET adresse = :adresse WHERE id =:ID');
+			$req->execute(array(
+				'ID' => $ID,
+				'adresse' => $Adresse));
+	}
 ?>
