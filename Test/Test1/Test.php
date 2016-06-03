@@ -1,5 +1,7 @@
 <?php
 	include("../Test1/Test_langue.php");
+	$url = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
+	echo $url;
 ?>
 <!DOCTYPE html>
 <html>
