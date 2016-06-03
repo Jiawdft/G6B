@@ -1,6 +1,3 @@
-<?php
-	//include('../Accueil_langue.php');
-?>
 <!DOCTYPE html>
 <html>
 	<head>
