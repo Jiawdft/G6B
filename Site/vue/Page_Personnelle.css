@@ -29,7 +29,8 @@ body {
     display: inline-block;
     border: 0.2em solid black;
     margin-left: 7em;
-    height: 7em;
+    height: 8em;
+    width: 21em;
     padding: 0.5em;
     text-align: left;
 }
@@ -51,10 +52,10 @@ body {
 
 .mygroups table {
     display: inline-block;
-    margin-top: 3em;
+    margin-top: 2em;
     border: 0.2em solid black;
-    height: 20.8em;
-    width: 40em;
+    height: 18em;
+    width: 30em;
     padding: 0.5em;
 }
 
@@ -88,16 +89,16 @@ body {
     display: inline-block;
     margin-top: 2em;
     border: 0.2em solid black;
-    height: 14.2em;
-    width: 35em;
+    height: 13em;
+    width: 30em;
 }
 
 .more li {
-    text-align: left;
+    margin-left: -8em;
     font-size: 1.5em;
+    list-style: none;
 }
 
 #p, #f {
-    padding-left: 15%;
-    padding-top: 5%;
+    padding-top: 6%;
 }

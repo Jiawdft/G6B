@@ -14,32 +14,32 @@
 			<div id="uinfo">
 				<table>
 					<tr>
-						<th>
+						<td>
 						<?php
 							echo $membre['prenom'] . " " . $membre['nom'] . " " . "(mail : " . $membre['adresse_mail'] . ")";
 						?>
-						</th>
+						</td>
 					</tr>
 					<tr>
-						<th>
+						<td>
 							<?php
 								echo $membre['adresse'] . "</br>" . $membre['codepostal'] . "</br>" . $membre['ville']."</br>";
 							?>
-						</th>
+						</td>
 					</tr>
 					<tr>
-						<th>
+						<td>
 							<?php
 								echo $membre['numero_de_portable'];
 							?>
-						</th>
+						</td>
 					</tr>
 					<tr>
-						<th>
+						<td>
 							<?php
 								echo $membre['date_de_naissance'];
 							?>
-						</th>
+						</td>
 					</tr>
 				</table></br>
 				<a href="../controleur/CreerGroupe.php">Créer un groupe</a><br />
@@ -51,7 +51,7 @@
 					<h3>Mon Planning :</h3>
 					<table>
 						<tr>
-							<th>
+							<td>
 								<ul><?php
 									foreach($event as $events){
 										foreach ($groupes as $groupe) {
@@ -64,7 +64,7 @@
 									
 									?>								
 								</ul>
-							</th>
+							</td>
 						</tr>
 					</table>
 				</div>
@@ -72,7 +72,7 @@
 					<h3>Forum :</h3>
 					<table>
 						<tr>
-							<th>
+							<td>
 								<ul><?php
 									foreach($post as $posts){
 										foreach ($groupes as $groupe) {
@@ -87,7 +87,7 @@
 									
 									?>
 								</ul>
-							</th>
+							</td>
 						</tr>
 					</table>
 				</div>
@@ -97,7 +97,7 @@
 			<h3>Mes Groupes :</h3>
 			<table>
 				<tr>
-					<th>
+					<td>
 						<ul>
 							<?php
 								foreach ($groupes as $groupe) {
@@ -107,7 +107,7 @@
 								}
 							?>
 						</ul>
-					</th>
+					</td>
 				</tr>
 			</table>
 		</div>
