@@ -52,6 +52,7 @@ html, body {
 
 .langue p {
     color: white;
+    text-transform : uppercase;
     font-weight: 500;
     line-height: 2em;
     margin-right: 0.8em;

@@ -45,12 +45,13 @@ html, body {
 .langue {
     position: absolute;
     top: 1.1099em;
-    left: 41.55em;
+    left: 41em;
     height: 2em;
     width: 3.5em;
 }
 
 .langue p {
+    text-transform: uppercase;
     color: white;
     font-weight: 500;
     line-height: 2em;

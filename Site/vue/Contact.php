@@ -11,7 +11,7 @@
 
 	    <div class="Contact">
 	    	<div class="Presentation">
-	    		<h1>A propos de nous :</h1>
+	    		<h1><?php echo apdn; ?></h1>
 	    		<a>
 	    			<br>Sportciety est une société francaise crée en 2016. Ce site a pour caractère de rassembler les utilisateurs afin de permettre à ses utilisateurs de partager leur passion pour un sport en formant des groupes de participants à des cours, des séances d'entrainement dans un club ou des compétitions sportives.<br>
 	    			<br><br>

@@ -1,5 +1,4 @@
 <?php
-
 if(isset($_GET['inscription']) and $_GET['inscription']==true)
 {
 		if(isset($_POST['Genre']) and isset($_POST['Prenom']) and $_POST['Prenom']!="" and isset($_POST['Nom']) and $_POST['Nom']!="" and isset($_POST['Code_Postal']) and $_POST['Code_Postal']!="" and isset($_POST['Adresse_Mail']) and $_POST['Adresse_Mail']!="" and isset($_POST['Mot_de_Passe']) and $_POST['Mot_de_Passe']!='')
