@@ -15,18 +15,18 @@ else
 	}
 	else
 	{
-		include'../modele/get_madmin.php';
-		$membres=get_membres('');
+		include'../modele/get_admin.php';
+		$membres=get_admin('');
 		foreach($membres as $membre)
 		{
-			if($_POST['mail']==$membre['adresse_mail']AND password_verify($_POST['passe'],$membre['mdp']))
+			if($_POST['mail']==$membre['adresse_mail']AND password_verify($_POST['passe'],$membre['passe']))
 			{
 				session_start();
-				include_once'../controleur/backclient.php';
+				include_once'../vue/backclient.php';
 				break;
 			}
 		}
-		if(!password_verify($_POST['passe'],$membre['mdp'])){
+		if(!password_verify($_POST['passe'],$membre['passe'])){
 		$erreur='Mot de passe incorrect';
 		include_once('../controleur/connexionBO.php');
 		}

@@ -4,7 +4,7 @@ function get_admin($mail)
 	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
 	if($mail=='')
 	{
-	$reponse = $bdd->query('SELECT * FROM admin ORDER BY nom');
+	$reponse = $bdd->query('SELECT * FROM admin ORDER BY adresse_mail');
 	$membres = $reponse->fetchAll();
 	return $membres;
 	}

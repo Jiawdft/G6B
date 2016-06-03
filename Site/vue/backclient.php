@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Back Office</title>
-		<link href="../Back Office/backclient.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="../vue/backclient.css" rel="stylesheet" type="text/css" media="screen" />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>

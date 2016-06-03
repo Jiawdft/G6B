@@ -17,7 +17,7 @@
 				<table>
 					<tr>
 						<th><a href="../controleur/Accueil.php">SPORTCIETY</a></th>
-	                   	<?php (isset($_SESSION['mail'])) { ?>
+	                   	<?php if(isset($_SESSION['mail'])) { ?>
 	                   	<th><a href="../controleur/Accueil.php?deconnexion=true">DECONNEXION</a></th>
 	                   	<?php
 	                   }
