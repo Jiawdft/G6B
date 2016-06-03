@@ -37,23 +37,14 @@
         if ($deja_membre=='')
         {
           ?>
-          <a id="bouton_rejoindre" href='../controleur/Connexion.php'>Rejoindre</a>
+          <a id="bouton_rejoindre" href='../controleur/inscription_groupe_membre.php?groupe=<?php echo $_GET['groupe']?>'>Rejoindre</a>
           <?php
         }
         else
         {
-          if ($deja_membre=='')
-          {
-            ?>
-            <a id="bouton_rejoindre" href='../controleur/inscription_groupe_membre.php?groupe=<?php echo $_GET['groupe']?>'>Rejoindre</a>
-          <?php
-          }
-          else
-          {
             ?>
             <a id="bouton_rejoindre" href='../controleur/Page_Personnelle_mon_groupe.php?groupe=<?php echo $_GET['groupe']?>'>Bienvenue</a>
             <?php
-          }
         }
       }
           ?>
