@@ -1,0 +1,46 @@
+#event {
+	height: 35em;
+}
+
+#event div {
+	display: inline-block;
+}
+
+#list_event {
+	margin: 2em 2em;
+}
+
+#list_event a {
+	text-decoration: none;
+	color: black;
+	font-size: 2em;
+  	font-weight: 200;
+}
+
+#detail {
+	float: right;
+	margin-top: 5em;
+	margin-right: 2em;
+	width: 75%;
+	background-color: rgba(0,0,0,0.2);
+	border-radius: 1em;
+	padding: 1em;
+	color: #31313a;
+	text-align: center;
+}
+
+#detail h3 {
+  padding: 0.5em;
+  font-weight: 300;
+}
+
+#detail h1 {
+  font-weight: 300;
+  text-decoration: underline;
+  padding: 0.8em;
+  padding-bottom: 2em;
+}
+
+#affiche_description div {
+	display: block;
+}

@@ -75,7 +75,7 @@
 									<?php
 									foreach($event as $events){
 										if($events['groupe']==$Groupe ){
-											?><li><a href="../controleur/Event.php?id=<?php echo $events['id']?>" ><?php echo $events['nom']?></li><?php
+											?><li><a href="../controleur/Event.php?groupe=<?php echo $_GET['groupe'] ?>&event=<?php echo $events['nom']?>" ><?php echo $events['nom']?></a></li><?php
 										}
 										}
 									?>
