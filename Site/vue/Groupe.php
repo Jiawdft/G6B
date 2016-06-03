@@ -22,7 +22,6 @@
 
 		<div id="descriptiongroupe">
 			<h1><?php echo $_GET['groupe']; ?></h1>
-        <a id="modg" href="../controleur/ModifGroupe.php">Modifier le Groupe</a>
       <p style="padding-bottom: 16em;"><?php echo $groupes['information'] ?></p>
 
       <?php

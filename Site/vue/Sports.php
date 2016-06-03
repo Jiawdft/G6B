@@ -27,6 +27,9 @@
 							<tr>
 							<?php
 						}
+						if($a>=30){
+							break;
+						}
 					}
 	    			?>
 	 				</tr>
@@ -47,7 +50,22 @@
 			<a>Plus…</a>
 		</div>
 		<div id="divacacher" style="display:none;">
-			<a>AUTRES SPORTS :</a>
+
+			<a>AUTRES SPORTS :</a></br></br>
+<?php
+$b=0;
+			foreach($sports as $sport){?>
+				<td><a href='../controleur/Fichesporttype.php?sport=<?php echo ($sport['sport'])?>'>  <?php echo mb_strtoupper($sport['sport'])?></a></td>
+<?php
+				if($a%5==0)
+						{
+							?>
+							</tr>
+							<tr>
+							<?php
+						}
+
+			} ?>
 		</div>
 	</body>
 </html>
