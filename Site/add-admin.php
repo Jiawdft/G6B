@@ -1,5 +1,5 @@
 <?php
-//include 'modele/password_maker.php';
+include 'modele/password_maker.php';
 
 $AdresseMail='o@gmail.com';
 $Mdp='coucou';
@@ -14,7 +14,7 @@ $Mdp='coucou';
 		VALUES(:adresse_mail,:passe)');
 	$req->execute(array(
 	'adresse_mail' => 'o@gmail.com',
-	'passe'=> 'coucou'
+	'passe'=> password_maker('coucou')
 	));}
 
 inscription_membre();
