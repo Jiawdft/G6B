@@ -15,7 +15,14 @@ else
 	include_once'../modele/add_post.php';
 	add_post($_POST['resultat'],$_SESSION['mail'],$_GET['sujet'],$_GET['sous_sujet']);
 	}
+
+	if(isset($_POST['resultat']) and !isset($_SESSION['mail'])){
+		$erreur='Connectez vous pour poster sur le forum ';
+		include_once'../controleur/Connexion.php';
+	}else{
+
 	include_once('../vue/Post.php');
+}
 }
 
 

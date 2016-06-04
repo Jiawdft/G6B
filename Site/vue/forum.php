@@ -25,10 +25,11 @@
 			<div id="club">
 				<a href="../controleur/Post.php?sujet=club">Clubs</a>
 			</div>
-
+<!--
 			<div id="question">
 				<a href="../controleur/Post.php?sujet=question">Questions</a>
 			</div>
+		-->
 
 		</div>
 	</body>

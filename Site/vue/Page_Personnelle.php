@@ -56,7 +56,7 @@
 									foreach($event as $events){
 										foreach ($groupes as $groupe) {
 										if($events['groupe']==$groupe['groupe'] ){
-											?><li><a href="../controleur/Event.php?id=<?php echo $events['id']?>" ><?php echo $events['nom']?></li><?php
+											?><li><a href="../controleur/Event.php?event=<?php echo $events['nom']?>&groupe=<?php echo $events['groupe'] ?>" ><?php echo $events['nom']?></li><?php
 										}
 										}
 									}

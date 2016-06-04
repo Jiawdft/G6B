@@ -10,7 +10,7 @@
 		<?php include("../Header/HOMETOP.php"); ?>
 
 	    <div class="ModifGroupe">
-	    	<h1 style="text-align: center;">MODIFIE TON GROUPE: <?php echo $_SESSION['groupe']?></h1>
+	    	<h1 style="text-align: center;">MODIFIE TON GROUPE: <?php echo $_GET['groupe']?></h1>
 	    	<form action='../controleur/Page_Personnelle_mon_groupe.php' method="post" enctype="multipart/form-data">
 	    		<input type="text" name="Codepostal" placeholder="Votre groupe déménage ? Entre un nouveau code postal" />
 	    		<input type="text" name="Description" placeholder="Entre une nouvelle description de groupe" />
