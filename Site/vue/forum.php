@@ -19,15 +19,15 @@
 			</div>
 
 			<div id="groupe">
-				<a href="../vue/Post.php?sujet=groupe">Groupes</a>
+				<a href="../controleur/Post.php?sujet=groupe">Groupes</a>
 			</div>
 
 			<div id="club">
-				<a href="../vue/Post.php?sujet=club">Clubs</a>
+				<a href="../controleur/Post.php?sujet=club">Clubs</a>
 			</div>
 
 			<div id="question">
-				<a href="../vue/Post.php?sujet=question">Questions</a>
+				<a href="../controleur/Post.php?sujet=question">Questions</a>
 			</div>
 
 		</div>

@@ -104,21 +104,27 @@ foreach($sports as $cle => $sport)
 	$sports[$cle]['sport'] = htmlspecialchars($sport['sport']);
 }
 
+
+
+
 if(isset($_GET['langue']) and $_GET['langue']=='fr') {
 	$_SESSION['langue']='fr';
 }
 elseif(isset($_GET['langue']) and $_GET['langue']=='en') {
 	$_SESSION['langue']='en';
 }
+else{
+	$_SESSION['langue']='fr';
+}
 
 if (isset($_SESSION['langue']) and $_SESSION['langue']=='fr') {
-	include('../Langues/Accueil.php');
+	include_once('../Langues/Accueil_fr.php');
 }
 elseif (isset($_SESSION['langue']) and $_SESSION['langue']=='en') {
-	include('../Langues/Accueil_en.php');
+	include_once('../Langues/Accueil_en.php');
 }
 else{
-	include('../Langues/Accueil_fr.php');
+	include_once('../Langues/Accueil_fr.php');
 }
 
 include_once('../vue/Accueil.php');

@@ -2,10 +2,10 @@
 	$url = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
 
 	if(isset($_SESSION['langue'])and $_SESSION['langue']=='fr') {
-		include'HOMETOP Slider_fr.php';
+		include_once'HOMETOP Slider_fr.php';
 	}
-	elseif(isset($_SESSION['langue'])and $_SESSION['langue']=='en') {
-		include'HOMETOP Slider_en.php';
+	else{
+		include_once'HOMETOP Slider_en.php';
 	}
 ?>
 <!DOCTYPE html>
@@ -44,7 +44,7 @@
 							<li>
 								<p>
 									<?php
-										if ($_SESSION['langue']) {
+										if ( isset($_SESSION['langue']) and ($_SESSION['langue']=='fr' or $_SESSION['langue']=='en') ) {
 											echo $_SESSION['langue'];
 										}
 										else {

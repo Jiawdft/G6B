@@ -41,7 +41,7 @@
 			</ul>
 	    </div>
 		<div id="SPORT"; style="text-align: center">
-			<a href="../Sports/Sports.php"><?php echo SPORT ?></a>
+			<a href="../Sports/Sports.php"><?php echo SPORTS ?></a>
 		</div>
 		<div class="picture">
 			<div class="pline1"; style="text-align: center">
@@ -59,7 +59,7 @@
 			</div>
 		</div>
 		<div id="MAPS" style="text-align: center">
-			<a>PLAN</a>
+			<a><?php echo PLAN ?></a>
 		</div>
 		<div class="googlemaps" style="text-align: center">
 			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d85161.85430845951!2d2.3617916544987367!3d48.864518359376234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1457358140451" style="height: 100%; width: 92%; border: none;"></iframe>
