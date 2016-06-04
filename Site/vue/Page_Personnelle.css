@@ -57,6 +57,7 @@ body {
     height: 18em;
     width: 30em;
     padding: 0.5em;
+    overflow: auto;
 }
 
 .mygroups a, li {
@@ -91,6 +92,7 @@ body {
     border: 0.2em solid black;
     height: 13em;
     width: 30em;
+    overflow: auto;
 }
 
 .more li {
