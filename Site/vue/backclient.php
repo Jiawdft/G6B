@@ -13,7 +13,7 @@
 			function bascule(elem) {
 			var i, str;
 			   if(document.getElementById(elem).style.display=="none") {
-			   for (i=1; i<=6; i++) {
+			   for (i=1; i<=5; i++) {
 			   str='div'+i;
 			   if (document.getElementById(str).style.display=="block") {
 			   document.getElementById(str).style.display = 'none';
@@ -139,9 +139,45 @@
 				</div>
 			</div>
 
-			<div id="Images">
-				<h3 onclick="bascule('div4'); return false;">Images</h3>
+
+			<div id="Forum">
+				<h3 onclick="bascule('div4'); return false;">Forum</h3>
 				<div id='div4' style='display:none;'>
+					<p>MODERER LES MESSAGES :</p>
+					<form method="post" action="../controleur/backclient.php?Forum=true">
+					<?php 
+					include'../modele/get_post.php';
+					$posts=get_post('','');
+					foreach ($posts as $post) {?>
+						<td>
+							<input type="checkbox" name="case[]"  value='<?php echo $post['id'] ?>' /><label for="case">
+							<a href="../controleur/backclientmodif.php?post=<?php echo $post['id'] ?>"><?php echo $post['id'] ?></a></label></td>
+					<?php
+					}
+					?>
+					<input type="submit" value="Supprimer" />
+				</form>
+				</div>
+			</div>
+
+			<div id="Aide">
+				<h3 onclick="bascule('div5'); return false;">Aide</h3>
+				<div id='div5' style='display:none;'>
+					<form method="post" action="../controleur/backclient.php?Aide=true">
+					<p>ADMINISTRER LA RUBRIQUE "AIDE" :</p>
+					<p>Administrer la rubrique "Aide" :</p><br>
+					<p>Ajouter une question :</p><br>
+					<textarea name="Question" rows="5" cols="100">Saisir une question ici.</textarea><br><br>
+					<p>Ajouter sa réponse :</p> <br>
+					<textarea name="Réponse" rows="7" cols="100">Saisir la réponse ici.</textarea><br><br>
+					<input type="submit" value="Ajouter">
+				</form>
+				</div>
+			</div>
+<!--
+			<div id="Images">
+				<h3 onclick="bascule('div6'); return false;">Images</h3>
+				<div id='div6' style='display:none;'>
 					<p>IMAGERIE :</p>
 					<h4>
 					<table>
@@ -180,41 +216,7 @@
 					</h4>			
 				</div>	
 			</div>
-
-			<div id="Forum">
-				<h3 onclick="bascule('div5'); return false;">Forum</h3>
-				<div id='div5' style='display:none;'>
-					<p>MODERER LES MESSAGES :</p>
-					<form method="post" action="../controleur/backclient.php?Forum=true">
-					<?php 
-					include'../modele/get_post.php';
-					$posts=get_post('','');
-					foreach ($posts as $post) {?>
-						<td>
-							<input type="checkbox" name="case[]"  value='<?php echo $post['id'] ?>' /><label for="case">
-							<a href="../controleur/backclientmodif.php?post=<?php echo $post['id'] ?>"><?php echo $post['id'] ?></a></label></td>
-					<?php
-					}
-					?>
-					<input type="submit" value="Supprimer" />
-				</form>
-				</div>
-			</div>
-
-			<div id="Aide">
-				<h3 onclick="bascule('div6'); return false;">Aide</h3>
-				<div id='div6' style='display:none;'>
-					<form method="post" action="../controleur/backclient.php?Aide=true">
-					<p>ADMINISTRER LA RUBRIQUE "AIDE" :</p>
-					<p>Administrer la rubrique "Aide" :</p><br>
-					<p>Ajouter une question :</p><br>
-					<textarea name="Question" rows="5" cols="100">Saisir une question ici.</textarea><br><br>
-					<p>Ajouter sa réponse :</p> <br>
-					<textarea name="Réponse" rows="7" cols="100">Saisir la réponse ici.</textarea><br><br>
-					<input type="submit" value="Ajouter">
-				</form>
-				</div>
-			</div>
+		-->
 		</div>
 	</body>
 </html>

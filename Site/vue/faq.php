@@ -35,6 +35,13 @@
 		}else{?>
 			<a href="../controleur/Connexion.php">Connectez vous d'abord</a></div><?php
 		} ?>
+		<?php
+		foreach($Question as $q){?>
+			<div class="question"><?php  echo $q['question'] ?></div>
+			<div class="reponse"><?php  echo $q['reponse'] ?></div>
+			<?php
+		}
+		?>
 	</section>	
 	<section id="mail">
 		<p>Pour toute autre question, n'hésitez pas à nous contacter en nous envoyant un mail :</p>

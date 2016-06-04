@@ -74,12 +74,15 @@
 						<tr>
 							<td>
 								<ul><?php
+								$a=0;
 									foreach($post as $posts){
 										foreach ($groupes as $groupe) {
+											if($a>=7){break;}
 										if($posts['auteur']==$_SESSION['mail']){
 											?>
 											<li><a href="../controleur/Post.php?sujet=<?php echo $posts['sujet']?>" ><?php echo $posts['sujet']?></a></li>
 											<?php
+											$a++;
 										}
 										}
 									}
