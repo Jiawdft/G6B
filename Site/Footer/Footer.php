@@ -1,3 +1,7 @@
+<?php
+	include_once('../modele/langue.php');
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -6,7 +10,7 @@
 	</head>
 	<footer>
 		<div class="organisation">
-			<h3>Partenaires premium</h3>
+			<h3><?php echo Partenaires ?></h3>
 			<table>
 				<tbody>
 					<tr>

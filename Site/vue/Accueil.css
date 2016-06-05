@@ -123,6 +123,10 @@ body {
 	line-height: 5em;
 }
 
+#SPORT, .picture, #MAPS, .googlemaps, #GROUPES, .vline {
+	text-align: center;
+}
+
 .picture > div div {
 	display: inline-block;
 	height: 20em;

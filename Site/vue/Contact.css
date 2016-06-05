@@ -54,9 +54,8 @@ body {
     margin-top: 1em;
 }
 
-#Mail p { 
-    color: #ffffff;
-    font-size: 1em;
+#Mail h3 { 
+    color: #ffffff; 
     font-weight: bold;
     margin-bottom: 1em;
 }

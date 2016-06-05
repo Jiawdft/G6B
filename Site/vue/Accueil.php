@@ -9,7 +9,7 @@
 		
 		<?php include("../Header/HOMETOP Slider.php"); ?>
 
-		<a id="inscription" href="../controleur/Inscription.php">Je m'inscris</a>
+		<a id="inscription" href="../controleur/Inscription.php"><?php echo Ins ?></a>
 		<div class="slider">
 			<figure>
 	    		<img src="../Images/Wallpaper/Slider.jpg">
@@ -24,7 +24,7 @@
 				<form action='../controleur/Fichesporttype.php' method="post">
 			
 				<select name="choix">
-				    <option value=''>Sport</option>
+				    <option value=''><?php echo Sport ?></option>
 				    <?php
 					foreach($sports as $sport)
 					{
@@ -35,41 +35,41 @@
 					?>
 				</select>
 			
-			    <input id="codepo" type="int" name="codepostal" placeholder="Code Postal" />
-			    <input type="submit" value="Rechercher" />
+			    <input id="codepo" type="int" name="codepostal" placeholder="<?php echo CP ?>" />
+			    <input type="submit" value="<?php echo Rechercher ?>" />
 				</form>
 			</ul>
 	    </div>
-		<div id="SPORT"; style="text-align: center">
-			<a href="../Sports/Sports.php"><?php echo SPORTS ?></a>
+		<div id="SPORT">
+			<a href="../Sports/Sports.php"><?php echo SPORT ?></a>
 		</div>
 		<div class="picture">
-			<div class="pline1"; style="text-align: center">
+			<div class="pline1">
 				<div class="p1"><a href="../controleur/Fichesporttype.php?sport=BASKETBALL">BASKETBALL</a></div>
-				<div class="p2"><a href="../controleur/Fichesporttype.php?sport=BOXE">BOXE</a></div>
+				<div class="p2"><a href="../controleur/Fichesporttype.php?sport=BOXE"><?php echo Boxe ?></a></div>
 				<div class="p3"><a href="../controleur/Fichesporttype.php?sport=SKI">SKI</a></div>
 			</div>
-			<div class="pline2"; style="text-align: center">
-				<div class="p4"><a href="../controleur/Fichesporttype.php?sport=ATHLETISME">ATHLETISME</a></div>
+			<div class="pline2">
+				<div class="p4"><a href="../controleur/Fichesporttype.php?sport=ATHLETISME"><?php echo Athlé ?></a></div>
 				<div class="p5"><a href="../controleur/Fichesporttype.php?sport=RUGBY">RUGBY</a></div>
 			</div>
-			<div class="pline3"; style="text-align: center">
-				<div class="p6"><a href="../controleur/Fichesporttype.php?sport=NATATION">NATATION</a></div>
+			<div class="pline3">
+				<div class="p6"><a href="../controleur/Fichesporttype.php?sport=NATATION"><?php echo Nata ?></a></div>
 				<div class="p7"><a href="../controleur/Fichesporttype.php?sport=TENNIS">TENNIS</a></div>
 			</div>
 		</div>
-		<div id="MAPS" style="text-align: center">
+		<div id="MAPS">
 			<a><?php echo PLAN ?></a>
 		</div>
-		<div class="googlemaps" style="text-align: center">
+		<div class="googlemaps">
 			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d85161.85430845951!2d2.3617916544987367!3d48.864518359376234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1457358140451" style="height: 100%; width: 92%; border: none;"></iframe>
 		</div>
 		</div>
-		<div id="GROUPES" style="text-align: center">
-			<a href="#"><?php echo DGROUPES ?></a>
+		<div id="GROUPES">
+			<a><?php echo DGROUPES ?></a>
 		</div>
 		<div class="vedettes">
-			<div class="vline"; style="text-align: center">
+			<div class="vline">
 				<?php
 				include ("../modele/get_last.php");
 				$groupes=get_last();

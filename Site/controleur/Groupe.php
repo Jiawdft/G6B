@@ -26,3 +26,7 @@ if(!isset($_GET['groupe']))
 
 
 }
+
+include_once('../modele/langue.php');
+
+?>

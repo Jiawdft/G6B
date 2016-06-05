@@ -28,5 +28,6 @@ else
 
 }
 
+include_once('../modele/langue.php');
 
 ?>

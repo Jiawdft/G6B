@@ -10,19 +10,19 @@
 		<?php include("../Header/HOMETOP.php"); ?>
 
 	    <div class="Inscription">
-	    	<h1 style="text-align: center;">INSCRIS-TOI</h1>
+	    	<h1 style="text-align: center;"><?php echo Inscris ?></h1>
 	    	<form method="post" action="../controleur/Accueil.php?inscription=true">
-	    		<input type="radio" name="Genre" value="Homme" /> <p>Homme</p>
-	    		<input type="radio" name="Genre" value="Femme" /> <p>Femme</p>
-	    		<input type="text" name="Prenom" placeholder="Prénom" />
-	    		<input type="text" name="Nom" placeholder="Nom" />
-	    		<input type="text" name="Date_de_Naisssance" placeholder="Date de naissance (format: jjmmAAAA)"/>
-	    		<input type="text" name="Numéro_de_Téléphone" placeholder="Numéro de Téléphone" />
-	    		<input type="text" name="Adresse" placeholder="Adresse" />
-	    		<input type="text" name="Code_Postal" placeholder="Code Postal" />
-	    		<input type="text" name="Ville" placeholder="Ville" />
-			    <input type="email" name="Adresse_Mail" placeholder="Adresse Mail" />
-			    <input type="password" name="Mot_de_Passe" placeholder="Mot de Passe" />
+	    		<input id="plh" type="radio" name="Genre" value="Homme" /> <p><?php echo Hom ?></p>
+	    		<input id="plh" type="radio" name="Genre" value="Femme" /> <p><?php echo Fem ?></p>
+	    		<input id="plh" type="text" name="Prenom" placeholder="<?php echo Prénom ?>" />
+	    		<input id="plh" type="text" name="Nom" placeholder="<?php echo Nom ?>" />
+	    		<input id="plh" type="text" name="Date_de_Naisssance" placeholder="<?php echo Ddn ?>" />
+	    		<input id="plh" type="text" name="Numéro_de_Téléphone" placeholder="<?php echo Tel ?>" />
+	    		<input id="plh" type="text" name="Adresse" placeholder="<?php echo Adres ?>" />
+	    		<input id="plh" type="text" name="Code_Postal" placeholder="<?php echo CP ?>" />
+	    		<input id="plh" type="text" name="Ville" placeholder="<?php echo Ville ?>" />
+			    <input id="plh" type="email" name="Adresse_Mail" placeholder="<?php echo Mail ?>" />
+			    <input id="plh" type="password" name="Mot_de_Passe" placeholder="<?php echo Pass ?>" />
 			    <input type="submit" value="INSCRIPTION" />
 			    <?php
 			    if(isset($erreur)and $erreur!=''){

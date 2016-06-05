@@ -1,10 +1,10 @@
 <?php
-/*
+
 if(!isset($_SESSION['mail']))
 {
 session_start();
-}*/
-/*
+}
+
 if(isset($_GET['inscription']) and $_GET['inscription']==true)
 {
 		if(isset($_POST['Genre']) and isset($_POST['Prenom']) and isset($_POST['Nom']) and isset($_POST['Code_Postal']) and isset($_POST['Adresse_Mail']) and isset($_POST['Mot_de_Passe']))
@@ -56,7 +56,10 @@ if(isset($_GET['inscription']) and $_GET['inscription']==true)
 	}
 
 }else{
-	*/
+	
 include_once('../vue/Inscription.php');
-//}
+}
+
+include_once('../modele/langue.php');
+
 ?>

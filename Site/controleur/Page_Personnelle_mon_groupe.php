@@ -91,4 +91,7 @@ $Groupe=$_GET['groupe'];
 $club=get_groupe_club($Groupe,'');
 include'../vue/Page_Personnelle_mon_groupe.php';
 }
+
+include_once('../modele/langue.php');
+
 ?>

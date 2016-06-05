@@ -40,4 +40,7 @@ foreach($sports as $cle => $sport)
 
 include_once'../vue/CreerGroupe.php';
 }
+
+include_once('../modele/langue.php');
+
 ?>

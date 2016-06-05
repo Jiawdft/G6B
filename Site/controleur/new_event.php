@@ -12,4 +12,7 @@ if($_POST['resultat_nom_event']!=""){
 }else{
 	include_once'../vue/new_event.php';
 }
+
+include_once('../modele/langue.php');
+
 ?>

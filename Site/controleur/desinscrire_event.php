@@ -11,3 +11,4 @@ desinscrire_event($next_event['id'],$_SESSION['mail']);
 
 header('Location: ../controleur/Groupe.php?groupe='.$_GET['groupe']);
 
+?>

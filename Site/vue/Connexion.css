@@ -24,7 +24,7 @@ html {
 .Connexion h1 {
     color: #ffffff;
     font-size: 2em;
-    font-weight: bold;
+    font-weight: 500;
     padding: 0.8em;
     padding-bottom: 1em;
     
@@ -55,6 +55,11 @@ html {
     font-size: 1em;
     padding: 1em;
     text-decoration: none;
+}
+
+#plh::-webkit-input-placeholder {
+  color: white;
+  font-weight: 300;
 }
 
 #inscription {

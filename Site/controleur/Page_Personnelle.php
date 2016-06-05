@@ -67,4 +67,7 @@ $post=get_post('','');
 
 include_once('../vue/Page_Personnelle.php');	
 }
+
+include_once('../modele/langue.php');
+
 ?>

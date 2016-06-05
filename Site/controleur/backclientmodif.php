@@ -33,3 +33,7 @@ if($_SESSION['mail']!=$Admin){
 
 include_once'../vue/backclientmodif.php';
 }
+
+include_once('../modele/langue.php');
+
+?>

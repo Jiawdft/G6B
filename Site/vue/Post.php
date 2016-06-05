@@ -78,10 +78,10 @@
 						?>
 						<h3><?php echo $_GET['sous_sujet'] ?></h3>
 						<div id="Plus"  onClick="AfficherMasquer();">
-							<a>Répondre</a>
+							<p><?php echo Répondre ?></p>
 						</div>
 						<div id="divacacher" style="display:none;">
-							<p>Votre réponse : </p>
+							<p><?php echo Réponse ?></p>
 								<form name="form" action='../controleur/Post.php?sujet=<?php echo $_GET['sujet']?>&sous_sujet=<?php echo $_GET['sous_sujet']?>' method="post">
 									
 									<input type="button" value="G" style="font-weight:bold;" onclick="commande('bold','','bouton_bold');" id="bouton_bold"/>
@@ -92,10 +92,8 @@
 								
 									<input type="hidden" name="resultat" id="resultat">
 									
-									<input type="submit" onclick="resultat_post();" value="Poster" >
-
+									<input type="submit" onclick="resultat_post();" value="<?php echo Poster ?>" >
 									
-
 								</form>
 
 						</div>
@@ -120,16 +118,9 @@
 						}
 					}
 					else {
-						if($_GET['sujet']=='question') {
-							?>
-							<h3>Veuillez sélectionner une <?php echo $_GET['sujet'] ?> pour décourvir les posts qui y sont associés</h3>
-							<?php
-						}
-						else {
-							?>
-							<h3>Veuillez sélectionner un <?php echo $_GET['sujet'] ?> pour décourvir les posts qui y sont associés</h3>
-							<?php
-						}
+						?>
+						<h3><?php echo Select ?></h3>
+						<?php
 					}
 				?>
 			</div>

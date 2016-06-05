@@ -11,5 +11,8 @@ foreach($sports as $cle => $sport)
 	$sports[$cle]['sport'] = htmlspecialchars($sport['sport']);
 }
 
+include_once('../modele/langue.php');
 
 include_once('../vue/Sports.php');
+
+?>

@@ -51,6 +51,6 @@ else
 
 echo $erreur;
 
-
+include_once('../modele/langue.php');
 
 ?>

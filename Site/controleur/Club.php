@@ -10,4 +10,7 @@ if(!isset($_GET['club'])){
 
 include_once('../vue/Club.php');
 }
+
+include_once('../modele/langue.php');
+
 ?>

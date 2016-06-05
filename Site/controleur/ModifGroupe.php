@@ -24,4 +24,7 @@ if(!$_SESSION['mail']==$gr['membre']){
 $erreur='Vous ne possèdez pas les droits de modifier le groupe';
 include_once'../vue/Connexion.php';}
 }
+
+include_once('../modele/langue.php');
+
 ?>

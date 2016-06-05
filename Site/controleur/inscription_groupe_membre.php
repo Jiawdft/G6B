@@ -9,3 +9,4 @@ inscription_groupe_membre($_SESSION['mail'],$_GET['groupe']);
 
 header('Location: ../controleur/Page_Personnelle_mon_groupe.php?groupe='.$_GET['groupe']);
 
+?>

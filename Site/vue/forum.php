@@ -19,17 +19,12 @@
 			</div>
 
 			<div id="groupe">
-				<a href="../controleur/Post.php?sujet=groupe">Groupes</a>
+				<a href="../controleur/Post.php?sujet=groupe"><?php echo Groupes ?></a>
 			</div>
 
 			<div id="club">
 				<a href="../controleur/Post.php?sujet=club">Clubs</a>
 			</div>
-<!--
-			<div id="question">
-				<a href="../controleur/Post.php?sujet=question">Questions</a>
-			</div>
-		-->
 
 		</div>
 	</body>

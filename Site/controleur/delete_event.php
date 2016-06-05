@@ -20,3 +20,5 @@ if (!isset($_SESSION['mail']) or !isset($_SESSION['groupe']) or $ev['createur']=
     delete_event($_GET['id']);
 }
 */
+
+?>

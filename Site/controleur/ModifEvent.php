@@ -8,3 +8,7 @@ session_start();
 
 include_once'../modele/modif_event.php';
 modif_event($_GET['id'],);
+
+include_once('../modele/langue.php');
+
+?>

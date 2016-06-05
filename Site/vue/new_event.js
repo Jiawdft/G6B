@@ -6,7 +6,7 @@ function commande(nom, argument,target){
     document.execCommand(nom, false, argument);
 
     if (document.queryCommandValue(nom)=="true") {
-      document.getElementById(target).style.backgroundColor="#0846ee";
+      document.getElementById(target).style.backgroundColor="grey";
     }
     else {
       document.getElementById(target).style.backgroundColor="";

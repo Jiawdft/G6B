@@ -1,16 +1,20 @@
 <?php
 
-if ($_GET['langue']=='fr') {
-	include('../vue/Accueil_fr.php');
-	include('../vue/Contact_fr.php');
+if(isset($_GET['langue']) and $_GET['langue']=='fr') {
+	$_SESSION['langue']='fr';
 }
-else if ($_GET['langue']=='en') {
-	include('../vue/Accueil_en.php');
-	include('../vue/Contact_fr.php');
+elseif(isset($_GET['langue']) and $_GET['langue']=='en') {
+	$_SESSION['langue']='en';
 }
-else {
-	include('../vue/Accueil_fr.php');
-	include('../vue/Contact_fr.php');
+
+if ($_SESSION['langue']=='fr') {
+	include('../Langues/Sporciety_fr.php');
+}
+elseif ($_SESSION['langue']=='en') {
+	include('../Langues/Sporciety_en.php');
+}
+else{
+	include('../Langues/Sporciety_fr.php');
 }
 
 ?>
