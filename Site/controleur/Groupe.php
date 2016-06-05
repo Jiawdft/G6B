@@ -19,8 +19,10 @@ if(!isset($_GET['groupe']))
 	include_once'../modele/get_Allevent.php';
 	$event=get_Allevent($_GET['groupe']);
 	include_once'../modele/get_membres_events.php';
-	if (isset($_SESSION['mail'])) {
-		$deja_event=get_membres_events($_SESSION['mail'],$next_event['id']);
+	if (isset($_GET['event']) and isset($_SESSION['mail'])) {
+		include_once'../modele/get_event.php';
+		$selected_event=selection_event($_GET['groupe'],$_GET['event']);
+		$deja_event=get_membres_events($_SESSION['mail'],$selected_event['id']);
 	}
 	include_once'../vue/Groupe.php';
 
