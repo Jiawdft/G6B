@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-   	<title>Créer votre événement</title>
+   	<title>Modifier votre événement</title>
     <link rel="stylesheet" type="text/css" href="../vue/new_event.css" media="screen" />
     <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 </head>
@@ -9,7 +9,7 @@
 	<?php include("../Header/HOMETOP Slider.php"); ?>
 
 	<div class="Creation">
-		<h1>CREER UN EVENEMENT</h1>
+		<h1>MODIFIER EVENEMENT</h1>
 
 		<input id="nom_event" type="text" placeholder="Nom de l'évènement"></input>
     <br>
@@ -24,8 +24,8 @@
 			<h4><?php echo $erreur?></h4><?php
 		}?>
 
-    <input id="creer" type="button" value="CREER" onclick="resultat();"/>
-    <form name="form" action='../controleur/ModifEvent.php?groupe=<?php echo $_GET['groupe']?>&event=<?php echo $_GET['event']?>' method="post">
+    <input id="creer" type="button" value="Modifier" onclick="resultat();"/>
+    <form name="form" action='../controleur/ModifEvent.php?groupe=<?php echo $_GET['groupe']?>&event=<?php echo $_GET['event']?>&etat=1' method="post">
         <input type="hidden" name="resultat_nom_event" id="resultat_nom_event">
         <input type="hidden" name="resultat_description" id="resultat_description">
         <input type="hidden" name="resultat_adresse" id="resultat_adresse">

@@ -47,7 +47,7 @@
             </p>
             <p> <?php echo $selected_event['date'];?> </p>
             <?php if ($check_createur==true or !isset($_SESSION['groupe'])): ?>
-                <a href="../controleur/ModifEvent.php">Modifier</a>
+                <a href="../controleur/ModifEvent.php?groupe=<?php echo $_GET['groupe']?>&event=<?php echo $_GET['event']?>">Modifier</a>
                 <a href="../controleur/delete_event.php?id=<?php echo $selected_event['id'] ?>&groupe=<?php echo $_GET['groupe'] ?>">Supprimer cet événement</a>
             <?php endif; ?>
           </div>

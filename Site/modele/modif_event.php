@@ -24,15 +24,16 @@ function modif_event($ID,$Nom,$Description,$Date,$Adresse){
 
 	}
 	if(isset($Date)and $Date!=''){
-		$req = $bdd->prepare('UPDATE event SET date = :Date WHERE id =:ID');
+		$req = $bdd->prepare('UPDATE event SET date = :date WHERE id =:ID');
 			$req->execute(array(
 				'ID' => $ID,
-				'Date' => $Date));
+				'date' => $Date));
 	}
-	if(isset($Date)and $Date!=''){
+	if(isset($Adresse)and $Adresse!=''){
 		$req = $bdd->prepare('UPDATE event SET adresse = :adresse WHERE id =:ID');
 			$req->execute(array(
 				'ID' => $ID,
 				'adresse' => $Adresse));
 	}
+}
 ?>
