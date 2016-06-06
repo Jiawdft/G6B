@@ -11,29 +11,24 @@
 
 		<div class="Sports">
 		    <table>
-		    	<tbody>
-					<?php
-					$a=0;
-					foreach($sports as $sport)
-					{	
+				<?php
+				$a=0;
+				foreach($sports as $sport) {	
 					?>
-					<td><a href='../controleur/Fichesporttype.php?sport=<?php echo ($sport['sport'])?>'>  <?php echo mb_strtoupper($sport['sport'])?></a></td>
+					<td id="sp"><a href='../controleur/Fichesporttype.php?sport=<?php echo ($sport['sport'])?>'>  <?php echo mb_strtoupper($sport['sport'])?></a></td>
 					<?php
-						$a++;
-						if($a%3==0)
-						{
-							?>
-							</tr>
-							<tr>
-							<?php
-						}
-						if($a>=30){
-							break;
-						}
+					$a++;
+					if($a%3==0) {
+						?>
+						<tr>
+						<?php
 					}
-	    			?>
-	 				</tr>
-				</tbody>
+					if($a>=30){
+						break;
+					}
+				}
+    			?>
+ 				</tr>
 			</table>
 		</div>
 		<script type="text/javascript">
@@ -52,20 +47,21 @@
 		<div id="divacacher" style="display:none;">
 
 			<a>AUTRES SPORTS :</a></br></br>
-<?php
-$b=0;
+			<?php
+			$a=10;
 			foreach($sports as $sport){?>
-				<td><a href='../controleur/Fichesporttype.php?sport=<?php echo ($sport['sport'])?>'>  <?php echo mb_strtoupper($sport['sport'])?></a></td>
-<?php
-				if($a%5==0)
-						{
-							?>
-							</tr>
-							<tr>
-							<?php
-						}
 
-			} ?>
+				<td><a href='../controleur/Fichesporttype.php?sport=<?php echo ($sport['sport'])?>'>  <?php echo mb_strtoupper($sport['sport'])?></a></td>
+				<?php
+				$a++;
+				if($a%5==0) {
+					?>
+					</tr>
+					<tr>
+					<?php
+				}
+			} 
+			?>
 		</div>
 	</body>
 </html>

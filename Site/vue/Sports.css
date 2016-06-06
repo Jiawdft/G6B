@@ -9,8 +9,7 @@
 html {
 	font-family: Helvetica;
     background-image: url("../Images/Wallpaper/PageSport.jpg");
-    background-size: cover;
-    background-color: grey;
+    background-size: 120% 140%;
     background-repeat: no-repeat;
     height: 100%;
 }
