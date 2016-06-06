@@ -1,8 +1,10 @@
 <?php
+
 function get_membres_groupes($mail,$groupe){
+	include'connexion_sql.php';
 	$mail=htmlspecialchars($mail);
 	$groupe=htmlspecialchars($groupe);
-	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
+	
 	if($groupe=='' and $mail=='')
 	{
 		$reponse = $bdd->query('SELECT * FROM groupe_contient_membre');

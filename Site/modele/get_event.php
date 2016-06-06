@@ -2,8 +2,9 @@
 
 function get_event($groupe)
 {
+	include'connexion_sql.php';
 	if($groupe==''){
-		$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
+		
 	$reponse = $bdd->query('SELECT * FROM event ORDER BY date');
 	$event=$reponse->fetchAll();
 	return $event;
@@ -11,7 +12,7 @@ function get_event($groupe)
 	}else{
 	$groupe=htmlspecialchars($groupe);
 
-	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
+	
 	$reponse = $bdd->prepare('SELECT * FROM event WHERE groupe= :groupe');
 	$reponse -> execute(array(
 			'groupe' => $groupe,
@@ -24,7 +25,7 @@ function get_list_event($groupe){
 	if ($groupe!='') {
 		$groupe=htmlspecialchars($groupe);
 
-		$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
+		
 		$reponse = $bdd->prepare('SELECT * FROM event WHERE groupe= :groupe ORDER BY date');
 		$reponse -> execute(array(
 				'groupe' => $groupe,
@@ -38,7 +39,7 @@ function selection_event($groupe,$nom){
 	$groupe=htmlspecialchars($groupe);
 	$nom=htmlspecialchars($nom);
 
-	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
+	
 	$reponse = $bdd->prepare('SELECT * FROM event WHERE groupe= :groupe AND nom= :nom');
 	$reponse -> execute(array(
 			'groupe' => $groupe,
@@ -49,7 +50,7 @@ function selection_event($groupe,$nom){
 }
 
 function selection_event_by_id($id){
-	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
+	
 	$reponse = $bdd->prepare('SELECT * FROM event WHERE id= :id');
 	$reponse -> execute(array(
 			'id' => $id,

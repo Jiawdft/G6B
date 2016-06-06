@@ -3,7 +3,7 @@ function get_post($Sujet,$Sous_sujet)
 {
 	$Sujet=htmlspecialchars($Sujet);
 	$Sous_sujet=htmlspecialchars($Sous_sujet);
-$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
+include'connexion_sql.php';
 	if($Sujet=='' and $Sous_sujet=='')
 	{
 		$reponse = $bdd->query('SELECT * FROM post ORDER BY date');

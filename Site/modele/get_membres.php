@@ -1,7 +1,7 @@
 <?php
 function get_membres($mail)
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
+	include_once'connexion_sql.php';
 	if($mail=='')
 	{
 	$reponse = $bdd->query('SELECT * FROM membre ORDER BY nom');

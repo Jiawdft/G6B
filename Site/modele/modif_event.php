@@ -6,7 +6,7 @@ function modif_event($ID,$Nom,$Description,$Date,$Adresse){
 	$Description=htmlspecialchars($Description);
 	$Date=htmlspecialchars($Date);
 	$Adresse=htmlspecialchars($Adresse);
-	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
+	include_once'connexion_sql.php';
 	if(isset($Nom)and $Nom!=''){
 		$req = $bdd->prepare('UPDATE event SET nom = :nom WHERE id =:ID');
 			$req->execute(array(

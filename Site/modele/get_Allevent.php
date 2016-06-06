@@ -3,7 +3,7 @@
 function get_Allevent($groupe)
 {
 	if($groupe==''){
-		$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
+		include_once'connexion_sql.php';
 	$reponse = $bdd->query('SELECT * FROM event ORDER BY date');
 	$event=$reponse->fetchAll();
 	return $event;
@@ -11,7 +11,7 @@ function get_Allevent($groupe)
 	}else{
 	$groupe=htmlspecialchars($groupe);
 
-	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
+	include_once'connexion_sql.php';
 	$reponse = $bdd->prepare('SELECT * FROM event WHERE groupe= :groupe');
 	$reponse -> execute(array(
 			'groupe' => $groupe,

@@ -3,7 +3,7 @@ function add_membre_groupe($Mail,$Groupe){
 	$Mail=htmlspecialchars($Mail);
 	$Groupe=htmlspecialchars($Groupe);
 	
-	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
+	include_once'connexion_sql.php';
 	$req = $bdd->prepare('INSERT INTO groupe_contient_membre(groupe,membre) 
 		VALUES(:groupe,
 			:membre)');

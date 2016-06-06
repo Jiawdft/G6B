@@ -3,7 +3,7 @@
 function inscription_event($mail,$id){
 	$mail=htmlspecialchars($mail);
 	$id=htmlspecialchars($id);
-	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
+	include_once'connexion_sql.php';
 	$req = $bdd->prepare('INSERT INTO event_contient_membre(mail,id) 
 		VALUES(:mail,:id)');
 	$req->execute(array(

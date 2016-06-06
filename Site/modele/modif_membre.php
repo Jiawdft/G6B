@@ -5,7 +5,7 @@ function modif_membre($Mail,$Telephone,$Adresse,$Codepostal,$MDP){
 	$Adresse=htmlspecialchars($Adresse);
 	$Codepostal=(int) $Codepostal;
 	$MDP=htmlspecialchars($MDP);	
-	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
+	include_once'connexion_sql.php';
 	if(isset($Telephone)and $Telephone!=''){
 		$req = $bdd->prepare('UPDATE membre SET numero_de_portable = :telephone WHERE adresse_mail =:mail');
 			$req->execute(array(

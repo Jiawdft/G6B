@@ -2,8 +2,7 @@
 function add_leader_groupe($Membre,$Groupe){
 	$Sport=htmlspecialchars($Membre);
 	$Groupe=htmlspecialchars($Groupe);
-	
-	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
+	include_once'connexion_sql.php';
 	$req = $bdd->prepare('INSERT INTO groupe_leader(membre,groupe) 
 		VALUES(:membre,
 			:groupe)');

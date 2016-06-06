@@ -27,7 +27,7 @@
 				<a href="../controleur/Connexion.php">Connectez vous d'abord</a></div><?php
 			} ?>
 
-			<div class="question">Comment crée votre groupe ?</div>
+			<div class="question">Comment créer votre groupe ?</div>
 			<div class="reponse"><?php if(isset($_SESSION['mail'])and $_SESSION['mail']!=""){ ?>
 				<a href="../controleur/Page_Personnelle.php">Cliquer ici pour accèder à votre profil et aller dans groupe puis créer un groupe</a></div><?php
 			}else{?>

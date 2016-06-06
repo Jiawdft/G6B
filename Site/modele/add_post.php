@@ -5,7 +5,7 @@ function add_post($Post,$Mail,$Sujet,$Sous_sujet){
 	$Sujet=htmlspecialchars($Sujet);
 	$Sous_sujet=htmlspecialchars($Sous_sujet);
 	
-	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
+	include_once'connexion_sql.php';
 	$req = $bdd->prepare('INSERT INTO post(sujet,sous_sujet,auteur,post) 
 		VALUES(:sujet,:sous_sujet,:auteur,:post)');
 $req->execute(array(

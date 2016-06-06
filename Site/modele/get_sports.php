@@ -1,7 +1,8 @@
 <?php
 function get_sports($sport)
 {   
-	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root' , 'root');
+	include_once'connexion_sql.php';
+	//$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root' , 'root');
 	if($sport=='')
 	{
 	$req = $bdd->prepare('SELECT * FROM sport ORDER BY sport');						

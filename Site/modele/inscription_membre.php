@@ -11,7 +11,7 @@ function inscription_membre($Civilite,$Nom,$Prenom,$DateNaissance,$CodePostal,$A
 	$NumeroDePortable=htmlspecialchars($NumeroDePortable);
 	$Mdp=htmlspecialchars($Mdp);
 	
-	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
+	include_once'connexion_sql.php';
 	$req = $bdd->prepare('INSERT INTO membre(civilite, nom, prenom, date_de_naissance,codepostal,adresse,adresse_mail,numero_de_portable,mdp) 
 		VALUES(:civilite, :nom, :prenom, :date_de_naissance,:codepostal, :adresse,:adresse_mail,:numero_de_portable,:mdp)');
 $req->execute(array(

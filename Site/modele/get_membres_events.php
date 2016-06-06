@@ -2,7 +2,7 @@
 function get_membres_events($mail,$id){
 	$mail=htmlspecialchars($mail);
 	$id=htmlspecialchars($id);
-	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
+	include_once'connexion_sql.php';
 	if ($mail!='' and $id!='') {
 		$reponse = $bdd->prepare('SELECT * FROM event_contient_membre WHERE mail= :mail and id= :id');
 		$reponse -> execute(array(

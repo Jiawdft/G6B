@@ -3,7 +3,7 @@
 function get_sports_groupes($sport,$groupe){
 	$sport=htmlspecialchars($sport);
 	$groupe=htmlspecialchars($groupe);
-	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
+	include_once'connexion_sql.php';
 	if($groupe=='' and $sport=='')
 	{
 		$reponse = $bdd->query('SELECT * FROM sport_groupe');
