@@ -4,7 +4,7 @@
 
 html {
   font-family: Helvetica;
-  background-image: url("../Images/Wallpaper/PageSport.jpg");
+  background-image: url("../Images/Wallpaper/wakeskate.jpg");
   background-size: cover;
 }
 
@@ -34,7 +34,7 @@ html {
 }
 
 #nom_event::-webkit-input-placeholder {
-  color: black;
+  color: white;
 }
 
 #nom_event:focus {
