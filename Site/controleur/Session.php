@@ -37,10 +37,15 @@ else
 
 			
 		}
+		if($_POST['mail']!=$membre['adresse_mail']){
+			$erreur='Mail incorrect';
+		include_once('../controleur/Connexion.php');
+		}
 		if(!password_verify($_POST['passe'],$membre['mdp'])){
 		$erreur='Mot de passe incorrect';
 		include_once('../controleur/Connexion.php');
 		}
+
 
 	}
 }
