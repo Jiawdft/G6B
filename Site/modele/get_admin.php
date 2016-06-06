@@ -1,7 +1,7 @@
 <?php
 function get_admin($mail)
 {
-	include_once'connexion_sql.php';
+	include'connexion_sql.php';
 	if($mail=='')
 	{
 	$reponse = $bdd->query('SELECT * FROM admin ORDER BY adresse_mail');
