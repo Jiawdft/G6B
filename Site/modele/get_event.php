@@ -22,6 +22,7 @@ function get_event($groupe)
 }
 
 function get_list_event($groupe){
+	include'connexion_sql.php';
 	if ($groupe!='') {
 		$groupe=htmlspecialchars($groupe);
 
@@ -36,6 +37,7 @@ function get_list_event($groupe){
 }
 
 function selection_event($groupe,$nom){
+	include'connexion_sql.php';
 	$groupe=htmlspecialchars($groupe);
 	$nom=htmlspecialchars($nom);
 
@@ -50,6 +52,7 @@ function selection_event($groupe,$nom){
 }
 
 function selection_event_by_id($id){
+	include'connexion_sql.php';
 	
 	$reponse = $bdd->prepare('SELECT * FROM event WHERE id= :id');
 	$reponse -> execute(array(
