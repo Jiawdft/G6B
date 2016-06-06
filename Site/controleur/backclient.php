@@ -13,15 +13,15 @@ if(!isset($_SESSION['mail'])){
 session_start();
 }
 include_once'../modele/get_admin.php';
-$mail=get_admin();
+$mail=get_admin('');
 if(!isset($_SESSION['mail'])){
-
+	$erreur='test';
 	include_once'../controleur/admin.php';
 }
 else{
 	include_once'../modele/get_admin.php';
 	$mail=get_admin($_SESSION['mail']);
-	if($mail['mail']!=$_SESSION['mail'])
+	if($mail['adresse_mail']!=$_SESSION['mail'])
 	{
 		include_once'../controleur/admin.php';
 	}
@@ -36,7 +36,8 @@ else{
 				delete_membre_groupe($case,'');
 				delete_leader_groupe($case,'');
 			}
-			include_once'../controleur/admin.php';
+			include_once('../modele/langue.php');
+			include_once'../vue/backclient.php';
 		}
 		if(isset($_GET['Groupe']) and $_GET['Groupe']==true){
 			include_once'../modele/delete_groupe.php';
@@ -52,7 +53,10 @@ else{
 				delete_leader_groupe('',$case);
 				delete_club_groupe('',$case);
 				delete_event($case);
-			}include_once'../controleur/admin.php';
+			
+			}
+			include_once('../modele/langue.php');
+			include_once'../vue/backclient.php';
 		}
 		if(isset($_GET['Groupe']) and $_GET['Groupe']=='Modif'){
 			include_once'../modele/modif_groupe.php';
@@ -65,7 +69,8 @@ else{
 				delete_sport($case);
 				delete_sport_groupe($case,'');
 			}
-			include_once'../controleur/admin.php';
+			include_once('../modele/langue.php');
+			include_once'../vue/backclient.php';
 		}
 		if(isset($_GET['Sport']) and $_GET['Sport']=='Modif'){
 			include_once'../modele/modif_sport.php';
@@ -75,7 +80,7 @@ else{
 		if(isset($_GET['Image']) and $_GET['Image']==true){
 			include_once'../modele/upload.php';
 
-		//include_once('../Back Office/backclient.php');
+		//include_once('../Back Office/admin.php');
 		}
 		*/
 		if(isset($_GET['Forum']) and $_GET['Forum']==true){
@@ -83,8 +88,11 @@ else{
 			foreach($_POST['case'] as $case){
 				delete_post($case);
 			}
-		include_once'../vue/admin.php';
+			include_once('../modele/langue.php');
+		include_once'../vue/backclient.php';
 		}
+		include_once('../modele/langue.php');
+		include_once'../vue/backclient.php';
 
 	}
 }
