@@ -3,7 +3,7 @@
 function get_sports_groupes($sport,$groupe){
 	$sport=htmlspecialchars($sport);
 	$groupe=htmlspecialchars($groupe);
-	include_once'connexion_sql.php';
+	include'connexion_sql.php';
 	if($groupe=='' and $sport=='')
 	{
 		$reponse = $bdd->query('SELECT * FROM sport_groupe');
