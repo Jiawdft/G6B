@@ -39,11 +39,7 @@
 			</ul>
 	    </div>
 		<div id="SPORT">
-<<<<<<< HEAD
 			<a><?php echo Sport ?></a>
-=======
-			<a href="../controleur/Sports.php"><?php echo SPORT ?></a>
->>>>>>> b9bd05622a91df4aef7fb9ddd0dc2f3c7d6e09c1
 		</div>
 		<div class="picture">
 			<div class="pline1">
