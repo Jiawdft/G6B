@@ -34,7 +34,7 @@ html {
 }
 
 #nom_event::-webkit-input-placeholder {
-  color: black;
+  color: white;
 }
 
 #nom_event:focus {
