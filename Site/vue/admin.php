@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Connexion</title>
-		<link href="../vue/backconnexion.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="../vue/admin.css" rel="stylesheet" type="text/css" media="screen" />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>

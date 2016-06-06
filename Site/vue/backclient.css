@@ -27,6 +27,8 @@ html, body {
 
 .bo h1 {
 	color: white;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .bo div h3{
