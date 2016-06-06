@@ -15,17 +15,10 @@ if (!isset($_POST['mail'])) {
 					break;
 				}
 			}
-<<<<<<< HEAD
 			if($_SESSION['mail']!=$membre['adresse_mail'])
 			{
 				$erreur='droit insuffisant connectez vous avec un compte administrateur';
 				include_once('../controleur/backconnexion.php');
-=======
-		}
-		if($_SESSION['mail']!=$membre['adresse_mail']){
-			$erreur='insuffisant';
-			include_once('../controleur/admin.php');
->>>>>>> 9e911218c70810a998be4b4711704b85c8457175
 
 			}
 	}
