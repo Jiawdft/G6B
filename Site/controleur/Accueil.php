@@ -35,26 +35,10 @@ if(isset($_GET['inscription']) and $_GET['inscription']==true)
 				else{$adresse='';}
 				$_POST['Code_Postal']=htmlspecialchars($_POST['Code_Postal']);
 				include_once'../modele/inscription_membre.php';	
-				inscription_membre($_POST['Genre'],$_POST['Nom'],$_POST['Prenom'],$Naissance,$_POST['Code_Postal'],$adresse,$_POST['Adresse_Mail'],$telephone,$_POST['Mot_de_Passe']);
+				inscription_membre($_POST['Genre'],$_POST['Nom'],$_POST['Prenom'],$Naissance,$_POST['Code_Postal'],$adresse,$_POST['Adresse_Mail'],$_POST['Ville'],$telephone,$_POST['Mot_de_Passe']);
 				
 				session_start();
-				$_SESSION['mail']=$_POST['Adresse_Mail'];
-				if(isset($_GET['langue']) and $_GET['langue']=='fr') {
-					$_SESSION['langue']='fr';
-				}
-				elseif(isset($_GET['langue']) and $_GET['langue']=='en') {
-					$_SESSION['langue']='en';
-				}
-
-				if (isset($_SESSION['langue']) and $_SESSION['langue']=='fr') {
-					include('../Langues/Accueil.php');
-				}
-				elseif (isset($_SESSION['langue']) and $_SESSION['langue']=='en') {
-					include('../Langues/Accueil_en.php');
-				}
-				else{
-					include('../Langues/Accueil_fr.php');
-				}
+				include_once'../modele/langue.php';
 
 
 
