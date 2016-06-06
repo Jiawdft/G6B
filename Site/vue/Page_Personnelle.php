@@ -17,7 +17,14 @@
 						<tr>
 							<td>
 							<?php
-								echo $membre['prenom'] . " " . $membre['nom'] . " " . "(mail : " . $membre['adresse_mail'] . ")";
+								echo $membre['prenom'] . " " . $membre['nom'];
+							?>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<?php
+								echo "Mail : " . $membre['adresse_mail'];
 							?>
 							</td>
 						</tr>
