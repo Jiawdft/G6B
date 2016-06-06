@@ -14,7 +14,7 @@ html {
 .Connexion {
     height: 56vh;
     width: 60%;
-    border-radius: 5%;
+    border-radius: 1em;
     padding: 2em;
     background-color: rgba(0,0,0,0.5);
     margin: 6% auto;
@@ -23,10 +23,15 @@ html {
 .Connexion h1 {
     color: #ffffff;
     font-size: 2em;
-    font-weight: bold;
+    font-weight: 400;
     padding: 0.8em;
     padding-bottom: 1em;
     
+}
+
+#plh::-webkit-input-placeholder {
+    color: white;
+    font-weight: 300;
 }
 
 .Connexion input,
