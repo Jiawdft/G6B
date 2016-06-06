@@ -4,7 +4,7 @@ function get_groupe_club($groupe,$club)
 	$groupe=htmlspecialchars($groupe);
 	$club=htmlspecialchars($club);
 
-	include_once'connexion_sql.php';
+	include'connexion_sql.php';
 	if($groupe=='' and $club=='')
 	{
 		$reponse = $bdd->query('SELECT * FROM club_groupe ORDER BY groupe');

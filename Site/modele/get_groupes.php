@@ -4,7 +4,7 @@ function get_groupes($groupe,$codepostal)
 	$groupe=htmlspecialchars($groupe);
 	$codepostal=(int)$codepostal;
 
-	include_once'connexion_sql.php';
+	include'connexion_sql.php';
 	if($groupe=='' and $codepostal=='')
 	{
 		$reponse = $bdd->query('SELECT * FROM groupe ORDER BY groupe');

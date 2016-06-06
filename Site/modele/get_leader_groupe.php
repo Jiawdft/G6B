@@ -2,7 +2,7 @@
 function get_leader_groupe($mail,$groupe){
 	$mail=htmlspecialchars($mail);
 	$groupe=htmlspecialchars($groupe);
-	include_once'connexion_sql.php';
+	include'connexion_sql.php';
 	if($groupe=='' and $mail=='')
 	{
 		$reponse = $bdd->query('SELECT * FROM groupe_leader');

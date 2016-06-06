@@ -1,7 +1,7 @@
 <?php
 function delete_event($Id){
 	$Id=(int)$Id;
-	include_once'connexion_sql.php';
+	include'connexion_sql.php';
 	$req = $bdd->prepare('DELETE FROM event WHERE id =:Id');
 		$req->execute(array(
 			'Id' => $Id
@@ -10,7 +10,7 @@ function delete_event($Id){
 
 function clean_membre_event($id){
 	$id=htmlspecialchars($id);
-	include_once'connexion_sql.php';
+	include'connexion_sql.php';
 	$req = $bdd->prepare('DELETE FROM event_contient_membre WHERE id= :id');
 	$req->execute(array(
 		'id' => $id,

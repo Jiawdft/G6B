@@ -5,14 +5,28 @@ session_start();
 }
 include_once('../modele/langue.php');
 if(isset($_GET['groupe']) and isset($_GET['Del'])){
+	include_once'../modele/get_leader_groupe.php';
 	$leader=get_leader_groupe('','');
 	foreach ($leader as $lead) {
 	if($lead['membre']==$_SESSION['mail'] and $lead['groupe']==$_GET['groupe']){
-		include_once'modele/delete_groupe.php';
+		include_once'../modele/delete_groupe.php';
+		include_once'../modele/delete_leader_groupe.php';
+		include_once'../modele/delete_membre_groupe.php';
+		include_once'../modele/delete_club_groupe.php';
+		include_once'../modele/delete_sport_groupe.php';
+		include_once'../modele/delete_event.php';
+		delete_sport_groupe('',$_GET['groupe']);
 		delete_groupe($_GET['groupe']);
+		delete_membre_groupe('',$_GET['groupe']);
+		delete_leader_groupe('',$_GET['groupe']);
+		delete_club_groupe('',$_GET['groupe']);
+		delete_event($_GET['groupe']);
+		echo 'test';
 		include_once'../controleur/Accueil.php';
+
 	}
 	include_once'../controleur/Accueil.php';
+}
 }
 else{
 	if(!isset($_SESSION['mail']) and !isset($_GET['groupe'])){

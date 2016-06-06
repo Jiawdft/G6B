@@ -1,7 +1,7 @@
 <?php
 function get_membres($mail)
 {
-	include_once'connexion_sql.php';
+	include'connexion_sql.php';
 	if($mail=='')
 	{
 	$reponse = $bdd->query('SELECT * FROM membre ORDER BY nom');
