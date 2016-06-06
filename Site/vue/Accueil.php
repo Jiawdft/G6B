@@ -22,7 +22,6 @@
 		<div class="search">
 			<ul>
 				<form action='../controleur/Fichesporttype.php' method="post">
-			
 				<select name="choix">
 				    <option value=''><?php echo Sport ?></option>
 				    <?php
@@ -34,14 +33,17 @@
 					}
 					?>
 				</select>
-			
 			    <input id="codepo" type="int" name="codepostal" placeholder="<?php echo CP ?>" />
 			    <input type="submit" value="<?php echo Rechercher ?>" />
 				</form>
 			</ul>
 	    </div>
 		<div id="SPORT">
+<<<<<<< HEAD
 			<a><?php echo Sport ?></a>
+=======
+			<a href="../controleur/Sports.php"><?php echo SPORT ?></a>
+>>>>>>> b9bd05622a91df4aef7fb9ddd0dc2f3c7d6e09c1
 		</div>
 		<div class="picture">
 			<div class="pline1">
@@ -57,13 +59,6 @@
 				<div class="p6"><a href="../controleur/Fichesporttype.php?sport=NATATION"><?php echo Nata ?></a></div>
 				<div class="p7"><a href="../controleur/Fichesporttype.php?sport=TENNIS">TENNIS</a></div>
 			</div>
-		</div>
-		<div id="MAPS">
-			<a><?php echo PLAN ?></a>
-		</div>
-		<div class="googlemaps">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d85161.85430845951!2d2.3617916544987367!3d48.864518359376234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1457358140451" style="height: 100%; width: 92%; border: none;"></iframe>
-		</div>
 		</div>
 		<div id="GROUPES">
 			<a><?php echo DGROUPES ?></a>

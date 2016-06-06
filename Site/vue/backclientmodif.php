@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html>
 	<head>
 		<title>Page Personnelle</title>
-		<link href="../vue/Page_Personnelle.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="../vue/backclientmodif.css" rel="stylesheet" type="text/css" media="screen" />
 		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
 	</head>
 	<body>
@@ -22,6 +21,7 @@
 	    		<input type="file" name="image_groupe" placeholder="Entre une nouvelle image de groupe" /></br>
 				-->
 	    		<input type="hidden" name="groupe" value=<?php echo $_GET['groupe'] ?> />
+	    		</br></br>
 				<input type="submit" value="Modifier">
 			</form>
 			<?php 

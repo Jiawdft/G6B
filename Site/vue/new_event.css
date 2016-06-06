@@ -54,23 +54,21 @@ html {
   height: 10em;
   margin-top: 1em;
   border-radius: 1em;
-  border: 0.2em solid rgb(140,140,140);
   background-color: rgba(255,255,255,0.7);
   resize: none;
-  font-size: 17px;
   margin-left: 14.7%;
+  padding: 1em;
 }
 
 #editeur_adresse {
   width: 70%;
-  height: 6em;
+  height: 3em;
   margin-top: 2em;
   border-radius: 1em;
-  border: 0.2em solid rgb(140,140,140);
   background-color: rgba(255,255,255,0.7);
   resize: none;
-  font-size: 17px;
   margin-left: 14.7%;
+  padding: 1em;
 }
 
 #editeur_description:focus,

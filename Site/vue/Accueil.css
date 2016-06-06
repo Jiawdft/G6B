@@ -200,18 +200,6 @@ body {
 	width : 30%; 
 }
 
-#MAPS a {
-	font-size: 3em;
-	font-weight: bold;
-	text-decoration: none;
-	color: black;
-	line-height: 5em;
-}
-
-.googlemaps {
-	height: 30em;
-}
-
 #GROUPES a {
 	font-size: 3em;
 	font-weight: bold;

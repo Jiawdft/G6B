@@ -11,10 +11,14 @@ body {
   background-color: rgba(220,220,220,0.7);
 }
 
-h1 {
-	text-align: center;
-	margin-top: 3em;
-	margin-bottom: 3em;
+#titre p {
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-size: 3em;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
 }
 
 .question {

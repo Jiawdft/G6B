@@ -26,7 +26,6 @@
 			   }
 			}
 			</script>
-
 			<h1> Page Administrateur </h1>
 			<div id="Membres">
 				<h3 onclick="bascule('div1'); return false;">Membres</h3>
@@ -151,7 +150,7 @@
 					foreach ($posts as $post) {?>
 						<td>
 							<input type="checkbox" name="case[]"  value='<?php echo $post['id'] ?>' /><label for="case">
-							<a href="../controleur/backclientmodif.php?post=<?php echo $post['id'] ?>"><?php echo $post['id'] ?></a></label></td>
+							<?php echo $post['id'] ?></label></td>
 					<?php
 					}
 					?>

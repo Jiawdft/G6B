@@ -21,10 +21,6 @@ html, body {
   color: #ffffff;
 }
 
-.Posts div {
-    display: inline-block;
-}
-
 .Sujet {
   position: absolute;
   top: 8em;
@@ -76,7 +72,6 @@ html, body {
 
 #editeur_description {
   width: 70%;
-  height: 15em;
   margin-top: 1em;
   border-radius: 1em;
   background-color: rgba(255,255,255,0.7);
@@ -89,7 +84,6 @@ html, body {
 
 #editeur_description:focus {
   outline: none;
-  cursor: none;
 }
 
 #divacacher p {
@@ -111,6 +105,8 @@ html, body {
 }
 
 #Plus p {
+  text-align: center;
+  width: 5em;
   color: white;
   cursor: pointer;
   margin-bottom: 1em;
