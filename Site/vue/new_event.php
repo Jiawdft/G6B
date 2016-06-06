@@ -4,6 +4,7 @@
    	<title>Créer votre événement</title>
     <link rel="stylesheet" type="text/css" href="../vue/new_event.css" media="screen" />
     <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+    <script type="text/javascript" src="../vue/new_event.js"></script>
 </head>
 <body>
 	<?php include("../Header/HOMETOP Slider.php"); ?>
@@ -31,7 +32,7 @@
         <input type="hidden" name="resultat_adresse" id="resultat_adresse">
         <input type="hidden" name="resultat_date" id="resultat_date">
     </form>
-    <script type="text/javascript" src="../vue/new_event.js"></script>
+    
 	</div>
 	<div id="social">
 		<a href="https://www.facebook.com/workoutsociety/?ref=aymt_homepage_panel"><img src="../Images/Logos/Fb.png"></a>

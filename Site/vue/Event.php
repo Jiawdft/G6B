@@ -13,7 +13,8 @@
           <h3> <?php echo $_GET['groupe']; ?> </h3>
           <?php
             include_once'../modele/get_event.php';
-            $list_Events=get_list_event($_GET['groupe']);
+            //$list_Events=get_list_event($_GET['groupe']);
+            $list_Events=get_event('');
             foreach ($list_Events as $list_Event) { ?>
               <a href="../controleur/Event.php?groupe=<?php echo $_GET['groupe'] ?>&event=<?php echo $list_Event['nom']?>"><?php echo $list_Event['nom']?></a>
               <br />

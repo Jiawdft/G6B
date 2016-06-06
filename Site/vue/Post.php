@@ -89,7 +89,7 @@
 									<input type="button" value="S" style="text-decoration:underline;" onclick="commande('underline','','bouton_underline');" id="bouton_underline"/>
 
 									<div id="editeur_description" name="editeur_description" contentEditable ></div>
-								
+
 									<input type="hidden" name="resultat" id="resultat">
 									
 									<input type="submit" onclick="resultat_post();" value="<?php echo Poster ?>" >
