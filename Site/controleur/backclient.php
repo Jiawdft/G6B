@@ -10,10 +10,10 @@ if($_SESSION['mail']!=$Admin){
 }else{
 */
 if(!isset($_SESSION['mail'])){
-session_start()
+session_start();
 }
 include_once'../modele/get_admin.php';
-$mail=get_admin()
+$mail=get_admin();
 if(!isset($_SESSION['mail'])){
 
 	include_once'../controleur/backconnexion.php';
