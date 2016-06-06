@@ -16,14 +16,14 @@ include_once'../modele/get_admin.php';
 $mail=get_admin()
 if(!isset($_SESSION['mail'])){
 
-	include_once'../controleur/backconnexion.php';
+	include_once'../controleur/admin.php';
 }
 else{
 	include_once'../modele/get_admin.php';
 	$mail=get_admin($_SESSION['mail']);
 	if($mail['mail']!=$_SESSION['mail'])
 	{
-		include_once'../controleur/backconnexion.php';
+		include_once'../controleur/admin.php';
 	}
 	else
 	{
@@ -36,7 +36,7 @@ else{
 				delete_membre_groupe($case,'');
 				delete_leader_groupe($case,'');
 			}
-			include_once'../Back Office/backclient.php';
+			include_once'../controleur/admin.php';
 		}
 		if(isset($_GET['Groupe']) and $_GET['Groupe']==true){
 			include_once'../modele/delete_groupe.php';
@@ -52,7 +52,7 @@ else{
 				delete_leader_groupe('',$case);
 				delete_club_groupe('',$case);
 				delete_event($case);
-			}include_once'../Back Office/backclient.php';
+			}include_once'../controleur/admin.php';
 		}
 		if(isset($_GET['Groupe']) and $_GET['Groupe']=='Modif'){
 			include_once'../modele/modif_groupe.php';
@@ -65,7 +65,7 @@ else{
 				delete_sport($case);
 				delete_sport_groupe($case,'');
 			}
-			include_once'../Back Office/backclient.php';
+			include_once'../controleur/admin.php';
 		}
 		if(isset($_GET['Sport']) and $_GET['Sport']=='Modif'){
 			include_once'../modele/modif_sport.php';
@@ -83,7 +83,7 @@ else{
 			foreach($_POST['case'] as $case){
 				delete_post($case);
 			}
-		include_once'../vue/backclient.php';
+		include_once'../vue/admin.php';
 		}
 
 	}
