@@ -8,7 +8,8 @@ $Mdp='coucou';
 	$AdresseMail=htmlspecialchars($AdresseMail);
 	$Mdp=htmlspecialchars($Mdp);
 	function inscription_membre($AdresseMail,$Mdp){
-	include_once'/modele/connexion_sql.php';
+	//include_once'/modele/connexion_sql.php';
+	$bdd = new PDO('mysql:host=localhost;dbname=test_site_internet;charset=utf8', 'root', 'root');
 	$req = $bdd->prepare('INSERT INTO admin(adresse_mail,passe) 
 		VALUES(:adresse_mail,:passe)');
 	$req->execute(array(
