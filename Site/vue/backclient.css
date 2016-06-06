@@ -42,7 +42,7 @@ html, body {
 	line-height: 4em;
 	margin: auto;
 	margin-bottom: 3em;
-	margin-top: 1.2em;
+	margin-top: 0.8em;
 }
 
 .bo a {
@@ -55,7 +55,7 @@ html, body {
 	color: white;
 	height: 20em;
 	width: 90%;
-	top: 15em;
+	top: 18em;
 	left: 1.2em;
 	border-radius: 1em;
 	background-color: rgba(0,0,0,0.7);
