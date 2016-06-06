@@ -31,36 +31,32 @@
 				<h3 onclick="bascule('div1'); return false;">Membres</h3>
 				<div id='div1' style='display:none;'>
 					<p>LISTE DES MEMBRES :</p>
-					<h4>
 					<table>
-		    			<tbody>
-			    			<form method="post" action="../controleur/backclient.php?Membre=true">
-			    			<tr>
-							<?php
-							include_once'../modele/get_membres.php';
-							$Membres=get_membres('','');
-							$a=0;
+		    	
+		    			<form method="post" action="../controleur/backclient.php?Membre=true">
+		    			<input type="submit" value="Supprimer" />
+		    			<tr>
+						<?php
+						include_once'../modele/get_membres.php';
+						$Membres=get_membres('','');
+						$a=0;
 
-							foreach ($Membres as $Membre) {
-								?><td>
-								<input type="checkbox" name="case[]"  value='<?php echo $Membre['adresse_mail'] ?>' /><label for="case"><a><?php echo $Membre['adresse_mail']?></a>	</label>				
-							<?php
-							$a++;
-							if($a%5==0)
-								{
-									?>
-									</tr>
-									<tr>
-									<?php
-								}
+						foreach ($Membres as $Membre) {
+							?><td>
+							<input type="checkbox" name="case[]"  value='<?php echo $Membre['adresse_mail'] ?>' /><label for="case"><a><?php echo $Membre['adresse_mail']?></a>	</label>				
+						<?php
+						$a++;
+						if($a%5==0)
+							{
+								?>
+								</tr>
+								<tr>
+								<?php
 							}
-							?>
-							</tr>
-							<input type="submit" value="Supprimer" />
-							</form>
-						</tbody>
-						<tr>
-					</h4>
+						}
+						?>
+						</tr>
+						</form>
 		    		</table>
 				</div>
 			</div>
@@ -144,17 +140,20 @@
 				<div id='div4' style='display:none;'>
 					<p>MODERER LES MESSAGES :</p>
 					<form method="post" action="../controleur/backclient.php?Forum=true">
+					<input type="submit" value="Supprimer" />
+					<br><br>
 					<?php 
 					include'../modele/get_post.php';
 					$posts=get_post('','');
 					foreach ($posts as $post) {?>
 						<td>
 							<input type="checkbox" name="case[]"  value='<?php echo $post['id'] ?>' /><label for="case">
-							<?php echo $post['id'] ?></label></td>
+							<?php echo $post['id'] ?></label>
+						</td>
 					<?php
 					}
 					?>
-					<input type="submit" value="Supprimer" />
+					
 				</form>
 				</div>
 			</div>
@@ -164,12 +163,16 @@
 				<div id='div5' style='display:none;'>
 					<form method="post" action="../controleur/backclient.php?Aide=true">
 					<p>ADMINISTRER LA RUBRIQUE "AIDE" :</p>
-					<p>Administrer la rubrique "Aide" :</p><br>
-					<p>Ajouter une question :</p><br>
-					<textarea name="Question" rows="5" cols="100">Saisir une question ici.</textarea><br><br>
-					<p>Ajouter sa réponse :</p> <br>
-					<textarea name="Réponse" rows="7" cols="100">Saisir la réponse ici.</textarea><br><br>
-					<input type="submit" value="Ajouter">
+					<div id="quest">
+						<p>Ajouter une question :</p>
+						<textarea name="Question" placeholder="Saisir une question ici"></textarea>
+					</div>
+					<div id="rep">
+						<p>Ajouter sa réponse :</p>
+						<textarea name="Réponse" placeholder="Saisir la réponse ici"></textarea>
+					</div>
+					<br>
+					<input id="add" type="submit" value="Ajouter">
 				</form>
 				</div>
 			</div>
