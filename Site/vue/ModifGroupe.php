@@ -10,14 +10,11 @@
 		<?php include("../Header/HOMETOP.php"); ?>
 
 	    <div class="ModifGroupe">
-	    	<h1 style="text-align: center;">MODIFIE TON GROUPE: <?php echo $_GET['groupe']?></h1>
-	    	<form action='../controleur/Page_Personnelle_mon_groupe.php' method="post" enctype="multipart/form-data">
+	    	<h1 style="text-align: center;">MODIFIE TON GROUPE: <?php echo $_GET['groupe'] ?></h1>
+	    	<form action='../controleur/Page_Personnelle_mon_groupe.php?groupe=<?php echo $_GET['groupe'] ?>' method="post" enctype="multipart/form-data">
 	    		<input type="text" name="Codepostal" placeholder="Votre groupe déménage ? Entre un nouveau code postal" />
 	    		<input type="text" name="Description" placeholder="Entre une nouvelle description de groupe" />
 
-	    	</br><h4> Importer l'image de votre groupe(Max 8Mo)</h4>
-	    		<input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
-	    		<input type="file" name="image_groupe" placeholder="Entre une nouvelle image de groupe" />
 	    		<br /><h3>Supprimer un membre du groupe :</h3>
 	    		<table>
 	    			<th>

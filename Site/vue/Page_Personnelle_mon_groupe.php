@@ -15,7 +15,9 @@
 
 			foreach ($leader as $lead) {
 				if($lead['membre']==$_SESSION['mail'] and $lead['groupe']==$Groupe){?>
-					<a href="../controleur/ModifGroupe.php?groupe=<?php echo $Groupe ?>">Modifie ton Groupe</a><br /><br /> <?php
+					<a href="../controleur/ModifGroupe.php?groupe=<?php echo $Groupe ?>">Modifie ton Groupe</a><br /><br /> 
+					<a href="../controleur/ModifGroupe.php?groupe=<?php echo $Groupe ?>&Del= true">Supprime ton Groupe</a><br /><br />
+					<?php
 				}
 			}
 				?>

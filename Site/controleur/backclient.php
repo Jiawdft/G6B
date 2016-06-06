@@ -1,14 +1,5 @@
 <?php
-/*
-if(!isset($_SESSION['mail']))
-{
-session_start();
-}
-$Admin="o@gmail.com";
-if($_SESSION['mail']!=$Admin){
-	include_once('../controleur/Accueil.php');
-}else{
-*/
+
 if(!isset($_SESSION['mail'])){
 session_start();
 }
@@ -60,7 +51,7 @@ else{
 		}
 		if(isset($_GET['Groupe']) and $_GET['Groupe']=='Modif'){
 			include_once'../modele/modif_groupe.php';
-			modif_groupe(urldecode($_POST['groupe']),'',$_POST['description']);
+			modif_groupe($_POST['groupe'],'',$_POST['description']);
 			include_once('../modele/langue.php');
 			include_once'../vue/backclient.php';
 		}

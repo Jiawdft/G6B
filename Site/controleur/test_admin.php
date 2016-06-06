@@ -12,6 +12,7 @@ if(isset($_SESSION['mail']))
 		{
 			if($_SESSION['mail']==$membre['adresse_mail'])
 			{
+			
 				include_once'../vue/backclient.php';
 				break;
 			}
@@ -34,7 +35,6 @@ else
 	{
 		if(($_POST['mail']=="" OR $_POST['passe']==""))
 		{
-
 		$erreur="Veuillez saisir votre adresse mail";
 			include('../controleur/admin.php');
 		}
@@ -51,8 +51,13 @@ else
 					break;
 				}
 			}
+			if($_POST['mail']!=$membre['adresse_mail']){
+				$erreur='Mail incorrect';
+				include_once('../controleur/admin.php');
+			}
 			if(!password_verify($_POST['passe'],$membre['passe'])){
 			$erreur='Mot de passe incorrect';
+		
 			include_once('../controleur/admin.php');
 			}
 

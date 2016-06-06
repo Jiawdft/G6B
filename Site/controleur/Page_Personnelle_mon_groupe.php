@@ -3,6 +3,7 @@ if(!isset($_SESSION['mail']))
 {
 session_start();
 }
+include_once('../modele/langue.php');
 if($_SESSION['mail']=='' or !isset($_SESSION['mail']))
 {
 	include_once'../controleur/Accueil.php';
@@ -18,20 +19,12 @@ if(!isset($_GET['groupe']) and !isset($_GET['new']) and (!isset($_POST['Descript
 	include'../controleur/Accueil.php';
 }
 
-elseif(isset($_POST['Description']) or isset($_POST['Codepostal'])or isset($_FILES['image_groupe']['name'])or isset($_POST['case']) or isset($_POST['radio']))
+elseif(isset($_POST['Description']) or isset($_POST['Codepostal'])or isset($_POST['case']) or isset($_POST['radio']))
 {
 	if(isset($_POST['Description']) or isset($_POST['Codepostal']))
 	{
-		include'../modele/modif_groupe.php';
-		modif_groupe($_SESSION['groupe'],$_POST['Codepostal'],$_POST['Description']);
-	}
-	include_once'../modele/upload.php';
-	if(isset($_FILES['image_groupe']))
-	{
-		if(upload('image_groupe','../Images',10485760,array('png','gif','jpg','jpeg'))==false)
-		{
-			$erreur= 'Problème lors de l upload';
-		}
+		include_once'../modele/modif_groupe.php';
+		modif_groupe($_GET['groupe'],$_POST['Codepostal'],$_POST['Description']);
 	}
 	if(isset($_POST['case']))
 	{
@@ -50,9 +43,10 @@ elseif(isset($_POST['Description']) or isset($_POST['Codepostal'])or isset($_FIL
 	}
 include'../modele/get_membres_groupes.php';
 include'../modele/get_membres.php';
-$mails= get_membres_groupes('',$_SESSION['groupe']);
+$mails= get_membres_groupes('',$_GET['groupe']);
 $membres=get_membres('');
-$Groupe=$_SESSION['groupe'];
+$Groupe=$_GET['groupe'];
+$club=get_groupe_club($Groupe,'');
 include'../vue/Page_Personnelle_mon_groupe.php';
 }
 
@@ -80,18 +74,18 @@ elseif(isset($_GET['new']) and $_GET['new']==true)
 }
 else
 {
-include'../modele/get_membres_groupes.php';
-include'../modele/get_membres.php';
-$mails= get_membres_groupes('',$_GET['groupe']);
-$membres=get_membres('');
-if ($_SESSION['mail']!='') {
-	$deja_membre=get_membres_groupes($_SESSION['mail'],$_GET['groupe']);
-}
-$Groupe=$_GET['groupe'];
-$club=get_groupe_club($Groupe,'');
-include'../vue/Page_Personnelle_mon_groupe.php';
+	include'../modele/get_membres_groupes.php';
+	include'../modele/get_membres.php';
+	$mails= get_membres_groupes('',$_GET['groupe']);
+	$membres=get_membres('');
+		if ($_SESSION['mail']!='') {
+			$deja_membre=get_membres_groupes($_SESSION['mail'],$_GET['groupe']);
+		}
+	$Groupe=$_GET['groupe'];
+	$club=get_groupe_club($Groupe,'');
+	include'../vue/Page_Personnelle_mon_groupe.php';
 }
 
-include_once('../modele/langue.php');
+
 
 ?>

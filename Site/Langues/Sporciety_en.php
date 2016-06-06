@@ -14,7 +14,7 @@ if (!defined('Partenaires')){define("Partenaires", "Premium Partners");}
 
 //////////////////////////////////////////// ACCUEIL ////////////////////////////////////////////
 
-if($url=='/GitHub/G6B/Site/controleur/Accueil.php' or $url=='/GitHub/G6B/Site/controleur/Session.php'){
+
 if (!defined('Ins')){define("Ins", "Register");}
 if (!defined('Sport')){define("Sport", "Sports");}
 if (!defined('CP')){define("CP", "Postal Code");}
@@ -24,7 +24,7 @@ if (!defined('Athlé')){define("Athlé", "ATHLETICS");}
 if (!defined('Nata')){define("Nata", "SWIMMING");}
 if (!defined('PLAN')){define("PLAN","MAP");}
 if (!defined('DGROUPES')){define("DGROUPES", "LAST GROUPS");}
-}
+
 
 //////////////////////////////////////////// FORUM ////////////////////////////////////////////
 

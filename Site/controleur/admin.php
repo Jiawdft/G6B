@@ -1,4 +1,10 @@
 <?php
+if(isset($_POST['mail']) or isset($_POST['passe'])){
+	session_destroy();
+}
+if(isset($_SESSION['mail'])){
+	session_destroy();
+}
 session_start();
 session_destroy();
 
