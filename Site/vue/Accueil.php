@@ -22,7 +22,6 @@
 		<div class="search">
 			<ul>
 				<form action='../controleur/Fichesporttype.php' method="post">
-			
 				<select name="choix">
 				    <option value=''><?php echo Sport ?></option>
 				    <?php
