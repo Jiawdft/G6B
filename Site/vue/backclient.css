@@ -14,7 +14,7 @@ html, body {
 
 .bo {
     height: 15em;
-    width: 86%;
+    width: 90%;
     margin: auto;
     margin-top: 5em;
 }
@@ -59,7 +59,7 @@ html, body {
 .bo #div1, #div2, #div3, #div4, #div5, #div6 {
 	position: absolute;
 	color: white;
-	width: 87.5%;
+	width: 84%;
 	top: 45%;
 	left: 0%;
 	border-radius: 1em;
