@@ -12,11 +12,11 @@
 
     <div class="slider">
 			<figure>
-	    		<img src="../Images/Wallpaper/get_fit.jpg">
 	    		<img src="../Images/Wallpaper/get_fit1.jpg">
-	    		<img src="../Images/Wallpaper/get_fit.jpg">
 	    		<img src="../Images/Wallpaper/get_fit1.jpg">
-	    		<img src="../Images/Wallpaper/get_fit.jpg">
+	    		<img src="../Images/Wallpaper/get_fit1.jpg">
+	    		<img src="../Images/Wallpaper/get_fit1.jpg">
+	    		<img src="../Images/Wallpaper/get_fit1.jpg">
 	  		</figure>
   	</div>
 
