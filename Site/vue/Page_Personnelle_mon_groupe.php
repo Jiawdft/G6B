@@ -22,7 +22,7 @@
 			<?php
 			if(isset($deja_membre)){
 			?>
-				<a href="../controleur/quitter_groupe.php?groupe=<?php echo $_GET['groupe']; ?>">Quitter le groupe</a>
+				<a id="pad_l" href="../controleur/quitter_groupe.php?groupe=<?php echo $_GET['groupe']; ?>">Quitter le groupe</a>
 			<?php
 			}
 			 ?>
@@ -51,21 +51,21 @@
 					<h3>Le Club :</h3>
 					<table>
 						<tr>
-							<th>
-								<ul>
-									<?php
-									foreach($club as $clubs){
-											?><li><a href="../controleur/Club.php?club=<?php echo $clubs['club']?>" ><?php echo $clubs['club']?></li><?php
-										}
-									?>
-								</ul>
-							</th>
+							<?php
+								foreach($club as $clubs){
+								?>
+								<td>
+								<li><a href="../controleur/Club.php?club=<?php echo $clubs['club']?>" ><?php echo $clubs['club']?></li>
+								</td>
+								<?php
+									}
+								?>
 						</tr>
 					</table>
 				</div>
 				<div id="cal">
 					<h3>Le Calendrier :</h3>
-					<p><a href="../controleur/new_event.php?groupe=<?php echo $_GET['groupe'] ?>">Créer un événement</a></p>
+					<p id="pad_l2"><a href="../controleur/new_event.php?groupe=<?php echo $_GET['groupe'] ?>">Créer un événement</a></p>
 					<table>
 						<tr>
 							<th>

@@ -22,9 +22,16 @@ body {
     font-weight: bold;
 }
 
+#pad_l {
+    padding-left: 12%; 
+}
+
+#pad_l2 {
+    padding-left: 14%;
+    padding-top: 1em;
+}
+
 .mygroups a {
-    clear: all;
-    padding-left: 12%;
     color: black;
     font-size: 0.9em;
     font-weight: 100;
@@ -77,11 +84,17 @@ body {
 #club table {
     height: 10em;
     width: 35em;
+    padding: 0.5em;
+}
+
+#club td {
+    width: 50em;
 }
 
 #cal table {
     height: 14.5em;
     width: 35em;
+    padding: 0.5em;
 }
 
 #club, #cal {
