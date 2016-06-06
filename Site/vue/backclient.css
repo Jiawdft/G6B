@@ -14,11 +14,11 @@ html, body {
 
 .bo div{
 	display: inline-block;
-	margin-right: 0.5em;
+	margin-right: 3em;
 }
 
 .bo {
-	margin-left: 1em;
+	margin-left: 2em;
 }
 
 .bo div div {

@@ -26,7 +26,6 @@
 			   }
 			}
 			</script>
-
 			<h1> Page Administrateur </h1>
 			<div id="Membres">
 				<h3 onclick="bascule('div1'); return false;">Membres</h3>
