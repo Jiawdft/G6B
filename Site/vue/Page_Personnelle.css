@@ -6,9 +6,17 @@
     display: none 
 }
 
-body {
+html {
     font-family: Helvetica;
     background-color: rgba(150,150,150,0.7);
+}
+
+html h3 {
+    font-weight: 400;
+}
+
+#wrap {
+    margin-left: 2.69%;
 }
 
 .user {
@@ -22,12 +30,12 @@ body {
 .user img {
     position: absolute;
     top: 7.5em;
-    left: 3em;
+    left: 5.3em;
 }
 
 #uinfo table {
     display: inline-block;
-    border: 0.2em solid black;
+    border: 0.1em solid black;
     margin-left: 7em;
     height: 8em;
     width: 21em;
@@ -53,7 +61,7 @@ body {
 .mygroups table {
     display: inline-block;
     margin-top: 2em;
-    border: 0.2em solid black;
+    border: 0.1em solid black;
     height: 18em;
     width: 30em;
     padding: 0.5em;
@@ -68,18 +76,16 @@ body {
 }
 
 .mygroups li {
-    margin-left: -1em;
-}
-
-#m, #c {
-    padding-left: 10%;
+    margin-left: -2em;
+    list-style: none;
+    padding: 0.3em;
+    font-weight: 300;
 }
 
 .more {
     position: absolute;
     top: 5.1em;
-    left: 44em;
-
+    left: 52%;
 }
 
 .more div {
@@ -89,7 +95,7 @@ body {
 .more table {
     display: inline-block;
     margin-top: 2em;
-    border: 0.2em solid black;
+    border: 0.1em solid black;
     height: 13em;
     width: 30em;
     overflow: auto;
@@ -99,6 +105,12 @@ body {
     margin-left: -8em;
     font-size: 1.5em;
     list-style: none;
+    padding: 0.3em;
+    font-weight: 300;
+}
+
+.more a {
+    text-decoration: none;
 }
 
 #p, #f {
