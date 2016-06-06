@@ -14,9 +14,9 @@ if (!defined('Partenaires')){define("Partenaires", "Partenaires Premium");}
 
 //////////////////////////////////////////// ACCUEIL ////////////////////////////////////////////
 
-if($url=='/GitHub/G6B/Site/controleur/Accueil.php'){
+if($url=='/GitHub/G6B/Site/controleur/Accueil.php' or $url=='/GitHub/G6B/Site/controleur/Session.php'){
 if (!defined('Ins')){define("Ins", "Je m'inscris");}
-if (!defined('CP')){define("Sport", "Les Sports");}
+if (!defined('Sport')){define("Sport", "Les Sports");}
 if (!defined('CP')){define("CP", "Code Postal");}
 if (!defined('Rechercher')){define("Rechercher", "Rechercher");}
 if (!defined('Boxe')){define("Boxe", "BOXE");}
@@ -28,7 +28,7 @@ if (!defined('DGROUPES')){define("DGROUPES", "DERNIERS GROUPES");}
 
 //////////////////////////////////////////// FORUM ////////////////////////////////////////////
 
-if($url=='/GitHub/G6B/Site/controleur/Forum.php'){
+if($url=='/GitHub/G6B/Site/controleur/Forum.php' or $url=='/GitHub/G6B/Site/controleur/Post.php'){	
 if (!defined('Groupes')){define("Groupes", "Groupes");}
 }
 
@@ -53,7 +53,7 @@ if (!defined('Contacter')){define("Contacter", "Contactez-nous");}
 
 //////////////////////////////////////////// CONNEXION ////////////////////////////////////////////
 
-if($url=='/GitHub/G6B/Site/controleur/Connexion.php'){
+if($url=='/GitHub/G6B/Site/controleur/Connexion.php' or $url=='/GitHub/G6B/Site/controleur/Session.php'){
 if (!defined('Connexion')){define("Connexion", "CONNECTEZ-VOUS");}
 if (!defined('Mail')){define("Mail", "Adresse Mail");}
 if (!defined('Pass')){define("Pass", "Mot de Passe");}
@@ -71,6 +71,10 @@ if (!defined('Ddn')){define("Ddn", "Date de Naissance (JJMMAAAA)");}
 if (!defined('Tel')){define("Tel", "Numéro de Téléphone");}
 if (!defined('Adres')){define("Adres", "Adresse");}
 if (!defined('Ville')){define("Ville", "Ville");}
+if (!defined('CP')){define("CP", "Code Postal");}
+if (!defined('Mail')){define("Mail", "Adresse Mail");}
+if (!defined('Pass')){define("Pass", "Mot de Passe");}
+
 }
 
 ?>

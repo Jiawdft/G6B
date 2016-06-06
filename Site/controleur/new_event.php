@@ -4,7 +4,7 @@ if(!isset($_SESSION['mail']))
 	session_start();
 }
 
-if($_POST['resultat_nom_event']!=""){
+if(isset($_POST['resultat_nom_event']) and $_POST['resultat_nom_event']!=""){
  	include_once'../modele/new_event.php';
 	new_event($_POST['resultat_nom_event'],$_POST['resultat_description'],$_POST['resultat_date'],$_POST['resultat_adresse'],$_GET['groupe'],$_SESSION['mail']);
 

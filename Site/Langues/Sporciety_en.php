@@ -14,9 +14,9 @@ if (!defined('Partenaires')){define("Partenaires", "Premium Partners");}
 
 //////////////////////////////////////////// ACCUEIL ////////////////////////////////////////////
 
-if($url=='/GitHub/G6B/Site/controleur/Accueil.php'){
+if($url=='/GitHub/G6B/Site/controleur/Accueil.php' or $url=='/GitHub/G6B/Site/controleur/Session.php'){
 if (!defined('Ins')){define("Ins", "Register");}
-if (!defined('CP')){define("Sport", "Sports");}
+if (!defined('Sport')){define("Sport", "Sports");}
 if (!defined('CP')){define("CP", "Postal Code");}
 if (!defined('Rechercher')){define("Rechercher", "Search");}
 if (!defined('Boxe')){define("Boxe", "BOXING");}
@@ -28,14 +28,14 @@ if (!defined('DGROUPES')){define("DGROUPES", "LAST GROUPS");}
 
 //////////////////////////////////////////// FORUM ////////////////////////////////////////////
 
-if($url=='/GitHub/G6B/Site/controleur/Forum.php'){
+if($url=='/GitHub/G6B/Site/controleur/Forum.php' or $url=='/GitHub/G6B/Site/controleur/Post.php'){	
 if (!defined('Groupes')){define("Groupes", "Groups");}
 }
 
 //////////////////////////////////////////// POST ////////////////////////////////////////////
 
 if($url=='/GitHub/G6B/Site/controleur/Post.php'){
-if (!defined('Select')){define("Select a ".$_GET['sujet']." to see relative posts");}
+if (!defined('Select')){define("Select","Select a ".$_GET['sujet']." to see relative posts");}
 if (!defined('Répondre')){define("Répondre", "Answer");}
 if (!defined('Réponse')){define("Réponse", "Your Answer :");}
 if (!defined('Poster')){define("Poster", "Post");}
@@ -53,7 +53,7 @@ if (!defined('Contacter')){define("Contacter", "Contact us");}
 
 //////////////////////////////////////////// CONNEXION ////////////////////////////////////////////
 
-if($url=='/GitHub/G6B/Site/controleur/Connexion.php'){
+if($url=='/GitHub/G6B/Site/controleur/Connexion.php' or $url=='/GitHub/G6B/Site/controleur/Session.php'){
 if (!defined('Connexion')){define("Connexion", "LOG IN");}
 if (!defined('Mail')){define("Mail", "Mail Address");}
 if (!defined('Pass')){define("Pass", "Password");}
@@ -72,6 +72,9 @@ if (!defined('Ddn')){define("Ddn", "Birth Date");}
 if (!defined('Tel')){define("Tel", "Phone Number");}
 if (!defined('Adres')){define("Adres", "Address");}
 if (!defined('Ville')){define("Ville", "City");}
+if (!defined('CP')){define("CP", "Postal Code");}
+if (!defined('Mail')){define("Mail", "Mail Address");}
+if (!defined('Pass')){define("Pass", "Password");}
 }
 
 ?>
