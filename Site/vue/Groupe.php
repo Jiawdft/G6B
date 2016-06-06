@@ -51,6 +51,7 @@
   			</div>
 
   			<div id="event">
+          <a id="Create_ev" href="../controleur/new_event.php?groupe=<?php echo $_GET['groupe'] ?>">Créer un événement</a>
           <div id="l_event">
             <?php
           foreach($event as $ev) {
