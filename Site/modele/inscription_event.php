@@ -8,7 +8,7 @@ function inscription_event($mail,$id){
 		VALUES(:mail,:id)');
 	$req->execute(array(
 	'mail' => $mail,
-	'id' => $id,
+	'id' => $id
 	));
 
 }
