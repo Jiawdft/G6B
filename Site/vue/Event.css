@@ -6,18 +6,18 @@
 	display: inline-block;
 }
 
-#list_event {
+#l_event {
 	margin: 2em 2em;
 }
 
-#list_event a {
+#l_event a {
 	text-decoration: none;
 	color: black;
 	font-size: 2em;
   	font-weight: 200;
 }
 
-#detail {
+#e_infos {
 	float: right;
 	margin-top: 5em;
 	margin-right: 2em;
@@ -29,18 +29,31 @@
 	text-align: center;
 }
 
-#detail h3 {
+#e_infos h3 {
   padding: 0.5em;
   font-weight: 300;
 }
 
-#detail h1 {
+#e_infos h1 {
   font-weight: 300;
   text-decoration: underline;
   padding: 0.8em;
   padding-bottom: 2em;
 }
 
-#affiche_description div {
-	display: block;
+#inline {
+	display: inline-block;
+}
+
+#ins_ev {
+	float: right;
+	color: white;
+	text-decoration: none;
+	border: 0.2em solid #31313a;
+	padding: 0.5em;
+	border-radius: 0.5em;
+}
+
+#affiche_description div{
+	display:block;
 }
