@@ -47,16 +47,16 @@ body {
 .members table {
     display: inline-block;
     border: 0.2em solid black;
-    margin: 2em 0 0 2em;
-    height: 29.2em;
-    width: 20em;
+    margin-top: 1em;
+    height: 25em;
+    width: 25em;
     padding: 0.5em;
 }
 
 .more {
     position: absolute;
-    left: 42%;
-    top: 8%;
+    left: 50%;
+    top: 10%;
 }
 
 .more div {
@@ -76,18 +76,19 @@ body {
 
 #club table {
     height: 10em;
-    width: 20em;
+    width: 35em;
 }
 
 #cal table {
-    height: 20em;
-    width: 45em;
+    height: 14.5em;
+    width: 35em;
 }
 
 #club, #cal {
     padding-top: 5%;
 }
 
-#club {
-    padding-left: 24%;
+#cal h3 {
 }
+
+

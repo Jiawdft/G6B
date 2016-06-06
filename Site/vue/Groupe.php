@@ -84,10 +84,17 @@
                     document.getElementById('affiche_description').innerHTML=document.getElementById('affiche_description').innerText;
                 </script>
                 <?php
-                if (isset($deja_event) and $deja_event=='') {
-                  ?>
-                  <a id="ins_ev" href='../controleur/inscription_event.php?groupe=<?php echo $_GET['groupe'] ?>&id=<?php echo $ev['id'] ?>'>Inscris toi à <?php echo $_GET['event']; ?></a>
-                  <?php
+                if (isset($_SESSION['mail'])) {
+                    if (isset($deja_event) and $deja_event=='') {
+                      ?>
+                      <a id="ins_ev" href='../controleur/inscription_event.php?groupe=<?php echo $_GET['groupe'] ?>&id=<?php echo $ev['id'] ?>'>Inscris toi à <?php echo $_GET['event']; ?></a>
+                      <?php
+                    }
+                    else {
+                        ?>
+                        <a id="desins_ev" href='../controleur/desinscrire_event.php?groupe=<?php echo $_GET['groupe'] ?>&id=<?php echo $ev['id'] ?>'>Se désinscrire de <?php echo $_GET['event']; ?></a>
+                        <?php
+                    }
                 }
               }
             }

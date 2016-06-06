@@ -136,7 +136,8 @@ html {
 	display: inline-block;
 }
 
-#ins_ev {
+#ins_ev,
+#desins_ev {
 	float: right;
 	color: white;
 	text-decoration: none;
@@ -183,4 +184,3 @@ html {
 .localisation iframe {
 	width: 40%;
 }
-
