@@ -61,7 +61,7 @@ if (!defined('Pins')){define("Pins", "Pas encore inscrit ? Inscris toi !");}
 }
 //////////////////////////////////////////// INSCRIPTION ////////////////////////////////////////////
 
-if($url=='/GitHub/G6B/Site/controleur/Inscription.php'){
+if($url=='/GitHub/G6B/Site/controleur/Inscription.php' or $url=='/GitHub/G6B/Site/controleur/Accueil.php' ){
 if (!defined('Inscris')){define("Inscris", "INSCRIS-TOI");}
 if (!defined('Hom')){define("Hom", "Homme");}
 if (!defined('Fem')){define("Fem", "Femme");}

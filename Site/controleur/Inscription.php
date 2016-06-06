@@ -1,9 +1,6 @@
 <?php
 
-if(!isset($_SESSION['mail']))
-{
-session_start();
-}
+
 include_once('../modele/langue.php');
 if(isset($_GET['inscription']) and $_GET['inscription']==true)
 {
@@ -40,19 +37,19 @@ if(isset($_GET['inscription']) and $_GET['inscription']==true)
 			else
 			{
 				$erreur='Mot de passe invalide 6 caractères minimum';
-				include'../controleur/Inscription.php';
+				include'../vue/Inscription.php';
 			}	
 		}
 		else
 		{
 			$erreur='Adresse mail invalide';
-			include'../controleur/Inscription.php';
+			include'../vue/Inscription.php';
 		}
 	}
 	else
 	{
 		$erreur='informations incomplètes';
-		include'../controleur/Inscription.php';
+		include'../vue/Inscription.php';
 	}
 
 }else{
