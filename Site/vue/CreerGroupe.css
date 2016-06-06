@@ -8,23 +8,23 @@
 
 body {
     font-family: Helvetica;
-    background-image: url("../Images/Wallpaper/Connexion.jpg");
+    background-image: url("../Images/Wallpaper/PageSport.jpg");
     background-size: cover;
 }
 
 .Creation {
     height: 80%;
     width: 60%;
-    border-radius: 5%;
+    border-radius: 1em;
     padding: 1em;
     background-color: rgba(0,0,0,0.5);
-    margin: 1% auto;
+    margin: 2% auto;
 }
 
 .Creation h1 {
     color: #ffffff;
     font-size: 2em;
-    font-weight: bold;
+    font-weight: 500;
 }
 .Creation h4{
     color:#ffffff;
@@ -63,7 +63,7 @@ body {
 }
 
 .Creation textarea {
-    width: 100%;
+    width: 95%;
     height: 10em;
     margin-top: 1em;
     border-radius: 1em;
@@ -71,6 +71,11 @@ body {
     background-color: white;
     resize: none;
     font-size: 17px;
+    padding: 1em;
+}
+
+#txtarea:focus {
+    outline: none;
 }
 
 .Creation input[type="submit"] {
@@ -88,8 +93,22 @@ body {
 }
 
 .Creation a {
-    color: grey;
     text-decoration: none;
+}
+
+.Creation p {
+    color: white;
+    font-weight: 300;
+}
+
+.Creation select {
+    color: white;
+    font-weight: 200;
+}
+
+#plh::-webkit-input-placeholder {
+  color: white;
+  font-weight: 300;
 }
 
 

@@ -10,9 +10,9 @@
 		<?php include("../Header/HOMETOP.php"); ?>
 
 	    <div class="Creation">
-	    	<h1 style="text-align: center;">CREER UN GROUPE</h1>
+	    	<h1 style="text-align: center;">CRÉER UN GROUPE</h1>
 	    	<form action='../controleur/Page_Personnelle_mon_groupe.php?new=true' method="post">
-	    		<input type="text" name="nom_groupe" placeholder="Nom du Groupe" />
+	    		<input id="plh" type="text" name="nom_groupe" placeholder="Nom du Groupe" />
 				<select name="choix">
 			    <option value=''>Sport</option>
 			    <?php
@@ -27,8 +27,8 @@
 				?>
 				</select>
 					<a href="../controleur/Add_Sport.php" ><p>Ajouter un sport<p></a>
-		    		<textarea type="text" name="description" placeholder="Description du groupe"></textarea>
-		    		<input type="text" name="code_postal" placeholder="Code Postal" />
+		    		<textarea id="txtarea" type="text" name="description" placeholder="Description du groupe"></textarea>
+		    		<input id="plh" type="text" name="code_postal" placeholder="Code Postal" />
 			    <?php
 			    if(isset($erreur) and $erreur!=""){?>
 			    	 <h4><?php echo $erreur?></h4><?php
