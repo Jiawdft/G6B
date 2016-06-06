@@ -1,23 +1,31 @@
 <?php
 session_start();
-if(isset($_SESSION['mail'])){
-	include_once'../modele/get_admin.php';
-	$membres=get_admin('');
-		foreach($membres as $membre)
-		{
-			if($_SESSION['mail']==$membre['adresse_mail'])
+if (!isset($_POST['mail'])) {
+
+
+	if(isset($_SESSION['mail']))
+	{
+		include_once'../modele/get_admin.php';
+		$membres=get_admin('');
+			foreach($membres as $membre)
 			{
-				include_once'../vue/backclient.php';
-				break;
+				if($_SESSION['mail']==$membre['adresse_mail'])
+				{
+					include_once'../vue/backclient.php';
+					break;
+				}
 			}
-		}
-		if($_SESSION['mail']!=$membre['adresse_mail']){
-			$erreur='insuffisant';
-			include_once('../controleur/backconnexion.php');
+			if($_SESSION['mail']!=$membre['adresse_mail'])
+			{
+				$erreur='droit insuffisant connectez vous avec un compte administrateur';
+				include_once('../controleur/backconnexion.php');
 
-		}
+			}
+	}
 
-}else{
+}
+else
+{
 
 	if(!isset($_POST['mail']) OR !isset($_POST['passe']))
 	{
