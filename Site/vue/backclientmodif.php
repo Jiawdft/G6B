@@ -20,7 +20,7 @@
 	    		<input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
 	    		<input type="file" name="image_groupe" placeholder="Entre une nouvelle image de groupe" /></br>
 				-->
-	    		<input type="hidden"  name="groupe" value=<?php echo $_GET['groupe']) ?> />
+	    		<input type="hidden"  name="groupe" value=<?php echo $_GET['groupe'] ?> />
 	    		</br></br>
 				<input type="submit" value="Modifier">
 			</form>
