@@ -73,7 +73,7 @@
 		<div class="Posts" >
 			<h1><?php echo strtoupper($_GET['sujet']) ?>S</h1>
 			<div id="p">
-				<?php	
+				<?php
 					if(isset($_GET['sujet']) and isset($_GET['sous_sujet'])) {
 						?>
 						<h3><?php echo $_GET['sous_sujet'] ?></h3>
@@ -83,7 +83,7 @@
 						<div id="divacacher" style="display:none;">
 							<p><?php echo Réponse ?></p>
 								<form name="form" action='../controleur/Post.php?sujet=<?php echo $_GET['sujet']?>&sous_sujet=<?php echo $_GET['sous_sujet']?>' method="post">
-									
+
 									<input type="button" value="G" style="font-weight:bold;" onclick="commande('bold','','bouton_bold');" id="bouton_bold"/>
 									<input type="button" value="I" style="font-style:italic;" onclick="commande('italic','','bouton_italic');" id="bouton_italic"/>
 									<input type="button" value="S" style="text-decoration:underline;" onclick="commande('underline','','bouton_underline');" id="bouton_underline"/>
@@ -91,15 +91,16 @@
 									<div id="editeur_description" name="editeur_description" contentEditable ></div>
 
 									<input type="hidden" name="resultat" id="resultat">
-									
+
 									<input type="submit" onclick="resultat_post();" value="<?php echo Poster ?>" >
-									
+
 								</form>
 
 						</div>
 						<?php
 						include'../modele/get_post.php';
 						$posts=get_post($_GET['sujet'],$_GET['sous_sujet']);
+						$compteur=0;
 						foreach($posts as $post) {
 						?>
 						<div id="ligne"></div>
@@ -109,12 +110,16 @@
 									<p><?php echo $post['auteur'].'</br>'.$post['date']; ?></p>
 								</td>
 								<td id="right">
-									<p><?php echo $post['post'] ?></p>
+									<p class="affiche_resultat"><?php echo $post['post'] ?></p>
+									<script type="text/javascript">
+										document.getElementsByClassName('affiche_resultat')[<?php echo $compteur ?>].innerHTML=document.getElementsByClassName('affiche_resultat')[<?php echo $compteur ?>].innerText
+									</script>
 								</td>
 							</tr>
 						</table>
 						<br />
 						<?php
+							$compteur=$compteur+1;
 						}
 					}
 					else {
