@@ -3,7 +3,7 @@ function modif_groupe($Nom,$CodePostal,$Info){
 	$Nom=htmlspecialchars($Nom);
 	$CodePostal=(int) $CodePostal;
 	$Info=htmlspecialchars($Info);	
-	include_once'connexion_sql.php';
+	include'connexion_sql.php';
 	if (!isset($CodePostal)or $CodePostal==''){
 			$req = $bdd->prepare('UPDATE groupe SET information = :information WHERE groupe =:groupe');
 			$req->execute(array(

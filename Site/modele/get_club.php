@@ -3,7 +3,7 @@ function get_club($Nom,$codepostal)
 {	
 	$Nom=htmlspecialchars($Nom);
 
-	include_once'connexion_sql.php';
+	include'connexion_sql.php';
 	if($Nom=='' and $codepostal=='')
 	{
 		$reponse = $bdd->query('SELECT * FROM club ORDER BY nom');

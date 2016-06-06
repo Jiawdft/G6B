@@ -6,7 +6,7 @@ function modif_event($ID,$Nom,$Description,$Date,$Adresse){
 	$Description=htmlspecialchars($Description);
 	$Date=htmlspecialchars($Date);
 	$Adresse=htmlspecialchars($Adresse);
-	include_once'connexion_sql.php';
+	include'connexion_sql.php';
 	if(isset($Nom)and $Nom!=''){
 		$req = $bdd->prepare('UPDATE event SET nom = :nom WHERE id =:ID');
 			$req->execute(array(

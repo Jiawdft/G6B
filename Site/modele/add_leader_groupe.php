@@ -2,7 +2,7 @@
 function add_leader_groupe($Membre,$Groupe){
 	$Sport=htmlspecialchars($Membre);
 	$Groupe=htmlspecialchars($Groupe);
-	include_once'connexion_sql.php';
+	include'connexion_sql.php';
 	$req = $bdd->prepare('INSERT INTO groupe_leader(membre,groupe) 
 		VALUES(:membre,
 			:groupe)');

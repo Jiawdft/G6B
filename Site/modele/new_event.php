@@ -5,7 +5,7 @@ function new_event($nom,$description,$date,$adresse,$groupe,$createur){
 	$groupe=htmlspecialchars($groupe);
 	$adresse=htmlspecialchars($adresse);
 	$createur=htmlspecialchars($createur);
-	include_once'../modele/connexion_sql.php';
+	include'../modele/connexion_sql.php';
 	$req = $bdd->prepare('INSERT INTO event(nom,description,date,adresse,groupe,createur)
 		VALUES(:nom,:description,:date,:adresse,:groupe,:createur)');
 	$req->execute(array(

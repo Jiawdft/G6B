@@ -3,7 +3,7 @@ function add_sport_groupe($Sport,$Groupe){
 	$Sport=htmlspecialchars($Sport);
 	$Groupe=htmlspecialchars($Groupe);
 	
-	include_once'connexion_sql.php';
+	include'connexion_sql.php';
 	$req = $bdd->prepare('INSERT INTO sport_groupe(sport,groupe) 
 		VALUES(:sport,
 			:groupe)');

@@ -4,7 +4,7 @@ function inscription_groupe($Nom,$CodePostal,$Info){
 	$CodePostal=(int) $CodePostal;
 	$Info=htmlspecialchars($Info);
 	
-	include_once'connexion_sql.php';
+	include'connexion_sql.php';
 	$req = $bdd->prepare('INSERT INTO groupe(groupe,information, codepostal) 
 		VALUES(:groupe,:information,:codepostal)');
 $req->execute(array(
