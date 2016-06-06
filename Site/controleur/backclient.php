@@ -43,7 +43,7 @@ else{
 				delete_membre_groupe('',$case);
 				delete_leader_groupe('',$case);
 				delete_club_groupe('',$case);
-				delete_event($case);
+				delete_event_groupe($case);
 			
 			}
 			include_once('../modele/langue.php');

@@ -16,4 +16,12 @@ function clean_membre_event($id){
 		'id' => $id,
 	));
 }
+function delete_event_groupe($Id){
+	$Id=(int)$Id;
+	include'connexion_sql.php';
+	$req = $bdd->prepare('DELETE FROM event WHERE groupe =:groupe');
+		$req->execute(array(
+			'groupe' => $Id
+	));
+	}
 ?>

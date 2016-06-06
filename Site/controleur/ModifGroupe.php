@@ -20,8 +20,7 @@ if(isset($_GET['groupe']) and isset($_GET['Del'])){
 		delete_membre_groupe('',$_GET['groupe']);
 		delete_leader_groupe('',$_GET['groupe']);
 		delete_club_groupe('',$_GET['groupe']);
-		delete_event($_GET['groupe']);
-		echo 'test';
+		delete_event_groupe($_GET['groupe']);
 		include_once'../controleur/Accueil.php';
 
 	}
