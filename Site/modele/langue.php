@@ -5,12 +5,14 @@ if(isset($_GET['langue']) and $_GET['langue']=='fr') {
 }
 elseif(isset($_GET['langue']) and $_GET['langue']=='en') {
 	$_SESSION['langue']='en';
+}else{
+	$_SESSION['langue']='fr';
 }
 
-if ($_SESSION['langue']=='fr') {
+if (isset($_SESSION['langue']) and $_SESSION['langue']=='fr') {
 	include('../Langues/Sporciety_fr.php');
 }
-elseif ($_SESSION['langue']=='en') {
+elseif (isset($_SESSION['langue']) and $_SESSION['langue']=='en') {
 	include('../Langues/Sporciety_en.php');
 }
 else{

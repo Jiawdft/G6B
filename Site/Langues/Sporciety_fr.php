@@ -1,64 +1,66 @@
 <?php
-
+$url = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
 //////////////////////////////////////////// HOMETOP ////////////////////////////////////////////
-
-define("SPORT", "LES SPORTS");
-define("PROFIL", "PROFIL");
-define("AIDE", "AIDE");
+if (!defined('SPORT')){define("SPORT", "LES SPORTS");}
+if (!defined('PROFIL')){define("PROFIL", "PROFIL");}
+if (!defined('AIDE')){define("AIDE", "AIDE");}
 
 //////////////////////////////////////////// FOOTER ////////////////////////////////////////////
 
-define("Partenaires", "Partenaires Premium");
+if (!defined('Partenaires')){define("Partenaires", "Partenaires Premium");}
 
 //////////////////////////////////////////// ACCUEIL ////////////////////////////////////////////
 
-define("Ins", "Je m'inscris");
-define("Sport", "Les Sports");
-define("CP", "Code Postal");
-define("Rechercher", "Rechercher");
-define("Boxe", "BOXE");
-define("Athlé", "ATHLÉTISME");
-define("Nata", "NATATION");
-define("PLAN","PLAN");
-define("DGROUPES", "DERNIERS GROUPES");
+if($url=='http://localhost/Github/G6B/Site/controleur/Accueil.php'){
+if (!defined('Ins')){define("Ins", "Je m'inscris");}
+if (!defined('CP')){define("CP", "Code Postal");}
+if (!defined('Rechercher')){define("Rechercher", "Rechercher");}
+if (!defined('Boxe')){define("Boxe", "BOXE");}
+if (!defined('Athlé')){define("Athlé", "ATHLÉTISME");}
+if (!defined('Nata')){define("Nata", "NATATION");}
+if (!defined('PLAN')){define("PLAN","PLAN");}
+if (!defined('DGROUPES')){define("DGROUPES", "DERNIERS GROUPES");}
+}
 
 //////////////////////////////////////////// FORUM ////////////////////////////////////////////
 
-define("Groupes", "Groupes");
+if($url=='http://localhost/Github/G6B/Site/controleur/Forum.php'){	
+if (!defined('Groupes')){define("Groupes", "Groupes");}
+}
 
 //////////////////////////////////////////// POST ////////////////////////////////////////////
-
-define("Select", "Veuillez sélectionner un ".$_GET['sujet']." pour décourvir les posts qui y sont associés");
-define("Répondre", "Répondre");
-define("Réponse", "Votre Réponse :");
-define("Poster", "Poster");
-
+if($url=='http://localhost/Github/G6B/Site/controleur/Post.php'){
+if (!defined('Select')){define("Select", "Veuillez sélectionner un ".$_GET['sujet']." pour décourvir les posts qui y sont associés");}
+if (!defined('Répondre')){define("Répondre", "Répondre");}
+if (!defined('Réponse')){define("Réponse", "Votre Réponse :");}
+if (!defined('Poster')){define("Poster", "Poster");}
+}
 //////////////////////////////////////////// CONTACT ////////////////////////////////////////////
-
-define("apdn", "A propos de nous :");
-define("Description", "Sportciety est une société francaise crée en 2016. Ce site a pour caractère de rassembler les utilisateurs afin de permettre à ses utilisateurs de partager leur passion pour un sport en formant des groupes de participants à des cours, des séances d'entrainement dans un club ou des compétitions sportives.");
-define("Adresse", "Sportciety est située en France :<br><br>10 rue de Vanves<br>92130 ISSY LES MOULINEAUX");
-define("Info", "Une question ? N'hésitez pas à nous envoyer un mail :");
-define("Contacter", "Contactez-nous");
-
+if($url=='http://localhost/Github/G6B/Site/controleur/Contact.php'){
+if (!defined('apdn')){define("apdn", "A propos de nous :");}
+if (!defined('Description')){define("Description", "Sportciety est une société francaise crée en 2016. Ce site a pour caractère de rassembler les utilisateurs afin de permettre à ses utilisateurs de partager leur passion pour un sport en formant des groupes de participants à des cours, des séances d'entrainement dans un club ou des compétitions sportives.");}
+if (!defined('Adresse')){define("Adresse", "Sportciety est située en France :<br><br>10 rue de Vanves<br>92130 ISSY LES MOULINEAUX");}
+if (!defined('Info')){define("Info", "Une question ? N'hésitez pas à nous envoyer un mail :");}
+if (!defined('Contacter')){define("Contacter", "Contactez-nous");}
+}
 //////////////////////////////////////////// CONNEXION ////////////////////////////////////////////
-
-define("Connexion", "CONNECTEZ-VOUS");
-define("Mail", "Adresse Mail");
-define("Pass", "Mot de Passe");
-define("Pins", "Pas encore inscrit ? Inscris toi !");
-
+if($url=='http://localhost/Github/G6B/Site/controleur/Connexion.php'){
+if (!defined('Connexion')){define("Connexion", "CONNECTEZ-VOUS");}
+if (!defined('Mail')){define("Mail", "Adresse Mail");}
+if (!defined('Pass')){define("Pass", "Mot de Passe");}
+if (!defined('Pins')){define("Pins", "Pas encore inscrit ? Inscris toi !");}
+}
 //////////////////////////////////////////// INSCRIPTION ////////////////////////////////////////////
-
-define("Inscris", "INSCRIS-TOI");
-define("Hom", "Homme");
-define("Fem", "Femme");
-define("Prénom", "Prénom");
-define("Nom", "Nom");
-define("Ddn", "Date de Naissance (JJMMAAAA)");
-define("Tel", "Numéro de Téléphone");
-define("Adres", "Adresse");
-define("Ville", "Ville");
-
+if($url=='http://localhost/Github/G6B/Site/controleur/Inscription.php'){
+if (!defined('Inscris')){define("Inscris", "INSCRIS-TOI");}
+if (!defined('Hom')){define("Hom", "Homme");}
+if (!defined('Fem')){define("Fem", "Femme");}
+if (!defined('Prénom')){define("Prénom", "Prénom");}
+if (!defined('Nom')){define("Nom", "Nom");}
+if (!defined('Ddn')){define("Ddn", "Date de Naissance (JJMMAAAA)");}
+if (!defined('Tel')){define("Tel", "Numéro de Téléphone");}
+if (!defined('Adres')){define("Adres", "Adresse");}
+if (!defined('Ville')){define("Ville", "Ville");}
+}
 
 ?>
