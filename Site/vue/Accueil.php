@@ -40,7 +40,7 @@
 			</ul>
 	    </div>
 		<div id="SPORT">
-			<a href="../Sports/Sports.php"><?php echo SPORT ?></a>
+			<a href="../controleur/Sports.php"><?php echo SPORT ?></a>
 		</div>
 		<div class="picture">
 			<div class="pline1">
