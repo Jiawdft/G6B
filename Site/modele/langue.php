@@ -5,6 +5,8 @@ if(isset($_GET['langue']) and $_GET['langue']=='fr') {
 }
 elseif(isset($_GET['langue']) and $_GET['langue']=='en') {
 	$_SESSION['langue']='en';
+}else{
+	$_SESSION['langue']='fr';
 }
 
 if (isset($_SESSION['langue']) and $_SESSION['langue']=='fr') {

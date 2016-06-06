@@ -1,6 +1,9 @@
 <?php
-$url =$_SERVER['PHP_SELF'];
+
+$url = $_SERVER['PHP_SELF'];
+
 //////////////////////////////////////////// HOMETOP ////////////////////////////////////////////
+
 if (!defined('SPORT')){define("SPORT", "SPORTS");}
 if (!defined('PROFIL')){define("PROFIL", "PROFILE");}
 if (!defined('AIDE')){define("AIDE", "HELP");}
@@ -11,10 +14,10 @@ if (!defined('Partenaires')){define("Partenaires", "Premium Partners");}
 
 //////////////////////////////////////////// ACCUEIL ////////////////////////////////////////////
 
-if($url=='/GitHub/G6B/Site/controleur/Accueil.php' or $url=='/GitHub/G6B/Site/controleur/Session.php'){
+if($url=='/GitHub/G6B/Site/controleur/Accueil.php'){
 if (!defined('Ins')){define("Ins", "Register");}
 if (!defined('CP')){define("Sport", "Sports");}
-if (!defined('CP')){define("CP", "Postal code");}
+if (!defined('CP')){define("CP", "Postal Code");}
 if (!defined('Rechercher')){define("Rechercher", "Search");}
 if (!defined('Boxe')){define("Boxe", "BOXING");}
 if (!defined('Athlé')){define("Athlé", "ATHLETICS");}
@@ -25,20 +28,21 @@ if (!defined('DGROUPES')){define("DGROUPES", "LAST GROUPS");}
 
 //////////////////////////////////////////// FORUM ////////////////////////////////////////////
 
-if($url=='/GitHub/G6B/Site/controleur/Forum.php' or $url=='/GitHub/G6B/Site/controleur/Post.php'){	
+if($url=='/GitHub/G6B/Site/controleur/Forum.php'){
 if (!defined('Groupes')){define("Groupes", "Groups");}
 }
 
 //////////////////////////////////////////// POST ////////////////////////////////////////////
+
 if($url=='/GitHub/G6B/Site/controleur/Post.php'){
-if(isset($_GET['sujet'])){
-if (!defined('Select')){define("Select","Select a ".$_GET['sujet']." to see relative posts");}
+if (!defined('Select')){define("Select a ".$_GET['sujet']." to see relative posts");}
 if (!defined('Répondre')){define("Répondre", "Answer");}
 if (!defined('Réponse')){define("Réponse", "Your Answer :");}
 if (!defined('Poster')){define("Poster", "Post");}
 }
-}
+
 //////////////////////////////////////////// CONTACT ////////////////////////////////////////////
+
 if($url=='/GitHub/G6B/Site/controleur/Contact.php'){
 if (!defined('apdn')){define("apdn", "About us :");}
 if (!defined('Description')){define("Description", "Sporciety is a french company founded in 2016. That website aim to bring users together to allow them to share their passion for the sport. They can create participants' groups which workout together, have meetings, sportive contests and so much more.");}
@@ -46,14 +50,18 @@ if (!defined('Adresse')){define("Adresse", "Sportciety is located in France :<br
 if (!defined('Info')){define("Info", "A question ? Please contact us by mail :");}
 if (!defined('Contacter')){define("Contacter", "Contact us");}
 }
+
 //////////////////////////////////////////// CONNEXION ////////////////////////////////////////////
-if($url=='/GitHub/G6B/Site/controleur/Connexion.php' or $url=='/GitHub/G6B/Site/controleur/Session.php'){
+
+if($url=='/GitHub/G6B/Site/controleur/Connexion.php'){
 if (!defined('Connexion')){define("Connexion", "LOG IN");}
-if (!defined('Mail')){define("Mail", "Mail Adress");}
+if (!defined('Mail')){define("Mail", "Mail Address");}
 if (!defined('Pass')){define("Pass", "Password");}
 if (!defined('Pins')){define("Pins", "Not register yet ? Register now !");}
 }
+
 //////////////////////////////////////////// INSCRIPTION ////////////////////////////////////////////
+
 if($url=='/GitHub/G6B/Site/controleur/Inscription.php'){
 if (!defined('Inscris')){define("Inscris", "REGISTER");}
 if (!defined('Hom')){define("Hom", "Man");}
