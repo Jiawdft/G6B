@@ -12,11 +12,10 @@
 		<a id="inscription" href="../controleur/Inscription.php"><?php echo Ins ?></a>
 		<div class="slider">
 			<figure>
-	    		<img src="../Images/Wallpaper/Slider.jpg">
-	    		<img src="../Images/Wallpaper/Slider2.jpg">
-	    		<img src="../Images/Wallpaper/Slider.jpg">
-	    		<img src="../Images/Wallpaper/Slider2.jpg">
-	    		<img src="../Images/Wallpaper/Slider.jpg">
+	    		<img src="../Images/Wallpaper/snow.jpg">
+	    		<img src="../Images/Wallpaper/surfing.jpg">
+	    		<img src="../Images/Wallpaper/mountain.jpg">
+	    		<img src="../Images/Wallpaper/kayak.jpg">
 	  		</figure>
   		</div>
 		<div class="search">
