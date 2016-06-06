@@ -16,7 +16,7 @@
 			<div id="right">
 				<table>
 					<tr>
-						<th><a href="../controleur/Sports.php">SPORTCIETY</a></th>
+						<th><a href="../controleur/Accueil.php">SPORCIETY</a></th>
 					</tr>
 				</table>
 			</div>

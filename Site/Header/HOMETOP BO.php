@@ -16,7 +16,7 @@
 			<div id="right">
 				<table>
 					<tr>
-						<th><a href="../controleur/Accueil.php">SPORTCIETY</a></th>
+						<th><a href="../controleur/Accueil.php">SPORCIETY</a></th>
 	                   	<?php if(isset($_SESSION['mail'])) { ?>
 	                   	<th><a href="../controleur/Accueil.php?deconnexion=true">DECONNEXION</a></th>
 	                   	<?php
