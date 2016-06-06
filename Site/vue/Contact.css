@@ -45,7 +45,7 @@ body {
 }
 
 .Carte {
-    padding-left: 5em;
+    padding-left: 3em;
 }
 
 #Mail {
@@ -73,25 +73,5 @@ body {
 
 #Mail a:hover {
     box-shadow: 0em 0em 0.5em #ffffff;
-}
-
-
-
-#social img {
-    padding: 1em;
-    width: 2em;
-    filter: brightness(100%);
-    -webkit-filter: brightness(100%);
-    -moz-filter: brightness(100%);
-    -o-filter: brightness(100%);
-    -ms-filter: brightness(100%);
-}
-
-#social img:hover {
-    filter: brightness(300%);
-    -webkit-filter: brightness(300%);
-    -moz-filter: brightness(300%);
-    -o-filter: brightness(300%);
-    -ms-filter: brightness(300%);
 }
 
