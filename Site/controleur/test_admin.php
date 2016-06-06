@@ -15,10 +15,17 @@ if (!isset($_POST['mail'])) {
 					break;
 				}
 			}
+<<<<<<< HEAD
 			if($_SESSION['mail']!=$membre['adresse_mail'])
 			{
 				$erreur='droit insuffisant connectez vous avec un compte administrateur';
 				include_once('../controleur/backconnexion.php');
+=======
+		}
+		if($_SESSION['mail']!=$membre['adresse_mail']){
+			$erreur='insuffisant';
+			include_once('../controleur/admin.php');
+>>>>>>> 9e911218c70810a998be4b4711704b85c8457175
 
 			}
 	}
@@ -30,7 +37,7 @@ else
 	if(!isset($_POST['mail']) OR !isset($_POST['passe']))
 	{
 		$erreur="Veuillez saisir votre adresse mail";
-		include('../controleur/backconnexion.php');
+		include('../controleur/admin.php');
 	}
 	else
 	{
@@ -38,7 +45,7 @@ else
 		{
 
 		$erreur="Veuillez saisir votre adresse mail";
-			include('../controleur/backconnexion.php');
+			include('../controleur/admin.php');
 		}
 		else
 		{
@@ -56,7 +63,7 @@ else
 			}
 			if(!password_verify($_POST['passe'],$membre['passe'])){
 			$erreur='Mot de passe incorrect';
-			include_once('../controleur/backconnexion.php');
+			include_once('../controleur/admin.php');
 			}
 
 		}
