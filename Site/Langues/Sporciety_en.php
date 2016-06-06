@@ -25,16 +25,18 @@ if (!defined('DGROUPES')){define("DGROUPES", "LAST GROUPS");}
 
 //////////////////////////////////////////// FORUM ////////////////////////////////////////////
 
-if($url=='/GitHub/G6B/Site/controleur/Forum.php'){	
+if($url=='/GitHub/G6B/Site/controleur/Forum.php' or $url=='/GitHub/G6B/Site/controleur/Post.php'){	
 if (!defined('Groupes')){define("Groupes", "Groups");}
 }
 
 //////////////////////////////////////////// POST ////////////////////////////////////////////
 if($url=='/GitHub/G6B/Site/controleur/Post.php'){
-if (!defined('Select')){define("Select a ".$_GET['sujet']." to see relative posts");}
+if(isset($_GET['sujet'])){
+if (!defined('Select')){define("Select","Select a ".$_GET['sujet']." to see relative posts");}
 if (!defined('Répondre')){define("Répondre", "Answer");}
 if (!defined('Réponse')){define("Réponse", "Your Answer :");}
 if (!defined('Poster')){define("Poster", "Post");}
+}
 }
 //////////////////////////////////////////// CONTACT ////////////////////////////////////////////
 if($url=='/GitHub/G6B/Site/controleur/Contact.php'){
