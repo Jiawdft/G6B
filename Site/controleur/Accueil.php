@@ -35,9 +35,10 @@ if(isset($_GET['inscription']) and $_GET['inscription']==true)
 				else{$adresse='';}
 				$_POST['Code_Postal']=htmlspecialchars($_POST['Code_Postal']);
 				include_once'../modele/inscription_membre.php';	
-				inscription_membre($_POST['Genre'],$_POST['Nom'],$_POST['Prenom'],$Naissance,$_POST['Code_Postal'],$adresse,$_POST['Adresse_Mail'],$_POST['Ville'],$telephone,$_POST['Mot_de_Passe']);
+				inscription_membre($_POST['Genre'],$_POST['Nom'],$_POST['Prenom'],$Naissance,$_POST['Code_Postal'],$adresse,$_POST['Ville'],$_POST['Adresse_Mail'],$telephone,$_POST['Mot_de_Passe']);
 				
 				session_start();
+				$_SESSION['mail']=$_POST['Adresse_Mail'];
 				include_once'../modele/langue.php';
 
 
