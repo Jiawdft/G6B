@@ -46,42 +46,5 @@
 			<a href="mailto:adresse@serveur.com" id="bouton_contact">Contactez-nous</a>
 
 		</section>
-
-
-		 <footer>	
-	      	<div class="organisation">
-	        	<h3>Partenaires premium</h3>
-		        <table>
-		        	<tbody>
-		           		<tr>
-			            	<td><img src="../Images/Logos/WebAward.png"><br><a>Awwwards : Best Web Design</a><br/></td>
-			            	<td></td>
-			            	<td><br><img src="../Images/Logos/Nike.png"><br/></td>
-			            	<td><img src="../Images/Logos/Powerade.png"><br/></td>
-			           		<td><br><img src="../Images/Logos/BNP.png"><br/></td>
-		           		</tr>
-		            	<div id="L1"></div>
-		            	<tr>
-			             	<td><h4 href="#"><br>Aide<br/></h4></td>
-			             	<td><h4 href="#"><br>Langue<br/></h4></td>
-			             	<td><h4 href="#"><br>Contact<br/></h4></td>
-			             	<td><h4 href="#"><br>Plan du Site<br/></h4></td>
-			             	<td><h4 href="#"><br>Mentions légales<br/></h4></td>
-		           		</tr>
-		         	</tbody>
-		        </table>
-	        	<div id="L2"></div>
-	     	</div>
-		    <div id="social" style="text-align: center">
-		        <a href="https://www.facebook.com/workoutsociety/?ref=aymt_homepage_panel"><img src="../Images/Logos/Fb.png"></a>
-		        <a href="https://twitter.com/?lang=fr"><img src="../Images/Logos/Tw.png"></a>
-		        <a href="https://www.instagram.com"><img src="../Images/Logos/Insta.png"></a>
-		        <a href="https://www.pinterest.com"><img src="../Images/Logos/Pint.png"></a>
-		    </div>
-	      	<div id="copyright" style="text-align: center">
-	        	<a>Copyright www.sportciety.com </a>
-	        	<a><br>Sportciety : 28 Rue Notre Dame des Champs, 75006 Paris </br></a>
-	      	</div>
-	    </footer>
 	</body>
 </html>
