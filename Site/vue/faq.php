@@ -43,7 +43,7 @@
 		</section>	
 		<section id="mail">
 			<p>Pour toute autre question, n'hésitez pas à nous contacter en nous envoyant un mail :</p>
-			<a href="mailto:adresse@serveur.com" id="bouton_contact">Contactez-nous</a>
+			<a href="mailto:sporciety@gmail.com" id="bouton_contact">Contactez-nous</a>
 
 		</section>
 	</body>
