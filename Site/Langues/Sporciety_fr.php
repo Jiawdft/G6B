@@ -16,7 +16,7 @@ if (!defined('Partenaires')){define("Partenaires", "Partenaires Premium");}
 
 
 if (!defined('Ins')){define("Ins", "Je m'inscris");}
-if (!defined('Sport')){define("Sport", "Les Sports");}
+if (!defined('Sport')){define("Sport", "LES SPORTS");}
 if (!defined('CP')){define("CP", "Code Postal");}
 if (!defined('Rechercher')){define("Rechercher", "Rechercher");}
 if (!defined('Boxe')){define("Boxe", "BOXE");}
