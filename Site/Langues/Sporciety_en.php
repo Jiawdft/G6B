@@ -28,41 +28,35 @@ if (!defined('DGROUPES')){define("DGROUPES", "LAST GROUPS");}
 
 //////////////////////////////////////////// FORUM ////////////////////////////////////////////
 
-if($url=='/GitHub/G6B/Site/controleur/Forum.php' or $url=='/GitHub/G6B/Site/controleur/Post.php'){	
 if (!defined('Groupes')){define("Groupes", "Groups");}
-}
+
 
 //////////////////////////////////////////// POST ////////////////////////////////////////////
 
-if($url=='/GitHub/G6B/Site/controleur/Post.php'){
 if (!defined('Select')){define("Select","Select a ".$_GET['sujet']." to see relative posts");}
 if (!defined('Répondre')){define("Répondre", "Answer");}
 if (!defined('Réponse')){define("Réponse", "Your Answer :");}
 if (!defined('Poster')){define("Poster", "Post");}
-}
+
 
 //////////////////////////////////////////// CONTACT ////////////////////////////////////////////
 
-if($url=='/GitHub/G6B/Site/controleur/Contact.php'){
 if (!defined('apdn')){define("apdn", "About us :");}
 if (!defined('Description')){define("Description", "Sporciety is a french company founded in 2016. That website aim to bring users together to allow them to share their passion for the sport. They can create participants' groups which workout together, have meetings, sportive contests and so much more.");}
 if (!defined('Adresse')){define("Adresse", "Sportciety is located in France :<br><br>10 rue de Vanves<br>92130 ISSY LES MOULINEAUX");}
 if (!defined('Info')){define("Info", "A question ? Please contact us by mail :");}
 if (!defined('Contacter')){define("Contacter", "Contact us");}
-}
+
 
 //////////////////////////////////////////// CONNEXION ////////////////////////////////////////////
 
-if($url=='/GitHub/G6B/Site/controleur/Connexion.php' or $url=='/GitHub/G6B/Site/controleur/Session.php'){
 if (!defined('Connexion')){define("Connexion", "LOG IN");}
 if (!defined('Mail')){define("Mail", "Mail Address");}
 if (!defined('Pass')){define("Pass", "Password");}
 if (!defined('Pins')){define("Pins", "Not register yet ? Register now !");}
-}
 
 //////////////////////////////////////////// INSCRIPTION ////////////////////////////////////////////
 
-if($url=='/GitHub/G6B/Site/controleur/Inscription.php'){
 if (!defined('Inscris')){define("Inscris", "REGISTER");}
 if (!defined('Hom')){define("Hom", "Man");}
 if (!defined('Fem')){define("Fem", "Woman");}
@@ -75,6 +69,6 @@ if (!defined('Ville')){define("Ville", "City");}
 if (!defined('CP')){define("CP", "Postal Code");}
 if (!defined('Mail')){define("Mail", "Mail Address");}
 if (!defined('Pass')){define("Pass", "Password");}
-}
+
 
 ?>
