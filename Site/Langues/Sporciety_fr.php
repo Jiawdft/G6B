@@ -31,12 +31,12 @@ if (!defined('DGROUPES')){define("DGROUPES", "DERNIERS GROUPES");}
 if (!defined('Groupes')){define("Groupes", "Groupes");}
 
 //////////////////////////////////////////// POST ////////////////////////////////////////////
-
+if($url=='/GitHub/G6B/Site/controleur/Post.php'){
 if (!defined('Select')){define("Select", "Veuillez sélectionner un ".$_GET['sujet']." pour décourvir les posts qui y sont associés");}
 if (!defined('Répondre')){define("Répondre", "Répondre");}
 if (!defined('Réponse')){define("Réponse", "Votre Réponse :");}
 if (!defined('Poster')){define("Poster", "Poster");}
-
+}
 //////////////////////////////////////////// CONTACT ////////////////////////////////////////////
 
 if (!defined('apdn')){define("apdn", "A propos de nous :");}

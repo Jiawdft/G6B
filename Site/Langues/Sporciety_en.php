@@ -32,11 +32,12 @@ if (!defined('Groupes')){define("Groupes", "Groups");}
 
 
 //////////////////////////////////////////// POST ////////////////////////////////////////////
-
+if($url=='/GitHub/G6B/Site/controleur/Post.php'){
 if (!defined('Select')){define("Select","Select a ".$_GET['sujet']." to see relative posts");}
 if (!defined('Répondre')){define("Répondre", "Answer");}
 if (!defined('Réponse')){define("Réponse", "Your Answer :");}
 if (!defined('Poster')){define("Poster", "Post");}
+}
 
 
 //////////////////////////////////////////// CONTACT ////////////////////////////////////////////
