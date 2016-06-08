@@ -10,13 +10,46 @@
 
     <?php include("../Header/HOMETOP Slider.php"); ?>
 
+    <?php
+
+      $img1='';
+      $img2='';
+      if ($_GET['sport']=='ATHLETISME') {
+        $img1='Athlétisme1.jpg';
+        $img2='Athlétisme2.jpg';
+      }
+      elseif ($_GET['sport']=='ACCROBRANCHE') {
+        $img1='Accrobranche1.jpg';
+        $img2='Accrobranche2.jpg';
+      }
+      elseif ($_GET['sport']=='BASKETBALL') {
+        $img1='Basketball1.jpg';
+        $img2='Basketball2.jpg';
+      }
+      elseif ($_GET['sport']=='MOTO') {
+        $img1='Moto1.jpg';
+        $img2='Moto2.jpg';
+      }
+      elseif ($_GET['sport']=='PING PONG') {
+        $img1='Ping Pong1.jpg';
+        $img2='Ping Pong1.jpg';
+      }
+      elseif ($_GET['sport']=='CYCLISME') {
+        $img1='cyclisme.jpg';
+        $img2='Cyclisme2.jpg';
+      }
+      else {
+        $img1='get_fit1.jpg';
+        $img2='get_fit1.jpg';
+      }
+    ?>
     <div class="slider">
 			<figure>
-	    		<img src="../Images/Wallpaper/get_fit1.jpg">
-	    		<img src="../Images/Wallpaper/get_fit1.jpg">
-	    		<img src="../Images/Wallpaper/get_fit1.jpg">
-	    		<img src="../Images/Wallpaper/get_fit1.jpg">
-	    		<img src="../Images/Wallpaper/get_fit1.jpg">
+	    		<img src="../Images/Wallpaper/<?php echo $img1 ?>">
+	    		<img src="../Images/Wallpaper/<?php echo $img2 ?>">
+	    		<img src="../Images/Wallpaper/<?php echo $img1 ?>">
+	    		<img src="../Images/Wallpaper/<?php echo $img2 ?>">
+	    		<img src="../Images/Wallpaper/<?php echo $img1 ?>">
 	  		</figure>
   	</div>
 
@@ -88,6 +121,7 @@
           <?php
         }
         foreach ($event as $ev) {
+
           if (isset($_GET['event']) and $_GET['event']==$ev['nom']) {
             ?>
             <h1 id="inline"> <?php echo $ev['nom']; ?> </h1>
