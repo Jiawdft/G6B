@@ -22,7 +22,7 @@
 			<ul>
 				<form action='../controleur/Fichesporttype.php' method="post">
 				<select name="choix">
-				    <option value=''><?php echo Sport ?></option>
+				    <option value=''><?php echo Sports ?></option>
 				    <?php
 					foreach($sports as $sport)
 					{
