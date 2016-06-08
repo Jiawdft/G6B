@@ -108,6 +108,7 @@
 							<tr>
 								<td id="left">
 									<p><?php echo $post['auteur'].'</br>'.$post['date']; ?></p>
+									<?php echo $post['id']?> 
 								</td>
 								<td id="right">
 									<p class="affiche_resultat"><?php echo $post['post'] ?></p>
